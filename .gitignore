@@ -1,0 +1,87 @@
+# Python cache and compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter temporary files
+.ipynb_checkpoints/
+
+# Virtual and Conda environments
+.venv/
+venv/
+env/
+ENV/
+.conda/
+conda-meta/
+
+# Environment variables, credentials, and secrets
+.env
+.env.*
+*.key
+*.pem
+secrets.*
+credentials.*
+
+# Operating-system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE settings
+.vscode/
+.idea/
+
+# Raw and intermediate project data
+data/raw/
+data/interim/
+data/cache/
+data/temp/
+data/tmp/
+
+# Large geospatial rasters and sidecar files
+*.tif
+*.tiff
+*.img
+*.vrt
+*.ovr
+*.aux.xml
+*.tfw
+*.tif.xml
+
+# File geodatabases and shapefile components
+*.gdb/
+*.shp
+*.shx
+*.dbf
+*.prj
+*.cpg
+*.sbn
+*.sbx
+
+# GeoPackage and spatial database files
+*.gpkg
+*.sqlite
+*.db
+
+# Compressed source-data archives
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+
+# Generated temporary and processing outputs
+outputs/rasters/
+outputs/intermediate/
+outputs/temp/
+outputs/tmp/
+
+# Download fragments and logs
+*.part
+*.tmp
+*.temp
+*.log
+
+# Local notebook backups
+*-checkpoint.ipynb
+*.bak

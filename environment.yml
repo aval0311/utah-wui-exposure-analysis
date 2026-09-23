@@ -1,0 +1,23 @@
+name: wui-professional-314
+channels:
+  - conda-forge
+dependencies:
+  # Versions reported by the successfully executed publication notebook.
+  - python=3.14.7
+  - numpy=2.4.6
+  - pandas=3.0.5
+  - geopandas=1.1.4
+  - shapely=2.1.2
+  - rasterio=1.5.1
+  - pyproj=3.8.0
+  - folium=0.20.0
+  - branca=0.8.2
+  - requests=2.34.2
+  - scipy=1.18.0
+
+  # Direct notebook dependencies not included in the runtime summary table.
+  - matplotlib
+  - jupyterlab
+  - ipykernel
+  - pyogrio
+
