@@ -69,7 +69,7 @@ The published analysis identified:
 | High-risk WUI overlap | 407.24 km² |
 | Critical facilities evaluated | 1,823 |
 | Critical facilities located within high-risk WUI | 27 |
-| Critical facilities located within one mile of high-risk WUI | 178 |
+| Critical facilities outside but within one mile of high-risk WUI | 178 |
 
 Population and housing figures represent estimates associated with exposed census block groups. They should not be interpreted as exact structure-level counts within WUI boundaries.
 
@@ -125,17 +125,23 @@ Detailed dataset descriptions, publication modes, refresh behavior, and licensin
 ```text
 utah-wui-exposure-analysis/
 ├── README.md
+├── LICENSE
 ├── environment.yml
 ├── .gitignore
 ├── data/
 │   └── README.md
+├── docs/
 ├── images/
 │   ├── utah_wui_dashboard_overview.png
 │   ├── salt_lake_county_wui_exposure.png
 │   ├── utah_county_high_risk_wui.png
 │   └── washington_county_composite_fire_hazard.png
-└── notebooks/
-    └── utah_wui_exposure_analysis.ipynb
+├── interactive-map/
+├── notebooks/
+│   └── utah_wui_exposure_analysis.ipynb
+└── outputs/
+    └── dashboard/
+        └── Utah_WUI_Exposure_Composite_Fire_Hazard_Dashboard.html
 ```
 
 Large raw, cached, intermediate, and processed geospatial datasets are intentionally excluded from the repository.
@@ -146,7 +152,9 @@ The complete analysis is available in:
 
 [`notebooks/utah_wui_exposure_analysis.ipynb`](notebooks/utah_wui_exposure_analysis.ipynb)
 
-GitHub displays the saved notebook outputs, tables, static visualizations, and narrative without requiring the notebook to be executed. The interactive dashboard should be opened through its separately published web link once available.
+GitHub displays the saved notebook outputs, tables, static visualizations, and narrative without requiring the notebook to be executed. GitHub's notebook preview does not run the interactive dashboard iframe.
+
+The generated dashboard is stored at [`outputs/dashboard/Utah_WUI_Exposure_Composite_Fire_Hazard_Dashboard.html`](outputs/dashboard/Utah_WUI_Exposure_Composite_Fire_Hazard_Dashboard.html) and can be opened locally in a web browser. A public dashboard link can be added here after deployment through GitHub Pages.
 
 For the best recruiter review experience, open the notebook directly in GitHub and use the table of contents to navigate between the analytical sections.
 
@@ -271,4 +279,4 @@ The results are intended for analytical and educational purposes and should not 
 
 ## License
 
-Original code and documentation in this repository are provided under the repository license. External datasets remain subject to the licenses, attribution requirements, and usage policies of their respective publishers.
+Original code and documentation in this repository are licensed under the [MIT License](LICENSE). External datasets remain subject to the licenses, attribution requirements, and usage policies of their respective publishers.
