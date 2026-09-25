@@ -31,9 +31,10 @@ desktop.ini
 .vscode/
 .idea/
 
-# Raw and intermediate project data
+# Raw, cached, intermediate, and processed project data
 data/raw/
 data/interim/
+data/processed/
 data/cache/
 data/temp/
 data/tmp/

@@ -13,11 +13,11 @@ dependencies:
   - folium=0.20.0
   - branca=0.8.2
   - requests=2.34.2
+  - urllib3=2.8.0
   - scipy=1.18.0
 
   # Direct notebook dependencies not included in the runtime summary table.
-  - matplotlib
-  - jupyterlab
-  - ipykernel
-  - pyogrio
-
+  - matplotlib=3.11.2
+  - jupyterlab=4.6.4
+  - ipykernel=7.3.0
+  - pyogrio=0.13.0
