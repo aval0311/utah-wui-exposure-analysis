@@ -1,0 +1,156 @@
+{
+  "status": "passed",
+  "started_utc": "2026-10-11T00:37:09.792478+00:00",
+  "artifact_directory": "<HISTORICAL_BENCHMARK_SOURCE>\\step3\\runs\\20261011T003709Z_5deb1585",
+  "output_root": "<HISTORICAL_WORKSPACE>\\benchmarks\\phase12\\correctness_step3_20261011T003709Z_5deb1585",
+  "provenance": {
+    "code_cells_identical_to_user_notebook": true,
+    "all_original_selected_sources_preserved": true,
+    "core_sha256": "af01ea4f0fc95d9d599a9b463d51012ac4edb4708bb06332b158bcdde60f6d13",
+    "focused_code_sha256": "007585aa12151b3cb465dcda78ad69fb45b949719ef73401c33e2971c7a33854",
+    "spec_sha256": "207b92f26b6096e3563d7ef63ceba94b8464a40653515f6ce63c9636d295aef8",
+    "manifest_sha256": "1e3aaa19cc33b52414cfd51dfb23431fa442e9147c13ca0db36a3d9a09e47153",
+    "baseline_notebook_sha256": "afceab013c0d7ddaecc4698c1c0f937a9a33026112a3b027c9b8a0d9c4901fba"
+  },
+  "run_records": [
+    "<HISTORICAL_BENCHMARK_SOURCE>\\step3\\runs\\20261011T003709Z_5deb1585\\chunks1024_workers1.json",
+    "<HISTORICAL_BENCHMARK_SOURCE>\\step3\\runs\\20261011T003709Z_5deb1585\\chunks1024_workers4.json",
+    "<HISTORICAL_BENCHMARK_SOURCE>\\step3\\runs\\20261011T003709Z_5deb1585\\chunks2048_workers4.json"
+  ],
+  "ipykernel_version": "7.4.0",
+  "runner_sha256": "8f6c00ca408d6551e6cf1cdf7a4accd6e7e5052f767ce45be8a406b151441c96",
+  "support_sha256": "d604d4628ea2fb9d8aa1de9627b3f4096ffe5a6d96ac5322b4d244e1ac7b9b2f",
+  "edge_tests_sha256": "34123099f8c09838d82c83f867189d3a21879faa5914bb5f75dd00700749e2dd",
+  "edge_record": "<HISTORICAL_BENCHMARK_SOURCE>\\step3\\runs\\20261011T003709Z_5deb1585\\edge_cases.json",
+  "completed_utc": "2026-10-11T00:41:30.997638+00:00",
+  "all_configurations_bitwise_identical": true,
+  "scope": "Frozen Phase 12 scientific equivalence; full upstream pipeline and performance are outside scope.",
+  "validated_configurations": [
+    {
+      "name": "chunks1024_workers1",
+      "chunk_shape": [
+        1024,
+        1024
+      ],
+      "n_workers": 1,
+      "threads_per_worker": 1,
+      "processes": true,
+      "memory_limit": "4GiB"
+    },
+    {
+      "name": "chunks1024_workers4",
+      "chunk_shape": [
+        1024,
+        1024
+      ],
+      "n_workers": 4,
+      "threads_per_worker": 1,
+      "processes": true,
+      "memory_limit": "4GiB"
+    },
+    {
+      "name": "chunks2048_workers4",
+      "chunk_shape": [
+        2048,
+        2048
+      ],
+      "n_workers": 4,
+      "threads_per_worker": 1,
+      "processes": true,
+      "memory_limit": "4GiB"
+    }
+  ],
+  "cross_output_audit": {
+    "status": "passed",
+    "grid": {
+      "width": 9454,
+      "height": 14467,
+      "crs": "EPSG:26912",
+      "resolution": [
+        30.0,
+        30.0
+      ],
+      "transform": [
+        30.0,
+        0.0,
+        228570.0,
+        0.0,
+        -30.0,
+        4530600.0
+      ]
+    },
+    "mismatch_counts": {
+      "coverage_footprint": 0,
+      "hazard_footprint": 0,
+      "stored_mask": 0,
+      "index_formula": 0,
+      "class_formula": 0,
+      "invalid_class": 0,
+      "invalid_coverage": 0
+    },
+    "coverage_counts_including_outside": [
+      121295786,
+      2645626,
+      0,
+      401370,
+      25332,
+      12402904
+    ],
+    "study_pixels": 15475232,
+    "modeled_pixels": 12402904,
+    "hazard_class_confusion_reference_rows_actual_columns": [
+      [
+        53028,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        5498779,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        6778826,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        72271,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "hazard_class_off_diagonal": 0,
+    "class_counts": {
+      "1": 53028,
+      "2": 5498779,
+      "3": 6778826,
+      "4": 72271,
+      "5": 0
+    }
+  },
+  "source_postflight": {
+    "code_cells_identical_to_user_notebook": true,
+    "all_original_selected_sources_preserved": true,
+    "core_sha256": "af01ea4f0fc95d9d599a9b463d51012ac4edb4708bb06332b158bcdde60f6d13",
+    "focused_code_sha256": "007585aa12151b3cb465dcda78ad69fb45b949719ef73401c33e2971c7a33854",
+    "spec_sha256": "207b92f26b6096e3563d7ef63ceba94b8464a40653515f6ce63c9636d295aef8",
+    "manifest_sha256": "1e3aaa19cc33b52414cfd51dfb23431fa442e9147c13ca0db36a3d9a09e47153",
+    "baseline_notebook_sha256": "afceab013c0d7ddaecc4698c1c0f937a9a33026112a3b027c9b8a0d9c4901fba"
+  }
+}

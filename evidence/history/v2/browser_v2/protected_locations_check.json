@@ -1,0 +1,8 @@
+{
+  "status": "unchanged",
+  "method": "Relative path, size and modification-time inventory; Git porcelain status comparison; .git excluded from file inventory.",
+  "repository_files": 13,
+  "retained_workspace_files": 2139,
+  "git_status_unchanged": true,
+  "git_status_clean": true
+}

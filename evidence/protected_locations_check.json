@@ -1,0 +1,19 @@
+{
+  "method": "Compare all file names, byte sizes, and nanosecond modification times with pre-revision inventories. These locations were not executed or edited.",
+  "locations": {
+    "GitHub working copy": {
+      "files": 107,
+      "added": [],
+      "removed": [],
+      "size_or_mtime_changed": [],
+      "unchanged": true
+    },
+    "Retained workspace": {
+      "files": 2139,
+      "added": [],
+      "removed": [],
+      "size_or_mtime_changed": [],
+      "unchanged": true
+    }
+  }
+}

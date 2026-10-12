@@ -1,0 +1,349 @@
+{
+  "status": "v2 popup revision validated; native fullscreen user-confirmed; public deployment pending",
+  "accepted_run": "20261011T170100Z_a475c3c2",
+  "fresh_kernel_full_pipeline": {
+    "status": "passed",
+    "seconds": 1747.6679797999968
+  },
+  "data_mode": "snapshot",
+  "engine": "dask",
+  "notebook_errors": [],
+  "notebook_warning_outputs": [],
+  "personal_paths_in_notebook_text_outputs": [],
+  "notebook_schema_and_code_syntax": "passed",
+  "snapshot_verified_input_files": 1065,
+  "analytical_acquisition": "Retained files and frozen responses; no live analytical downloads used.",
+  "network_guard_scope": "Notebook-kernel Python audit hook blocks non-loopback socket connections. This is not an operating-system firewall or worker-process network sandbox.",
+  "focused_checks": {
+    "verify_hpc.py": "passed: real multiprocess Dask, uneven chunks, mask precedence, exact outputs and shifted-grid rejection",
+    "verify_snapshot_policy.py": "passed: source and derivative integrity, recipe changes, missing manifest, unique output paths, external Python lookup rejection",
+    "verify_temporal_median.py": "passed with RuntimeWarning treated as error"
+  },
+  "full_grid_serial_comparison": {
+    "status": "passed",
+    "scope": "Current full-pipeline inputs, serial versus Dask; not a matched benchmark",
+    "serial_seconds": 64.28279880000628,
+    "comparisons": {
+      "normalized_hazard": {
+        "mask_mismatches": 0,
+        "invalid_value_mismatches": 0,
+        "valid_pixels": 12402904,
+        "numeric_differing_pixels": 0,
+        "bitwise_differing_valid_pixels": 0,
+        "pixels_exceeding_tolerance": 0,
+        "max_absolute_difference": 0.0,
+        "actual_minimum": 0.06507927179336548,
+        "actual_maximum": 0.7645182013511658,
+        "reference_minimum": 0.06507927179336548,
+        "reference_maximum": 0.7645182013511658,
+        "metadata_checks": {
+          "crs": true,
+          "transform": true,
+          "shape": true,
+          "bounds": true,
+          "dtype": true,
+          "nodata": true,
+          "band_count": true,
+          "descriptions": true,
+          "tags": true,
+          "compression": true,
+          "block_shapes": true,
+          "predictor": true
+        },
+        "profile": {
+          "dtype": "float32",
+          "nodata": -9999.0,
+          "block_shape": [
+            256,
+            256
+          ],
+          "compression": "DEFLATE",
+          "predictor": "3"
+        },
+        "mean_absolute_difference": 0.0,
+        "rmse": 0.0,
+        "actual_mean": 0.4104833567075429,
+        "reference_mean": 0.4104833567075429,
+        "passed": true,
+        "atol": 0.0,
+        "rtol": 0.0,
+        "sha256": "9a38f4f0561ca72b30615662757e438fcab6f16f6a40e2036b55189109a85bc8",
+        "reference_sha256": "285fc01ee6ac7fe6d48e9f1f821b53d2720ef7e92a11726259ee908bde5fbfbd",
+        "file_bytes_identical": false,
+        "path": "<WORKSPACE>/outputs/publication/20261011T170100Z_a475c3c2/rasters/composite_fire_hazard_normalized.tif",
+        "reference_path": "<WORKSPACE>/outputs/publication/20261011T170100Z_a475c3c2/serial_equivalence/composite_fire_hazard_normalized.tif"
+      },
+      "continuous_index_1_10": {
+        "mask_mismatches": 0,
+        "invalid_value_mismatches": 0,
+        "valid_pixels": 12402904,
+        "numeric_differing_pixels": 0,
+        "bitwise_differing_valid_pixels": 0,
+        "pixels_exceeding_tolerance": 0,
+        "max_absolute_difference": 0.0,
+        "actual_minimum": 1.5857133865356445,
+        "actual_maximum": 7.880663871765137,
+        "reference_minimum": 1.5857133865356445,
+        "reference_maximum": 7.880663871765137,
+        "metadata_checks": {
+          "crs": true,
+          "transform": true,
+          "shape": true,
+          "bounds": true,
+          "dtype": true,
+          "nodata": true,
+          "band_count": true,
+          "descriptions": true,
+          "tags": true,
+          "compression": true,
+          "block_shapes": true,
+          "predictor": true
+        },
+        "profile": {
+          "dtype": "float32",
+          "nodata": -9999.0,
+          "block_shape": [
+            256,
+            256
+          ],
+          "compression": "DEFLATE",
+          "predictor": "3"
+        },
+        "mean_absolute_difference": 0.0,
+        "rmse": 0.0,
+        "actual_mean": 4.694350210431083,
+        "reference_mean": 4.694350210431083,
+        "passed": true,
+        "atol": 0.0,
+        "rtol": 0.0,
+        "sha256": "4a86602096ca10b0c5b5eda0ef1ff2067d3596e743a83f53bb0e2ff65065d1ec",
+        "reference_sha256": "254bbe54c27485d9011ee695bb709bfc8f8bbf378a25a8ceab3a3d5698329d2e",
+        "file_bytes_identical": false,
+        "path": "<WORKSPACE>/outputs/publication/20261011T170100Z_a475c3c2/rasters/composite_fire_hazard_index_1_10.tif",
+        "reference_path": "<WORKSPACE>/outputs/publication/20261011T170100Z_a475c3c2/serial_equivalence/composite_fire_hazard_index_1_10.tif"
+      },
+      "hazard_class": {
+        "mask_mismatches": 0,
+        "invalid_value_mismatches": 0,
+        "valid_pixels": 12402904,
+        "numeric_differing_pixels": 0,
+        "bitwise_differing_valid_pixels": 0,
+        "pixels_exceeding_tolerance": 0,
+        "max_absolute_difference": 0.0,
+        "actual_minimum": 1.0,
+        "actual_maximum": 4.0,
+        "reference_minimum": 1.0,
+        "reference_maximum": 4.0,
+        "metadata_checks": {
+          "crs": true,
+          "transform": true,
+          "shape": true,
+          "bounds": true,
+          "dtype": true,
+          "nodata": true,
+          "band_count": true,
+          "descriptions": true,
+          "tags": true,
+          "compression": true,
+          "block_shapes": true,
+          "predictor": true
+        },
+        "profile": {
+          "dtype": "float32",
+          "nodata": -9999.0,
+          "block_shape": [
+            256,
+            256
+          ],
+          "compression": "DEFLATE",
+          "predictor": "3"
+        },
+        "mean_absolute_difference": 0.0,
+        "rmse": 0.0,
+        "actual_mean": 2.5528966442052603,
+        "reference_mean": 2.5528966442052603,
+        "passed": true,
+        "atol": 0.0,
+        "rtol": 0.0,
+        "sha256": "afae022c9387866754af1f7146914922fbe04cc47bdfa53fb4fa250b060b75d6",
+        "reference_sha256": "3d8e2f6e648e3b4bcb474a5706c4bd6b130633a5949005673f1d466871bf3b7f",
+        "file_bytes_identical": false,
+        "path": "<WORKSPACE>/outputs/publication/20261011T170100Z_a475c3c2/rasters/composite_fire_hazard_class.tif",
+        "reference_path": "<WORKSPACE>/outputs/publication/20261011T170100Z_a475c3c2/serial_equivalence/composite_fire_hazard_class.tif"
+      },
+      "coverage_reason": {
+        "mask_mismatches": 0,
+        "invalid_value_mismatches": 0,
+        "valid_pixels": 15475232,
+        "numeric_differing_pixels": 0,
+        "bitwise_differing_valid_pixels": 0,
+        "pixels_exceeding_tolerance": 0,
+        "max_absolute_difference": 0.0,
+        "actual_minimum": 1.0,
+        "actual_maximum": 5.0,
+        "reference_minimum": 1.0,
+        "reference_maximum": 5.0,
+        "metadata_checks": {
+          "crs": true,
+          "transform": true,
+          "shape": true,
+          "bounds": true,
+          "dtype": true,
+          "nodata": true,
+          "band_count": true,
+          "descriptions": true,
+          "tags": true,
+          "compression": true,
+          "block_shapes": true,
+          "predictor": true
+        },
+        "profile": {
+          "dtype": "uint8",
+          "nodata": 0.0,
+          "block_shape": [
+            256,
+            256
+          ],
+          "compression": "DEFLATE",
+          "predictor": "1"
+        },
+        "mean_absolute_difference": 0.0,
+        "rmse": 0.0,
+        "actual_mean": 4.262655577635282,
+        "reference_mean": 4.262655577635282,
+        "passed": true,
+        "atol": 0.0,
+        "rtol": 0.0,
+        "sha256": "ad31eda35f5aad292605ede54f80f8a8f7313e369fae6be8c78d48a1a9967231",
+        "reference_sha256": "e32194dd56d37915f2e30fbefc0b16b2677b7ec9a174dcba1fb4154be03fdfe9",
+        "file_bytes_identical": false,
+        "path": "<WORKSPACE>/outputs/publication/20261011T170100Z_a475c3c2/composite_coverage_reason.tif",
+        "reference_path": "<WORKSPACE>/outputs/publication/20261011T170100Z_a475c3c2/serial_equivalence/composite_coverage_reason.tif"
+      }
+    }
+  },
+  "coverage_map_visual_review": "Passed: county polygon masking; no neighboring-county rectangular spillover.",
+  "browser_validation": "browser_v2/browser_validation.json",
+  "post_execution_packaging_changes": {
+    "notebook": "v2 changes code cells 335/337 and markdown cells 334/336 (zero-based). Presentation-cell outputs/counts cleared; all other analytical code and outputs retained.",
+    "runtime": "Manifest path-containment and nonempty-input validation tightened; snapshot-policy checks rerun.",
+    "source_inventory_provenance": [
+      {
+        "path": "data/snapshots/publication/facilities_0fcb9cc15670bbc87191.json",
+        "executed_sha256": "cd3976d07a4c756a3b409a8ab0312b9d456f49717f8cf0e0313a9d9f5ea91012",
+        "packaged_sha256": "0924dfcfe7165beaa69bc39e668e78f82bfbec7870e4ed55a117113574f7c8e4",
+        "change": "Acquisition/assembly provenance only; scientific payload unchanged."
+      },
+      {
+        "path": "data/snapshots/publication/facilities_1162991c0ee64baaf079.json",
+        "executed_sha256": "c0a8cdebad5c7690258017908b848cfb5e94a5a49748f409153ada64c0088ff1",
+        "packaged_sha256": "357dcaf3c3d1b8293b85d9e7a131de9b39cb6bb7779537bc82cf3e60030eb2f5",
+        "change": "Acquisition/assembly provenance only; scientific payload unchanged."
+      },
+      {
+        "path": "data/snapshots/publication/facilities_86b1f4f6b16152f46b13.json",
+        "executed_sha256": "db8ce11305106f785970065768b1bd47998b738a247da6b3236873c408971fe2",
+        "packaged_sha256": "16d341944188adff383dd03214a9dc796527b918da53bc2d0c9fb65d6cef0021",
+        "change": "Acquisition/assembly provenance only; scientific payload unchanged."
+      },
+      {
+        "path": "data/snapshots/publication/facilities_b2d84bb9536e96819121.json",
+        "executed_sha256": "4d6ab6576a8d5e5a2b16f36d0459a099a1366a8cb9ff59659ffa2a01bbb7b1b6",
+        "packaged_sha256": "491765980afdcecefecc83c75389d7bd35e3ca484fe3ab2926d2bf6e3b541946",
+        "change": "Acquisition/assembly provenance only; scientific payload unchanged."
+      },
+      {
+        "path": "data/snapshots/publication/facilities_d09879691282f3a065e6.json",
+        "executed_sha256": "c1e41f1bedb45b090d84b48ee3c7b0d28e410c0bd7a067dd3a3e2d58b2192822",
+        "packaged_sha256": "177c9bb575380d52f428f4ca7937e63dae655f75653d103888ca7c30e2c839dc",
+        "change": "Acquisition/assembly provenance only; scientific payload unchanged."
+      },
+      {
+        "path": "data/snapshots/publication/tnm_catalog.json",
+        "executed_sha256": "f24006c048397bcf1313c498a37b6fa9c55dbd6980a9ca577d918ceb71f19664",
+        "packaged_sha256": "e70baff686336ef83b757b3a550a4369677179c0ce878ef24a287ce7cd22a22c",
+        "change": "Acquisition/assembly provenance only; scientific payload unchanged."
+      }
+    ]
+  },
+  "remaining_checks": [
+    "Full refresh-mode reacquisition",
+    "Physical phone/touch interaction",
+    "Hosted snapshot download and GitHub Pages deployment"
+  ],
+  "interpretation": "The earlier repeated performance experiment and this current functional-validation run are separate evidence.",
+  "final_static_checks": {
+    "relative_markdown_links": "passed",
+    "all_python_syntax": "passed",
+    "executed_vs_packaged_python_code": "Analytical code identical; two presentation cells revised without full notebook reexecution.",
+    "public_text_credential_and_personal_path_scan": "passed"
+  },
+  "packaged_snapshot": {
+    "filename": "wui-snapshot-publication-v1.zip",
+    "bytes": 27334663257,
+    "sha256": "d63f7c1e81e60f90881dece70c16e5b5fb285cf9c534e6575d59ad6c94c0afa4",
+    "files": 1190,
+    "unpacked_data_bytes": 27413398059
+  },
+  "archive_integrity": "Full ZIP CRC verification passed.",
+  "packaged_snapshot_manifest_sha256": "e9e8c29ebd8946b7eb9b0deb603816f6506965878a98f8ed78b24c1f9235c5de",
+  "clean_environment_validation": {
+    "status": "passed",
+    "record": "clean_environment_validation.json",
+    "full_notebook_seconds": 1465.568,
+    "four_rasters_and_six_tables": "exact match"
+  },
+  "release_version": 2,
+  "historical_browser_validation": "browser/browser_validation.json",
+  "ui_revision": {
+    "version": 2,
+    "scope": "Responsive popup bounds, nested content wrapping, scrolling, and resize/fullscreen repositioning.",
+    "full_notebook_reexecuted": false,
+    "native_fullscreen": {
+      "status": "passed",
+      "method": "User manual confirmation",
+      "tests": [
+        "Open fullscreen, open block-group popup, exit with Escape; popup and close button remain visible.",
+        "Re-enter fullscreen and exit with dashboard fullscreen control."
+      ],
+      "scope_note": "User confirmed both tests before final nested facility-content CSS refinement; fullscreen handling and block-group logic were unchanged by that refinement."
+    },
+    "baseline_release_sha256": "81b4cdd677105d76d149479ad1f8cf9ae13168355d7bf190bd2ec320b4b3d1c6",
+    "unchanged_scientific_files_verified": [
+      "data/README.md",
+      "data/snapshot_download.json",
+      "data/snapshot_manifest.json",
+      "environment.yml",
+      "images/county_coverage_diagnostics.png",
+      "images/county_exposure.png",
+      "images/facility_proximity.png",
+      "images/hazard_overview.png",
+      "outputs/tables/county_exposure.csv",
+      "outputs/tables/county_hazard_coverage.csv",
+      "outputs/tables/county_hls_observation_support.csv",
+      "outputs/tables/facility_proximity.csv",
+      "outputs/tables/hazard_coverage.csv",
+      "outputs/tables/weight_sensitivity.csv",
+      "scripts/check_snapshot.py",
+      "scripts/export_publication.py",
+      "scripts/verify_hpc.py",
+      "scripts/verify_snapshot_policy.py",
+      "scripts/verify_temporal_median.py",
+      "src/wui/__init__.py",
+      "src/wui/hpc.py",
+      "src/wui/runtime.py",
+      "src/wui/validation.py"
+    ],
+    "dashboard_data_payload": "Removing only the added popup CSS/JavaScript exactly reproduces the v1 dashboard text.",
+    "notebook_changed_cell_indices_zero_based": [
+      334,
+      335,
+      336,
+      337
+    ],
+    "python_code_cells_compiled": 158,
+    "inline_javascript_blocks_parsed": 2,
+    "notebook_schema": "passed",
+    "jinja_template_syntax": "passed"
+  }
+}

@@ -1,0 +1,638 @@
+{
+  "portfolio_version": "wui_portfolio_publication_v1",
+  "model_version": "1.2-nonburnable-mask",
+  "completed_utc": "2026-10-11T17:28:00.113024+00:00",
+  "data_mode": "snapshot",
+  "elapsed_seconds": 1619.54,
+  "runtime": [
+    {
+      "COMPONENT": "Python",
+      "VERSION": "3.14.7"
+    },
+    {
+      "COMPONENT": "GeoPandas",
+      "VERSION": "1.1.4"
+    },
+    {
+      "COMPONENT": "pandas",
+      "VERSION": "3.0.6"
+    },
+    {
+      "COMPONENT": "NumPy",
+      "VERSION": "2.4.6"
+    },
+    {
+      "COMPONENT": "Shapely",
+      "VERSION": "2.1.2"
+    },
+    {
+      "COMPONENT": "Rasterio",
+      "VERSION": "1.5.1"
+    },
+    {
+      "COMPONENT": "PyProj",
+      "VERSION": "3.8.0"
+    },
+    {
+      "COMPONENT": "Folium",
+      "VERSION": "0.20.0"
+    },
+    {
+      "COMPONENT": "Branca",
+      "VERSION": "0.8.2"
+    },
+    {
+      "COMPONENT": "Requests",
+      "VERSION": "2.34.2"
+    },
+    {
+      "COMPONENT": "SciPy",
+      "VERSION": "1.18.0"
+    },
+    {
+      "COMPONENT": "Xarray",
+      "VERSION": "2026.9.0"
+    },
+    {
+      "COMPONENT": "rioxarray",
+      "VERSION": "0.23.0"
+    },
+    {
+      "COMPONENT": "Dask",
+      "VERSION": "2026.8.0"
+    },
+    {
+      "COMPONENT": "distributed",
+      "VERSION": "2026.8.0"
+    },
+    {
+      "COMPONENT": "psutil",
+      "VERSION": "7.2.2"
+    },
+    {
+      "COMPONENT": "ipykernel",
+      "VERSION": "7.4.0"
+    }
+  ],
+  "execution_scope": "full_pipeline",
+  "engine": "dask",
+  "study_mask": {
+    "policy": "versioned canonical county footprint",
+    "sha256": "e695db075801f422eac9ca77f288cd979dec5fa425777e695834715787573a82",
+    "study_pixels": 15475232,
+    "reconstructed_pixels": 15475218,
+    "reconstruction_differing_pixels": 208,
+    "differing_area_km2": 0.1872
+  },
+  "snapshot_manifest_sha256": "e613c2c6974cd819572f86f978457626e36508585352824de45abf5d84f80aa1",
+  "source_versions": {
+    "landfire": "LF2025",
+    "hls": "Version 2.0",
+    "hls_collections": [
+      "hls2-l30",
+      "hls2-s30"
+    ],
+    "hls_analysis_period": "July-September 2025",
+    "tiger_roads": "2025",
+    "annual_nlcd": "CONUS Collection 1.2 (1985-2025)",
+    "mtbs": "2026 Q3",
+    "inform_fodr": "Current through 2026"
+  },
+  "nonburnable_policy": {
+    "codes": [
+      91,
+      92,
+      93,
+      98,
+      99
+    ],
+    "final_disposition": "NoData",
+    "source": "aligned LANDFIRE FBFM40",
+    "intermediate_surface_fuel_score": 0.0
+  },
+  "coverage_categories": [
+    {
+      "CATEGORY": "Confirmed nonburnable (excluded by policy)",
+      "PIXELS": 2645626,
+      "AREA_KM2": 2381.0634,
+      "STUDY_AREA_PERCENT": 17.095872940709388
+    },
+    {
+      "CATEGORY": "Missing or unrecognized FBFM40 class",
+      "PIXELS": 0,
+      "AREA_KM2": 0.0,
+      "STUDY_AREA_PERCENT": 0.0
+    },
+    {
+      "CATEGORY": "Burnable: insufficient NDVI or NDMI observations",
+      "PIXELS": 401370,
+      "AREA_KM2": 361.233,
+      "STUDY_AREA_PERCENT": 2.593628321694951
+    },
+    {
+      "CATEGORY": "Burnable: missing another required component",
+      "PIXELS": 25332,
+      "AREA_KM2": 22.7988,
+      "STUDY_AREA_PERCENT": 0.16369383024435435
+    },
+    {
+      "CATEGORY": "Valid modeled burnable land",
+      "PIXELS": 12402904,
+      "AREA_KM2": 11162.6136,
+      "STUDY_AREA_PERCENT": 80.14680490735131
+    }
+  ],
+  "coverage_mask_validation_passed": true,
+  "weights": {
+    "fuel_hazard": 0.3,
+    "fuel_dryness": 0.2,
+    "slope_hazard": 0.15,
+    "aspect_hazard": 0.1,
+    "historical_fire_likelihood": 0.15,
+    "human_ignition_potential": 0.1
+  },
+  "mtbs_perimeters_used": 0,
+  "nlcd_missing_study_pixels": 0,
+  "analytical_qa_passed": true,
+  "browser_qa_status": "not established by this notebook",
+  "files": [
+    {
+      "path": "data/raw/fire_hazard/fuels/fuel_hazard_component/aligned_sources/landfire_fbfm40_aligned.tif",
+      "bytes": 6587135,
+      "sha256": "7ca6acace02a85ef6cc07bde1b0f2e40b7742545a36998c8c3ac34c4640993ed"
+    },
+    {
+      "path": "data/raw/fire_hazard/fuels/fuel_hazard_component/component_output/composite_fuel_hazard_score.tif",
+      "bytes": 31098973,
+      "sha256": "3883129c9ce1c4e0b3eeaba9078cfd11dbf97895aa6c2074c9b5c58ff6a08f14"
+    },
+    {
+      "path": "data/raw/fire_hazard/fuels/fuel_hazard_component/historical_fire_hazard/historical_fire_likelihood.tif",
+      "bytes": 34912585,
+      "sha256": "984b7f8b46149b40ff91b25b41af1833a4466203835dba3976c3176482e82609"
+    },
+    {
+      "path": "data/raw/fire_hazard/fuels/fuel_hazard_component/human_ignition_hazard/human_ignition_potential.tif",
+      "bytes": 21377233,
+      "sha256": "d21b695ea82500aa8324915091a6ca9b5be1e2d6a4a9e025e3f01a6982e26056"
+    },
+    {
+      "path": "data/raw/fire_hazard/fuels/fuel_hazard_component/terrain_hazard/aspect_hazard.tif",
+      "bytes": 51952924,
+      "sha256": "769e16272339b2511a77cf1848e10e2370b2517f70062a213cf2e1f6c694a955"
+    },
+    {
+      "path": "data/raw/fire_hazard/fuels/fuel_hazard_component/terrain_hazard/slope_hazard.tif",
+      "bytes": 50723897,
+      "sha256": "095537f24b030b694242f8cb5d68ac121a66ab01bd1700c548a8dbb5afce10b1"
+    },
+    {
+      "path": "data/raw/fire_hazard/fuels/fuel_hazard_component/terrain_hazard/usgs_3dep_dem_aligned_30m.tif",
+      "bytes": 37305961,
+      "sha256": "1b029719973f5e3d04a2064f00af1d686e53738486515fb7d11d98dda8da5935"
+    },
+    {
+      "path": "data/raw/fire_hazard/fuels/landfire_2025_canopy_bulk_density_study_area.tif",
+      "bytes": 20415393,
+      "sha256": "dd3182f3ce1bcd667de7fcc755b968e2cd748c5878508f8cf121195d1ccc1150"
+    },
+    {
+      "path": "data/raw/fire_hazard/fuels/landfire_2025_canopy_cover_study_area.tif",
+      "bytes": 18900707,
+      "sha256": "862b06b91de89ccc65b6421a92519073a4db235079839c4917e2d0dc86658427"
+    },
+    {
+      "path": "data/raw/fire_hazard/fuels/landfire_2025_fbfm40_study_area.tif",
+      "bytes": 41161421,
+      "sha256": "a96fe43c777e90c8ed631f35b885d1852e22d79f5843f1a62073a558cd7cac4d"
+    },
+    {
+      "path": "data/raw/fire_hazard/historical_fire/inform_fodr_utah_fire_occurrences_through_2026.geojson",
+      "bytes": 53181592,
+      "sha256": "0cd0d89bdb8aa7de1b85344054f6f7b0a5a64f553c44832edb5165cb29c060eb"
+    },
+    {
+      "path": "data/raw/fire_hazard/human_ignition/annual_nlcd_c1_2_2025_land_cover_conus.tif",
+      "bytes": 20224249,
+      "sha256": "0a3f5e1938885a2853a4e227df8fc0647e53db36989db830f7dcff739dfd608e"
+    },
+    {
+      "path": "data/raw/fire_hazard/human_ignition/tl_2025_49_roads.zip",
+      "bytes": 15957755,
+      "sha256": "16ed3b22d80fa7eb3b1fea5d8e6341921a1ee814adf9ec515ff33ce8b498c069"
+    },
+    {
+      "path": "data/raw/fire_hazard/vegetation/hls_planetary_computer_2025_fire_season/temporal_composites/observation_counts/hls_2025_fire_season_ndmi_observation_count.tif",
+      "bytes": 1773253,
+      "sha256": "4553d02015fb5630c030f85b023661a9204e129b9ea5e8c86c5d2b5a10c87ba5"
+    },
+    {
+      "path": "data/raw/fire_hazard/vegetation/hls_planetary_computer_2025_fire_season/temporal_composites/observation_counts/hls_2025_fire_season_ndvi_observation_count.tif",
+      "bytes": 1773259,
+      "sha256": "113a377cd68793861be20f95b35961712670af225e777712656731c44b547c53"
+    },
+    {
+      "path": "data/raw/fire_hazard/vegetation/hls_planetary_computer_2025_fire_season/vegetation_dryness_component/hazard_raster/vegetation_dryness_hazard_score.tif",
+      "bytes": 46055627,
+      "sha256": "f51aa6c96cfbc1593bdd3f95fc0c451587a164a4a95926e580b96e7a85f772e4"
+    },
+    {
+      "path": "data/snapshots/portfolio_http_v1/090ff7f0f9a36c0a79ba6d3f42b313c9522d9f04a30848abe38c2badeba8d945.json",
+      "bytes": 750473,
+      "sha256": "8641d73a3155bccbfdd0fcf14aaf773378eef390a4429cbb9ea0ccb48b950de8"
+    },
+    {
+      "path": "data/snapshots/portfolio_http_v1/0c675f57b30192e09ceff96334b344598d8939bdecf199aa14bb687b261992bf.json",
+      "bytes": 1348,
+      "sha256": "da95c9fea2d6962a558b2bc9745529e2ad9f26f3fc0e5fab1c660c543b99a1be"
+    },
+    {
+      "path": "data/snapshots/portfolio_http_v1/0d49ac13f551dd0ca1e7f3b543b8d3e416b36fbb8b6fada1cf1225b43319b917.json",
+      "bytes": 5073694,
+      "sha256": "ae894727821583a4791f081c0108fb6a4790690dcf73f8ab4098177c5e00b40c"
+    },
+    {
+      "path": "data/snapshots/portfolio_http_v1/0fbfca16e8c04b3c27e398bc1c8468e3fbb221b6648d1b1f2f552101ed0b351d.json",
+      "bytes": 624,
+      "sha256": "06168149b7c094b53eb2ef55c8fd6546bbf51b3e97ace9a48352bb20ef4e3fd4"
+    },
+    {
+      "path": "data/snapshots/portfolio_http_v1/13d0b319ba7082f5d258a980de3e91e28a0e27ae8cf822e848e38212719395e9.json",
+      "bytes": 834781,
+      "sha256": "e00486c93e9cdbf9ac2e231c7393bb7a47c6b59a73c48f429ba3338ee644ecf7"
+    },
+    {
+      "path": "data/snapshots/portfolio_http_v1/16bfc112b625cfdb5543afd95affd3038ff99c19c8f2a39beae4d5aff12fbe5c.json",
+      "bytes": 5066139,
+      "sha256": "88f1dc155f5a199bbb27538b58592ac25adaa8b2dda9caf51af0247177bbc2a8"
+    },
+    {
+      "path": "data/snapshots/portfolio_http_v1/16e13d6f45f8cb4ad5354972e611d31a3aee1715e9b0eb06b63211f6d71a9610.json",
+      "bytes": 5096354,
+      "sha256": "09d7f1ca0631cfad908afb03fd270101ba6a55573be3a12972f64664f1f0b7a2"
+    },
+    {
+      "path": "data/snapshots/portfolio_http_v1/1a84b4358c53ee54d18376637792f1cf18a25e1be2cc3659f69bb6d69da521e0.json",
+      "bytes": 8283,
+      "sha256": "9d8134258c4ea33a112772ee5e6a9826de063e7fd0e241c6e75c5a6836d5d291"
+    },
+    {
+      "path": "data/snapshots/portfolio_http_v1/200e09fa8870770fc97470f9e847c8f4feebc30d51ae95c8388b8b108a0633ce.json",
+      "bytes": 5222711,
+      "sha256": "bd0b0b59caf5fecfcf6a66c3091a45e12c658c990ff1ebc9420fce64266b6323"
+    },
+    {
+      "path": "data/snapshots/portfolio_http_v1/242fce5dbcf5a32dae864c2d7f212976e0d3b9dde3083605f644ae236b6a332d.json",
+      "bytes": 569,
+      "sha256": "9700678c28ac97d36110b7ee6bf1f203d613eefbb1253cc1ff8ad23c30424dcc"
+    },
+    {
+      "path": "data/snapshots/portfolio_http_v1/2f3c9cbbaba7e84feb0fe0b62c248356cfa7ee8cc84c275c226971b8c52b2c8e.json",
+      "bytes": 2770,
+      "sha256": "4bccea17767def9559077938e1aaba15443810738d9a2595ca775189b1939728"
+    },
+    {
+      "path": "data/snapshots/portfolio_http_v1/30f1ee5809ebdedcc05cfb60f7b021cf137c3cf1a7a2972ca0943ee1f457f5f7.json",
+      "bytes": 3188360,
+      "sha256": "c9c6111fe37c3c8f43bc153a75e84965985e4db15f827504b88da97215126355"
+    },
+    {
+      "path": "data/snapshots/portfolio_http_v1/3204118d625ca4c52366989dcc00d6bc40c3fb6cfe1ff5a6f96fa0a1318501e7.json",
+      "bytes": 718,
+      "sha256": "382d0d03930ccd681c37019467bac74ad69703aa126d681a10f8d3968c7cef1e"
+    },
+    {
+      "path": "data/snapshots/portfolio_http_v1/339f9f5fbeb26d05d9c7acbfde3be7d3caf0ac164a26c8d684ca25ff653b7859.json",
+      "bytes": 190192,
+      "sha256": "7467bd788b447d9604a04148a1686032cd4685a80c2095113dfcc975ff26f2b7"
+    },
+    {
+      "path": "data/snapshots/portfolio_http_v1/355734b8c421827b3ff1deb8d9b0318a99b174a783b02d211017c3c40986aa46.json",
+      "bytes": 2432,
+      "sha256": "ab93c7326db71baebdf033f885a9970ce85a83eda872c97926820658c2c3c4c2"
+    },
+    {
+      "path": "data/snapshots/portfolio_http_v1/453580a2733e0f611c1ee93f2bf8108a4c3c99499d1248c217bfeacf4e5964da.json",
+      "bytes": 92991,
+      "sha256": "2565db5406e6759a88a433ec0b950ca482c74a8d76d7a3056dafc149bafcaca7"
+    },
+    {
+      "path": "data/snapshots/portfolio_http_v1/4ef8bf9599d7ac623d226e7eda12723937fef95426774460037a12750a55801d.json",
+      "bytes": 67189,
+      "sha256": "229dd978ed3fd73f17972f7c3373ba88babd282e7c32bdd2850d5ff59a322a43"
+    },
+    {
+      "path": "data/snapshots/portfolio_http_v1/5312309554ba11b06bdea4bf3521109ec463f563c4defdd09905b0534ee75028.json",
+      "bytes": 11817,
+      "sha256": "2e2348bbf27ee8e576922a4a5b0d7d3223d707f2e2dc1876dbb48bc5e51e87c2"
+    },
+    {
+      "path": "data/snapshots/portfolio_http_v1/5426d3dc21ebe9e186206454431543260ac27ca76a38e6d301ad5d06f93f364f.json",
+      "bytes": 382297,
+      "sha256": "c54c99629f2bf34a162f1fa6abae22c42c3d8114d9be30cef48c1e4c92f74604"
+    },
+    {
+      "path": "data/snapshots/portfolio_http_v1/5751eef111f27f7c4d7717cc60d1408f8f22339b695f9199af04af8580bf3a13.json",
+      "bytes": 768,
+      "sha256": "6686f0df83010d8d24f6ca03011c3f6cbbab379d07000bc7e5daf09b33ea9fe5"
+    },
+    {
+      "path": "data/snapshots/portfolio_http_v1/5bf356d668d2e05b2606dace5f2145bf3d69549b2756004bf03a990c65c3f991.json",
+      "bytes": 635,
+      "sha256": "facd34d1bd43c4737e91583a3d8f10ae7f6319a00f6ed8cdf296a7e5b40814c9"
+    },
+    {
+      "path": "data/snapshots/portfolio_http_v1/5ffd8c1b0cad3ab76c2129fb8938f7e0f8b0a2417f62009a819802ed9df9f362.json",
+      "bytes": 5089315,
+      "sha256": "9e1ffa95235ac21f2a3590bb10f6a10688f6ddb023ccafd28156224ce5530ae4"
+    },
+    {
+      "path": "data/snapshots/portfolio_http_v1/613a95d20944865e043d6a3e23b126c0aee7aa4331fadbd22a3495bf923d061b.json",
+      "bytes": 10343,
+      "sha256": "88a2e3b847bf6ee366d840fea960710dfc9bccd8465d4dc9fc923c4739f94bd1"
+    },
+    {
+      "path": "data/snapshots/portfolio_http_v1/62a68d5ac8bb49ae3b792eb653aa36cd446fecf19dd8658567a34958badf67fd.json",
+      "bytes": 9108,
+      "sha256": "47aabb952fe87201555dd298b6981444d40d896e084648499cdf0e0fd7af6168"
+    },
+    {
+      "path": "data/snapshots/portfolio_http_v1/6373e005e890375b8217112ad52df3d2fd4bb2cee68d1ba43583a5cb5b06fb42.json",
+      "bytes": 337922,
+      "sha256": "04034916aab6b8761d3bd77c1e886ac8f261332125e15144c21f4cfaa5a93d23"
+    },
+    {
+      "path": "data/snapshots/portfolio_http_v1/651bb2c54194a8dbd4d8596d4a64599b14d772e6037c0c325d41032210950dc2.json",
+      "bytes": 5111409,
+      "sha256": "fa6f61c752eb0fc0c9e297d38a3e22ecbf0c4c09c495281e13fde0e4d7bd8bbb"
+    },
+    {
+      "path": "data/snapshots/portfolio_http_v1/6b26f7caa183e78d7b718a56a07e166ab64b9cd9739b155f76abd75c0ea86278.json",
+      "bytes": 3312255,
+      "sha256": "5ca29e563a930b4b9fb724da743c5c0be9b62eff1a1ee93734d9b90ebae79b99"
+    },
+    {
+      "path": "data/snapshots/portfolio_http_v1/6c55bf8f6187c4269c95208dc41325276d900ffd49641bab4ef88ed93e1b274b.json",
+      "bytes": 542,
+      "sha256": "9b169a26d54e0e65205cba996f2f1a718652dcaadf592b57fdfdf0848dd27a7f"
+    },
+    {
+      "path": "data/snapshots/portfolio_http_v1/6ee6195a2f4f46bcdf10158d5c33ed15b31006630b359214f9cfeba2b44bc0b1.json",
+      "bytes": 4218889,
+      "sha256": "071ecda6a59cac9805642ffabcf7423e93e5c4dbbe8a5454e94447d30cf49212"
+    },
+    {
+      "path": "data/snapshots/portfolio_http_v1/83e4e309bc444f4a92f2aee301245de6d757388602d22ff635e413ff95d73eae.json",
+      "bytes": 1177,
+      "sha256": "a78f7485584122cd711a69c4f3bf21e4ea8f34689e52532569f971d3e8c33d79"
+    },
+    {
+      "path": "data/snapshots/portfolio_http_v1/8789f76e283708a0acd756062046647f99433a34c9e8275b519cf901cd010c96.json",
+      "bytes": 53868,
+      "sha256": "38917f5a041f8cae17036c9810fff6f07d433aaa4e0913e9177e1669f0f68b87"
+    },
+    {
+      "path": "data/snapshots/portfolio_http_v1/8f6fd7217058d1fbc37a925721adbf006752cf95cdd139ea8e2f2bea9e94cb5a.json",
+      "bytes": 41828,
+      "sha256": "0094b9d1014f30832704ad104d60683c7a774cf470d4c9796adc1526463bf063"
+    },
+    {
+      "path": "data/snapshots/portfolio_http_v1/915328a53ccbc24e3cadcf8448d54aa6babd704696b32fc63b8b12cc2ebe77e8.json",
+      "bytes": 622187,
+      "sha256": "ffa3f2d18e09649fc426ea1650abd673bf61c8abfd8f4cb72c2cb85d5c596211"
+    },
+    {
+      "path": "data/snapshots/portfolio_http_v1/96fc077991c5c9a6241fec42d022926810c21540a34005e6d1ad1096acc12e3e.json",
+      "bytes": 3426,
+      "sha256": "df1e48ee41d64859702c87630ee5afcb04ac467d6358f5e00dfd05d1e7b3649b"
+    },
+    {
+      "path": "data/snapshots/portfolio_http_v1/9a315e65ac6a8f74a7b60fd98d788138af84b049ff0285c646e50a34919354ee.json",
+      "bytes": 5063953,
+      "sha256": "0fe140700bd153f341dc30c5401ce72d7ea06d0e39ad3580e04691dec452eafc"
+    },
+    {
+      "path": "data/snapshots/portfolio_http_v1/9face0d00da8f0a0f54913221228b009d74900db072380c639b4a4e448cb031f.json",
+      "bytes": 5085832,
+      "sha256": "7ca1ebe07c0467ec5083a1e73a0047c774e57bb8a9fd26ce5280f7aa16206d8b"
+    },
+    {
+      "path": "data/snapshots/portfolio_http_v1/a2a47754139d52ff9d21274f10189dc61432c54f5c51c515be3b5f76273a7ccf.json",
+      "bytes": 5412,
+      "sha256": "8d63a289f79c836743230ff9e29e459c09e2a39d0d2b11267bdcde6d4591765a"
+    },
+    {
+      "path": "data/snapshots/portfolio_http_v1/a2f5ea299c7d2940226ff8ebab93a652edf2d28b20ae80a7864cf94fc8aca303.json",
+      "bytes": 1147,
+      "sha256": "827fb2ecf0d636552dbcc33b11e76e12ce7fb471aa6b2cbb0061858e792f3a09"
+    },
+    {
+      "path": "data/snapshots/portfolio_http_v1/a91911ee6dfc97c1d1b8e1a1c083a230f3720901d07f8d2a359e1c393fe9f856.json",
+      "bytes": 12781,
+      "sha256": "9982c4939452cef54eca2fe2a2b9be78b72142fe13d313fd0e35a75cd04c0e8b"
+    },
+    {
+      "path": "data/snapshots/portfolio_http_v1/a9986786c4035652952b635858b8196bf6e6a6c7895aec026ed42452e788c154.json",
+      "bytes": 5394,
+      "sha256": "ab6a0079b22d04dd03b8c0e2d155740af1d81ca3ca5c94d2bd937e9f070cc072"
+    },
+    {
+      "path": "data/snapshots/portfolio_http_v1/ab1ce57121634d229091ec8d8c7988347e46fe1309a8dd0fd70c4fd93b293f7b.json",
+      "bytes": 1054437,
+      "sha256": "169dc4f3ac50c6d071dce46618c8d3c0a6ae65434a7d23021781912294abf13b"
+    },
+    {
+      "path": "data/snapshots/portfolio_http_v1/acf24cfe72d663d1bed30b300c60b4de7d64be4d744c7504e6fe4875b03f51f1.json",
+      "bytes": 20938,
+      "sha256": "b6bb969c9492c36e42e8e08294c46e2bed532ef141a06d959296c3b0b51b88ea"
+    },
+    {
+      "path": "data/snapshots/portfolio_http_v1/af5d84a0684abe0a977ec30779f927dfa060725e902e6e7a363ee4170901d70a.json",
+      "bytes": 81217,
+      "sha256": "574920bc0766874df2e1117dd434a7dfa95b58afe40a260e7cff368d9bac59a6"
+    },
+    {
+      "path": "data/snapshots/portfolio_http_v1/b58dab791689fe2723b86c93492c7ff5360f593ce2b536aaf9e37a05156a6af6.json",
+      "bytes": 43671,
+      "sha256": "4e1b1be355c686e76fac677e224758c40b854ecee442fb180c617fde0f84c2a3"
+    },
+    {
+      "path": "data/snapshots/portfolio_http_v1/b6b02cacd04dcc7a9334949f955c51c4e693534d3e5b304dde6afb59d190537f.json",
+      "bytes": 395593,
+      "sha256": "4c79bf030aaf448fb23cd2b27ad9851d586984dd4905f8dc251fa1c873d2caec"
+    },
+    {
+      "path": "data/snapshots/portfolio_http_v1/b72f81487c02f57c6de44b9605d3c968c967c85c029e58f4521b74f4334d6ca3.json",
+      "bytes": 1993,
+      "sha256": "8775e7ade391350dd866502d26c6490c3f4b6826a012990d6289e5c984b006e7"
+    },
+    {
+      "path": "data/snapshots/portfolio_http_v1/b8300bfee5ae6d7244abb4a3f319dd0ae2f9849377c94015b1eb188192f61ec4.json",
+      "bytes": 800,
+      "sha256": "e3eb3b0a501ae9339e49b158f837aabe58fd9933769e2d32d6b4fb0bfbc8cea8"
+    },
+    {
+      "path": "data/snapshots/portfolio_http_v1/b878ca6e58deafd9bed55bb111c2171e35ca74f7f7347e1f81730c99d5646916.json",
+      "bytes": 2189088,
+      "sha256": "95965ba39ed1cae29f639344effac26aaf715f7dbcdfbf8d00020839a2e7a5e4"
+    },
+    {
+      "path": "data/snapshots/portfolio_http_v1/b9c7c8d9f8734a2be024f0f917997bfa91682d8f95c73bedd2cd59415d819094.json",
+      "bytes": 1970,
+      "sha256": "d56e0c4406d914f243a429f35ddc33012eaa1537e5fb5243cdf9ce0cc1656b07"
+    },
+    {
+      "path": "data/snapshots/portfolio_http_v1/bcc3ea5d5efcd480a3f504dbbd6facd623aac384c27d47cb3d4cf0b0c9d5a71b.json",
+      "bytes": 5132797,
+      "sha256": "fc659bc8e5ff4a69570b68012a721ef5859f893b7d52e9d404b38586d159ea84"
+    },
+    {
+      "path": "data/snapshots/portfolio_http_v1/c93a6077a7348b110d15adeaa680b91627670d4e6b25159e1d0a4cafe96e0305.json",
+      "bytes": 567,
+      "sha256": "324d42b4cc3a3914a7151f8f0ad6a8678af1519a604bbb5041d455ceb3ded125"
+    },
+    {
+      "path": "data/snapshots/portfolio_http_v1/caae7d72f101629bcf3a606cc658c9089152fd3f508c535d28488b9dd1cc0254.json",
+      "bytes": 501,
+      "sha256": "bb0fe3402bd9b93ecb15d92261566664f019dee62abdd72a9b2400209d8cd624"
+    },
+    {
+      "path": "data/snapshots/portfolio_http_v1/d62d27b161442d8b7ece495b72e07ad8e2c4b9c2e3e1fc74a087483da89ecc67.json",
+      "bytes": 1795,
+      "sha256": "d66bb3d9250e40aff7f3d611a304ad2a237dde95d517014d5c91ec04f9b198cf"
+    },
+    {
+      "path": "data/snapshots/portfolio_http_v1/d92e50c863a8fa250ece9e5c8abea346c10c8eb1d8e0e21767271c9387a84870.json",
+      "bytes": 2031760,
+      "sha256": "4efb60448f8e629e604fdc12ce0d6056b29363f406e79f20c4b6dd13596a4ec8"
+    },
+    {
+      "path": "data/snapshots/portfolio_http_v1/df9f1e8281c2d3db71e69f04d0a89a5e6d014c707e0d40a54f3db8bf8df03f18.json",
+      "bytes": 14876,
+      "sha256": "41a56bfd58dea605bbbc60948ce82bab749982143277fba9ed4d883cbd0e9a46"
+    },
+    {
+      "path": "data/snapshots/portfolio_http_v1/e1a4c6519f978e657cee41a46897384259fd989413d55b9b6b8a65dd0f2f4f2a.json",
+      "bytes": 7872153,
+      "sha256": "55848ede8050a51bbd7c3a3b78d27de0c4eb4db7e1ca267e892f900eaa179d26"
+    },
+    {
+      "path": "data/snapshots/portfolio_http_v1/e2dc594e140281a3dff0eb5f76cbfb77f42b8af8d2404779938f2f31785f035c.json",
+      "bytes": 5159155,
+      "sha256": "540e1b7f36a465863c822569bcd4b2abbe1a1d2d38d5cf7405709024d6d0af6e"
+    },
+    {
+      "path": "data/snapshots/portfolio_http_v1/e4ca0407f18c316ab96aa7ccc61a16fe39383a8601f129d52f575f19d158565b.json",
+      "bytes": 5398,
+      "sha256": "2c0e24f45ac8d1f777f2bb9ffc138cd44234b577f66738ac91906805820d88c1"
+    },
+    {
+      "path": "data/snapshots/portfolio_http_v1/e8023a0a5150af7fcef677b72ae83f46e156965d2577b1a0e63a625452a1c369.json",
+      "bytes": 12712,
+      "sha256": "0f13782ba925d1909999863a2d99b976c978478ea01712cbfb10f11152e9800f"
+    },
+    {
+      "path": "data/snapshots/portfolio_http_v1/e8ade03c62b0bae36522c3396f7157027c1385663ae5dc58c1338fb0f511792a.json",
+      "bytes": 432,
+      "sha256": "0d4b380aac0a1578fc76734201396b02a3bd7692f84d256864285b4c20387b85"
+    },
+    {
+      "path": "outputs/publication/20261011T170100Z_a475c3c2/composite_coverage_reason.tif",
+      "bytes": 946693,
+      "sha256": "ad31eda35f5aad292605ede54f80f8a8f7313e369fae6be8c78d48a1a9967231"
+    },
+    {
+      "path": "outputs/publication/20261011T170100Z_a475c3c2/dashboard/Utah_WUI_Exposure_Composite_Fire_Hazard_Dashboard.html",
+      "bytes": 23105922,
+      "sha256": "4b2816e647affe804c8746a186b786fe6e5011a0ff6e33dedf85122eaeb4b154"
+    },
+    {
+      "path": "outputs/publication/20261011T170100Z_a475c3c2/rasters/composite_fire_hazard_class.tif",
+      "bytes": 6837507,
+      "sha256": "afae022c9387866754af1f7146914922fbe04cc47bdfa53fb4fa250b060b75d6"
+    },
+    {
+      "path": "outputs/publication/20261011T170100Z_a475c3c2/rasters/composite_fire_hazard_index_1_10.tif",
+      "bytes": 42309225,
+      "sha256": "4a86602096ca10b0c5b5eda0ef1ff2067d3596e743a83f53bb0e2ff65065d1ec"
+    },
+    {
+      "path": "outputs/publication/20261011T170100Z_a475c3c2/rasters/composite_fire_hazard_normalized.tif",
+      "bytes": 43682559,
+      "sha256": "9a38f4f0561ca72b30615662757e438fcab6f16f6a40e2036b55189109a85bc8"
+    },
+    {
+      "path": "data/processed/utah_three_county_2020_census_block_groups.gpkg",
+      "bytes": 5103616,
+      "sha256": "86fd825cb0e36a9dc9cae26501a7e35954ddcf6c9b183245c1f31e91e5811ee5"
+    },
+    {
+      "path": "data/processed/utah_three_county_acs5_2024_block_groups_processed.csv",
+      "bytes": 66926,
+      "sha256": "fa6e6b1d895e57ac5974f2f9335b2b0fc19524c07d147c52c15b1338e480a34b"
+    }
+  ],
+  "http_activity": [
+    {
+      "endpoint": "https://services1.arcgis.com/99lidPhWCzftIe9K/ArcGIS/rest/services/UtahCountyBoundaries/FeatureServer/0/query",
+      "action": "snapshot",
+      "key": "13d0b319ba7082f5d258a980de3e91e28a0e27ae8cf822e848e38212719395e9"
+    },
+    {
+      "endpoint": "https://services.arcgis.com/ZzrwjTRez6FJiOq4/arcgis/rest/services/Utah_High_Risk_WUI_Properties/FeatureServer/1/query",
+      "action": "snapshot",
+      "key": "242fce5dbcf5a32dae864c2d7f212976e0d3b9dde3083605f644ae236b6a332d"
+    },
+    {
+      "endpoint": "https://services.arcgis.com/ZzrwjTRez6FJiOq4/arcgis/rest/services/Utah_High_Risk_WUI_Properties/FeatureServer/1/query",
+      "action": "snapshot",
+      "key": "e1a4c6519f978e657cee41a46897384259fd989413d55b9b6b8a65dd0f2f4f2a"
+    },
+    {
+      "endpoint": "https://services.arcgis.com/ZzrwjTRez6FJiOq4/arcgis/rest/services/Utah_High_Risk_WUI_Properties/FeatureServer/1/query",
+      "action": "snapshot",
+      "key": "96fc077991c5c9a6241fec42d022926810c21540a34005e6d1ad1096acc12e3e"
+    },
+    {
+      "endpoint": "https://services1.arcgis.com/99lidPhWCzftIe9K/ArcGIS/rest/services/LicensedHealthCareFacilities/FeatureServer/0",
+      "action": "snapshot",
+      "key": "5312309554ba11b06bdea4bf3521109ec463f563c4defdd09905b0534ee75028"
+    },
+    {
+      "endpoint": "https://services1.arcgis.com/99lidPhWCzftIe9K/ArcGIS/rest/services/FireStations/FeatureServer/0",
+      "action": "snapshot",
+      "key": "613a95d20944865e043d6a3e23b126c0aee7aa4331fadbd22a3495bf923d061b"
+    },
+    {
+      "endpoint": "https://services1.arcgis.com/99lidPhWCzftIe9K/ArcGIS/rest/services/society_law_enforcement_locations/FeatureServer/0",
+      "action": "snapshot",
+      "key": "e8023a0a5150af7fcef677b72ae83f46e156965d2577b1a0e63a625452a1c369"
+    },
+    {
+      "endpoint": "https://services1.arcgis.com/99lidPhWCzftIe9K/ArcGIS/rest/services/Schools_PreKto12/FeatureServer/0",
+      "action": "snapshot",
+      "key": "acf24cfe72d663d1bed30b300c60b4de7d64be4d744c7504e6fe4875b03f51f1"
+    },
+    {
+      "endpoint": "https://gis.fema.gov/arcgis/rest/services/NSS/FEMA_NSS/FeatureServer/5",
+      "action": "snapshot",
+      "key": "8f6fd7217058d1fbc37a925721adbf006752cf95cdd139ea8e2f2bea9e94cb5a"
+    },
+    {
+      "endpoint": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/hls2-l30",
+      "action": "snapshot",
+      "key": "1a84b4358c53ee54d18376637792f1cf18a25e1be2cc3659f69bb6d69da521e0"
+    },
+    {
+      "endpoint": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/hls2-s30",
+      "action": "snapshot",
+      "key": "62a68d5ac8bb49ae3b792eb653aa36cd446fecf19dd8658567a34958badf67fd"
+    },
+    {
+      "endpoint": "https://tnmaccess.nationalmap.gov/api/v1/products",
+      "action": "snapshot",
+      "inventory": "data/snapshots/publication/tnm_catalog.json"
+    }
+  ],
+  "packaging_note": "Selected-input inventory only. Preserve the complete data directory, including HLS assets, STAC metadata and DEM tiles, for full rebuilding."
+}

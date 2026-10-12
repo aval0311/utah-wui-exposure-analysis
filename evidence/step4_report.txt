@@ -1,0 +1,177 @@
+WUI PHASE 12 — STEP 4 MATCHED PERFORMANCE BENCHMARK
+
+COMPLETE. One excluded warm-up and five measured fresh-process repetitions
+passed for each of four methods: 24 runs total, 20 retained measurements.
+All 96 full-grid output comparisons passed.
+All valid output values matched the baseline bitwise.
+No scientific algorithm or acceptance tolerance was changed.
+
+RESULT
+Fastest tested method: Dask: 4 workers, 2,048 x 2,048.
+Median computation-through-export runtime: 17.673 seconds.
+Matched baseline median: 38.711 seconds.
+Ratio of medians: 2.190x speedup; 54.3% lower runtime.
+Including measured cluster startup and teardown: 1.895x.
+The fastest configuration used 1.86x the baseline's median peak total-process RSS. The measured gain is runtime, not lower total-process memory.
+
+PRIMARY RESULTS
+Method                             Median s    Range s        IQR s   Speedup   Median peak GiB   Max peak GiB
+Rasterio/NumPy baseline              38.711  38.111-39.015   0.295    1.000x             2.960          2.961
+Dask: 1 worker, 1,024 x 1,024        65.282  64.008-66.245   0.920    0.593x             2.268          2.273
+Dask: 4 workers, 1,024 x 1,024       22.559  22.502-22.688   0.044    1.716x             5.252          5.300
+Dask: 4 workers, 2,048 x 2,048       17.673  17.579-18.379   0.104    2.190x             5.510          5.735
+
+Peak RSS is sampled for the complete process tree during the primary interval,
+including the client/scheduler, all worker and nanny processes, and any helper
+processes. It is not a per-worker value or a configured memory limit. Median
+peak means the median of five per-run peaks; maximum peak is the largest of
+those five peaks. Shared pages can be double-counted in summed RSS.
+
+WORKER SCALING
+For fixed 1,024 x 1,024 chunks, increasing Dask from one to four workers gave
+2.894x observed speedup and 72.3% scaling efficiency
+(speedup divided by four). This compares the same Dask implementation and
+chunk shape; it is distinct from the Rasterio-to-Dask method speedups above.
+
+CLUSTER OVERHEAD (MEDIANS)
+Method                             Startup s   Teardown s   Primary + cluster s   Speedup with cluster
+Rasterio/NumPy baseline                0.000        0.000                38.711                 1.000x
+Dask: 1 worker, 1,024 x 1,024          1.379        0.375                67.143                 0.577x
+Dask: 4 workers, 1,024 x 1,024         2.396        0.428                25.363                 1.526x
+Dask: 4 workers, 2,048 x 2,048         2.314        0.515                20.427                 1.895x
+
+Primary + cluster is calculated for each run before taking its median. Startup
+includes worker creation and observer registration. Teardown includes observer
+collection and shutdown. Baseline has no cluster; its overhead values are zero.
+
+ALL MEASURED OBSERVATIONS, IN EXECUTION ORDER
+Run   Method                             Primary s   Peak RSS GiB   Managed GiB   Spill write MiB
+  1   Rasterio/NumPy baseline               39.015          2.960           n/a               n/a
+  1   Dask: 1 worker, 1,024 x 1,024         65.820          2.272         0.048             0.000
+  1   Dask: 4 workers, 2,048 x 2,048        18.379          5.510         0.855             0.000
+  1   Dask: 4 workers, 1,024 x 1,024        22.688          5.300         0.180             0.000
+  2   Dask: 1 worker, 1,024 x 1,024         66.245          2.268         0.048             0.000
+  2   Dask: 4 workers, 1,024 x 1,024        22.559          5.252         0.171             0.000
+  2   Rasterio/NumPy baseline               38.111          2.960           n/a               n/a
+  2   Dask: 4 workers, 2,048 x 2,048        17.714          5.644         0.816             0.000
+  3   Dask: 4 workers, 1,024 x 1,024        22.556          5.194         0.194             0.000
+  3   Dask: 4 workers, 2,048 x 2,048        17.610          5.339         0.773             0.000
+  3   Dask: 1 worker, 1,024 x 1,024         65.282          2.261         0.048             0.000
+  3   Rasterio/NumPy baseline               38.711          2.960           n/a               n/a
+  4   Dask: 4 workers, 2,048 x 2,048        17.579          5.344         0.727             0.000
+  4   Rasterio/NumPy baseline               38.494          2.961           n/a               n/a
+  4   Dask: 4 workers, 1,024 x 1,024        22.502          5.233         0.177             0.000
+  4   Dask: 1 worker, 1,024 x 1,024         64.008          2.259         0.048             0.000
+  5   Dask: 4 workers, 1,024 x 1,024        22.600          5.262         0.167             0.000
+  5   Rasterio/NumPy baseline               38.789          2.961           n/a               n/a
+  5   Dask: 4 workers, 2,048 x 2,048        17.673          5.735         0.965             0.000
+  5   Dask: 1 worker, 1,024 x 1,024         64.900          2.273         0.048             0.000
+
+DASK MEMORY AND SPILLING
+Worker-managed data excludes native-library allocations and other unmanaged
+memory; it is not interchangeable with process RSS. Managed/spilled peaks are
+estimated from asynchronous 250 ms worker observations, carrying each worker's
+latest sample forward before summing. Complete per-worker traces are retained.
+The largest observed worker-metric sampling gap was 1.887 seconds;
+busy event loops can delay callbacks, so short managed-memory peaks may be missed.
+Cumulative measured spill writes: 0 bytes.
+Cumulative measured spill reads: 0 bytes.
+Runs with an observed paused worker: none.
+Spill counters cover the cluster lifetime, including between the two compute
+stages; actual spill reads/writes persist in counters even after data is removed.
+A separate temporary-cluster test forced spill and unspill and verified that
+the instrumentation records both. Those synthetic events are excluded here.
+
+PROCESS I/O AND SEPARATE WORK (MEDIANS)
+Method                             Process read GiB   Process write GiB   Final QA s   Whole process s
+Rasterio/NumPy baseline                       0.270               0.086        7.039            74.255
+Dask: 1 worker, 1,024 x 1,024                 0.313               0.096        6.925           102.857
+Dask: 4 workers, 1,024 x 1,024                0.406               0.096        6.961            61.085
+Dask: 4 workers, 2,048 x 2,048                0.396               0.095        6.918            56.449
+
+Windows process I/O counters include cached I/O and do not measure physical
+SSD throughput. Whole-process time includes imports, setup, hashing, input
+validation, computation, final QA, reference comparison, and shutdown. Final QA
+is the original final validation and metadata work, outside primary timing.
+
+EXPERIMENTAL DESIGN
+The methods ran in interleaved rounds. Each of the first four measured rounds
+contained every method once, with each method occupying every position once
+across those rounds. A fifth order was declared before execution. Exact order,
+warm-ups, timestamps, all individual observations, and within-round speedup
+ratios are retained in benchmark_summary.json. No run was excluded because
+of its runtime. Quartiles use NumPy's linear interpolation convention.
+
+The common primary interval covers input reads, graph construction where
+applicable, coverage classification/counts, weighted normalized hazard, all
+four GeoTIFF exports, closed/promoted files, and rereading the saved float32
+normalized raster for index/classes. It includes actual computation. Setup,
+cluster lifecycle, final validation, and independent comparisons are separate.
+Files are closed at application level; forced physical-device fsync is absent.
+
+Both methods use the frozen original rasters, mask, arithmetic, output grid,
+NoData, class boundaries, DEFLATE compression, 256 x 256 TIFF tiles, and saved
+float32 stage boundary. Baseline source is compiled from the pinned notebook;
+Dask executes the unchanged 12-cell checkpoint source. Only declared settings,
+output paths, suppressed interactive displays, and telemetry are supplied by
+the runner. The Dask observer runs periodic callbacks without changing tasks;
+its overhead is included in measurements. It buffers data in RAM and exports
+it after primary timing.
+
+CACHE, STORAGE, AND ENVIRONMENT
+These are warm-cache workflow measurements: checksums and original component
+validation read the input rasters before every timed calculation. A fresh
+process does not flush OS caches. Inputs and output rasters are on the C: SATA
+SSD. The frozen mask is on D: SATA HDD. Both methods retain the same original
+mask for validation; Dask additionally reads its identical disk copy lazily
+inside the primary interval. This preserves the previously declared comparison.
+
+CPU and RAM: 8 physical / 16 logical CPUs;
+31.932 GiB addressable RAM.
+OS: Windows-11-10.0.26300-SP0
+Python: 3.14.7 | packaged by conda-forge | (main, Sep  2 2026, 21:12:42) [MSC v.1944 64 bit (AMD64)]
+Scientific package versions: {"dask": "2026.8.0", "distributed": "2026.8.0", "geopandas": "1.1.4", "numpy": "2.4.6", "pandas": "3.0.6", "psutil": "7.2.2", "pyproj": "3.8.0", "rasterio": "1.5.1", "rioxarray": "0.23.0", "xarray": "2026.9.0"}
+GDAL: 3.13.3; PROJ: 9.8.1.
+Package versions, native-resource paths, thread environment settings, and CPU
+affinity matched across all runs. Dask uses one thread per worker and a 4 GiB
+limit per worker in all tested configurations. Limits are not memory usage.
+
+RSS was sampled at a requested 100 ms interval. Largest observed primary
+sampling gap: 0.163 seconds. Brief peaks may be missed.
+Minimum sampled system-available RAM during measured intervals: 11.366 GiB.
+The user was asked to pause streaming and heavy applications; background
+applications were not terminated or assumed absent. Host CPU load and available
+RAM were sampled. These are controlled software conditions on a shared desktop,
+not a dedicated laboratory host. The results do not establish a universal optimum.
+
+CORRECTNESS AND PROVENANCE
+All 24 runs verified frozen inputs and reference files before and after the
+calculation and compared four complete output grids to the original baseline.
+Values, masks, excluded values, geospatial metadata, band descriptions, tags,
+compression, predictor, and tile sizes passed the unchanged Step 1 criteria.
+Steps 2A and 3 remain separate historical evidence; their runtimes were not
+pooled into this matched comparison. Full upstream/downstream execution remains
+outside scope. The documented original-mask provenance and model-description
+discrepancies remain unchanged.
+
+Baseline notebook SHA256: afceab013c0d7ddaecc4698c1c0f937a9a33026112a3b027c9b8a0d9c4901fba
+HPC core SHA256: af01ea4f0fc95d9d599a9b463d51012ac4edb4708bb06332b158bcdde60f6d13
+Input manifest SHA256: 1e3aaa19cc33b52414cfd51dfb23431fa442e9147c13ca0db36a3d9a09e47153
+Per-run source identities, original-cell extracts, logs, metrics, all outputs,
+and complete comparison JSON are retained in:
+<HISTORICAL_WORKSPACE>\benchmarks\phase12\matched_step4_20261011T005409Z_563a721f
+
+PUBLICATION COPY
+This report describes the historical benchmark. Absolute paths and obsolete
+course-only launch commands have been removed from this portable copy.
+The unchanged source report remains in the retained authoring workspace.
+Individual run results and full output comparisons accompany this report.
+
+For current-release scientific checks, use scripts/verify_hpc.py.
+Current full-pipeline output equivalence is recorded separately; those
+verification timings are not pooled into the historical benchmark.
+
+DOCUMENTATION
+Dask worker memory semantics: https://distributed.dask.org/en/stable/worker-memory.html
+Dask plugin API: https://distributed.dask.org/en/stable/plugins.html
+Installed distributed/spill.py supplies the pinned spill counter implementation.

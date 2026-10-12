@@ -1,0 +1,644 @@
+{
+  "status": "passed",
+  "stages": {
+    "checkpoint_setup": {
+      "start_ns": 13543289910500,
+      "end_ns": 13544015594500,
+      "seconds": 0.725684
+    },
+    "input_validation_cell310": {
+      "start_ns": 13544015601600,
+      "end_ns": 13554713774000,
+      "seconds": 10.6981724
+    },
+    "output_setup_cell312": {
+      "start_ns": 13554713780500,
+      "end_ns": 13554718461700,
+      "seconds": 0.0046812
+    },
+    "cluster_startup": {
+      "start_ns": 13554836115500,
+      "end_ns": 13557032419800,
+      "seconds": 2.1963043
+    },
+    "primary_compute_export": {
+      "start_ns": 13557033258800,
+      "end_ns": 13579592082500,
+      "seconds": 22.5588237
+    },
+    "composite_and_coverage": {
+      "start_ns": 13557033258800,
+      "end_ns": 13572087467500,
+      "seconds": 15.0542087
+    },
+    "index_and_class": {
+      "start_ns": 13572087467500,
+      "end_ns": 13579592082500,
+      "seconds": 7.504615
+    },
+    "cluster_teardown": {
+      "start_ns": 13579592086100,
+      "end_ns": 13580143275800,
+      "seconds": 0.5511897
+    },
+    "final_validation_cell318": {
+      "start_ns": 13580143804500,
+      "end_ns": 13586891271100,
+      "seconds": 6.7474666
+    },
+    "final_metadata_cell320": {
+      "start_ns": 13586891280900,
+      "end_ns": 13586982148200,
+      "seconds": 0.0908673
+    },
+    "independent_output_comparison_and_postflight": {
+      "start_ns": 13586982158500,
+      "end_ns": 13599181384800,
+      "seconds": 12.1992263
+    }
+  },
+  "started_utc": "2026-10-11T01:05:46.087798+00:00",
+  "comparison_to_saved_baseline": {
+    "normalized_hazard": {
+      "mask_mismatches": 0,
+      "invalid_value_mismatches": 0,
+      "valid_pixels": 12402904,
+      "numeric_differing_pixels": 0,
+      "bitwise_differing_valid_pixels": 0,
+      "pixels_exceeding_tolerance": 0,
+      "max_absolute_difference": 0.0,
+      "actual_minimum": 0.06507927179336548,
+      "actual_maximum": 0.7689153552055359,
+      "reference_minimum": 0.06507927179336548,
+      "reference_maximum": 0.7689153552055359,
+      "metadata_checks": {
+        "crs": true,
+        "transform": true,
+        "shape": true,
+        "bounds": true,
+        "dtype": true,
+        "nodata": true,
+        "band_count": true,
+        "descriptions": true,
+        "tags": true,
+        "compression": true,
+        "block_shapes": true,
+        "predictor": true
+      },
+      "profile": {
+        "dtype": "float32",
+        "nodata": -9999.0,
+        "block_shape": [
+          256,
+          256
+        ],
+        "compression": "DEFLATE",
+        "predictor": "3"
+      },
+      "mean_absolute_difference": 0.0,
+      "rmse": 0.0,
+      "actual_mean": 0.41071195134710015,
+      "reference_mean": 0.41071195134710015,
+      "passed": true,
+      "atol": 1e-06,
+      "rtol": 0.0,
+      "sha256": "280a11fe0eeb19fc0df161e640c42408c05f2296b871572b386b2b2f9851b25d",
+      "reference_sha256": "f9e0cc983cf27d9063771f3ec5b48cf4eddf1e8d81700caa831eab798be3ba8d",
+      "file_bytes_identical": false,
+      "path": "<HISTORICAL_WORKSPACE>\\benchmarks\\phase12\\matched_step4_20261011T005409Z_563a721f\\run_02_dask_1024_w4\\computation\\dask_step2b_20261011T010547Z_c1963624\\outputs\\composite_fire_hazard_normalized.tif",
+      "reference_path": "<HISTORICAL_WORKSPACE>\\data\\raw\\fire_hazard\\fuels\\fuel_hazard_component\\composite_fire_hazard\\composite_fire_hazard_normalized.tif"
+    },
+    "continuous_index_1_10": {
+      "mask_mismatches": 0,
+      "invalid_value_mismatches": 0,
+      "valid_pixels": 12402904,
+      "numeric_differing_pixels": 0,
+      "bitwise_differing_valid_pixels": 0,
+      "pixels_exceeding_tolerance": 0,
+      "max_absolute_difference": 0.0,
+      "actual_minimum": 1.5857133865356445,
+      "actual_maximum": 7.920238018035889,
+      "reference_minimum": 1.5857133865356445,
+      "reference_maximum": 7.920238018035889,
+      "metadata_checks": {
+        "crs": true,
+        "transform": true,
+        "shape": true,
+        "bounds": true,
+        "dtype": true,
+        "nodata": true,
+        "band_count": true,
+        "descriptions": true,
+        "tags": true,
+        "compression": true,
+        "block_shapes": true,
+        "predictor": true
+      },
+      "profile": {
+        "dtype": "float32",
+        "nodata": -9999.0,
+        "block_shape": [
+          256,
+          256
+        ],
+        "compression": "DEFLATE",
+        "predictor": "3"
+      },
+      "mean_absolute_difference": 0.0,
+      "rmse": 0.0,
+      "actual_mean": 4.696407562093874,
+      "reference_mean": 4.696407562093874,
+      "passed": true,
+      "atol": 1e-05,
+      "rtol": 0.0,
+      "sha256": "f13f6cf98f8d1a8725e0fff6c0e9337867745777a33e2d80adfe0a140cea3515",
+      "reference_sha256": "9e4ebc9cb4fc93f55958c64a238e395ad7ca4b9b92314eff26e488e874f943cf",
+      "file_bytes_identical": false,
+      "path": "<HISTORICAL_WORKSPACE>\\benchmarks\\phase12\\matched_step4_20261011T005409Z_563a721f\\run_02_dask_1024_w4\\computation\\dask_step2b_20261011T010547Z_c1963624\\outputs\\composite_fire_hazard_index_1_10.tif",
+      "reference_path": "<HISTORICAL_WORKSPACE>\\data\\raw\\fire_hazard\\fuels\\fuel_hazard_component\\composite_fire_hazard\\composite_fire_hazard_index_1_10.tif"
+    },
+    "hazard_class": {
+      "mask_mismatches": 0,
+      "invalid_value_mismatches": 0,
+      "valid_pixels": 12402904,
+      "numeric_differing_pixels": 0,
+      "bitwise_differing_valid_pixels": 0,
+      "pixels_exceeding_tolerance": 0,
+      "max_absolute_difference": 0.0,
+      "actual_minimum": 1.0,
+      "actual_maximum": 4.0,
+      "reference_minimum": 1.0,
+      "reference_maximum": 4.0,
+      "metadata_checks": {
+        "crs": true,
+        "transform": true,
+        "shape": true,
+        "bounds": true,
+        "dtype": true,
+        "nodata": true,
+        "band_count": true,
+        "descriptions": true,
+        "tags": true,
+        "compression": true,
+        "block_shapes": true,
+        "predictor": true
+      },
+      "profile": {
+        "dtype": "float32",
+        "nodata": -9999.0,
+        "block_shape": [
+          256,
+          256
+        ],
+        "compression": "DEFLATE",
+        "predictor": "3"
+      },
+      "mean_absolute_difference": 0.0,
+      "rmse": 0.0,
+      "actual_mean": 2.553929950598666,
+      "reference_mean": 2.553929950598666,
+      "passed": true,
+      "atol": 0.0,
+      "rtol": 0.0,
+      "sha256": "823a556a3922ac4eca4b3fe8be87fb4baa94152df9cf46ee94317f407560e36d",
+      "reference_sha256": "b46722b8fc5621fd2a0518026dab152002b8737b5bb485bf715b93a0865b383c",
+      "file_bytes_identical": false,
+      "path": "<HISTORICAL_WORKSPACE>\\benchmarks\\phase12\\matched_step4_20261011T005409Z_563a721f\\run_02_dask_1024_w4\\computation\\dask_step2b_20261011T010547Z_c1963624\\outputs\\composite_fire_hazard_class.tif",
+      "reference_path": "<HISTORICAL_WORKSPACE>\\data\\raw\\fire_hazard\\fuels\\fuel_hazard_component\\composite_fire_hazard\\composite_fire_hazard_class.tif"
+    },
+    "coverage_reason": {
+      "mask_mismatches": 0,
+      "invalid_value_mismatches": 0,
+      "valid_pixels": 15475232,
+      "numeric_differing_pixels": 0,
+      "bitwise_differing_valid_pixels": 0,
+      "pixels_exceeding_tolerance": 0,
+      "max_absolute_difference": 0.0,
+      "actual_minimum": 1.0,
+      "actual_maximum": 5.0,
+      "reference_minimum": 1.0,
+      "reference_maximum": 5.0,
+      "metadata_checks": {
+        "crs": true,
+        "transform": true,
+        "shape": true,
+        "bounds": true,
+        "dtype": true,
+        "nodata": true,
+        "band_count": true,
+        "descriptions": true,
+        "tags": true,
+        "compression": true,
+        "block_shapes": true,
+        "predictor": true
+      },
+      "profile": {
+        "dtype": "uint8",
+        "nodata": 0.0,
+        "block_shape": [
+          256,
+          256
+        ],
+        "compression": "DEFLATE",
+        "predictor": "1"
+      },
+      "mean_absolute_difference": 0.0,
+      "rmse": 0.0,
+      "actual_mean": 4.262655577635282,
+      "reference_mean": 4.262655577635282,
+      "passed": true,
+      "atol": 0.0,
+      "rtol": 0.0,
+      "sha256": "1e57788b04e83819a599573b2750a6fd88b045fe0a87e1f383c469c848a9c587",
+      "reference_sha256": "738ba3e999e6edb53c57bde588553936052748dd0972f13311e7eda9b7d16c3c",
+      "file_bytes_identical": false,
+      "path": "<HISTORICAL_WORKSPACE>\\benchmarks\\phase12\\matched_step4_20261011T005409Z_563a721f\\run_02_dask_1024_w4\\computation\\dask_step2b_20261011T010547Z_c1963624\\outputs\\composite_coverage_reason.tif",
+      "reference_path": "<HISTORICAL_WORKSPACE>\\outputs\\wui_portfolio_overhaul_v3\\composite_coverage_reason.tif"
+    }
+  },
+  "coverage_counts": [
+    0,
+    2645626,
+    0,
+    401370,
+    25332,
+    12402904
+  ],
+  "environment": {
+    "python": "3.14.7 | packaged by conda-forge | (main, Sep  2 2026, 21:12:42) [MSC v.1944 64 bit (AMD64)]",
+    "executable": "<ENVIRONMENT>\\python.exe",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "packages": {
+      "numpy": "2.4.6",
+      "rasterio": "1.5.1",
+      "pandas": "3.0.6",
+      "psutil": "7.2.2",
+      "geopandas": "1.1.4",
+      "pyproj": "3.8.0",
+      "dask": "2026.8.0",
+      "distributed": "2026.8.0",
+      "xarray": "2026.9.0",
+      "rioxarray": "0.23.0"
+    },
+    "gdal": "3.13.3",
+    "proj": "9.8.1",
+    "gdal_cachemax_bytes": 1714316695,
+    "logical_cpus": 16,
+    "physical_cpus": 8,
+    "ram_bytes": 34286333952,
+    "environment_variables": {
+      "PROJ_DATA": "<ENVIRONMENT>\\Library\\share\\proj",
+      "PROJ_LIB": "<ENVIRONMENT>\\Library\\share\\proj",
+      "GDAL_DATA": "<ENVIRONMENT>\\Library\\share\\gdal",
+      "GDAL_CACHEMAX": null,
+      "GDAL_NUM_THREADS": null,
+      "OMP_NUM_THREADS": null,
+      "OPENBLAS_NUM_THREADS": null,
+      "MKL_NUM_THREADS": null,
+      "NUMEXPR_NUM_THREADS": null,
+      "VECLIB_MAXIMUM_THREADS": null
+    },
+    "cpu_affinity": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ]
+  },
+  "config": {
+    "chunk_shape": [
+      1024,
+      1024
+    ],
+    "n_workers": 4,
+    "threads_per_worker": 1,
+    "processes": true,
+    "memory_limit": "4GiB",
+    "spill_directory": "<HISTORICAL_WORKSPACE>\\benchmarks\\phase12\\matched_step4_20261011T005409Z_563a721f\\run_02_dask_1024_w4\\computation\\dask_step2b_20261011T010547Z_c1963624\\dask-spill"
+  },
+  "original_validation": {
+    "normalized": {
+      "PATH": "<HISTORICAL_WORKSPACE>\\benchmarks\\phase12\\matched_step4_20261011T005409Z_563a721f\\run_02_dask_1024_w4\\computation\\dask_step2b_20261011T010547Z_c1963624\\outputs\\composite_fire_hazard_normalized.tif",
+      "FILE_EXISTS": true,
+      "GRID_VALID": true,
+      "STRUCTURE_VALID": true,
+      "VALID_PIXELS": 12402904,
+      "VALID_OUTSIDE_STUDY_AREA": 0,
+      "MINIMUM": 0.06507927179336548,
+      "MAXIMUM": 0.7689153552055359,
+      "MEAN": 0.41071195134710015,
+      "VALID": true
+    },
+    "index_minimum": 1.5857133865356445,
+    "index_maximum": 7.920238018035889,
+    "observed_classes": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "historical_normalized_validator_flag_for_index_unused": false
+  },
+  "outputs": {
+    "normalized_hazard": "<HISTORICAL_WORKSPACE>\\benchmarks\\phase12\\matched_step4_20261011T005409Z_563a721f\\run_02_dask_1024_w4\\computation\\dask_step2b_20261011T010547Z_c1963624\\outputs\\composite_fire_hazard_normalized.tif",
+    "continuous_index_1_10": "<HISTORICAL_WORKSPACE>\\benchmarks\\phase12\\matched_step4_20261011T005409Z_563a721f\\run_02_dask_1024_w4\\computation\\dask_step2b_20261011T010547Z_c1963624\\outputs\\composite_fire_hazard_index_1_10.tif",
+    "hazard_class": "<HISTORICAL_WORKSPACE>\\benchmarks\\phase12\\matched_step4_20261011T005409Z_563a721f\\run_02_dask_1024_w4\\computation\\dask_step2b_20261011T010547Z_c1963624\\outputs\\composite_fire_hazard_class.tif",
+    "coverage_reason": "<HISTORICAL_WORKSPACE>\\benchmarks\\phase12\\matched_step4_20261011T005409Z_563a721f\\run_02_dask_1024_w4\\computation\\dask_step2b_20261011T010547Z_c1963624\\outputs\\composite_coverage_reason.tif"
+  },
+  "setup_and_validation": {
+    "checksum_preflight_seconds": 0.30503260000114096,
+    "mask_setup_seconds": 0.3392602000003535,
+    "input_validation_seconds": 10.697697599998719,
+    "output_setup_seconds": 0.004422199999680743,
+    "original_final_validation_seconds": 6.747102299999824,
+    "original_metadata_seconds": 0.09023090000118827,
+    "independent_comparison_seconds": 11.8810725000003,
+    "checksum_postflight_seconds": 0.3122144999997545
+  },
+  "workers": {
+    "tcp://127.0.0.1:55521": {
+      "nthreads": 1,
+      "memory_limit": 4294967296
+    },
+    "tcp://127.0.0.1:55526": {
+      "nthreads": 1,
+      "memory_limit": 4294967296
+    },
+    "tcp://127.0.0.1:55531": {
+      "nthreads": 1,
+      "memory_limit": 4294967296
+    },
+    "tcp://127.0.0.1:55537": {
+      "nthreads": 1,
+      "memory_limit": 4294967296
+    }
+  },
+  "dask_metrics": {
+    "worker_count": 4,
+    "workers": [
+      {
+        "pid": 1072,
+        "samples": 84,
+        "maximum_sample_gap_seconds": 1.8078811,
+        "peak_managed_bytes": 68159072,
+        "peak_spilled_disk_bytes": 0,
+        "cumulative_spill_written_bytes": 0,
+        "cumulative_spill_read_bytes": 0,
+        "cumulative_spill_write_count": 0,
+        "observed_paused": false
+      },
+      {
+        "pid": 30276,
+        "samples": 84,
+        "maximum_sample_gap_seconds": 1.8200345,
+        "peak_managed_bytes": 60818368,
+        "peak_spilled_disk_bytes": 0,
+        "cumulative_spill_written_bytes": 0,
+        "cumulative_spill_read_bytes": 0,
+        "cumulative_spill_write_count": 0,
+        "observed_paused": false
+      },
+      {
+        "pid": 2368,
+        "samples": 84,
+        "maximum_sample_gap_seconds": 1.7812605,
+        "peak_managed_bytes": 68158720,
+        "peak_spilled_disk_bytes": 0,
+        "cumulative_spill_written_bytes": 0,
+        "cumulative_spill_read_bytes": 0,
+        "cumulative_spill_write_count": 0,
+        "observed_paused": false
+      },
+      {
+        "pid": 29144,
+        "samples": 85,
+        "maximum_sample_gap_seconds": 1.6505788,
+        "peak_managed_bytes": 73401744,
+        "peak_spilled_disk_bytes": 0,
+        "cumulative_spill_written_bytes": 0,
+        "cumulative_spill_read_bytes": 0,
+        "cumulative_spill_write_count": 0,
+        "observed_paused": false
+      }
+    ],
+    "peak_aggregate_managed_bytes": 183503872,
+    "peak_aggregate_spilled_disk_bytes": 0,
+    "cumulative_spill_written_bytes": 0,
+    "cumulative_spill_read_bytes": 0,
+    "cumulative_spill_write_count": 0,
+    "maximum_sample_gap_seconds": 1.8200345,
+    "observed_paused": false,
+    "scope": "Managed/spill peaks use 250 ms asynchronous worker samples with last observation carried forward. Cumulative spill I/O covers the full cluster lifetime. These are distinct from total process-tree RSS."
+  },
+  "implementation_record": "<HISTORICAL_WORKSPACE>\\benchmarks\\phase12\\matched_step4_20261011T005409Z_563a721f\\run_02_dask_1024_w4\\computation\\dask_step2b_20261011T010547Z_c1963624\\hpc_implementation_result.json",
+  "completed_utc": "2026-10-11T01:06:43.377227+00:00",
+  "method": "dask_1024_w4",
+  "label": "run_02_dask_1024_w4",
+  "repetition": 2,
+  "configuration": {
+    "name": "dask_1024_w4",
+    "engine": "dask",
+    "chunk_shape": [
+      1024,
+      1024
+    ],
+    "n_workers": 4
+  },
+  "provenance": {
+    "code_cells_identical_to_user_notebook": true,
+    "all_original_selected_sources_preserved": true,
+    "core_sha256": "af01ea4f0fc95d9d599a9b463d51012ac4edb4708bb06332b158bcdde60f6d13",
+    "focused_code_sha256": "007585aa12151b3cb465dcda78ad69fb45b949719ef73401c33e2971c7a33854",
+    "spec_sha256": "207b92f26b6096e3563d7ef63ceba94b8464a40653515f6ce63c9636d295aef8",
+    "manifest_sha256": "1e3aaa19cc33b52414cfd51dfb23431fa442e9147c13ca0db36a3d9a09e47153",
+    "baseline_notebook_sha256": "afceab013c0d7ddaecc4698c1c0f937a9a33026112a3b027c9b8a0d9c4901fba"
+  },
+  "benchmark_worker_sha256": "055fd5940661eb035b044834ee3561cfd9b425933e14296d19a4789b43c5a759",
+  "source_postflight_unchanged": true,
+  "memory": {
+    "checkpoint_setup": {
+      "samples": 7,
+      "starting_rss_bytes": 207187968,
+      "starting_sample_age_seconds": 0.0180149,
+      "peak_rss_bytes": 533344256,
+      "peak_private_bytes": 590479360,
+      "peak_above_starting_rss_bytes": 326156288,
+      "median_sample_interval_seconds": 0.10007949999999999,
+      "maximum_sample_interval_seconds": 0.1015903,
+      "maximum_process_count": 1,
+      "minimum_system_available_bytes": 17076367360,
+      "mean_system_cpu_percent": 10.82857142857143,
+      "approximate_process_cpu_seconds": 0.703125,
+      "approximate_process_read_bytes": 348175431,
+      "approximate_process_write_bytes": 180
+    },
+    "input_validation_cell310": {
+      "samples": 107,
+      "starting_rss_bytes": 355708928,
+      "starting_sample_age_seconds": 0.0432733,
+      "peak_rss_bytes": 910016512,
+      "peak_private_bytes": 891326464,
+      "peak_above_starting_rss_bytes": 554307584,
+      "median_sample_interval_seconds": 0.10006425,
+      "maximum_sample_interval_seconds": 0.1038337,
+      "maximum_process_count": 1,
+      "minimum_system_available_bytes": 16725757952,
+      "mean_system_cpu_percent": 11.441121495327103,
+      "approximate_process_cpu_seconds": 10.671875,
+      "approximate_process_read_bytes": 236113595,
+      "approximate_process_write_bytes": 666
+    },
+    "output_setup_cell312": {
+      "samples": 0
+    },
+    "cluster_startup": {
+      "samples": 22,
+      "starting_rss_bytes": 358010880,
+      "starting_sample_age_seconds": 0.064735,
+      "peak_rss_bytes": 688943104,
+      "peak_private_bytes": 575381504,
+      "peak_above_starting_rss_bytes": 330932224,
+      "median_sample_interval_seconds": 0.1003714,
+      "maximum_sample_interval_seconds": 0.1025354,
+      "maximum_process_count": 5,
+      "minimum_system_available_bytes": 17051336704,
+      "mean_system_cpu_percent": 22.60909090909091,
+      "approximate_process_cpu_seconds": 4.46875,
+      "approximate_process_read_bytes": 65933618,
+      "approximate_process_write_bytes": 39280
+    },
+    "primary_compute_export": {
+      "samples": 226,
+      "starting_rss_bytes": 688943104,
+      "starting_sample_age_seconds": 0.0624353,
+      "peak_rss_bytes": 5639659520,
+      "peak_private_bytes": 5460799488,
+      "peak_above_starting_rss_bytes": 4950716416,
+      "median_sample_interval_seconds": 0.1000634,
+      "maximum_sample_interval_seconds": 0.1044826,
+      "maximum_process_count": 5,
+      "minimum_system_available_bytes": 12204343296,
+      "mean_system_cpu_percent": 27.515929203539823,
+      "approximate_process_cpu_seconds": 71.5,
+      "approximate_process_read_bytes": 436544425,
+      "approximate_process_write_bytes": 103457884
+    },
+    "composite_and_coverage": {
+      "samples": 151,
+      "starting_rss_bytes": 688943104,
+      "starting_sample_age_seconds": 0.0624353,
+      "peak_rss_bytes": 5639659520,
+      "peak_private_bytes": 5460799488,
+      "peak_above_starting_rss_bytes": 4950716416,
+      "median_sample_interval_seconds": 0.1000104,
+      "maximum_sample_interval_seconds": 0.1044826,
+      "maximum_process_count": 5,
+      "minimum_system_available_bytes": 12204343296,
+      "mean_system_cpu_percent": 30.93774834437086,
+      "approximate_process_cpu_seconds": 54.71875,
+      "approximate_process_read_bytes": 385936998,
+      "approximate_process_write_bytes": 48359983
+    },
+    "index_and_class": {
+      "samples": 75,
+      "starting_rss_bytes": 1926156288,
+      "starting_sample_age_seconds": 0.0110808,
+      "peak_rss_bytes": 1845145600,
+      "peak_private_bytes": 1691414528,
+      "peak_above_starting_rss_bytes": -81010688,
+      "median_sample_interval_seconds": 0.10012045,
+      "maximum_sample_interval_seconds": 0.1023668,
+      "maximum_process_count": 5,
+      "minimum_system_available_bytes": 16002576384,
+      "mean_system_cpu_percent": 20.626666666666665,
+      "approximate_process_cpu_seconds": 16.78125,
+      "approximate_process_read_bytes": 50607427,
+      "approximate_process_write_bytes": 55097901
+    },
+    "cluster_teardown": {
+      "samples": 5,
+      "starting_rss_bytes": 1381834752,
+      "starting_sample_age_seconds": 0.0194488,
+      "peak_rss_bytes": 1236791296,
+      "peak_private_bytes": 1054949376,
+      "peak_above_starting_rss_bytes": -145043456,
+      "median_sample_interval_seconds": 0.09980230000000001,
+      "maximum_sample_interval_seconds": 0.1009718,
+      "maximum_process_count": 5,
+      "minimum_system_available_bytes": 16611348480,
+      "mean_system_cpu_percent": 27.72,
+      "approximate_process_cpu_seconds": -51.421875,
+      "approximate_process_read_bytes": -350358689,
+      "approximate_process_write_bytes": -71628981
+    },
+    "final_validation_cell318": {
+      "samples": 68,
+      "starting_rss_bytes": 588902400,
+      "starting_sample_age_seconds": 0.0718356,
+      "peak_rss_bytes": 2318262272,
+      "peak_private_bytes": 2381168640,
+      "peak_above_starting_rss_bytes": 1729359872,
+      "median_sample_interval_seconds": 0.0999513,
+      "maximum_sample_interval_seconds": 0.1025183,
+      "maximum_process_count": 1,
+      "minimum_system_available_bytes": 15343484928,
+      "mean_system_cpu_percent": 10.641176470588235,
+      "approximate_process_cpu_seconds": -10.96875,
+      "approximate_process_read_bytes": -17522426,
+      "approximate_process_write_bytes": -23894817
+    },
+    "final_metadata_cell320": {
+      "samples": 1,
+      "starting_rss_bytes": 1972133888,
+      "starting_sample_age_seconds": 0.0202058,
+      "peak_rss_bytes": 1759879168,
+      "peak_private_bytes": 1724317696,
+      "peak_above_starting_rss_bytes": -212254720,
+      "median_sample_interval_seconds": null,
+      "maximum_sample_interval_seconds": null,
+      "maximum_process_count": 1,
+      "minimum_system_available_bytes": 15905112064,
+      "mean_system_cpu_percent": 16.8,
+      "approximate_process_cpu_seconds": 0.109375,
+      "approximate_process_read_bytes": 0,
+      "approximate_process_write_bytes": 4390
+    },
+    "independent_output_comparison_and_postflight": {
+      "samples": 122,
+      "starting_rss_bytes": 1759879168,
+      "starting_sample_age_seconds": 0.0112077,
+      "peak_rss_bytes": 2928197632,
+      "peak_private_bytes": 2933743616,
+      "peak_above_starting_rss_bytes": 1168318464,
+      "median_sample_interval_seconds": 0.1000052,
+      "maximum_sample_interval_seconds": 0.1021529,
+      "maximum_process_count": 1,
+      "minimum_system_available_bytes": 14739816448,
+      "mean_system_cpu_percent": 10.15,
+      "approximate_process_cpu_seconds": 12.140625,
+      "approximate_process_read_bytes": 714359488,
+      "approximate_process_write_bytes": 7055
+    }
+  },
+  "entire_run_peak_rss_bytes": 5639659520,
+  "supervised_process_seconds": 61.16781319999973,
+  "memory_sampling": {
+    "requested_interval_seconds": 0.1,
+    "samples": 601,
+    "access_errors": [],
+    "scope": "Simultaneous sampled RSS of the complete child process tree, including client/scheduler, workers, nannies, and helper processes; excludes supervisor and unrelated applications. Shared pages can be counted more than once. Brief peaks may be missed.",
+    "io_note": "Windows process counters include cached I/O, not physical device throughput."
+  }
+}

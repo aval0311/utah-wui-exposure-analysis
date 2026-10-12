@@ -1,0 +1,47 @@
+{
+  "status": "passed",
+  "release": "wui-publication-v3",
+  "completed_utc": "2026-10-12T18:35:47.397410+00:00",
+  "accepted_run": "20261012T180540Z_eb3fdcb7",
+  "notebook": {
+    "path": "notebooks/utah_wui_exposure_analysis.ipynb",
+    "sha256": "f4f10033db754cf410ebd8502757cc7340507ea02a4c01450e2feeff4a00086f",
+    "code_cells_executed": 158,
+    "recorded_errors": 0,
+    "recorded_python_warnings": 0,
+    "data_mode": "snapshot",
+    "rebuild_derived": false
+  },
+  "execution": {
+    "rebuild_seconds_including_kernel": 2838.8342126999923,
+    "default_snapshot_seconds_including_kernel": 1452.1711838000047,
+    "accepted_manifest_timer_seconds": 1447.35,
+    "timer_scope": "configuration start through input checks, complete pipeline, and final snapshot inventory; excludes kernel startup and final manifest write"
+  },
+  "snapshot": {
+    "filename": "wui-snapshot-publication-v3.zip",
+    "bytes": 27335277631,
+    "sha256": "fe057aaced058708048c7ba74b02f114eae66641a0e070702fe82ba275651cfc",
+    "files": 1190,
+    "unpacked_data_bytes": 27414011715
+  },
+  "verified_input_files": 1067,
+  "immutable_source_files_unchanged": 526,
+  "checks": {
+    "focused_regressions": "passed",
+    "packaged_snapshot_integrity_and_recipe": "passed",
+    "rebuild_vs_relocated_snapshot": "passed; four full-grid rasters and six tables agree exactly",
+    "current_serial_vs_dask": "passed; four full-grid outputs, zero differing valid pixels",
+    "notebook_static_publication_checks": "passed",
+    "figures": "visually reviewed after the final execution",
+    "desktop_mobile_dashboard": "passed within the documented Chromium viewport scope",
+    "fullscreen": "entry and exit verified through the native Fullscreen API with both popup types open",
+    "protected_locations": "unchanged"
+  },
+  "historical_evidence": "The matched HPC benchmark and previous-release reports retain their original scope; they are not newly measured v3 performance claims.",
+  "publication_status": "Packaged for review and manual repository replacement. Public GitHub Pages deployment and public snapshot hosting have not been performed.",
+  "limitations": [
+    "Browser checks used local HTTP in Chromium with responsive viewports, not physical mobile devices or every browser engine.",
+    "Existing scientific and data limitations are documented in the notebook and README. Refresh mode was not used to reproduce this release."
+  ]
+}

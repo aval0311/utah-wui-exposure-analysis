@@ -1,0 +1,26 @@
+{
+  "Baseline": {
+    "fuel_hazard": 0.3,
+    "fuel_dryness": 0.2,
+    "slope_hazard": 0.15,
+    "aspect_hazard": 0.1,
+    "historical_fire_likelihood": 0.15,
+    "human_ignition_potential": 0.1
+  },
+  "Equal weights": {
+    "fuel_hazard": 0.16666666666666666,
+    "fuel_dryness": 0.16666666666666666,
+    "slope_hazard": 0.16666666666666666,
+    "aspect_hazard": 0.16666666666666666,
+    "historical_fire_likelihood": 0.16666666666666666,
+    "human_ignition_potential": 0.16666666666666666
+  },
+  "Half history influence, renormalized": {
+    "fuel_hazard": 0.32432432432432434,
+    "fuel_dryness": 0.21621621621621626,
+    "slope_hazard": 0.16216216216216217,
+    "aspect_hazard": 0.10810810810810813,
+    "historical_fire_likelihood": 0.08108108108108109,
+    "human_ignition_potential": 0.10810810810810813
+  }
+}

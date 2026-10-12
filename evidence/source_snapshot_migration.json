@@ -1,0 +1,18 @@
+{
+  "verified_original_inputs": 1065,
+  "complete_pre_rebuild_inventory": 1067,
+  "required_sources": [
+    {
+      "path": "data/processed/utah_three_county_acs5_2024_block_groups_processed.csv",
+      "bytes": 66926,
+      "role": "source",
+      "sha256": "fa6e6b1d895e57ac5974f2f9335b2b0fc19524c07d147c52c15b1338e480a34b"
+    },
+    {
+      "path": "data/raw/fire_hazard/historical_fire/inform_fodr_utah_fire_occurrences_through_2026.geojson",
+      "bytes": 53181592,
+      "role": "source",
+      "sha256": "0cd0d89bdb8aa7de1b85344054f6f7b0a5a64f553c44832edb5165cb29c060eb"
+    }
+  ]
+}

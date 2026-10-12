@@ -1,0 +1,21 @@
+{
+  "event_definition": "recorded wildfire ignition; IncidentTypeCategory=WF",
+  "start_utc_inclusive": "1992-01-01T00:00:00+00:00",
+  "end_utc_exclusive": "2026-09-30T00:00:00+00:00",
+  "spatial_domain": "combined county bounding rectangle; surrounding records retained for smoothing",
+  "source_records": 21220,
+  "source_incident_types": {
+    "WF": 20889,
+    "RX": 331
+  },
+  "excluded_non_wildfire_records": 331,
+  "wildfire_records_with_missing_dates": 0,
+  "wildfire_records_outside_period": 0,
+  "wildfire_records_in_period_with_invalid_geometry": 0,
+  "eligible_records_outside_rectangle": 36,
+  "selected_rectangle_records": 20853,
+  "selected_inside_counties": 4689,
+  "selected_outside_counties": 16164,
+  "first_selected_discovery_utc": "1992-03-05T23:00:00+00:00",
+  "last_selected_discovery_utc": "2026-09-24T17:42:20+00:00"
+}

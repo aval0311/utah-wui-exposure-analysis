@@ -1,0 +1,49 @@
+{
+  "status": "passed within recorded scope",
+  "date_utc": "2026-10-11T17:45:18.828407+00:00",
+  "surface": "Codex in-app Chromium browser; local HTTP dashboard",
+  "viewports": [
+    [
+      1440,
+      1000
+    ],
+    [
+      390,
+      844
+    ],
+    [
+      320,
+      640
+    ],
+    [
+      844,
+      390
+    ]
+  ],
+  "checks_passed": [
+    "No horizontal document overflow at all four viewport sizes",
+    "Desktop: all 11 overlay checkboxes toggle and restore",
+    "Basemap radios are mutually exclusive",
+    "Hazard opacity updates the rendered overlay; disabling hazard disables its slider",
+    "Legend follows enabled layers and shows its empty state when all overlays are off",
+    "Layer information expands and collapses",
+    "Reset view, cluster zoom, county popup and facility popup work",
+    "Phone drawer fits viewport; background map is inert while drawer is open",
+    "Escape closes drawer and returns focus to its toggle",
+    "Landscape drawer scrolls to lower controls; shelter control and help work",
+    "No browser console errors or warnings observed"
+  ],
+  "limitations": [
+    "Responsive viewport testing, not a physical phone",
+    "Native fullscreen did not activate in the embedded browser and remains unverified",
+    "Hosted GitHub Pages, slow networks, touch gestures and a comprehensive accessibility audit were not tested"
+  ],
+  "screenshots": [
+    "desktop.jpg",
+    "facility_popup.jpg",
+    "mobile.jpg",
+    "mobile_drawer.jpg",
+    "narrow_mobile.jpg",
+    "landscape.jpg"
+  ]
+}

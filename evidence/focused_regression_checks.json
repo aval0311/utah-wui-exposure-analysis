@@ -1,0 +1,36 @@
+{
+  "status": "passed",
+  "recorded_utc": "2026-10-12T18:11:25.551541+00:00",
+  "environment": "wui-professional-314 on Windows; real local worker processes used for Dask tests.",
+  "tests": [
+    {
+      "script": "scripts/verify_analytical_corrections.py",
+      "status": "passed",
+      "exit_code": 0,
+      "scope": "Wildfire event/date/domain selection and reconciliation, duplicate IDs, observation-support counts, and disjoint index-availability counts.",
+      "script_sha256": "77c871dc635f4c5e36472283750c8603896d1f5651c6cb64f23914e3ce914bfa"
+    },
+    {
+      "script": "scripts/verify_snapshot_policy.py",
+      "status": "passed",
+      "exit_code": 0,
+      "scope": "Missing or changed source inventory, including ACS CSV and InFORM GeoJSON; rebuild behavior, recipe changes, distinct run directories, and snapshot network guard.",
+      "script_sha256": "d3f579bc992d0e9f8966a7a4efac7fa431c354bb1ac1e0c2b37267035e1e63f8"
+    },
+    {
+      "script": "scripts/verify_temporal_median.py",
+      "status": "passed",
+      "exit_code": 0,
+      "scope": "Supported temporal medians under RuntimeWarning-as-error, including all-NaN cells.",
+      "script_sha256": "8d870d33b5bda3eb305a976807e20ad1c0582a15ed3152d76b9bf96d9c2f4e03"
+    },
+    {
+      "script": "scripts/verify_hpc.py",
+      "status": "passed",
+      "exit_code": 0,
+      "scope": "Independent serial comparison on uneven chunks with two Dask worker processes; mask precedence, output metadata, exact values, and overwrite protection.",
+      "script_sha256": "bc33f7ff550ae58948e75143efa2e8b0a65a09bd57e758a690a79742c2e03787"
+    }
+  ],
+  "note": "These focused tests were executed during this revision. Later edits affected presentation/export text and figure drawing order; analytical helpers tested here were unchanged."
+}

@@ -1,0 +1,60 @@
+{
+  "status": "passed",
+  "accepted_run": "20261012T180540Z_eb3fdcb7",
+  "candidate_run": "20261012T170452Z_03981eaa",
+  "candidate_html_sha256": "5d632f261c7540d279ab3249586ae4058c0e088f231198d599731a4fa0b0d52c",
+  "accepted_html_sha256": "e1afada1fe3b5ba1f9591c36abb0da6295486adaf1e79342948d9aa2a3a9e6e6",
+  "comparison": {
+    "equal_after_generated_id_normalization": true,
+    "normalization": "Replace each generated 32-hex Folium identifier suffix with a consistent first-occurrence ordinal; normalize line endings.",
+    "candidate_identifiers": 5493,
+    "accepted_identifiers": 5493,
+    "normalized_sha256": "26d3cf0797dff16d1ebf6e1263eea700367a35bbe865a3c25fc5a4f7bb508057"
+  },
+  "detailed_checks": "measurements.json",
+  "final_smoke": {
+    "accepted_run": "20261012T180540Z_eb3fdcb7",
+    "tested_utc": "2026-10-12T18:33:03.972Z",
+    "desktop": {
+      "hazardImages": 1,
+      "height": 900,
+      "layerInputs": 13,
+      "mapId": "map_d1b7ce120271f28f3680a3a773fb74bb",
+      "overflow": false,
+      "sidebarExpanded": "true",
+      "title": "Utah WUI Exposure Dashboard",
+      "width": 1440
+    },
+    "popup": {
+      "contentHeight": 386,
+      "contentScrollHeight": 386,
+      "contentScrollWidth": 301,
+      "contentWidth": 301,
+      "map": {
+        "bottom": 899.9999771118164,
+        "left": 331.9934387207031,
+        "right": 1440.3225402832031,
+        "top": 75.9954605102539
+      },
+      "pageOverflow": false,
+      "popup": {
+        "bottom": 847.991455078125,
+        "left": 773.0015258789062,
+        "right": 1119.9773254394531,
+        "top": 434.2817687988281
+      },
+      "withinMap": true
+    },
+    "mobile": {
+      "hazardImages": 1,
+      "height": 844,
+      "overflow": false,
+      "sidebarExpanded": "false",
+      "width": 390
+    },
+    "console": [],
+    "passed": true
+  },
+  "scope": "Local HTTP dashboard; desktop and mobile viewport tests, popup bounds/scrolling, and native Fullscreen API entry/exit. Physical mobile devices and public GitHub Pages deployment are outside this test.",
+  "console_warnings_errors": []
+}

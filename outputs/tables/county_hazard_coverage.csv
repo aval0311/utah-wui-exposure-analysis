@@ -1,0 +1,16 @@
+COUNTY,CATEGORY,PIXELS,AREA_KM2,COUNTY_PERCENT
+Washington,Confirmed nonburnable (excluded by policy),517482,465.7338,7.39502345482934
+Washington,Missing or unrecognized FBFM40 class,0,0.0,0.0
+Washington,Burnable: insufficient NDVI or NDMI observations,234946,211.4514,3.3574717200179602
+Washington,Burnable: missing another required component,10563,9.5067,0.15094946829718195
+Washington,Valid modeled burnable land,6234715,5611.2435,89.09655535685552
+Salt Lake,Confirmed nonburnable (excluded by policy),992094,892.8846,42.854458536408366
+Salt Lake,Missing or unrecognized FBFM40 class,0,0.0,0.0
+Salt Lake,Burnable: insufficient NDVI or NDMI observations,49376,44.4384,2.132844009432271
+Salt Lake,Burnable: missing another required component,3362,3.0258,0.14522483716200776
+Salt Lake,Valid modeled burnable land,1270199,1143.1791,54.867472616997354
+Utah,Confirmed nonburnable (excluded by policy),1136050,1022.445,18.434903395459145
+Utah,Missing or unrecognized FBFM40 class,0,0.0,0.0
+Utah,Burnable: insufficient NDVI or NDMI observations,117062,105.3558,1.8995877481442176
+Utah,Burnable: missing another required component,11407,10.2663,0.1851035984613375
+Utah,Valid modeled burnable land,4897976,4408.1784,79.4804052579353

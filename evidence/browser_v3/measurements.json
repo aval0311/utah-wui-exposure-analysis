@@ -1,0 +1,635 @@
+{
+  "stage": "Rebuilt dashboard candidate; final accepted replay linkage pending",
+  "candidate_run": "20261012T170452Z_03981eaa",
+  "tested_utc": "2026-10-12T18:07:22.089Z",
+  "browser": "Codex in-app Chromium browser",
+  "scope": "Local HTTP dashboard; desktop and mobile viewport tests, popup bounds/scrolling, and native Fullscreen API entry/exit. Physical mobile devices and public GitHub Pages deployment are outside this test.",
+  "checks": [
+    {
+      "check": "layer toggle",
+      "id": "hazard",
+      "before": {
+        "checked": true,
+        "images": 1,
+        "paths": 0
+      },
+      "changed": {
+        "checked": false,
+        "images": 0,
+        "paths": 0
+      },
+      "restored": {
+        "checked": true,
+        "images": 1,
+        "paths": 0
+      }
+    },
+    {
+      "check": "layer toggle",
+      "id": "wui",
+      "before": {
+        "checked": true,
+        "images": 1,
+        "paths": 0
+      },
+      "changed": {
+        "checked": false,
+        "images": 1,
+        "paths": 0
+      },
+      "restored": {
+        "checked": true,
+        "images": 1,
+        "paths": 0
+      }
+    },
+    {
+      "check": "layer toggle",
+      "id": "exposure",
+      "before": {
+        "checked": true,
+        "images": 1,
+        "paths": 0
+      },
+      "changed": {
+        "checked": false,
+        "images": 1,
+        "paths": 0
+      },
+      "restored": {
+        "checked": true,
+        "images": 1,
+        "paths": 0
+      }
+    },
+    {
+      "check": "layer toggle",
+      "id": "salt-lake",
+      "before": {
+        "checked": true,
+        "images": 1,
+        "paths": 0
+      },
+      "changed": {
+        "checked": false,
+        "images": 1,
+        "paths": 0
+      },
+      "restored": {
+        "checked": true,
+        "images": 1,
+        "paths": 0
+      }
+    },
+    {
+      "check": "layer toggle",
+      "id": "utah",
+      "before": {
+        "checked": true,
+        "images": 1,
+        "paths": 0
+      },
+      "changed": {
+        "checked": false,
+        "images": 1,
+        "paths": 0
+      },
+      "restored": {
+        "checked": true,
+        "images": 1,
+        "paths": 0
+      }
+    },
+    {
+      "check": "layer toggle",
+      "id": "washington",
+      "before": {
+        "checked": true,
+        "images": 1,
+        "paths": 0
+      },
+      "changed": {
+        "checked": false,
+        "images": 1,
+        "paths": 0
+      },
+      "restored": {
+        "checked": true,
+        "images": 1,
+        "paths": 0
+      }
+    },
+    {
+      "check": "layer toggle",
+      "id": "hospitals",
+      "before": {
+        "checked": false,
+        "images": 1,
+        "paths": 0
+      },
+      "changed": {
+        "checked": true,
+        "images": 1,
+        "paths": 0
+      },
+      "restored": {
+        "checked": false,
+        "images": 1,
+        "paths": 0
+      }
+    },
+    {
+      "check": "layer toggle",
+      "id": "fire",
+      "before": {
+        "checked": false,
+        "images": 1,
+        "paths": 0
+      },
+      "changed": {
+        "checked": true,
+        "images": 1,
+        "paths": 0
+      },
+      "restored": {
+        "checked": false,
+        "images": 1,
+        "paths": 0
+      }
+    },
+    {
+      "check": "layer toggle",
+      "id": "police",
+      "before": {
+        "checked": false,
+        "images": 1,
+        "paths": 0
+      },
+      "changed": {
+        "checked": true,
+        "images": 1,
+        "paths": 0
+      },
+      "restored": {
+        "checked": false,
+        "images": 1,
+        "paths": 0
+      }
+    },
+    {
+      "check": "layer toggle",
+      "id": "schools",
+      "before": {
+        "checked": false,
+        "images": 1,
+        "paths": 0
+      },
+      "changed": {
+        "checked": true,
+        "images": 1,
+        "paths": 0
+      },
+      "restored": {
+        "checked": false,
+        "images": 1,
+        "paths": 0
+      }
+    },
+    {
+      "check": "layer toggle",
+      "id": "shelters",
+      "before": {
+        "checked": false,
+        "images": 1,
+        "paths": 0
+      },
+      "changed": {
+        "checked": true,
+        "images": 1,
+        "paths": 0
+      },
+      "restored": {
+        "checked": false,
+        "images": 1,
+        "paths": 0
+      }
+    },
+    {
+      "check": "imagery basemap",
+      "state": {
+        "imagery": true,
+        "tileSources": [
+          "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer"
+        ],
+        "topographic": false
+      }
+    },
+    {
+      "check": "opacity zero",
+      "state": {
+        "opacity": "0",
+        "value": "0"
+      }
+    },
+    {
+      "check": "opacity full",
+      "state": {
+        "opacity": "1",
+        "value": "100"
+      }
+    },
+    {
+      "check": "contextual legend",
+      "state": {
+        "hazardLegendPresent": false
+      }
+    },
+    {
+      "check": "facility popup desktop 1440",
+      "state": {
+        "contentHeight": 341,
+        "contentScrollHeight": 341,
+        "contentScrollWidth": 311,
+        "contentWidth": 311,
+        "map": {
+          "bottom": 899.9999771118164,
+          "left": 331.9934387207031,
+          "right": 1440.3225402832031,
+          "top": 75.9954605102539
+        },
+        "pageOverflow": false,
+        "popup": {
+          "bottom": 542.9913940429688,
+          "left": 673.9990234375,
+          "right": 1030.96728515625,
+          "top": 173.68698120117188
+        },
+        "withinMap": true
+      }
+    },
+    {
+      "check": "facility popup desktop 1366",
+      "state": {
+        "contentHeight": 341,
+        "contentScrollHeight": 341,
+        "contentScrollWidth": 311,
+        "contentWidth": 311,
+        "map": {
+          "bottom": 768.5483779907227,
+          "left": 331.9934387207031,
+          "right": 1366.1290588378906,
+          "top": 75.9954605102539
+        },
+        "pageOverflow": false,
+        "popup": {
+          "bottom": 477.99141693115234,
+          "left": 636.9990234375,
+          "right": 993.96728515625,
+          "top": 108.68697357177734
+        },
+        "withinMap": true
+      }
+    },
+    {
+      "check": "facility popup after sidebar collapse",
+      "state": {
+        "contentHeight": 341,
+        "contentScrollHeight": 341,
+        "contentScrollWidth": 311,
+        "contentWidth": 311,
+        "map": {
+          "bottom": 768.5483779907227,
+          "left": 0,
+          "right": 1366.1290283203125,
+          "top": 75.9954605102539
+        },
+        "pageOverflow": false,
+        "popup": {
+          "bottom": 477.99141693115234,
+          "left": 305.00555419921875,
+          "right": 661.9738159179688,
+          "top": 108.68697357177734
+        },
+        "withinMap": true
+      }
+    },
+    {
+      "check": "fullscreen attempt in in-app browser",
+      "state": {
+        "activeElement": "wui-app",
+        "popupVisible": true
+      },
+      "status": "Fullscreen entry confirmed through the :fullscreen DOM selector."
+    },
+    {
+      "check": "facility popup at 390 while fullscreen (DOM bounds only)",
+      "state": {
+        "contentHeight": 372,
+        "contentScrollHeight": 372,
+        "contentScrollWidth": 279,
+        "contentWidth": 279,
+        "map": {
+          "bottom": 844.354866027832,
+          "left": 0,
+          "right": 390.3225708007813,
+          "top": 65.99042510986328
+        },
+        "pageOverflow": false,
+        "popup": {
+          "bottom": 513.9863510131836,
+          "left": 56.008567810058594,
+          "right": 380.98336029052734,
+          "top": 113.5831527709961
+        },
+        "withinMap": true
+      }
+    },
+    {
+      "check": "facility popup in fullscreen",
+      "fullscreen": "wui-app",
+      "state": {
+        "contentHeight": 341,
+        "contentScrollHeight": 341,
+        "contentScrollWidth": 311,
+        "contentWidth": 311,
+        "map": {
+          "bottom": 872.5806655883789,
+          "left": 331.9934387207031,
+          "right": 1549.1935119628906,
+          "top": 75.9954605102539
+        },
+        "pageOverflow": false,
+        "popup": {
+          "bottom": 533.9914245605469,
+          "left": 785.9989624023438,
+          "right": 1142.9671630859375,
+          "top": 164.68698120117188
+        },
+        "withinMap": true
+      }
+    },
+    {
+      "check": "fullscreen exit",
+      "state": {
+        "activeElement": null
+      }
+    },
+    {
+      "check": "facility popup mobile 390 normal view",
+      "state": {
+        "contentHeight": 372,
+        "contentScrollHeight": 372,
+        "contentScrollWidth": 279,
+        "contentWidth": 279,
+        "map": {
+          "bottom": 844.354866027832,
+          "left": 0,
+          "right": 390.3225708007813,
+          "top": 65.99042510986328
+        },
+        "pageOverflow": false,
+        "popup": {
+          "bottom": 513.9863510131836,
+          "left": 56.008567810058594,
+          "right": 380.98336029052734,
+          "top": 113.5831527709961
+        },
+        "withinMap": true
+      }
+    },
+    {
+      "check": "facility popup mobile 360 normal view",
+      "state": {
+        "contentHeight": 389,
+        "contentScrollHeight": 389,
+        "contentScrollWidth": 249,
+        "contentWidth": 249,
+        "map": {
+          "bottom": 640.3225784301758,
+          "left": 0,
+          "right": 360.48388671875,
+          "top": 65.99042510986328
+        },
+        "pageOverflow": false,
+        "popup": {
+          "bottom": 493.98638916015625,
+          "left": 56.00354766845703,
+          "right": 350.97583770751953,
+          "top": 77.5045166015625
+        },
+        "withinMap": true
+      }
+    },
+    {
+      "check": "fresh mobile default",
+      "state": {
+        "drawerExpanded": "false",
+        "height": 640,
+        "overflow": false,
+        "width": 360
+      }
+    },
+    {
+      "check": "mobile drawer open",
+      "state": {
+        "expanded": "true",
+        "overflow": false,
+        "sidebar": {
+          "bottom": 640.3225784301758,
+          "height": 574.3321533203125,
+          "left": 0,
+          "right": 316.4818420410156,
+          "top": 65.99042510986328,
+          "width": 316.4818420410156,
+          "x": 0,
+          "y": 65.99042510986328
+        }
+      }
+    },
+    {
+      "check": "mobile Escape closes drawer",
+      "expanded": "false"
+    },
+    {
+      "check": "block-group popup desktop 1440",
+      "state": {
+        "contentHeight": 386,
+        "contentScrollHeight": 386,
+        "contentScrollWidth": 301,
+        "contentWidth": 301,
+        "map": {
+          "bottom": 899.9999771118164,
+          "left": 331.9934387207031,
+          "right": 1440.3225402832031,
+          "top": 75.9954605102539
+        },
+        "pageOverflow": false,
+        "popup": {
+          "bottom": 847.991455078125,
+          "left": 773.0015258789062,
+          "right": 1119.9773254394531,
+          "top": 434.2817687988281
+        },
+        "withinMap": true
+      }
+    },
+    {
+      "check": "block-group popup desktop 1366",
+      "state": {
+        "contentHeight": 386,
+        "contentScrollHeight": 386,
+        "contentScrollWidth": 301,
+        "contentWidth": 301,
+        "map": {
+          "bottom": 768.5483779907227,
+          "left": 331.9934387207031,
+          "right": 1366.1290588378906,
+          "top": 75.9954605102539
+        },
+        "pageOverflow": false,
+        "popup": {
+          "bottom": 716.991455078125,
+          "left": 736.00146484375,
+          "right": 1082.9772644042969,
+          "top": 303.2817687988281
+        },
+        "withinMap": true
+      }
+    },
+    {
+      "check": "block-group popup in fullscreen",
+      "fullscreen": "wui-app",
+      "state": {
+        "contentHeight": 386,
+        "contentScrollHeight": 386,
+        "contentScrollWidth": 301,
+        "contentWidth": 301,
+        "map": {
+          "bottom": 872.5806655883789,
+          "left": 331.9934387207031,
+          "right": 1549.1935119628906,
+          "top": 75.9954605102539
+        },
+        "pageOverflow": false,
+        "popup": {
+          "bottom": 744.991455078125,
+          "left": 828.0015869140625,
+          "right": 1174.977294921875,
+          "top": 331.2817687988281
+        },
+        "withinMap": true
+      }
+    },
+    {
+      "check": "block-group fullscreen exit",
+      "state": {
+        "contentHeight": 386,
+        "contentScrollHeight": 386,
+        "contentScrollWidth": 301,
+        "contentWidth": 301,
+        "map": {
+          "bottom": 720.1612930297852,
+          "left": 331.9934387207031,
+          "right": 1280.6451721191406,
+          "top": 75.9954605102539
+        },
+        "pageOverflow": false,
+        "popup": {
+          "bottom": 667.991455078125,
+          "left": 694.0015258789062,
+          "right": 1040.9772338867188,
+          "top": 254.28176879882812
+        },
+        "withinMap": true
+      },
+      "fullscreen": null
+    },
+    {
+      "check": "block-group popup mobile 390",
+      "state": {
+        "contentHeight": 401,
+        "contentScrollHeight": 401,
+        "contentScrollWidth": 279,
+        "contentWidth": 279,
+        "map": {
+          "bottom": 844.354866027832,
+          "left": 0,
+          "right": 390.3225708007813,
+          "top": 65.99042510986328
+        },
+        "pageOverflow": false,
+        "popup": {
+          "bottom": 724.9864196777344,
+          "left": 56.008541107177734,
+          "right": 380.9833335876465,
+          "top": 296.3699951171875
+        },
+        "withinMap": true
+      }
+    },
+    {
+      "check": "block-group popup mobile 360",
+      "state": {
+        "contentHeight": 450,
+        "contentScrollHeight": 483,
+        "contentScrollWidth": 234,
+        "contentWidth": 234,
+        "map": {
+          "bottom": 640.3225784301758,
+          "left": 0,
+          "right": 360.48388671875,
+          "top": 65.99042510986328
+        },
+        "pageOverflow": false,
+        "popup": {
+          "bottom": 587.9864044189453,
+          "left": 56.00349807739258,
+          "right": 350.9757881164551,
+          "top": 110.01261901855467
+        },
+        "withinMap": true
+      }
+    },
+    {
+      "check": "block-group popup short landscape",
+      "state": {
+        "contentHeight": 242,
+        "contentScrollHeight": 401,
+        "contentScrollWidth": 286,
+        "contentWidth": 286,
+        "map": {
+          "bottom": 390.3225898742676,
+          "left": 0,
+          "right": 844.3548583984375,
+          "top": 52.3941535949707
+        },
+        "pageOverflow": false,
+        "popup": {
+          "bottom": 338.39014434814453,
+          "left": 272.008056640625,
+          "right": 618.9838562011719,
+          "top": 68.41785430908203
+        },
+        "withinMap": true
+      }
+    },
+    {
+      "check": "block-group popup scroll to final row",
+      "state": {
+        "height": 242,
+        "lastRow": "Intersecting WUI Polygons:\t4",
+        "scrollHeight": 401,
+        "scrollTop": 158.8709716796875
+      }
+    },
+    {
+      "check": "reset view",
+      "state": {
+        "overflow": false,
+        "popupPresent": false,
+        "scale": "50 km\n50 mi"
+      }
+    }
+  ],
+  "console_warnings_errors": []
+}

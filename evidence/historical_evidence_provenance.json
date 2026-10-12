@@ -1,0 +1,222 @@
+[
+  {
+    "name": "benchmark_summary.json",
+    "original_sha256": "11809edd557b96000d9c92e4a2468e26ccc40f8a97a803e1c85efdd09da0d275",
+    "normalization": "Absolute machine paths replaced; measurements unchanged."
+  },
+  {
+    "name": "benchmark_runs/run_01_baseline_result.json",
+    "original_sha256": "310aa65d813edb02acd99f4e2d1c53889abe2aed21f5ec147d9a5033efbf0ac5",
+    "normalization": "Absolute machine paths replaced; measurements unchanged."
+  },
+  {
+    "name": "benchmark_runs/run_01_dask_1024_w1_result.json",
+    "original_sha256": "13ba700d11113599bc0205d8f342e41aadd60900307f209ecf8bd6b2ce1c1ad7",
+    "normalization": "Absolute machine paths replaced; measurements unchanged."
+  },
+  {
+    "name": "benchmark_runs/run_01_dask_1024_w4_result.json",
+    "original_sha256": "494a2db7ee67cf05cf71866c682e85071e5029d90abe1ecc2681751915872d92",
+    "normalization": "Absolute machine paths replaced; measurements unchanged."
+  },
+  {
+    "name": "benchmark_runs/run_01_dask_2048_w4_result.json",
+    "original_sha256": "6dee598d66b5c8f4b8524e161d681cd4b27c7a8597384b5f83e8788678e22ad3",
+    "normalization": "Absolute machine paths replaced; measurements unchanged."
+  },
+  {
+    "name": "benchmark_runs/run_02_baseline_result.json",
+    "original_sha256": "37a5389562ac88d8a854999120a097322e71a39fa5a2b14c4a51afa03924b0fe",
+    "normalization": "Absolute machine paths replaced; measurements unchanged."
+  },
+  {
+    "name": "benchmark_runs/run_02_dask_1024_w1_result.json",
+    "original_sha256": "1655aafbb10017e8a8ed99a17bb5237b262a9100381002a1e47c1078397a0276",
+    "normalization": "Absolute machine paths replaced; measurements unchanged."
+  },
+  {
+    "name": "benchmark_runs/run_02_dask_1024_w4_result.json",
+    "original_sha256": "7ad2f22973836b6329f59188f0f63d3339f7c71301fd77ddd6222ca7a93efc6e",
+    "normalization": "Absolute machine paths replaced; measurements unchanged."
+  },
+  {
+    "name": "benchmark_runs/run_02_dask_2048_w4_result.json",
+    "original_sha256": "0f9772b96b9ace7d8deba0ebc7a1cb2baefd5ae17d13604444d5309c985bf168",
+    "normalization": "Absolute machine paths replaced; measurements unchanged."
+  },
+  {
+    "name": "benchmark_runs/run_03_baseline_result.json",
+    "original_sha256": "2f2abe8b27a528326a455b078f55b4acebe3c350419e8975128b0cd5eb8b121f",
+    "normalization": "Absolute machine paths replaced; measurements unchanged."
+  },
+  {
+    "name": "benchmark_runs/run_03_dask_1024_w1_result.json",
+    "original_sha256": "ecbd37648785371bef33a28bfa75f4762040bad092906b7b062dd35cce37fc93",
+    "normalization": "Absolute machine paths replaced; measurements unchanged."
+  },
+  {
+    "name": "benchmark_runs/run_03_dask_1024_w4_result.json",
+    "original_sha256": "ced16eb6f49c39eda27c5fdd7453e2bf9c9da72bde6ca55d79b37a931444d644",
+    "normalization": "Absolute machine paths replaced; measurements unchanged."
+  },
+  {
+    "name": "benchmark_runs/run_03_dask_2048_w4_result.json",
+    "original_sha256": "6672a03bce062deda537b4406e830b0a3d056829d0aae7ee01812146a57398b0",
+    "normalization": "Absolute machine paths replaced; measurements unchanged."
+  },
+  {
+    "name": "benchmark_runs/run_04_baseline_result.json",
+    "original_sha256": "e73a2b9d55c64ae0012ea4be75199235fa00c913aca16a6da670d760e71c89a4",
+    "normalization": "Absolute machine paths replaced; measurements unchanged."
+  },
+  {
+    "name": "benchmark_runs/run_04_dask_1024_w1_result.json",
+    "original_sha256": "b4756797b03b21349d0b61f475577e3f5beae5b22080334439ae152d8905066e",
+    "normalization": "Absolute machine paths replaced; measurements unchanged."
+  },
+  {
+    "name": "benchmark_runs/run_04_dask_1024_w4_result.json",
+    "original_sha256": "e8057c4e340b39ec798fd7b88004cc27aac703a1207ad7bf4b6695342e1de08f",
+    "normalization": "Absolute machine paths replaced; measurements unchanged."
+  },
+  {
+    "name": "benchmark_runs/run_04_dask_2048_w4_result.json",
+    "original_sha256": "71b00de83e0e17b56bb52b1d2c0f033834977e62d0d9eb07fe8ff046897c6222",
+    "normalization": "Absolute machine paths replaced; measurements unchanged."
+  },
+  {
+    "name": "benchmark_runs/run_05_baseline_result.json",
+    "original_sha256": "29d555327479c1e9ce0709d79a239c6251d1a5f45d466400fcdff03a2ceaed68",
+    "normalization": "Absolute machine paths replaced; measurements unchanged."
+  },
+  {
+    "name": "benchmark_runs/run_05_dask_1024_w1_result.json",
+    "original_sha256": "fbcc98b420e8099163c4ee7d3410b00fd28246b0237a91e6775960bcb67dd9ef",
+    "normalization": "Absolute machine paths replaced; measurements unchanged."
+  },
+  {
+    "name": "benchmark_runs/run_05_dask_1024_w4_result.json",
+    "original_sha256": "14d6d66b4d58bbb415d9cd023578c0d1033d02681e945ed1c8678e3f7b85a578",
+    "normalization": "Absolute machine paths replaced; measurements unchanged."
+  },
+  {
+    "name": "benchmark_runs/run_05_dask_2048_w4_result.json",
+    "original_sha256": "571511ec7b248b7516420f73ce35ed3d081ef6cf0dc1167daa009c2595a66816",
+    "normalization": "Absolute machine paths replaced; measurements unchanged."
+  },
+  {
+    "name": "benchmark_runs/warmup_baseline_result.json",
+    "original_sha256": "c6eb11567d7894c44f020a75cecededbe63300e59f7afc668a79247a8d365f7f",
+    "normalization": "Absolute machine paths replaced; measurements unchanged."
+  },
+  {
+    "name": "benchmark_runs/warmup_dask_1024_w1_result.json",
+    "original_sha256": "c455e3a959ee8cc3f4a294611123f475e5f254f49fd582920f9a0f6242ef093f",
+    "normalization": "Absolute machine paths replaced; measurements unchanged."
+  },
+  {
+    "name": "benchmark_runs/warmup_dask_1024_w4_result.json",
+    "original_sha256": "aa002d9bcd9dcaec7c041d471e766382c33bce19ed2def9b98b6cc8ad30ec6b9",
+    "normalization": "Absolute machine paths replaced; measurements unchanged."
+  },
+  {
+    "name": "benchmark_runs/warmup_dask_2048_w4_result.json",
+    "original_sha256": "97c081ab3042f50d6da59fca3d8fe048acc3eb79c111fbe6c9b9cf3949f109ec",
+    "normalization": "Absolute machine paths replaced; measurements unchanged."
+  },
+  {
+    "name": "benchmark_comparisons/run_01_dask_1024_w1__computation__dask_step2b_20261011T010021Z_8028429b__output_comparisons.json",
+    "original_sha256": "6fe30d24025436b56e898915a8621786dea8f0457b1e6588bfbd810b4e608a3b",
+    "normalization": "Absolute machine paths replaced; measurements unchanged."
+  },
+  {
+    "name": "benchmark_comparisons/run_01_dask_1024_w4__computation__dask_step2b_20261011T010301Z_d4f8eed3__output_comparisons.json",
+    "original_sha256": "00db7c99cf98aa01f275a4af918f6dceaa0bd531ba44bd3c6f7ab662c643fc3d",
+    "normalization": "Absolute machine paths replaced; measurements unchanged."
+  },
+  {
+    "name": "benchmark_comparisons/run_01_dask_2048_w4__computation__dask_step2b_20261011T010204Z_91ca89b3__output_comparisons.json",
+    "original_sha256": "bd4eef33d1b983682ff4ad3b49822c0b8c3bbde8ccc92bfa0357083852acc628",
+    "normalization": "Absolute machine paths replaced; measurements unchanged."
+  },
+  {
+    "name": "benchmark_comparisons/run_02_dask_1024_w1__computation__dask_step2b_20261011T010403Z_44ff87ca__output_comparisons.json",
+    "original_sha256": "9ca9f8ef40031fc921964a7c4c886a3856132f6862a855e181e0c8449d1baea4",
+    "normalization": "Absolute machine paths replaced; measurements unchanged."
+  },
+  {
+    "name": "benchmark_comparisons/run_02_dask_1024_w4__computation__dask_step2b_20261011T010547Z_c1963624__output_comparisons.json",
+    "original_sha256": "3e2843108e54525039d0f639670a562232002ab0d47295403b7903082537a3f0",
+    "normalization": "Absolute machine paths replaced; measurements unchanged."
+  },
+  {
+    "name": "benchmark_comparisons/run_02_dask_2048_w4__computation__dask_step2b_20261011T010801Z_6212dbb7__output_comparisons.json",
+    "original_sha256": "6ac1750cd13c5ff298fd93b72e25bf72e91f4ba32a1661e2bcd3801b6d32546c",
+    "normalization": "Absolute machine paths replaced; measurements unchanged."
+  },
+  {
+    "name": "benchmark_comparisons/run_03_dask_1024_w1__computation__dask_step2b_20261011T011055Z_f8f7e2bb__output_comparisons.json",
+    "original_sha256": "6116875aeefd43a6d07587e862073b7d158eea5ae263f79d9e4975a4613ad6ba",
+    "normalization": "Absolute machine paths replaced; measurements unchanged."
+  },
+  {
+    "name": "benchmark_comparisons/run_03_dask_1024_w4__computation__dask_step2b_20261011T010857Z_7a1a6a55__output_comparisons.json",
+    "original_sha256": "b9d50250e29a83071f8fc3ca1d398a3d0327e8d757190267eb82059581db91d8",
+    "normalization": "Absolute machine paths replaced; measurements unchanged."
+  },
+  {
+    "name": "benchmark_comparisons/run_03_dask_2048_w4__computation__dask_step2b_20261011T010959Z_da715f81__output_comparisons.json",
+    "original_sha256": "b146ba6b96c97ba35b749ef73357c9e40f866259308087e9b84ef39b195b3bb3",
+    "normalization": "Absolute machine paths replaced; measurements unchanged."
+  },
+  {
+    "name": "benchmark_comparisons/run_04_dask_1024_w1__computation__dask_step2b_20261011T011706Z_6bcd358a__output_comparisons.json",
+    "original_sha256": "e686977174392e6dd6d770aa88dc20b49bd79c9f5263cf99c89cbc0c3dfec42a",
+    "normalization": "Absolute machine paths replaced; measurements unchanged."
+  },
+  {
+    "name": "benchmark_comparisons/run_04_dask_1024_w4__computation__dask_step2b_20261011T011604Z_a6fe22de__output_comparisons.json",
+    "original_sha256": "0d9f77d3fc35aefe4915c5b79eb3fc32e194bc56cf1a6057272d304bc6634b6d",
+    "normalization": "Absolute machine paths replaced; measurements unchanged."
+  },
+  {
+    "name": "benchmark_comparisons/run_04_dask_2048_w4__computation__dask_step2b_20261011T011353Z_d28126a0__output_comparisons.json",
+    "original_sha256": "cfeed512b983c5caca7f2a4bcabd990693fcc13aff257de2737993a29bad6b4f",
+    "normalization": "Absolute machine paths replaced; measurements unchanged."
+  },
+  {
+    "name": "benchmark_comparisons/run_05_dask_1024_w1__computation__dask_step2b_20261011T012157Z_94f7dd1e__output_comparisons.json",
+    "original_sha256": "c7ccfb04df289105bbd250a9f7f172ba5c0594e567b7cc40a259b4a91714c244",
+    "normalization": "Absolute machine paths replaced; measurements unchanged."
+  },
+  {
+    "name": "benchmark_comparisons/run_05_dask_1024_w4__computation__dask_step2b_20261011T011847Z_f525a613__output_comparisons.json",
+    "original_sha256": "a19fa4247b76ced1bc52cec0e7676bad6ae278e99fd61b81417d0327565fe6e2",
+    "normalization": "Absolute machine paths replaced; measurements unchanged."
+  },
+  {
+    "name": "benchmark_comparisons/run_05_dask_2048_w4__computation__dask_step2b_20261011T012101Z_8f0458ac__output_comparisons.json",
+    "original_sha256": "50fa9d16fa90be07b9a4a1afe088e821ff65d023329a5461fec487d3f089f20b",
+    "normalization": "Absolute machine paths replaced; measurements unchanged."
+  },
+  {
+    "name": "benchmark_comparisons/warmup_dask_1024_w1__computation__dask_step2b_20261011T005527Z_0a379f33__output_comparisons.json",
+    "original_sha256": "8bd142b0520e0ab03a74b46dc75e3ea484deab95d0b6ab06cc6412de90dba24f",
+    "normalization": "Absolute machine paths replaced; measurements unchanged."
+  },
+  {
+    "name": "benchmark_comparisons/warmup_dask_1024_w4__computation__dask_step2b_20261011T005709Z_153ed420__output_comparisons.json",
+    "original_sha256": "da45d9cd693d52233e3ac7c1a12f6746965585e8a35b335ddd184a8d83c98dde",
+    "normalization": "Absolute machine paths replaced; measurements unchanged."
+  },
+  {
+    "name": "benchmark_comparisons/warmup_dask_2048_w4__computation__dask_step2b_20261011T005811Z_357d3de6__output_comparisons.json",
+    "original_sha256": "5129dab70c2a1ffd45d8eea5fdfda961d6d5505d82cf576c0d5ed9b55bf998fc",
+    "normalization": "Absolute machine paths replaced; measurements unchanged."
+  },
+  {
+    "name": "historical_correctness.json",
+    "original_sha256": "6a0d50b758ef54feddfc92f676072cd9295d680dda884ae56636c60f9c7358fc",
+    "normalization": "Absolute machine paths replaced; measurements unchanged."
+  }
+]

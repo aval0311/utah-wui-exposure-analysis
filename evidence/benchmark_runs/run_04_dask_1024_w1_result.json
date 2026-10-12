@@ -1,0 +1,586 @@
+{
+  "status": "passed",
+  "stages": {
+    "checkpoint_setup": {
+      "start_ns": 14221617602400,
+      "end_ns": 14222374309600,
+      "seconds": 0.7567072
+    },
+    "input_validation_cell310": {
+      "start_ns": 14222374317400,
+      "end_ns": 14233123710600,
+      "seconds": 10.7493932
+    },
+    "output_setup_cell312": {
+      "start_ns": 14233123717400,
+      "end_ns": 14233132353800,
+      "seconds": 0.0086364
+    },
+    "cluster_startup": {
+      "start_ns": 14233257805800,
+      "end_ns": 14234608668600,
+      "seconds": 1.3508628
+    },
+    "primary_compute_export": {
+      "start_ns": 14234609294200,
+      "end_ns": 14298616932200,
+      "seconds": 64.007638
+    },
+    "composite_and_coverage": {
+      "start_ns": 14234609294200,
+      "end_ns": 14281444280700,
+      "seconds": 46.8349865
+    },
+    "index_and_class": {
+      "start_ns": 14281444280700,
+      "end_ns": 14298616932200,
+      "seconds": 17.1726515
+    },
+    "cluster_teardown": {
+      "start_ns": 14298616935800,
+      "end_ns": 14299015464000,
+      "seconds": 0.3985282
+    },
+    "final_validation_cell318": {
+      "start_ns": 14299016113300,
+      "end_ns": 14305861905000,
+      "seconds": 6.8457917
+    },
+    "final_metadata_cell320": {
+      "start_ns": 14305861912400,
+      "end_ns": 14305941396400,
+      "seconds": 0.079484
+    },
+    "independent_output_comparison_and_postflight": {
+      "start_ns": 14305941404700,
+      "end_ns": 14318233794400,
+      "seconds": 12.2923897
+    }
+  },
+  "started_utc": "2026-10-11T01:17:04.117057+00:00",
+  "comparison_to_saved_baseline": {
+    "normalized_hazard": {
+      "mask_mismatches": 0,
+      "invalid_value_mismatches": 0,
+      "valid_pixels": 12402904,
+      "numeric_differing_pixels": 0,
+      "bitwise_differing_valid_pixels": 0,
+      "pixels_exceeding_tolerance": 0,
+      "max_absolute_difference": 0.0,
+      "actual_minimum": 0.06507927179336548,
+      "actual_maximum": 0.7689153552055359,
+      "reference_minimum": 0.06507927179336548,
+      "reference_maximum": 0.7689153552055359,
+      "metadata_checks": {
+        "crs": true,
+        "transform": true,
+        "shape": true,
+        "bounds": true,
+        "dtype": true,
+        "nodata": true,
+        "band_count": true,
+        "descriptions": true,
+        "tags": true,
+        "compression": true,
+        "block_shapes": true,
+        "predictor": true
+      },
+      "profile": {
+        "dtype": "float32",
+        "nodata": -9999.0,
+        "block_shape": [
+          256,
+          256
+        ],
+        "compression": "DEFLATE",
+        "predictor": "3"
+      },
+      "mean_absolute_difference": 0.0,
+      "rmse": 0.0,
+      "actual_mean": 0.41071195134710015,
+      "reference_mean": 0.41071195134710015,
+      "passed": true,
+      "atol": 1e-06,
+      "rtol": 0.0,
+      "sha256": "545b461b8b8a630dceef8a9613283b6e0193cdf0cfe1071e11abd0511b8ba4cb",
+      "reference_sha256": "f9e0cc983cf27d9063771f3ec5b48cf4eddf1e8d81700caa831eab798be3ba8d",
+      "file_bytes_identical": false,
+      "path": "<HISTORICAL_WORKSPACE>\\benchmarks\\phase12\\matched_step4_20261011T005409Z_563a721f\\run_04_dask_1024_w1\\computation\\dask_step2b_20261011T011706Z_6bcd358a\\outputs\\composite_fire_hazard_normalized.tif",
+      "reference_path": "<HISTORICAL_WORKSPACE>\\data\\raw\\fire_hazard\\fuels\\fuel_hazard_component\\composite_fire_hazard\\composite_fire_hazard_normalized.tif"
+    },
+    "continuous_index_1_10": {
+      "mask_mismatches": 0,
+      "invalid_value_mismatches": 0,
+      "valid_pixels": 12402904,
+      "numeric_differing_pixels": 0,
+      "bitwise_differing_valid_pixels": 0,
+      "pixels_exceeding_tolerance": 0,
+      "max_absolute_difference": 0.0,
+      "actual_minimum": 1.5857133865356445,
+      "actual_maximum": 7.920238018035889,
+      "reference_minimum": 1.5857133865356445,
+      "reference_maximum": 7.920238018035889,
+      "metadata_checks": {
+        "crs": true,
+        "transform": true,
+        "shape": true,
+        "bounds": true,
+        "dtype": true,
+        "nodata": true,
+        "band_count": true,
+        "descriptions": true,
+        "tags": true,
+        "compression": true,
+        "block_shapes": true,
+        "predictor": true
+      },
+      "profile": {
+        "dtype": "float32",
+        "nodata": -9999.0,
+        "block_shape": [
+          256,
+          256
+        ],
+        "compression": "DEFLATE",
+        "predictor": "3"
+      },
+      "mean_absolute_difference": 0.0,
+      "rmse": 0.0,
+      "actual_mean": 4.696407562093874,
+      "reference_mean": 4.696407562093874,
+      "passed": true,
+      "atol": 1e-05,
+      "rtol": 0.0,
+      "sha256": "1a0300bab4885c38fb68a86e5a7feac8e338405bb01007c2731d3adcdd467da9",
+      "reference_sha256": "9e4ebc9cb4fc93f55958c64a238e395ad7ca4b9b92314eff26e488e874f943cf",
+      "file_bytes_identical": false,
+      "path": "<HISTORICAL_WORKSPACE>\\benchmarks\\phase12\\matched_step4_20261011T005409Z_563a721f\\run_04_dask_1024_w1\\computation\\dask_step2b_20261011T011706Z_6bcd358a\\outputs\\composite_fire_hazard_index_1_10.tif",
+      "reference_path": "<HISTORICAL_WORKSPACE>\\data\\raw\\fire_hazard\\fuels\\fuel_hazard_component\\composite_fire_hazard\\composite_fire_hazard_index_1_10.tif"
+    },
+    "hazard_class": {
+      "mask_mismatches": 0,
+      "invalid_value_mismatches": 0,
+      "valid_pixels": 12402904,
+      "numeric_differing_pixels": 0,
+      "bitwise_differing_valid_pixels": 0,
+      "pixels_exceeding_tolerance": 0,
+      "max_absolute_difference": 0.0,
+      "actual_minimum": 1.0,
+      "actual_maximum": 4.0,
+      "reference_minimum": 1.0,
+      "reference_maximum": 4.0,
+      "metadata_checks": {
+        "crs": true,
+        "transform": true,
+        "shape": true,
+        "bounds": true,
+        "dtype": true,
+        "nodata": true,
+        "band_count": true,
+        "descriptions": true,
+        "tags": true,
+        "compression": true,
+        "block_shapes": true,
+        "predictor": true
+      },
+      "profile": {
+        "dtype": "float32",
+        "nodata": -9999.0,
+        "block_shape": [
+          256,
+          256
+        ],
+        "compression": "DEFLATE",
+        "predictor": "3"
+      },
+      "mean_absolute_difference": 0.0,
+      "rmse": 0.0,
+      "actual_mean": 2.553929950598666,
+      "reference_mean": 2.553929950598666,
+      "passed": true,
+      "atol": 0.0,
+      "rtol": 0.0,
+      "sha256": "df21a4cd7728fd0910cbe497ac02f3206e65e8f5de9686724f67f4a101a2f04e",
+      "reference_sha256": "b46722b8fc5621fd2a0518026dab152002b8737b5bb485bf715b93a0865b383c",
+      "file_bytes_identical": false,
+      "path": "<HISTORICAL_WORKSPACE>\\benchmarks\\phase12\\matched_step4_20261011T005409Z_563a721f\\run_04_dask_1024_w1\\computation\\dask_step2b_20261011T011706Z_6bcd358a\\outputs\\composite_fire_hazard_class.tif",
+      "reference_path": "<HISTORICAL_WORKSPACE>\\data\\raw\\fire_hazard\\fuels\\fuel_hazard_component\\composite_fire_hazard\\composite_fire_hazard_class.tif"
+    },
+    "coverage_reason": {
+      "mask_mismatches": 0,
+      "invalid_value_mismatches": 0,
+      "valid_pixels": 15475232,
+      "numeric_differing_pixels": 0,
+      "bitwise_differing_valid_pixels": 0,
+      "pixels_exceeding_tolerance": 0,
+      "max_absolute_difference": 0.0,
+      "actual_minimum": 1.0,
+      "actual_maximum": 5.0,
+      "reference_minimum": 1.0,
+      "reference_maximum": 5.0,
+      "metadata_checks": {
+        "crs": true,
+        "transform": true,
+        "shape": true,
+        "bounds": true,
+        "dtype": true,
+        "nodata": true,
+        "band_count": true,
+        "descriptions": true,
+        "tags": true,
+        "compression": true,
+        "block_shapes": true,
+        "predictor": true
+      },
+      "profile": {
+        "dtype": "uint8",
+        "nodata": 0.0,
+        "block_shape": [
+          256,
+          256
+        ],
+        "compression": "DEFLATE",
+        "predictor": "1"
+      },
+      "mean_absolute_difference": 0.0,
+      "rmse": 0.0,
+      "actual_mean": 4.262655577635282,
+      "reference_mean": 4.262655577635282,
+      "passed": true,
+      "atol": 0.0,
+      "rtol": 0.0,
+      "sha256": "7e1086ad8676881c8f35ff7f1dce031c60fc8342b83ff9fe9c2e76c54c532a6b",
+      "reference_sha256": "738ba3e999e6edb53c57bde588553936052748dd0972f13311e7eda9b7d16c3c",
+      "file_bytes_identical": false,
+      "path": "<HISTORICAL_WORKSPACE>\\benchmarks\\phase12\\matched_step4_20261011T005409Z_563a721f\\run_04_dask_1024_w1\\computation\\dask_step2b_20261011T011706Z_6bcd358a\\outputs\\composite_coverage_reason.tif",
+      "reference_path": "<HISTORICAL_WORKSPACE>\\outputs\\wui_portfolio_overhaul_v3\\composite_coverage_reason.tif"
+    }
+  },
+  "coverage_counts": [
+    0,
+    2645626,
+    0,
+    401370,
+    25332,
+    12402904
+  ],
+  "environment": {
+    "python": "3.14.7 | packaged by conda-forge | (main, Sep  2 2026, 21:12:42) [MSC v.1944 64 bit (AMD64)]",
+    "executable": "<ENVIRONMENT>\\python.exe",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "packages": {
+      "numpy": "2.4.6",
+      "rasterio": "1.5.1",
+      "pandas": "3.0.6",
+      "psutil": "7.2.2",
+      "geopandas": "1.1.4",
+      "pyproj": "3.8.0",
+      "dask": "2026.8.0",
+      "distributed": "2026.8.0",
+      "xarray": "2026.9.0",
+      "rioxarray": "0.23.0"
+    },
+    "gdal": "3.13.3",
+    "proj": "9.8.1",
+    "gdal_cachemax_bytes": 1714316695,
+    "logical_cpus": 16,
+    "physical_cpus": 8,
+    "ram_bytes": 34286333952,
+    "environment_variables": {
+      "PROJ_DATA": "<ENVIRONMENT>\\Library\\share\\proj",
+      "PROJ_LIB": "<ENVIRONMENT>\\Library\\share\\proj",
+      "GDAL_DATA": "<ENVIRONMENT>\\Library\\share\\gdal",
+      "GDAL_CACHEMAX": null,
+      "GDAL_NUM_THREADS": null,
+      "OMP_NUM_THREADS": null,
+      "OPENBLAS_NUM_THREADS": null,
+      "MKL_NUM_THREADS": null,
+      "NUMEXPR_NUM_THREADS": null,
+      "VECLIB_MAXIMUM_THREADS": null
+    },
+    "cpu_affinity": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ]
+  },
+  "config": {
+    "chunk_shape": [
+      1024,
+      1024
+    ],
+    "n_workers": 1,
+    "threads_per_worker": 1,
+    "processes": true,
+    "memory_limit": "4GiB",
+    "spill_directory": "<HISTORICAL_WORKSPACE>\\benchmarks\\phase12\\matched_step4_20261011T005409Z_563a721f\\run_04_dask_1024_w1\\computation\\dask_step2b_20261011T011706Z_6bcd358a\\dask-spill"
+  },
+  "original_validation": {
+    "normalized": {
+      "PATH": "<HISTORICAL_WORKSPACE>\\benchmarks\\phase12\\matched_step4_20261011T005409Z_563a721f\\run_04_dask_1024_w1\\computation\\dask_step2b_20261011T011706Z_6bcd358a\\outputs\\composite_fire_hazard_normalized.tif",
+      "FILE_EXISTS": true,
+      "GRID_VALID": true,
+      "STRUCTURE_VALID": true,
+      "VALID_PIXELS": 12402904,
+      "VALID_OUTSIDE_STUDY_AREA": 0,
+      "MINIMUM": 0.06507927179336548,
+      "MAXIMUM": 0.7689153552055359,
+      "MEAN": 0.41071195134710015,
+      "VALID": true
+    },
+    "index_minimum": 1.5857133865356445,
+    "index_maximum": 7.920238018035889,
+    "observed_classes": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "historical_normalized_validator_flag_for_index_unused": false
+  },
+  "outputs": {
+    "normalized_hazard": "<HISTORICAL_WORKSPACE>\\benchmarks\\phase12\\matched_step4_20261011T005409Z_563a721f\\run_04_dask_1024_w1\\computation\\dask_step2b_20261011T011706Z_6bcd358a\\outputs\\composite_fire_hazard_normalized.tif",
+    "continuous_index_1_10": "<HISTORICAL_WORKSPACE>\\benchmarks\\phase12\\matched_step4_20261011T005409Z_563a721f\\run_04_dask_1024_w1\\computation\\dask_step2b_20261011T011706Z_6bcd358a\\outputs\\composite_fire_hazard_index_1_10.tif",
+    "hazard_class": "<HISTORICAL_WORKSPACE>\\benchmarks\\phase12\\matched_step4_20261011T005409Z_563a721f\\run_04_dask_1024_w1\\computation\\dask_step2b_20261011T011706Z_6bcd358a\\outputs\\composite_fire_hazard_class.tif",
+    "coverage_reason": "<HISTORICAL_WORKSPACE>\\benchmarks\\phase12\\matched_step4_20261011T005409Z_563a721f\\run_04_dask_1024_w1\\computation\\dask_step2b_20261011T011706Z_6bcd358a\\outputs\\composite_coverage_reason.tif"
+  },
+  "setup_and_validation": {
+    "checksum_preflight_seconds": 0.32415900000160036,
+    "mask_setup_seconds": 0.3429006999995181,
+    "input_validation_seconds": 10.748892800000249,
+    "output_setup_seconds": 0.008362000000488479,
+    "original_final_validation_seconds": 6.845270199999504,
+    "original_metadata_seconds": 0.07886549999966519,
+    "independent_comparison_seconds": 11.977791900000739,
+    "checksum_postflight_seconds": 0.30888080000113405
+  },
+  "workers": {
+    "tcp://127.0.0.1:53260": {
+      "nthreads": 1,
+      "memory_limit": 4294967296
+    }
+  },
+  "dask_metrics": {
+    "worker_count": 1,
+    "workers": [
+      {
+        "pid": 26368,
+        "samples": 251,
+        "maximum_sample_gap_seconds": 1.4194249,
+        "peak_managed_bytes": 51381424,
+        "peak_spilled_disk_bytes": 0,
+        "cumulative_spill_written_bytes": 0,
+        "cumulative_spill_read_bytes": 0,
+        "cumulative_spill_write_count": 0,
+        "observed_paused": false
+      }
+    ],
+    "peak_aggregate_managed_bytes": 51381424,
+    "peak_aggregate_spilled_disk_bytes": 0,
+    "cumulative_spill_written_bytes": 0,
+    "cumulative_spill_read_bytes": 0,
+    "cumulative_spill_write_count": 0,
+    "maximum_sample_gap_seconds": 1.4194249,
+    "observed_paused": false,
+    "scope": "Managed/spill peaks use 250 ms asynchronous worker samples with last observation carried forward. Cumulative spill I/O covers the full cluster lifetime. These are distinct from total process-tree RSS."
+  },
+  "implementation_record": "<HISTORICAL_WORKSPACE>\\benchmarks\\phase12\\matched_step4_20261011T005409Z_563a721f\\run_04_dask_1024_w1\\computation\\dask_step2b_20261011T011706Z_6bcd358a\\hpc_implementation_result.json",
+  "completed_utc": "2026-10-11T01:18:42.430205+00:00",
+  "method": "dask_1024_w1",
+  "label": "run_04_dask_1024_w1",
+  "repetition": 4,
+  "configuration": {
+    "name": "dask_1024_w1",
+    "engine": "dask",
+    "chunk_shape": [
+      1024,
+      1024
+    ],
+    "n_workers": 1
+  },
+  "provenance": {
+    "code_cells_identical_to_user_notebook": true,
+    "all_original_selected_sources_preserved": true,
+    "core_sha256": "af01ea4f0fc95d9d599a9b463d51012ac4edb4708bb06332b158bcdde60f6d13",
+    "focused_code_sha256": "007585aa12151b3cb465dcda78ad69fb45b949719ef73401c33e2971c7a33854",
+    "spec_sha256": "207b92f26b6096e3563d7ef63ceba94b8464a40653515f6ce63c9636d295aef8",
+    "manifest_sha256": "1e3aaa19cc33b52414cfd51dfb23431fa442e9147c13ca0db36a3d9a09e47153",
+    "baseline_notebook_sha256": "afceab013c0d7ddaecc4698c1c0f937a9a33026112a3b027c9b8a0d9c4901fba"
+  },
+  "benchmark_worker_sha256": "055fd5940661eb035b044834ee3561cfd9b425933e14296d19a4789b43c5a759",
+  "source_postflight_unchanged": true,
+  "memory": {
+    "checkpoint_setup": {
+      "samples": 8,
+      "starting_rss_bytes": 206327808,
+      "starting_sample_age_seconds": 0.0595731,
+      "peak_rss_bytes": 583790592,
+      "peak_private_bytes": 590741504,
+      "peak_above_starting_rss_bytes": 377462784,
+      "median_sample_interval_seconds": 0.0997751,
+      "maximum_sample_interval_seconds": 0.1017959,
+      "maximum_process_count": 1,
+      "minimum_system_available_bytes": 17877626880,
+      "mean_system_cpu_percent": 13.0,
+      "approximate_process_cpu_seconds": 0.796875,
+      "approximate_process_read_bytes": 348548320,
+      "approximate_process_write_bytes": 322
+    },
+    "input_validation_cell310": {
+      "samples": 107,
+      "starting_rss_bytes": 356384768,
+      "starting_sample_age_seconds": 0.0184331,
+      "peak_rss_bytes": 914714624,
+      "peak_private_bytes": 914030592,
+      "peak_above_starting_rss_bytes": 558329856,
+      "median_sample_interval_seconds": 0.09997075,
+      "maximum_sample_interval_seconds": 0.1020865,
+      "maximum_process_count": 1,
+      "minimum_system_available_bytes": 17575030784,
+      "mean_system_cpu_percent": 10.381308411214953,
+      "approximate_process_cpu_seconds": 10.65625,
+      "approximate_process_read_bytes": 236108189,
+      "approximate_process_write_bytes": 524
+    },
+    "output_setup_cell312": {
+      "samples": 0
+    },
+    "cluster_startup": {
+      "samples": 14,
+      "starting_rss_bytes": 357957632,
+      "starting_sample_age_seconds": 0.100322,
+      "peak_rss_bytes": 442105856,
+      "peak_private_bytes": 385089536,
+      "peak_above_starting_rss_bytes": 84148224,
+      "median_sample_interval_seconds": 0.1000125,
+      "maximum_sample_interval_seconds": 0.101778,
+      "maximum_process_count": 2,
+      "minimum_system_available_bytes": 18080260096,
+      "mean_system_cpu_percent": 10.17142857142857,
+      "approximate_process_cpu_seconds": 1.140625,
+      "approximate_process_read_bytes": 16833231,
+      "approximate_process_write_bytes": 9632
+    },
+    "primary_compute_export": {
+      "samples": 640,
+      "starting_rss_bytes": 442105856,
+      "starting_sample_age_seconds": 0.0518646,
+      "peak_rss_bytes": 2425974784,
+      "peak_private_bytes": 2358198272,
+      "peak_above_starting_rss_bytes": 1983868928,
+      "median_sample_interval_seconds": 0.1000179,
+      "maximum_sample_interval_seconds": 0.1031582,
+      "maximum_process_count": 2,
+      "minimum_system_available_bytes": 16121171968,
+      "mean_system_cpu_percent": 10.15265625,
+      "approximate_process_cpu_seconds": 51.859375,
+      "approximate_process_read_bytes": 335542532,
+      "approximate_process_write_bytes": 103457742
+    },
+    "composite_and_coverage": {
+      "samples": 468,
+      "starting_rss_bytes": 442105856,
+      "starting_sample_age_seconds": 0.0518646,
+      "peak_rss_bytes": 2425974784,
+      "peak_private_bytes": 2358198272,
+      "peak_above_starting_rss_bytes": 1983868928,
+      "median_sample_interval_seconds": 0.0999774,
+      "maximum_sample_interval_seconds": 0.1031582,
+      "maximum_process_count": 2,
+      "minimum_system_available_bytes": 16121171968,
+      "mean_system_cpu_percent": 9.913034188034189,
+      "approximate_process_cpu_seconds": 36.375,
+      "approximate_process_read_bytes": 285670196,
+      "approximate_process_write_bytes": 48358497
+    },
+    "index_and_class": {
+      "samples": 172,
+      "starting_rss_bytes": 2373312512,
+      "starting_sample_age_seconds": 0.0875819,
+      "peak_rss_bytes": 2372771840,
+      "peak_private_bytes": 2299854848,
+      "peak_above_starting_rss_bytes": -540672,
+      "median_sample_interval_seconds": 0.1001066,
+      "maximum_sample_interval_seconds": 0.1023149,
+      "maximum_process_count": 2,
+      "minimum_system_available_bytes": 16202952704,
+      "mean_system_cpu_percent": 10.804651162790698,
+      "approximate_process_cpu_seconds": 15.484375,
+      "approximate_process_read_bytes": 49872336,
+      "approximate_process_write_bytes": 55099245
+    },
+    "cluster_teardown": {
+      "samples": 4,
+      "starting_rss_bytes": 1182748672,
+      "starting_sample_age_seconds": 0.0590758,
+      "peak_rss_bytes": 1031131136,
+      "peak_private_bytes": 955650048,
+      "peak_above_starting_rss_bytes": -151617536,
+      "median_sample_interval_seconds": 0.0988591,
+      "maximum_sample_interval_seconds": 0.1017003,
+      "maximum_process_count": 2,
+      "minimum_system_available_bytes": 17579728896,
+      "mean_system_cpu_percent": 15.725,
+      "approximate_process_cpu_seconds": 0.421875,
+      "approximate_process_read_bytes": 87,
+      "approximate_process_write_bytes": 100087
+    },
+    "final_validation_cell318": {
+      "samples": 69,
+      "starting_rss_bytes": 615092224,
+      "starting_sample_age_seconds": 0.0579883,
+      "peak_rss_bytes": 2345730048,
+      "peak_private_bytes": 2465456128,
+      "peak_above_starting_rss_bytes": 1730637824,
+      "median_sample_interval_seconds": 0.09994995000000001,
+      "maximum_sample_interval_seconds": 0.102734,
+      "maximum_process_count": 1,
+      "minimum_system_available_bytes": 16214024192,
+      "mean_system_cpu_percent": 10.304347826086957,
+      "approximate_process_cpu_seconds": -40.578125,
+      "approximate_process_read_bytes": -217787306,
+      "approximate_process_write_bytes": -95657962
+    },
+    "final_metadata_cell320": {
+      "samples": 0
+    },
+    "independent_output_comparison_and_postflight": {
+      "samples": 123,
+      "starting_rss_bytes": 1805508608,
+      "starting_sample_age_seconds": 0.0845695,
+      "peak_rss_bytes": 2930438144,
+      "peak_private_bytes": 2938359808,
+      "peak_above_starting_rss_bytes": 1124929536,
+      "median_sample_interval_seconds": 0.09997225,
+      "maximum_sample_interval_seconds": 0.1020923,
+      "maximum_process_count": 1,
+      "minimum_system_available_bytes": 15677407232,
+      "mean_system_cpu_percent": 9.86260162601626,
+      "approximate_process_cpu_seconds": 12.21875,
+      "approximate_process_read_bytes": 630174091,
+      "approximate_process_write_bytes": 11445
+    }
+  },
+  "entire_run_peak_rss_bytes": 2930438144,
+  "supervised_process_seconds": 102.15144770000006,
+  "memory_sampling": {
+    "requested_interval_seconds": 0.1,
+    "samples": 1011,
+    "access_errors": [],
+    "scope": "Simultaneous sampled RSS of the complete child process tree, including client/scheduler, workers, nannies, and helper processes; excludes supervisor and unrelated applications. Shared pages can be counted more than once. Brief peaks may be missed.",
+    "io_note": "Windows process counters include cached I/O, not physical device throughput."
+  }
+}

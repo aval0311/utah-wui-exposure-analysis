@@ -1,0 +1,252 @@
+{
+  "release": "v2",
+  "status": "passed within recorded scope",
+  "recorded_at": "2026-10-12T00:00:03.534822+00:00",
+  "dashboard_sha256": "d6fff52bd0b08b3249aa24ba13c73522a96550cb93e9bb4534999192db54c6a4",
+  "notebook_sha256": "089599a54dea7595a860be244e5957d19654845f071fae95f8f21f13df2e22ff",
+  "browser": "Codex embedded browser; native fullscreen separately verified by the user",
+  "desktop": {
+    "eleven_overlay_controls_toggle_and_restore": "passed",
+    "exclusive_basemaps": "passed",
+    "opacity_keyboard_adjustment": "passed",
+    "hazard_information_expand_collapse": "passed",
+    "legend_empty_state": "passed",
+    "county_popup_sidebar_collapse_expand": "passed",
+    "facility_cluster_and_popup": "passed",
+    "reset_study_extent": "passed",
+    "no_horizontal_document_overflow": "passed"
+  },
+  "responsive": {
+    "mobile_drawer_focus_escape_and_inert_map": "passed",
+    "long_popup_keyboard_scroll": "passed",
+    "final_popup_tests": [
+      {
+        "test": "facility_desktop",
+        "viewport": [
+          1440,
+          1000
+        ],
+        "fits_map": true,
+        "close_visible": true,
+        "no_horizontal_content_overflow": true,
+        "content_dimensions": [
+          311,
+          311,
+          293,
+          293
+        ]
+      },
+      {
+        "test": "facility_desktop_1366",
+        "viewport": [
+          1366,
+          768
+        ],
+        "fits_map": true,
+        "close_visible": true,
+        "no_horizontal_content_overflow": true,
+        "content_dimensions": [
+          311,
+          311,
+          293,
+          293
+        ]
+      },
+      {
+        "test": "facility_mobile_390",
+        "viewport": [
+          390,
+          844
+        ],
+        "fits_map": true,
+        "close_visible": true,
+        "no_horizontal_content_overflow": true,
+        "content_dimensions": [
+          279,
+          279,
+          324,
+          324
+        ]
+      },
+      {
+        "test": "facility_narrow_320",
+        "viewport": [
+          320,
+          640
+        ],
+        "fits_map": true,
+        "close_visible": true,
+        "no_horizontal_content_overflow": true,
+        "content_dimensions": [
+          209,
+          209,
+          405,
+          405
+        ]
+      },
+      {
+        "test": "facility_landscape",
+        "viewport": [
+          844,
+          390
+        ],
+        "fits_map": true,
+        "close_visible": true,
+        "no_horizontal_content_overflow": true,
+        "content_dimensions": [
+          296,
+          296,
+          242,
+          293
+        ]
+      },
+      {
+        "test": "facility_tablet_768",
+        "viewport": [
+          768,
+          1024
+        ],
+        "fits_map": true,
+        "close_visible": true,
+        "no_horizontal_content_overflow": true,
+        "content_dimensions": [
+          326,
+          326,
+          293,
+          293
+        ]
+      },
+      {
+        "test": "block_group_final_desktop",
+        "viewport": [
+          1440,
+          1000
+        ],
+        "fits_map": true,
+        "close_visible": true,
+        "no_horizontal_content_overflow": true,
+        "content_dimensions": [
+          301,
+          301,
+          369,
+          369
+        ]
+      },
+      {
+        "test": "block_group_final_320",
+        "viewport": [
+          320,
+          640
+        ],
+        "fits_map": true,
+        "close_visible": true,
+        "no_horizontal_content_overflow": true,
+        "content_dimensions": [
+          194,
+          194,
+          450,
+          538
+        ]
+      },
+      {
+        "test": "block_group_final_landscape",
+        "viewport": [
+          844,
+          390
+        ],
+        "fits_map": true,
+        "close_visible": true,
+        "no_horizontal_content_overflow": true,
+        "content_dimensions": [
+          286,
+          286,
+          242,
+          369
+        ]
+      },
+      {
+        "test": "block_group_final_390",
+        "viewport": [
+          390,
+          844
+        ],
+        "fits_map": true,
+        "close_visible": true,
+        "no_horizontal_content_overflow": true,
+        "content_dimensions": [
+          279,
+          279,
+          369,
+          369
+        ]
+      }
+    ]
+  },
+  "native_fullscreen": {
+    "status": "passed",
+    "method": "User manual confirmation",
+    "tests": [
+      "Open fullscreen, open block-group popup, exit with Escape; popup and close button remain visible.",
+      "Re-enter fullscreen and exit with dashboard fullscreen control."
+    ],
+    "scope_note": "User confirmed both tests before final nested facility-content CSS refinement; fullscreen handling and block-group logic were unchanged by that refinement."
+  },
+  "console_errors_and_warnings": [],
+  "observations": "browser_observations.json",
+  "screenshots": {
+    "block_group_320.png": [
+      320,
+      640
+    ],
+    "block_group_final_320.png": [
+      320,
+      640
+    ],
+    "block_group_final_390.png": [
+      390,
+      844
+    ],
+    "block_group_final_landscape.png": [
+      844,
+      390
+    ],
+    "block_group_landscape.png": [
+      844,
+      390
+    ],
+    "desktop_1440.png": [
+      1440,
+      1000
+    ],
+    "facility_desktop.png": [
+      1440,
+      1000
+    ],
+    "facility_desktop_1366.png": [
+      1366,
+      768
+    ],
+    "facility_landscape.png": [
+      844,
+      390
+    ],
+    "facility_mobile_390.png": [
+      390,
+      844
+    ],
+    "facility_narrow_320.png": [
+      320,
+      640
+    ],
+    "facility_tablet_768.png": [
+      768,
+      1024
+    ]
+  },
+  "regression_scope": "Controls were checked before the final nested facility-div width clamp. Facility and block-group popups were rechecked after that CSS-only refinement; no later dashboard changes.",
+  "limitations": [
+    "Viewport resizing is not a physical phone/touch test.",
+    "Hosted GitHub Pages and hosted snapshot download have not been checked.",
+    "No comprehensive accessibility or cross-browser certification."
+  ]
+}

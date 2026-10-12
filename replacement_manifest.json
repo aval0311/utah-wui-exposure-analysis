@@ -1,0 +1,15 @@
+{
+  "obsolete_tracked_files": [
+    "images/salt_lake_county_wui_exposure.png",
+    "images/utah_county_high_risk_wui.png",
+    "images/utah_wui_dashboard_overview.png",
+    "images/washington_county_composite_fire_hazard.png"
+  ],
+  "replacement_images": [
+    "images/county_exposure.png",
+    "images/facility_proximity.png",
+    "images/hazard_overview.png",
+    "images/county_coverage_diagnostics.png"
+  ],
+  "note": "Remove obsolete screenshots from the new publication tree after preserving repository history. This package does not delete files automatically."
+}

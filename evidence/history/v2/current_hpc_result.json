@@ -1,0 +1,157 @@
+{
+  "coverage_counts": [
+    0,
+    2645626,
+    0,
+    401370,
+    25332,
+    12402904
+  ],
+  "stages": {
+    "cluster_startup": {
+      "start_ns": 72336995063900,
+      "end_ns": 72339813900500,
+      "seconds": 2.8188366
+    },
+    "primary_compute_export": {
+      "start_ns": 72339815224300,
+      "end_ns": 72359472049600,
+      "seconds": 19.6568253
+    },
+    "composite_and_coverage": {
+      "start_ns": 72339815224300,
+      "end_ns": 72353060525000,
+      "seconds": 13.2453007
+    },
+    "index_and_class": {
+      "start_ns": 72353060525000,
+      "end_ns": 72359472049600,
+      "seconds": 6.4115246
+    },
+    "cluster_teardown": {
+      "start_ns": 72359472053500,
+      "end_ns": 72359895762300,
+      "seconds": 0.4237088
+    }
+  },
+  "config": {
+    "chunk_shape": [
+      2048,
+      2048
+    ],
+    "n_workers": 4,
+    "threads_per_worker": 1,
+    "processes": true,
+    "memory_limit": "4GiB",
+    "spill_directory": "<WORKSPACE>/outputs/publication/20261011T170100Z_a475c3c2/dask-spill"
+  },
+  "workers": {
+    "tcp://127.0.0.1:63144": {
+      "nthreads": 1,
+      "memory_limit": 4294967296
+    },
+    "tcp://127.0.0.1:63149": {
+      "nthreads": 1,
+      "memory_limit": 4294967296
+    },
+    "tcp://127.0.0.1:63154": {
+      "nthreads": 1,
+      "memory_limit": 4294967296
+    },
+    "tcp://127.0.0.1:63159": {
+      "nthreads": 1,
+      "memory_limit": 4294967296
+    }
+  },
+  "outputs": {
+    "normalized_hazard": "outputs/publication/20261011T170100Z_a475c3c2/rasters/composite_fire_hazard_normalized.tif",
+    "continuous_index_1_10": "outputs/publication/20261011T170100Z_a475c3c2/rasters/composite_fire_hazard_index_1_10.tif",
+    "hazard_class": "outputs/publication/20261011T170100Z_a475c3c2/rasters/composite_fire_hazard_class.tif",
+    "coverage_reason": "outputs/publication/20261011T170100Z_a475c3c2/composite_coverage_reason.tif"
+  },
+  "purpose": "Current full-pipeline execution; historical benchmark reported separately.",
+  "status": "passed",
+  "execution_mode": "full_pipeline",
+  "engine": "dask",
+  "completed_utc": "2026-10-11T17:26:11.958895+00:00",
+  "environment": {
+    "python": "3.14.7 | packaged by conda-forge | (main, Sep  2 2026, 21:12:42) [MSC v.1944 64 bit (AMD64)]",
+    "executable": "<ENVIRONMENT>/python.exe",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "packages": {
+      "numpy": "2.4.6",
+      "rasterio": "1.5.1",
+      "pandas": "3.0.6",
+      "psutil": "7.2.2",
+      "geopandas": "1.1.4",
+      "pyproj": "3.8.0",
+      "dask": "2026.8.0",
+      "distributed": "2026.8.0",
+      "xarray": "2026.9.0",
+      "rioxarray": "0.23.0"
+    },
+    "gdal": "3.13.3",
+    "proj": "9.8.1",
+    "gdal_cachemax_bytes": 1714316695,
+    "logical_cpus": 16,
+    "physical_cpus": 8,
+    "ram_bytes": 34286333952,
+    "environment_variables": {
+      "PROJ_DATA": "<ENVIRONMENT>/Library/share/proj",
+      "PROJ_LIB": "<ENVIRONMENT>/Library/share/proj",
+      "GDAL_DATA": "<ENVIRONMENT>/Library/share/gdal",
+      "GDAL_CACHEMAX": null,
+      "GDAL_NUM_THREADS": null,
+      "OMP_NUM_THREADS": null,
+      "OPENBLAS_NUM_THREADS": null,
+      "MKL_NUM_THREADS": null,
+      "NUMEXPR_NUM_THREADS": null,
+      "VECLIB_MAXIMUM_THREADS": null
+    },
+    "cpu_affinity": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ]
+  },
+  "current_inputs": {
+    "fuel_hazard": {
+      "path": "data/raw/fire_hazard/fuels/fuel_hazard_component/component_output/composite_fuel_hazard_score.tif",
+      "sha256": "3883129c9ce1c4e0b3eeaba9078cfd11dbf97895aa6c2074c9b5c58ff6a08f14"
+    },
+    "fuel_dryness": {
+      "path": "data/raw/fire_hazard/vegetation/hls_planetary_computer_2025_fire_season/vegetation_dryness_component/hazard_raster/vegetation_dryness_hazard_score.tif",
+      "sha256": "f51aa6c96cfbc1593bdd3f95fc0c451587a164a4a95926e580b96e7a85f772e4"
+    },
+    "slope_hazard": {
+      "path": "data/raw/fire_hazard/fuels/fuel_hazard_component/terrain_hazard/slope_hazard.tif",
+      "sha256": "095537f24b030b694242f8cb5d68ac121a66ab01bd1700c548a8dbb5afce10b1"
+    },
+    "aspect_hazard": {
+      "path": "data/raw/fire_hazard/fuels/fuel_hazard_component/terrain_hazard/aspect_hazard.tif",
+      "sha256": "769e16272339b2511a77cf1848e10e2370b2517f70062a213cf2e1f6c694a955"
+    },
+    "historical_fire_likelihood": {
+      "path": "data/raw/fire_hazard/fuels/fuel_hazard_component/historical_fire_hazard/historical_fire_likelihood.tif",
+      "sha256": "984b7f8b46149b40ff91b25b41af1833a4466203835dba3976c3176482e82609"
+    },
+    "human_ignition_potential": {
+      "path": "data/raw/fire_hazard/fuels/fuel_hazard_component/human_ignition_hazard/human_ignition_potential.tif",
+      "sha256": "d21b695ea82500aa8324915091a6ca9b5be1e2d6a4a9e025e3f01a6982e26056"
+    }
+  },
+  "study_mask_sha256": "d2459d6f4cc1e680ee6870d2fcf84e210ac40c37026f68e2973fcd247774e7f7"
+}

@@ -1,0 +1,6 @@
+CATEGORY,PIXELS,AREA_KM2,STUDY_AREA_PERCENT
+Confirmed nonburnable (excluded by policy),2645626,2381.0634,17.095872940709388
+Missing or unrecognized FBFM40 class,0,0.0,0.0
+Burnable: insufficient NDVI or NDMI observations,401384,361.2456,2.5937187888362514
+Burnable: missing another required component,25332,22.7988,0.16369383024435435
+Valid modeled burnable land,12402890,11162.601,80.14671444021

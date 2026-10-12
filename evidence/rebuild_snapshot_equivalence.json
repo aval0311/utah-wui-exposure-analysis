@@ -1,0 +1,232 @@
+{
+  "status": "passed",
+  "rebuilt_run": "20261012T170452Z_03981eaa",
+  "accepted_snapshot_run": "20261012T180540Z_eb3fdcb7",
+  "rasters": {
+    "normalized_hazard": {
+      "mask_mismatches": 0,
+      "invalid_value_mismatches": 0,
+      "valid_pixels": 12402890,
+      "numeric_differing_pixels": 0,
+      "bitwise_differing_valid_pixels": 0,
+      "pixels_exceeding_tolerance": 0,
+      "max_absolute_difference": 0.0,
+      "actual_minimum": 0.06507927924394608,
+      "actual_maximum": 0.7644633054733276,
+      "reference_minimum": 0.06507927924394608,
+      "reference_maximum": 0.7644633054733276,
+      "metadata_checks": {
+        "crs": true,
+        "transform": true,
+        "shape": true,
+        "bounds": true,
+        "dtype": true,
+        "nodata": true,
+        "band_count": true,
+        "descriptions": true,
+        "tags": true,
+        "compression": true,
+        "block_shapes": true,
+        "predictor": true
+      },
+      "profile": {
+        "dtype": "float32",
+        "nodata": -9999.0,
+        "block_shape": [
+          256,
+          256
+        ],
+        "compression": "DEFLATE",
+        "predictor": "3"
+      },
+      "mean_absolute_difference": 0.0,
+      "rmse": 0.0,
+      "actual_mean": 0.41034768644383984,
+      "reference_mean": 0.41034768644383984,
+      "passed": true,
+      "atol": 0.0,
+      "rtol": 0.0,
+      "sha256": "c360f366d19b8f98234f507ca677ac65425931bbd6c62bb9bf36f8263e70ddf7",
+      "reference_sha256": "24a2b36b6d4d8cc73e1ecaf87898ba098d424fecefbe6e3d6487da5909fc2651",
+      "file_bytes_identical": false,
+      "path": "<WORKSPACE>/workspace/outputs/publication/20261012T170452Z_03981eaa/rasters/composite_fire_hazard_normalized.tif",
+      "reference_path": "<WORKSPACE>/replay_workspace/outputs/publication/20261012T180540Z_eb3fdcb7/rasters/composite_fire_hazard_normalized.tif"
+    },
+    "continuous_index_1_10": {
+      "mask_mismatches": 0,
+      "invalid_value_mismatches": 0,
+      "valid_pixels": 12402890,
+      "numeric_differing_pixels": 0,
+      "bitwise_differing_valid_pixels": 0,
+      "pixels_exceeding_tolerance": 0,
+      "max_absolute_difference": 0.0,
+      "actual_minimum": 1.585713505744934,
+      "actual_maximum": 7.880169868469238,
+      "reference_minimum": 1.585713505744934,
+      "reference_maximum": 7.880169868469238,
+      "metadata_checks": {
+        "crs": true,
+        "transform": true,
+        "shape": true,
+        "bounds": true,
+        "dtype": true,
+        "nodata": true,
+        "band_count": true,
+        "descriptions": true,
+        "tags": true,
+        "compression": true,
+        "block_shapes": true,
+        "predictor": true
+      },
+      "profile": {
+        "dtype": "float32",
+        "nodata": -9999.0,
+        "block_shape": [
+          256,
+          256
+        ],
+        "compression": "DEFLATE",
+        "predictor": "3"
+      },
+      "mean_absolute_difference": 0.0,
+      "rmse": 0.0,
+      "actual_mean": 4.69312917800007,
+      "reference_mean": 4.69312917800007,
+      "passed": true,
+      "atol": 0.0,
+      "rtol": 0.0,
+      "sha256": "b38f0423441b24fd5666c46047fa22e77c7beea1f90ff242fd02309f138a3c45",
+      "reference_sha256": "44843f408f130479c4e5ebc53e6846a7bc2b0307ebc398fcb85666d719f7f6c3",
+      "file_bytes_identical": false,
+      "path": "<WORKSPACE>/workspace/outputs/publication/20261012T170452Z_03981eaa/rasters/composite_fire_hazard_index_1_10.tif",
+      "reference_path": "<WORKSPACE>/replay_workspace/outputs/publication/20261012T180540Z_eb3fdcb7/rasters/composite_fire_hazard_index_1_10.tif"
+    },
+    "hazard_class": {
+      "mask_mismatches": 0,
+      "invalid_value_mismatches": 0,
+      "valid_pixels": 12402890,
+      "numeric_differing_pixels": 0,
+      "bitwise_differing_valid_pixels": 0,
+      "pixels_exceeding_tolerance": 0,
+      "max_absolute_difference": 0.0,
+      "actual_minimum": 1.0,
+      "actual_maximum": 4.0,
+      "reference_minimum": 1.0,
+      "reference_maximum": 4.0,
+      "metadata_checks": {
+        "crs": true,
+        "transform": true,
+        "shape": true,
+        "bounds": true,
+        "dtype": true,
+        "nodata": true,
+        "band_count": true,
+        "descriptions": true,
+        "tags": true,
+        "compression": true,
+        "block_shapes": true,
+        "predictor": true
+      },
+      "profile": {
+        "dtype": "float32",
+        "nodata": -9999.0,
+        "block_shape": [
+          256,
+          256
+        ],
+        "compression": "DEFLATE",
+        "predictor": "3"
+      },
+      "mean_absolute_difference": 0.0,
+      "rmse": 0.0,
+      "actual_mean": 2.5521273670894447,
+      "reference_mean": 2.5521273670894447,
+      "passed": true,
+      "atol": 0.0,
+      "rtol": 0.0,
+      "sha256": "249553652bdbbbdd157f6d1e72c665d9197b1bee4c9e2853094534bfbfd1264c",
+      "reference_sha256": "94252240768c1b6f36c7ef9367ffc16e60e0f4a1f393bdae8ed51e7d473097f0",
+      "file_bytes_identical": false,
+      "path": "<WORKSPACE>/workspace/outputs/publication/20261012T170452Z_03981eaa/rasters/composite_fire_hazard_class.tif",
+      "reference_path": "<WORKSPACE>/replay_workspace/outputs/publication/20261012T180540Z_eb3fdcb7/rasters/composite_fire_hazard_class.tif"
+    },
+    "coverage_reason": {
+      "mask_mismatches": 0,
+      "invalid_value_mismatches": 0,
+      "valid_pixels": 15475232,
+      "numeric_differing_pixels": 0,
+      "bitwise_differing_valid_pixels": 0,
+      "pixels_exceeding_tolerance": 0,
+      "max_absolute_difference": 0.0,
+      "actual_minimum": 1.0,
+      "actual_maximum": 5.0,
+      "reference_minimum": 1.0,
+      "reference_maximum": 5.0,
+      "metadata_checks": {
+        "crs": true,
+        "transform": true,
+        "shape": true,
+        "bounds": true,
+        "dtype": true,
+        "nodata": true,
+        "band_count": true,
+        "descriptions": true,
+        "tags": true,
+        "compression": true,
+        "block_shapes": true,
+        "predictor": true
+      },
+      "profile": {
+        "dtype": "uint8",
+        "nodata": 0.0,
+        "block_shape": [
+          256,
+          256
+        ],
+        "compression": "DEFLATE",
+        "predictor": "1"
+      },
+      "mean_absolute_difference": 0.0,
+      "rmse": 0.0,
+      "actual_mean": 4.262653768292456,
+      "reference_mean": 4.262653768292456,
+      "passed": true,
+      "atol": 0.0,
+      "rtol": 0.0,
+      "sha256": "89602fe085d3a663e117262e1e7aa87562b160eb7e84548766eacb5eec9eb60a",
+      "reference_sha256": "89602fe085d3a663e117262e1e7aa87562b160eb7e84548766eacb5eec9eb60a",
+      "file_bytes_identical": true,
+      "path": "<WORKSPACE>/workspace/outputs/publication/20261012T170452Z_03981eaa/composite_coverage_reason.tif",
+      "reference_path": "<WORKSPACE>/replay_workspace/outputs/publication/20261012T180540Z_eb3fdcb7/composite_coverage_reason.tif"
+    }
+  },
+  "tables": {
+    "county_exposure.csv": {
+      "equal": true,
+      "rows": 3
+    },
+    "facility_proximity.csv": {
+      "equal": true,
+      "rows": 5
+    },
+    "hazard_coverage.csv": {
+      "equal": true,
+      "rows": 5
+    },
+    "county_hazard_coverage.csv": {
+      "equal": true,
+      "rows": 15
+    },
+    "county_hls_observation_support.csv": {
+      "equal": true,
+      "rows": 18
+    },
+    "weight_sensitivity.csv": {
+      "equal": true,
+      "rows": 3
+    }
+  },
+  "historical_selection_equal": true,
+  "study_mask_equal": true,
+  "scope": "Fresh derivative rebuild versus default snapshot replay after archive extraction and relocation; two environments on the same Windows host."
+}

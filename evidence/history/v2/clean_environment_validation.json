@@ -1,0 +1,229 @@
+{
+  "status": "passed",
+  "completed_utc": "2026-10-11T20:41:03.365657+00:00",
+  "scope": "Fresh conda-forge installation and full snapshot execution on Windows, using fresh extractions of both delivered archives.",
+  "release_archive": {
+    "filename": "wui-publication-release-v1.zip",
+    "bytes": 6707513,
+    "sha256": "49fbdb59feb538d634aff748f67f1dbe272adeeaa48dbd38bd615aaea71816d1"
+  },
+  "snapshot_archive": {
+    "filename": "wui-snapshot-publication-v1.zip",
+    "bytes": 27334663257,
+    "sha256": "d63f7c1e81e60f90881dece70c16e5b5fb285cf9c534e6575d59ad6c94c0afa4",
+    "files": 1190,
+    "unpacked_data_bytes": 27413398059
+  },
+  "environment": {
+    "creation_exit_code": 0,
+    "installed_packages": 306,
+    "all_pinned_versions_match": true,
+    "dependency_specification_modified": false,
+    "separate_package_cache": true,
+    "user_site_disabled": true,
+    "private_kernel_verified": true,
+    "python": "3.14.7 | packaged by conda-forge | (main, Sep  2 2026, 21:12:42) [MSC v.1944 64 bit (AMD64)]"
+  },
+  "preliminary_checks": [
+    {
+      "script": "check_snapshot.py",
+      "exit_code": 0,
+      "seconds": 71.03
+    },
+    {
+      "script": "verify_temporal_median.py",
+      "exit_code": 0,
+      "seconds": 3.16
+    },
+    {
+      "script": "verify_snapshot_policy.py",
+      "exit_code": 0,
+      "seconds": 0.47
+    },
+    {
+      "script": "verify_hpc.py",
+      "exit_code": 0,
+      "seconds": 14.87
+    }
+  ],
+  "full_notebook_seconds": 1465.568,
+  "results": {
+    "status": "passed",
+    "accepted_reference_run": "20261011T170100Z_a475c3c2",
+    "clean_environment_run": "20261011T201441Z_c18c035e",
+    "rasters": [
+      {
+        "role": "normalized_hazard",
+        "metadata": {
+          "crs": true,
+          "transform": true,
+          "width": true,
+          "height": true,
+          "count": true,
+          "dtypes": true,
+          "nodata": true
+        },
+        "bitwise_differing_pixels": 0,
+        "mask_differing_pixels": 0,
+        "valid_pixels": 12402904,
+        "reference_file_sha256_verified": true,
+        "clean_file_sha256": "9bd71dd5e43b0968e87eae06f83a43bbc839bf7cd5e5b5237701c35b2d1f7b39",
+        "entire_file_sha256_matches": false
+      },
+      {
+        "role": "continuous_index_1_10",
+        "metadata": {
+          "crs": true,
+          "transform": true,
+          "width": true,
+          "height": true,
+          "count": true,
+          "dtypes": true,
+          "nodata": true
+        },
+        "bitwise_differing_pixels": 0,
+        "mask_differing_pixels": 0,
+        "valid_pixels": 12402904,
+        "reference_file_sha256_verified": true,
+        "clean_file_sha256": "2dac132ed3e89ea5f9ef5bca376f84c21fc1ba580d08f2588a407d37acbd8fbd",
+        "entire_file_sha256_matches": false
+      },
+      {
+        "role": "hazard_class",
+        "metadata": {
+          "crs": true,
+          "transform": true,
+          "width": true,
+          "height": true,
+          "count": true,
+          "dtypes": true,
+          "nodata": true
+        },
+        "bitwise_differing_pixels": 0,
+        "mask_differing_pixels": 0,
+        "valid_pixels": 12402904,
+        "reference_file_sha256_verified": true,
+        "clean_file_sha256": "824ebc7c4ade8f527fbda3e25d64a8107cfe768b77b3c300dc9b54e265d23d85",
+        "entire_file_sha256_matches": false
+      },
+      {
+        "role": "coverage_reason",
+        "metadata": {
+          "crs": true,
+          "transform": true,
+          "width": true,
+          "height": true,
+          "count": true,
+          "dtypes": true,
+          "nodata": true
+        },
+        "bitwise_differing_pixels": 0,
+        "mask_differing_pixels": 0,
+        "valid_pixels": 15475232,
+        "reference_file_sha256_verified": true,
+        "clean_file_sha256": "882fd5c454480c3f0b3194296d999214dbc680950be4139e5c5a31fbc5deabdd",
+        "entire_file_sha256_matches": false
+      }
+    ],
+    "tables": [
+      {
+        "table": "county_exposure.csv",
+        "rows": 3,
+        "exact_match": true
+      },
+      {
+        "table": "county_hazard_coverage.csv",
+        "rows": 15,
+        "exact_match": true
+      },
+      {
+        "table": "county_hls_observation_support.csv",
+        "rows": 18,
+        "exact_match": true
+      },
+      {
+        "table": "facility_proximity.csv",
+        "rows": 5,
+        "exact_match": true
+      },
+      {
+        "table": "hazard_coverage.csv",
+        "rows": 5,
+        "exact_match": true
+      },
+      {
+        "table": "weight_sensitivity.csv",
+        "rows": 3,
+        "exact_match": true
+      }
+    ],
+    "notebook_errors": [],
+    "notebook_warning_outputs": [],
+    "http_activity": {
+      "records": 12,
+      "all_actions": "snapshot"
+    },
+    "coverage": [
+      {
+        "CATEGORY": "Confirmed nonburnable (excluded by policy)",
+        "PIXELS": 2645626,
+        "AREA_KM2": 2381.0634,
+        "STUDY_AREA_PERCENT": 17.095872940709388
+      },
+      {
+        "CATEGORY": "Missing or unrecognized FBFM40 class",
+        "PIXELS": 0,
+        "AREA_KM2": 0.0,
+        "STUDY_AREA_PERCENT": 0.0
+      },
+      {
+        "CATEGORY": "Burnable: insufficient NDVI or NDMI observations",
+        "PIXELS": 401370,
+        "AREA_KM2": 361.233,
+        "STUDY_AREA_PERCENT": 2.593628321694951
+      },
+      {
+        "CATEGORY": "Burnable: missing another required component",
+        "PIXELS": 25332,
+        "AREA_KM2": 22.7988,
+        "STUDY_AREA_PERCENT": 0.16369383024435435
+      },
+      {
+        "CATEGORY": "Valid modeled burnable land",
+        "PIXELS": 12402904,
+        "AREA_KM2": 11162.6136,
+        "STUDY_AREA_PERCENT": 80.14680490735131
+      }
+    ],
+    "study_mask": {
+      "policy": "versioned canonical county footprint",
+      "sha256": "e695db075801f422eac9ca77f288cd979dec5fa425777e695834715787573a82",
+      "study_pixels": 15475232,
+      "reconstructed_pixels": 15475218,
+      "reconstruction_differing_pixels": 208,
+      "differing_area_km2": 0.1872
+    }
+  },
+  "source_integrity": {
+    "all_extracted_release_files_unchanged": true,
+    "original_git_status": "clean before and after",
+    "retained_workspace": "Not used for execution or modified; run used a fresh extracted workspace."
+  },
+  "launcher_warnings": [
+    {
+      "source": "pyzmq / asyncio",
+      "message": "Windows Proactor loop lacks add_reader; pyzmq registered a selector thread.",
+      "impact": "Execution completed; no notebook-computation warning or output difference observed."
+    },
+    {
+      "source": "Jupyter kernel",
+      "message": "Kernel reported TCP transport without encryption.",
+      "scope": "Private test kernel used local loopback transport; this message came from the validation launcher."
+    }
+  ],
+  "limits": [
+    "One fresh Windows environment on the same computer; other operating systems not tested.",
+    "Snapshot replay used the published retained source data and reusable derivatives; full refresh and forced derivative rebuild were not tested.",
+    "Public data hosting, GitHub Pages deployment, native fullscreen and physical-phone interaction remain separate checks."
+  ]
+}

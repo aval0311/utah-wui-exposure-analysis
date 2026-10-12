@@ -1,282 +1,190 @@
-# Utah Wildland–Urban Interface Exposure Analysis
+# Utah WUI exposure and relative wildfire hazard
 
-A reproducible geospatial analysis of population, housing, critical-facility, and wildfire-hazard exposure within high-risk wildland–urban interface areas in Utah.
+A geospatial data-science portfolio project connecting a complete ETL pipeline to
+county exposure estimates, transparent raster modeling, and an interactive dashboard
+for Salt Lake, Utah, and Washington counties.
 
-The project evaluates Salt Lake, Utah, and Washington counties using census geography, demographic estimates, WUI boundaries, vegetation and fuel conditions, terrain, historical fire activity, roads, land cover, and critical-facility locations.
+## Explore
 
-![Statewide Utah WUI exposure and wildfire hazard dashboard](images/utah_wui_dashboard_overview.png)
+- **[Analysis notebook](notebooks/utah_wui_exposure_analysis.ipynb):** saved results, methods, code, and checks.
+- **[Dashboard](docs/index.html):** download the release and open this HTML file in a browser.
+- **[Live deployment target](https://aval0311.github.io/utah-wui-exposure-analysis/):** serves v3 after this release is deployed; deployment is not performed by this package.
+- **[County results](outputs/tables/county_exposure.csv)** and **[coverage diagnostics](outputs/tables/hazard_coverage.csv)**.
+- **[Reproduction guide](data/README.md)** and **[publication handoff](RELEASE_HANDOFF.md)**.
 
-*Study-area overview of the integrated wildfire-hazard and WUI-exposure dashboard for Salt Lake, Utah, and Washington counties.*
+GitHub's notebook preview displays saved figures and tables. Interactive exploration
+uses the standalone dashboard. Browser libraries and basemap tiles require internet.
 
-## Project Objective
+## Questions and contribution
 
-The objective is to identify where high-risk WUI areas intersect populated census block groups, evaluate environmental conditions associated with wildfire hazard, and summarize the people, housing units, and critical facilities potentially exposed.
+1. Where does mapped high-risk WUI intersect Census block groups?
+2. How do estimated population and housing overlap differ between counties?
+3. Which facilities intersect or lie near those WUI polygons?
+4. How do six environmental indicators combine into a relative hazard surface?
+5. What computation-time and memory tradeoff does local parallel processing provide?
 
-This project demonstrates an end-to-end geospatial data-science workflow, including:
+The pipeline preserves source snapshots, standardizes identifiers and spatial references,
+performs overlap-safe vector analysis, aligns a 30 m raster grid, records missing-data
+coverage, validates outputs, and exports a responsive Folium dashboard. Xarray and
+rioxarray retain grid coordinates; Dask parallelizes the final composite with local workers.
 
-- Programmatic data acquisition and validation
-- Raster and vector data processing
-- Coordinate-reference-system management
-- Spatial overlays, clipping, and proximity analysis
-- Census demographic integration
-- Composite hazard modeling
-- Exposure estimation and aggregation
-- Quality-control testing
-- Interactive web-map development
+## Results from the accepted release
 
-## Research Questions
+<!-- RELEASE_RESULTS_START -->
+Accepted snapshot run: **20261012T180540Z_eb3fdcb7**, completed **2026-10-12 UTC**.
+This summary is synchronized from exported tables; new execution results appear later in the notebook.
 
-1. Where do designated high-risk WUI areas overlap populated census block groups?
-2. How many residents and housing units are located within the affected block groups?
-3. How does modeled wildfire hazard vary across the study area?
-4. Which critical facilities are located within or near high-risk WUI areas?
-5. How can these results be communicated through an interactive decision-support dashboard?
+| County | Estimated residents in mapped WUI | Estimated housing units | Share of county population |
+|---|---:|---:|---:|
+| Salt Lake | 4,552 | 1,523 | 0.38% |
+| Utah | 6,464 | 1,640 | 0.92% |
+| Washington | 8,176 | 3,770 | 4.16% |
 
-## Study Area
+Washington County has the largest estimated exposed population and the highest share of county residents within mapped WUI. These area-weighted estimates describe mapped WUI overlap, not population within a modeled hazard class.
 
-The study covers three Utah counties:
+The study footprint totals **13,927.71 km²**.
 
-- Salt Lake County
-- Utah County
-- Washington County
-
-All projected spatial analysis is performed in **NAD83 / UTM Zone 12N (EPSG:26912)** to support consistent area, distance, and proximity calculations.
-
-## County Analysis Views
-
-![Salt Lake County block-group WUI exposure](images/salt_lake_county_wui_exposure.png)
-
-*Block-group WUI exposure in Salt Lake County, including estimated population and housing exposure within the selected block group.*
-
-![Utah County high-risk WUI polygons](images/utah_county_high_risk_wui.png)
-
-*High-risk WUI polygons across Utah County, illustrating where developed areas intersect wildfire-prone landscapes.*
-
-![Washington County composite fire hazard](images/washington_county_composite_fire_hazard.png)
-
-*Composite fire-hazard classifications across Washington County displayed over Esri World Imagery.*
-
-## Key Findings
-
-The published analysis identified:
-
-| Metric | Result |
+| Coverage category | Study area (%) |
 |---|---:|
-| Census block groups analyzed | 1,240 |
-| Block groups with high-risk WUI exposure | 111 |
-| Estimated residents in exposed block groups | 19,192 |
-| Estimated housing units in exposed block groups | 6,933 |
-| High-risk WUI overlap | 407.24 km² |
-| Critical facilities evaluated | 1,823 |
-| Critical facilities located within high-risk WUI | 27 |
-| Critical facilities outside but within one mile of high-risk WUI | 178 |
+| Confirmed nonburnable (excluded by policy) | 17.10 |
+| Missing or unrecognized FBFM40 class | 0.00 |
+| Burnable: insufficient NDVI or NDMI observations | 2.59 |
+| Burnable: missing another required component | 0.16 |
+| Valid modeled burnable land | 80.15 |
 
-Population and housing figures represent estimates associated with exposed census block groups. They should not be interpreted as exact structure-level counts within WUI boundaries.
+County panels are polygon-masked. Nonburnable land and missing observations have separate exclusion categories.
 
-## Analytical Workflow
+Sensitivity uses **13,591** modeled sample pixels.
 
-The notebook implements the following workflow:
+- Equal weights: **85.27%** class agreement; top-quintile Jaccard **0.631**.
+- Half history influence, renormalized: **88.14%** class agreement; top-quintile Jaccard **0.867**.
 
-1. Define the study area and projected coordinate system.
-2. Acquire or load validated census, WUI, infrastructure, environmental, and historical-fire datasets.
-3. Standardize coordinate systems, schemas, geometries, and spatial extents.
-4. Clip high-risk WUI polygons to the three-county study area.
-5. Measure WUI overlap within census block groups.
-6. Integrate ACS population and housing estimates.
-7. Prepare vegetation, fuels, terrain, fire-history, road, and land-cover indicators.
-8. Normalize the model inputs and construct a composite fire-hazard index.
-9. Classify the composite index into five relative hazard categories.
-10. Evaluate critical facilities located within and near high-risk WUI areas.
-11. Validate intermediate and final analytical products.
-12. Build an interactive dashboard for exploring the results.
+These comparisons assess stability under assumed weights.
 
-## Composite Fire-Hazard Model
+Historical selection retained **20,853 recorded wildfires** in the density rectangle, including **4,689 inside the county polygons**. Prescribed fires are excluded.
 
-The composite model combines indicators representing:
+This complete snapshot run took **24.1 minutes**, measured from configuration through input verification, processing, and snapshot-inventory finalization. This single functional-validation timing is separate from the retained composite benchmark.
 
-- Vegetation condition
-- Surface and canopy fuels
-- Terrain
-- Historical fire activity
-- Roads and other human ignition indicators
-- Developed-land patterns
+<!-- RELEASE_RESULTS_END -->
 
-The resulting categories—Very Low, Low, Moderate, High, and Very High—represent relative modeled hazard within this project. They are not official wildfire forecasts, evacuation products, or replacements for authoritative agency assessments.
+![County exposure](images/county_exposure.png)
+![Relative hazard by county](images/hazard_overview.png)
 
-## Data Sources
+## Methods and interpretation
 
-Primary data providers include:
+Spatial analysis uses EPSG:26912. Population and housing estimates allocate 2024 ACS
+five-year values by mapped WUI overlap with 2020 block groups. This assumes uniform
+density within a block group; allocated margins of error omit spatial-allocation uncertainty.
+Facility proximity is Euclidean distance. The one-mile screening flag is a project rule,
+and popup demographic values describe the containing block group.
 
-- U.S. Census Bureau
-- Utah Geographic Information Systems
-- NASA
-- Microsoft Planetary Computer
-- LANDFIRE
-- U.S. Geological Survey
-- National Interagency Fire Center
-- U.S. Forest Service
-- Monitoring Trends in Burn Severity
-- Multi-Resolution Land Characteristics Consortium
+The relative score combines fuels (30%), vegetation dryness (20%), slope (15%), aspect
+(10%), historical wildfire occurrence (15%), and human-activity indicators (10%).
+The notebook explains transformations, thresholds, and rationale beside each phase.
+These are explicit project assumptions. The continuous index is 1 + 9 × normalized score;
+fixed boundaries at 0.2, 0.4, 0.6, and 0.8 define five descriptive classes.
 
-Detailed dataset descriptions, publication modes, refresh behavior, and licensing information are available in [`data/README.md`](data/README.md).
+Recorded InFORM wildfires are filtered to IncidentTypeCategory=WF, with discovery dates
+from 1992-01-01 inclusive to 2026-09-30 exclusive (UTC). A documented bounding rectangle
+retains surrounding events for density smoothing; actual county counts are reported separately.
+Source vintages differ. This release provides a relative screening analysis rather than
+calibrated probabilities of ignition, loss, or fire behavior.
 
-## Repository Structure
+## Quality and limitations
 
-```text
-utah-wui-exposure-analysis/
-├── README.md
-├── LICENSE
-├── environment.yml
-├── .gitignore
-├── data/
-│   └── README.md
-├── docs/
-├── images/
-│   ├── utah_wui_dashboard_overview.png
-│   ├── salt_lake_county_wui_exposure.png
-│   ├── utah_county_high_risk_wui.png
-│   └── washington_county_composite_fire_hazard.png
-├── interactive-map/
-├── notebooks/
-│   └── utah_wui_exposure_analysis.ipynb
-└── outputs/
-    └── dashboard/
-        └── Utah_WUI_Exposure_Composite_Fire_Hazard_Dashboard.html
-```
+Checks cover geometry, joins, exact raster alignment, input checksums, temporal support,
+nonburnable exclusions, coverage reconciliation, component formulas, and serial/Dask agreement.
+See [current release evidence](evidence/release_validation.json) for completed checks and their scope.
 
-Large raw, cached, intermediate, and processed geospatial datasets are intentionally excluded from the repository.
+- Confirmed nonburnable and incomplete cells are excluded for different reasons.
+- HLS sampling and quality masks leave some burnable land without sufficient observations.
+- MTBS perimeters are unavailable in this snapshot. The retained 60/40 history formulation
+  assigns zero to the missing perimeter term and caps the component at 0.60.
+- The canonical mask differs from independent county reconstruction at 208 cells (0.1872 km²
+  in the retained footprint). Its original cause is unresolved; each run measures the difference.
+- Infrastructure records can be incomplete or imprecise; shelter points do not establish
+  operating status. Historical fire reporting is incomplete and varies over time.
+- Weight sensitivity assesses stability. Predictive accuracy has not been established for this index.
 
-## Explore the Analysis
+![County coverage](images/county_coverage_diagnostics.png)
 
-The complete analysis is available in:
+## Reproduce the analysis
 
-[`notebooks/utah_wui_exposure_analysis.ipynb`](notebooks/utah_wui_exposure_analysis.ipynb)
+Keep the notebook with src/, scripts/, and the environment specification. If the tested
+wui-professional-314 environment already exists, activate it and select its kernel in JupyterLab.
+To create the environment on another compatible machine:
 
-GitHub displays the saved notebook outputs, tables, static visualizations, and narrative without requiring the notebook to be executed. GitHub's notebook preview does not run the interactive dashboard iframe.
+    mamba env create -f environment.yml
+    mamba activate wui-professional-314
+    python -m ipykernel install --user --name wui-professional-314
+    jupyter lab
 
-The generated dashboard is stored at [`outputs/dashboard/Utah_WUI_Exposure_Composite_Fire_Hazard_Dashboard.html`](outputs/dashboard/Utah_WUI_Exposure_Composite_Fire_Hazard_Dashboard.html) and can be opened locally in a web browser. A public dashboard link can be added here after deployment through GitHub Pages.
+Extract **wui-snapshot-publication-v3.zip** into a separate writable workspace. Set
+WUI_PROJECT_ROOT before starting Jupyter, or set PROJECT_ROOT_OVERRIDE in the configuration
+cell. Restart the kernel and run all cells. Full steps and checksum verification are in the
+[data guide](data/README.md). Saved outputs and the dashboard can be reviewed without the snapshot.
 
-For the best recruiter review experience, open the notebook directly in GitHub and use the table of contents to navigate between the analytical sections.
+Defaults are DATA_MODE="snapshot", REBUILD_DERIVED=False, and HPC_ENGINE="dask".
+Snapshot execution uses retained sources and frozen responses. Refresh intentionally reacquires
+sources and requires a Census API key through an environment variable or hidden prompt.
+Rebuilding derivatives uses the selected acquisition mode and never silently enables downloads.
+The snapshot network guard applies to the notebook kernel's Python socket calls; it is not an
+operating-system or worker-process firewall.
 
-## Reproducing the Environment
+Four local workers have a 4 GiB limit each. The client and upstream arrays need additional RAM;
+the validated machine has approximately 32 GiB. Worker count and chunk size are configurable.
+Allow space for the approximately 27 GB archive, extraction, derived products, and new outputs.
+Preserve the downloaded archive as the immutable starting copy.
 
-The analysis was validated with:
+Each execution writes a unique outputs/publication/RUN_ID/ directory in the selected workspace.
+After an accepted execution, export that run to update the package's dashboard, figures,
+tables, notebook opening summary, and README together:
 
-- Python 3.14.7
-- NumPy 2.4.6
-- Rasterio 1.5.1
-- GeoPandas 1.1.4
-- Shapely 2.1.2
+    python scripts/export_publication.py /path/to/workspace --run /path/to/workspace/outputs/publication/RUN_ID
 
-NumPy is constrained to versions below 2.5 for compatibility with the verified geospatial environment.
+Run current equivalence and browser checks before replacing release evidence. Recreate
+release checksums after changes. Running notebook cells alone does not rewrite the
+accepted-run summaries in the opening Markdown or README.
 
-Create the Conda environment from the repository root:
+## Parallel-processing evidence
 
-```bash
-mamba env create -f environment.yml
-```
+A retained matched experiment used identical frozen composite inputs, one warm-up, and five
+measured runs per configuration. It predates v3's wildfire-only source selection.
 
-Activate the environment:
+| Configuration | Median compute/export | Median peak process-tree RSS |
+|---|---:|---:|
+| Rasterio/NumPy | 38.711 s | 2.960 GiB |
+| Dask, 1 worker, 1024 × 1024 | 65.282 s | 2.268 GiB |
+| Dask, 4 workers, 1024 × 1024 | 22.559 s | 5.252 GiB |
+| Dask, 4 workers, 2048 × 2048 | 17.673 s | 5.510 GiB |
 
-```bash
-mamba activate wui-professional-314
-```
+The selected configuration achieved **2.19× compute/export speedup**, or **1.90× including
+cluster startup and teardown**, using approximately **1.86× memory**. All 96 retained output
+comparisons passed. These warm-cache, local-host measurements apply to the recorded composite
+workload. Upstream ETL remains conventional Python GIS; multi-node scaling is future work.
+The [protocol](evidence/step4_report.txt) and [measurements](evidence/benchmark_summary.json)
+document timing boundaries, hardware, and sampling limitations. Current equivalence evidence
+is separate from that historical experiment.
 
-Start JupyterLab:
+## Planned machine-learning extension
 
-```bash
-jupyter lab
-```
+Estimate the probability of **at least one new recorded wildfire ignition within a defined
+geographic unit during a specified future period**. Resolution and forecast horizon will be
+chosen after evaluating event frequency, source accuracy, and data availability. Development
+will require multi-year, time-aligned predictors available at forecast issue time, observed
+outcomes, appropriate no-recorded-ignition samples, calibration, and comparisons with simple
+baselines. Evaluation will withhold future periods and geographic areas. The current weighted
+score is not a training label. This capability is planned and is not implemented in this release.
 
-Then open:
+## Package layout
 
-```text
-notebooks/utah_wui_exposure_analysis.ipynb
-```
+- notebooks/: executed analysis and narrative.
+- src/wui/: runtime, analytical helpers, parallel computation, validation, and publication support.
+- scripts/: regression checks and publication export.
+- data/: matching snapshot inventory, checksum, and acquisition guide.
+- images/ and outputs/tables/: accepted-run figures and tables.
+- docs/index.html: interactive dashboard for GitHub Pages.
+- evidence/: current validation and explicitly retained historical evidence.
 
-## Data Modes
-
-The publication notebook uses:
-
-```python
-census_geography_data_mode = "snapshot"
-acs_data_mode = "snapshot"
-fire_hazard_data_mode = "snapshot"
-```
-
-These three modes were used to load the validated census-geography, ACS demographic, and fire-hazard inputs that produced the published results. However, the complete snapshot and cached datasets are not included in this repository because they require multiple gigabytes of storage.
-
-A user starting from a fresh clone will need to configure the workflow to refresh the required data:
-
-```python
-census_geography_data_mode = "refresh"
-acs_data_mode = "refresh"
-fire_hazard_data_mode = "refresh"
-```
-
-`census_geography_data_mode` controls whether the notebook loads the validated census-geography snapshot or downloads the required county and block-group boundaries again. `acs_data_mode` controls the corresponding ACS demographic inputs, and `fire_hazard_data_mode` controls the environmental and fire-hazard source data and derived caches.
-
-ACS refresh mode requires a U.S. Census API key. Census-geography and fire-hazard refresh modes require network access, while fire-hazard refresh mode can also require substantial download time, disk space, memory, and processing time.
-
-Refreshing upstream datasets may produce results that differ from the published analysis.
-
-## Validation and Quality Control
-
-The workflow includes checks for:
-
-- Expected coordinate-reference systems
-- Invalid or empty geometries
-- Duplicate geographic identifiers
-- Census-table completeness
-- Raster resolution, bounds, and alignment
-- Missing and non-finite values
-- Spatial-overlay consistency
-- Hazard-score ranges and classifications
-- Exposure-summary reconciliation
-- Required dashboard layers and basemaps
-
-The publication notebook was restarted, cleared, and executed from beginning to end in the verified environment before release.
-
-## Limitations
-
-- The composite hazard index is an analytical model, not an official wildfire-risk product.
-- Model results depend on the selected indicators, transformations, weights, classifications, spatial resolutions, and source dates.
-- Census block-group summaries do not provide structure-level or household-level exposure estimates.
-- Critical-facility results depend on the completeness and positional accuracy of published facility datasets.
-- Source datasets represent different collection dates and update schedules.
-- MTBS fire-perimeter data were configured as an optional input but were unavailable during the publication run. The historical-fire component therefore used the available InFORM fire-occurrence data.
-- Refreshing external data may change the results.
-- The analysis does not model active fire behavior, weather, suppression capability, evacuation time, or future climate conditions.
-
-## Potential Extensions
-
-Potential extensions include:
-
-1. Testing alternative model weights and classification methods through sensitivity analysis.
-2. Integrating building footprints, address points, or parcel data for higher-resolution exposure estimates.
-3. Expanding the workflow to additional Utah counties and establishing a controlled update process.
-
-## Tools and Technologies
-
-- Python
-- JupyterLab
-- GeoPandas
-- Pandas
-- NumPy
-- Shapely
-- Rasterio
-- Folium
-- Matplotlib
-- Conda and Mamba
-- REST APIs
-- Cloud-hosted geospatial data services
-
-## Intended Use
-
-This project was developed as a professional geospatial data-science portfolio demonstration. It illustrates reproducible spatial analysis, multi-source data integration, environmental hazard modeling, validation, and interactive cartographic communication.
-
-The results are intended for analytical and educational purposes and should not be used for emergency response, evacuation decisions, insurance evaluation, or official hazard designation.
-
-## License
-
-Original code and documentation in this repository are licensed under the [MIT License](LICENSE). External datasets remain subject to the licenses, attribution requirements, and usage policies of their respective publishers.
+Original code and documentation use the [MIT License](LICENSE). Third-party datasets retain
+their providers' terms and attribution requirements.

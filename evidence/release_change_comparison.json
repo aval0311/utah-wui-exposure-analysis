@@ -1,0 +1,60 @@
+{
+  "previous_run": "20261011T170100Z_a475c3c2",
+  "rebuilt_run": "20261012T170452Z_03981eaa",
+  "source_files_compared": 526,
+  "changed_source_files": [],
+  "coverage_transition_matrix": [
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      2645626,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      401320,
+      0,
+      50
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      25332,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      64,
+      0,
+      12402840
+    ]
+  ],
+  "coverage_codes": "Rows: prior category; columns: new category; 0 outside, 1 nonburnable, 2 unknown fuel, 3 insufficient HLS, 4 other missing, 5 modeled.",
+  "class_changes_where_modeled_in_both": 19922,
+  "modeled_pixels_in_both": 12402840,
+  "note": "The release includes both wildfire-only selection and a full derivative rebuild. Coverage differences must not be attributed to the historical-event filter."
+}
