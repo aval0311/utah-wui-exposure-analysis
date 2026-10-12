@@ -6,9 +6,9 @@ for Salt Lake, Utah, and Washington counties.
 
 ## Explore
 
+- **[Live dashboard](https://aval0311.github.io/utah-wui-exposure-analysis/):** explore wildfire exposure, relative hazard, and facility proximity across Salt Lake, Utah, and Washington counties.
 - **[Analysis notebook](notebooks/utah_wui_exposure_analysis.ipynb):** saved results, methods, code, and checks.
-- **[Dashboard](docs/index.html):** download the release and open this HTML file in a browser.
-- **[Live deployment target](https://aval0311.github.io/utah-wui-exposure-analysis/):** serves v3 after this release is deployed; deployment is not performed by this package.
+- **[Dashboard HTML](docs/index.html):** download and open locally in a browser; internet is required for browser libraries and basemap tiles.
 - **[County results](outputs/tables/county_exposure.csv)** and **[coverage diagnostics](outputs/tables/hazard_coverage.csv)**.
 - **[Reproduction guide](data/README.md)** and **[publication handoff](RELEASE_HANDOFF.md)**.
 
