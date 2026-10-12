@@ -186,5 +186,10 @@ score is not a training label. This capability is planned and is not implemented
 - docs/index.html: interactive dashboard for GitHub Pages.
 - evidence/: current validation and explicitly retained historical evidence.
 
+The [file checksum manifest](release_file_checksums.json) records SHA-256 hashes and byte
+sizes for tracked publication files as stored by Git, excluding the manifest itself.
+These describe the current repository contents; Windows working copies can use different
+line endings. Execution reports retain the hashes of the original validated release artifacts.
+
 Original code and documentation use the [MIT License](LICENSE). Third-party datasets retain
 their providers' terms and attribution requirements.
