@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Explore reviewed recorded wildfire occurrence across 997 county-clipped cells in three Utah counties, 2001–2021.">
+  <title>Utah wildfire history · 2001–2021</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css">
+  <script src="data/timeline.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to explorer</a>
+<header class="site-header">
+  <a class="brand" href="https://aval0311.github.io/utah-wui-exposure-analysis/">UTAH WUI <span>Adam Valentino</span></a>
+  <nav aria-label="Project phases">
+    <a href="https://aval0311.github.io/utah-wui-exposure-analysis/">WUI dashboard</a>
+    <a href="https://aval0311.github.io/utah-wui-exposure-analysis/ml/">ML case study</a>
+    <span aria-current="page">Historical timeline</span>
+  </nav>
+</header>
+<main id="main">
+  <section class="intro" aria-labelledby="title">
+    <div class="eyebrow">Historical evidence explorer <span>2001–2021</span></div>
+    <h1 id="title">Recorded wildfire occurrence,<br>one year at a time.</h1>
+    <p>Explore 21 years across Salt Lake, Utah, and Washington counties. Each observation is a county-clipped grid cell in one UTC calendar year. A positive means <strong>at least one recorded wildfire discovery</strong> in that cell.</p>
+    <div class="scope-tags"><span>997 nominal 4 km cells</span><span>Includes non-WUI land</span><span>Reviewed historical labels</span></div>
+  </section>
+
+  <section class="explorer" aria-labelledby="explore-title">
+    <div class="section-heading"><div><div class="eyebrow">01 / Annual pattern</div><h2 id="explore-title">Follow the record through time</h2></div><a class="download" href="data/annual_summary.csv" download>Download annual CSV ↓</a></div>
+    <div class="controls">
+      <div class="field"><label for="county">Study area</label><select id="county"><option>All counties</option><option>Salt Lake</option><option>Utah</option><option>Washington</option></select></div>
+      <fieldset class="measure"><legend>Chart measure</legend><div class="segmented"><label><input type="radio" name="measure" value="rate" checked><span>Occurrence rate</span></label><label><input type="radio" name="measure" value="count"><span>Positive cells</span></label></div></fieldset>
+      <p class="denominator" id="denominator-note"><strong>Rate = positive cells ÷ known reviewed cells.</strong> Unknown labels are omitted. Flagged zeros retain their reviewed zero label and remain in this denominator.</p>
+    </div>
+    <div class="chart-scroll" role="region" aria-label="Annual occurrence chart; scroll horizontally on small screens" tabindex="0"><svg id="trend" viewBox="0 0 1020 340" aria-labelledby="trend-title trend-description"><title id="trend-title">Annual recorded occurrence</title><desc id="trend-description"></desc></svg></div>
+    <p class="chart-note"><span class="dot"></span> Recorded occurrence <span class="dot selected-dot"></span> Selected year <span class="dot quality-dot"></span> Unknown or flagged labels <span class="transition-key"></span> 2020 source transition · Select a bar or use the year control.</p>
+    <div class="year-controls"><button id="previous" class="step" type="button" aria-label="Previous year">←</button><label for="year">Selected year <output id="year-output" for="year">2021</output></label><input id="year" type="range" min="2001" max="2021" step="1" value="2021" aria-label="Selected year"><button id="next" class="step" type="button" aria-label="Next year">→</button></div>
+    <div class="selected-heading"><h3 id="selected-heading">2021 · All counties</h3><span id="selected-rate"></span></div>
+    <div class="metrics" aria-label="Selected-year summary">
+      <div class="metric positive"><span>Recorded-positive cells</span><strong id="positive">—</strong><small>At least one recorded discovery</small></div>
+      <div class="metric"><span>Known reviewed cells</span><strong id="known">—</strong><small id="known-detail">Rate denominator</small></div>
+      <div class="metric unknown"><span>Unknown labels</span><strong id="unknown">—</strong><small>Omitted from the rate</small></div>
+      <div class="metric flagged"><span>Flagged zeros</span><strong id="flagged">—</strong><small>Subset of known reviewed cells</small></div>
+    </div>
+    <div id="year-context" class="context" role="note"></div>
+    <p id="announcement" class="sr-only" role="status" aria-live="polite"></p>
+    <details class="annual-table"><summary>Read the annual values as a table</summary><div class="table-scroll" tabindex="0" role="region" aria-label="Annual values"><table><caption id="table-caption">All counties · annual reviewed occurrence</caption><thead><tr><th scope="col">Year</th><th scope="col">Positive cells</th><th scope="col">Known cells</th><th scope="col">Rate</th><th scope="col">Unknown</th><th scope="col">Flagged zeros</th></tr></thead><tbody id="annual-rows"></tbody></table></div></details>
+  </section>
+
+  <section class="spatial" aria-labelledby="map-title">
+    <div class="section-heading"><div><div class="eyebrow">02 / The geography of the record</div><h2 id="map-title">Locate the selected year's cells</h2></div><span class="year-badge" id="map-year">2021</span></div>
+    <p class="section-copy">Each shape is an original study cell clipped to the county union. The panels use separate scales. County filters group cells by their largest county area share, rather than the exact county of an incident.</p>
+    <ul class="legend" aria-label="Cell status legend"><li><i class="swatch status-P"></i>Recorded positive</li><li><i class="swatch status-N"></i>No recorded occurrence</li><li><i class="swatch status-U"></i>Unknown label</li><li><i class="swatch status-F"></i>Flagged zero</li></ul>
+    <div id="maps" class="maps"></div>
+    <div class="cell-inspector">
+      <div class="field"><label for="cell-select">Inspect a cell</label><select id="cell-select"><option value="">Choose a cell from the map or list</option></select><small>On a map, arrow keys move through cells; Enter selects.</small></div>
+      <div id="cell-detail" class="cell-detail"><h3>A cell's history</h3><p>Select a cell to see all 21 annual labels and its original observation area.</p></div>
+    </div>
+  </section>
+
+  <section class="reading" aria-labelledby="reading-title">
+    <div><div class="eyebrow">03 / Interpretation</div><h2 id="reading-title">Read the record with its limits.</h2></div>
+    <div class="reading-grid">
+      <article><h3>Cells are the observation unit.</h3><p>One cell can contain several discoveries but contributes only one positive in a year. These charts show occupied cell-years, not unique incident counts or the number of distinct cells across the whole period.</p></article>
+      <article><h3>Coverage changes the comparison.</h3><p>Unknown labels stay unknown. The 2020 source transition coincides with reporting differences; this evidence cannot separate reporting changes from real fire variation. A no-record label does not prove that no fire occurred.</p></article>
+      <article><h3>Area affects opportunity.</h3><p>Cells have unequal clipped areas. Counts and rates describe these footprints, including non-WUI land. They are not hazard per square kilometer, property-loss estimates, or daily fire danger.</p></article>
+      <article><h3>Historical labels and ML scores differ.</h3><p>This rate includes flagged zeros as retained reviewed labels. The ML case study excludes the frozen 155 flagged-zero cell-years from evaluation. Direct comparisons must use the same cohort. Training and calibration policy is unchanged.</p></article>
+    </div>
+  </section>
+  <section class="evidence" aria-labelledby="evidence-title"><div><div class="eyebrow">Evidence and reuse</div><h2 id="evidence-title">A portable historical snapshot.</h2><p>This explorer uses saved reviewed labels and the frozen flagged-zero mask. Its map geometry is simplified only for display. All viewing assets work offline.</p></div><ul><li><a href="data/annual_summary.csv" download>Annual summaries · CSV</a></li><li><a href="data/timeline.json" download>Cell histories and display paths · JSON</a></li><li><a href="data/provenance.json">Provenance and denominator definitions</a></li><li><a href="README.md">Viewing and reproduction notes</a></li><li><a href="https://aval0311.github.io/utah-wui-exposure-analysis/ml/#sources">Underlying sources and attribution</a></li></ul></section>
+</main>
+<footer>Adam Valentino · Historical occurrence explorer v0.1.0 · Development evidence, 2001–2021 · Historical snapshot</footer>
+<noscript><p class="noscript">JavaScript is needed for the interactive charts and map. <a href="data/annual_summary.csv">Download the complete annual summary table</a> to read the values without JavaScript.</p></noscript>
+</body>
+</html>

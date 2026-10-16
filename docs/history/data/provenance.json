@@ -1,0 +1,101 @@
+{
+  "version": "0.1.0",
+  "scope": "Reviewed development labels, UTC calendar years 2001–2021 only",
+  "sources": [
+    {
+      "bundle": "label_review_79ce3359e998",
+      "file": "labels_cell_year_reviewed.parquet",
+      "sha256": "555f2574a0ca66bd461dc807189b3764a27c6cedbeaa95e1f703154ad2638ea3"
+    },
+    {
+      "bundle": "annual_calibration_9b93835d6db9",
+      "file": "flagged_cell_years.parquet",
+      "sha256": "1bed016cca31f0ce6f420d76bdef64581b88ece1b986e7928a0a3ee712c3acaa"
+    },
+    {
+      "bundle": "milestone1_56ca5d009827",
+      "file": "analysis_grid.parquet",
+      "sha256": "4291591af2915d5443637839745f4a8bfc5e4c76d504b4acb75e1ab3db1ba451"
+    }
+  ],
+  "temporal_reads": [
+    {
+      "source": "label_review_79ce3359e998/labels_cell_year_reviewed.parquet",
+      "columns": [
+        "cell_id",
+        "observation_id",
+        "year",
+        "primary_county",
+        "study_area_km2",
+        "y_reviewed"
+      ],
+      "filters": [
+        [
+          "year",
+          ">=",
+          2001
+        ],
+        [
+          "year",
+          "<=",
+          2021
+        ]
+      ],
+      "rows": 20937,
+      "minimum_year": 2001,
+      "maximum_year": 2021
+    },
+    {
+      "source": "annual_calibration_9b93835d6db9/flagged_cell_years.parquet",
+      "columns": [
+        "observation_id",
+        "year"
+      ],
+      "filters": [
+        [
+          "year",
+          ">=",
+          2001
+        ],
+        [
+          "year",
+          "<=",
+          2021
+        ]
+      ],
+      "rows": 155,
+      "minimum_year": 2017,
+      "maximum_year": 2020
+    }
+  ],
+  "map_display": {
+    "crs": "EPSG:26912",
+    "simplification_m": 75,
+    "note": "Simplified geometry is for display; original labels, area and grid membership are retained. County panels have separate scales."
+  },
+  "county_assignment": "Largest county area share of each original county-union-clipped cell; not exact incident county.",
+  "rate_denominator": "Known reviewed labels. Flagged zeros retain label 0 and remain in this denominator, as in the frozen reviewed data.",
+  "flagged_zero_policy": "Use the frozen 155-cell-year mask as an annotation only. No relabeling. ML evaluation excludes these rows; this historical rate includes them.",
+  "limits": [
+    "Binary cell-year occupancy is not an incident count.",
+    "No recorded occurrence does not establish absence of fire.",
+    "Reporting variation and the 2020 source transition cannot be separated from real occurrence changes.",
+    "Variable cell areas and retrospective county attribution limit comparisons.",
+    "The grid includes non-WUI land."
+  ],
+  "work_performed": {
+    "model_fits": 0,
+    "model_objects_loaded": 0,
+    "new_predictions": 0,
+    "label_changes": 0,
+    "source_refreshes": 0,
+    "later_period_rows_loaded": 0
+  },
+  "saved_ml_map_rows_reconciled": 8973,
+  "totals": {
+    "cell_years": 20937,
+    "positive_cell_years": 2006,
+    "unknown_cell_years": 231,
+    "flagged_zero_cell_years": 155
+  }
+}

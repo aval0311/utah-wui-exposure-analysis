@@ -3,10 +3,17 @@ import csv, json
 from pathlib import Path
 
 def add_phase_navigation(html):
-    """Keep the published ML study discoverable when exporting the dashboard."""
-    if '<nav class="wui-phase-nav"' in html:
-        return html
+    """Keep both historical and ML studies discoverable on dashboard exports."""
     css_anchor = '  #wui-app .wui-body { flex:1;'
+    if '<nav class="wui-phase-nav"' in html:
+        if 'class="wui-timeline-link"' not in html:
+            anchor = '  </nav>\n  <div class="wui-body">'
+            if html.count(anchor) != 1:
+                raise ValueError('Review project-phase navigation before export.')
+            html = html.replace(anchor, '    <a class="wui-timeline-link" href="https://aval0311.github.io/utah-wui-exposure-analysis/history/">Historical timeline <span aria-hidden="true">&rarr;</span></a>\n' + anchor)
+        if '#wui-app .wui-phase-nav .wui-timeline-link' not in html:
+            html = html.replace(css_anchor, '  #wui-app .wui-phase-nav .wui-timeline-link { background:var(--wui-teal); color:white;\n    padding:0 12px; border-radius:4px; text-decoration:none; }\n  #wui-app .wui-phase-nav .wui-timeline-link:hover { background:#12575C; }\n' + css_anchor)
+        return html
     html_anchor = '  </header>\n  <div class="wui-body">'
     if html.count(css_anchor) != 1 or html.count(html_anchor) != 1:
         raise ValueError('Dashboard header changed; review project-phase navigation before export.')
@@ -24,7 +31,7 @@ def add_phase_navigation(html):
     <a href="https://aval0311.github.io/utah-wui-exposure-analysis/ml/">ML case study <span aria-hidden="true">&rarr;</span></a>
   </nav>
   <div class="wui-body">'''
-    return html.replace(css_anchor, css + css_anchor).replace(html_anchor, navigation)
+    return add_phase_navigation(html.replace(css_anchor, css + css_anchor).replace(html_anchor, navigation))
 
 def release_summary(run):
     run=Path(run)

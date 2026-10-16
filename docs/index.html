@@ -341,6 +341,9 @@
   #wui-app .wui-phase-nav a { display:inline-flex; align-items:center; gap:6px;
     min-height:36px; color:#12575C; font-weight:700; text-decoration:underline; text-underline-offset:3px; }
   #wui-app .wui-phase-nav a:hover { color:#0B363A; }
+  #wui-app .wui-phase-nav .wui-timeline-link { background:var(--wui-teal); color:white;
+    padding:0 12px; border-radius:4px; text-decoration:none; }
+  #wui-app .wui-phase-nav .wui-timeline-link:hover { background:#12575C; }
   #wui-app .wui-body { flex:1; min-height:0; display:flex; position:relative; }
   #wui-app .wui-sidebar { width:332px; flex:none; display:flex; flex-direction:column;
     background:var(--wui-paper); border-right:1px solid var(--wui-line); z-index:1100; min-height:0; }
@@ -457,6 +460,7 @@
   <nav class="wui-phase-nav" aria-label="Project phases">
     <span aria-current="page">WUI dashboard</span>
     <a href="https://aval0311.github.io/utah-wui-exposure-analysis/ml/">ML case study <span aria-hidden="true">&rarr;</span></a>
+    <a class="wui-timeline-link" href="https://aval0311.github.io/utah-wui-exposure-analysis/history/">Historical timeline <span aria-hidden="true">&rarr;</span></a>
   </nav>
   <div class="wui-body">
     <button id="wui-sidebar-backdrop" class="wui-backdrop" type="button" aria-label="Close map sidebar" tabindex="-1"></button>

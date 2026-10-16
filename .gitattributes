@@ -1,3 +1,5 @@
 # Preserve the immutable ML release bytes and its SHA-256 manifest.
 docs/ml/** -text
 docs/ml/*.pdf binary
+# Preserve the historical snapshot and its byte-level manifest.
+docs/history/** -text
