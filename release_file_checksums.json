@@ -24,8 +24,8 @@
     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
   "docs/index.html": {
-    "bytes": 23125841,
-    "sha256": "ba170098a225eb62ed837ad4af7675e07bf6259885997a90c2888530c6fc0d58"
+    "bytes": 23126618,
+    "sha256": "11000af47801c833dec9a4feec95958ffa7d3e48a19f597b684da23047727188"
   },
   "docs/ml/AREA_AUDIT.md": {
     "bytes": 2595,
@@ -792,8 +792,8 @@
     "sha256": "379e4ba1ed07f18fd448ca5b0d80fa7b83d08b88a084db2716c77f5b56334867"
   },
   "scripts/export_publication.py": {
-    "bytes": 4311,
-    "sha256": "d80937b16e2125c1e0fab0e41a51530ebd750851e8fcc8c744c988a7f72136c3"
+    "bytes": 4426,
+    "sha256": "c1716c1d8dcab59ac20f83418407f8b7ba41f2a6a974fdfabf7bf6e0a80b16e8"
   },
   "scripts/verify_analytical_corrections.py": {
     "bytes": 3132,
@@ -836,8 +836,8 @@
     "sha256": "6504bd5e56b2bf6953167d32df989ba9a925aaafa9bf89bd0690136b471c5f8d"
   },
   "src/wui/publication.py": {
-    "bytes": 3381,
-    "sha256": "7da78c5c43f05c89cac88bd9b95b9dc0bf3b6148d31144b34bd979cd759e579e"
+    "bytes": 4778,
+    "sha256": "2db01ec1c8047b64a6e5abfd78ee7f78ddc8d49591b90f28e86a6abe60852263"
   },
   "src/wui/runtime.py": {
     "bytes": 15669,

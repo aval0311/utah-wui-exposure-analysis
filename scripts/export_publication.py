@@ -4,7 +4,7 @@ from pathlib import Path
 import nbformat
 repository=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(repository/'src'))
-from wui.publication import release_summary
+from wui.publication import add_phase_navigation, release_summary
 from wui.runtime import portable
 parser=argparse.ArgumentParser(description=__doc__)
 parser.add_argument('workspace',type=Path)
@@ -33,7 +33,9 @@ for name in required:
     if not (run/name).is_file():raise SystemExit('Completed run lacks required publication output: '+name)
 for folder in ['docs','images','outputs/tables','outputs/dashboard','evidence']:
     (repository/folder).mkdir(parents=True,exist_ok=True)
-shutil.copy2(run/required[-1],repository/'docs/index.html')
+(repository/'docs/index.html').write_text(
+    add_phase_navigation((run/required[-1]).read_text(encoding='utf-8')),
+    encoding='utf-8', newline='\n')
 for source in run.glob('*.png'):shutil.copy2(source,repository/'images'/source.name)
 for source in run.glob('*.csv'):
     (repository/'outputs/tables'/source.name).write_text(portable(source.read_text(encoding='utf-8'),workspace),encoding='utf-8')

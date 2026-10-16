@@ -2,6 +2,30 @@
 import csv, json
 from pathlib import Path
 
+def add_phase_navigation(html):
+    """Keep the published ML study discoverable when exporting the dashboard."""
+    if '<nav class="wui-phase-nav"' in html:
+        return html
+    css_anchor = '  #wui-app .wui-body { flex:1;'
+    html_anchor = '  </header>\n  <div class="wui-body">'
+    if html.count(css_anchor) != 1 or html.count(html_anchor) != 1:
+        raise ValueError('Dashboard header changed; review project-phase navigation before export.')
+    css = '''  #wui-app .wui-phase-nav { flex:none; display:flex; align-items:center; flex-wrap:wrap;
+    gap:4px 20px; padding:4px 20px; background:var(--wui-selected);
+    border-bottom:1px solid #BFD4D3; font-size:12px; }
+  #wui-app .wui-phase-nav [aria-current="page"] { color:var(--wui-muted); }
+  #wui-app .wui-phase-nav a { display:inline-flex; align-items:center; gap:6px;
+    min-height:36px; color:#12575C; font-weight:700; text-decoration:underline; text-underline-offset:3px; }
+  #wui-app .wui-phase-nav a:hover { color:#0B363A; }
+'''
+    navigation = '''  </header>
+  <nav class="wui-phase-nav" aria-label="Project phases">
+    <span aria-current="page">WUI dashboard</span>
+    <a href="https://aval0311.github.io/utah-wui-exposure-analysis/ml/">ML case study <span aria-hidden="true">&rarr;</span></a>
+  </nav>
+  <div class="wui-body">'''
+    return html.replace(css_anchor, css + css_anchor).replace(html_anchor, navigation)
+
 def release_summary(run):
     run=Path(run)
     manifest=json.loads((run/'run_manifest.json').read_text(encoding='utf-8'))
