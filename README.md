@@ -1,11 +1,17 @@
-# Utah WUI exposure and relative wildfire hazard
+# Utah WUI exposure and wildfire occurrence modeling
 
 A geospatial data-science portfolio project connecting a complete ETL pipeline to
 county exposure estimates, transparent raster modeling, and an interactive dashboard
 for Salt Lake, Utah, and Washington counties.
 
+The ML phase adds a separate development case study of annual recorded wildfire occurrence,
+with temporal and geographic validation, probability calibration, ranking comparisons, and
+an audit of unequal cell areas. The descriptive dashboard and ML study answer different questions.
+
 ## Explore
 
+- **[ML v1 development case study](https://aval0311.github.io/utah-wui-exposure-analysis/ml/):** annual recorded wildfire occurrence, development 2001–2021, with nine annual map pairs and disclosed reporting and area limitations.
+- **[ML release download](https://github.com/aval0311/utah-wui-exposure-analysis/releases/tag/ml-v1.0.0):** complete offline viewer, map atlas, executed snapshot notebook, saved evidence, and checksums.
 - **[Live dashboard](https://aval0311.github.io/utah-wui-exposure-analysis/):** explore wildfire exposure, relative hazard, and facility proximity across Salt Lake, Utah, and Washington counties.
 - **[Analysis notebook](notebooks/utah_wui_exposure_analysis.ipynb):** saved results, methods, code, and checks.
 - **[Dashboard HTML](docs/index.html):** download and open locally in a browser; internet is required for browser libraries and basemap tiles.
@@ -166,15 +172,42 @@ The [protocol](evidence/step4_report.txt) and [measurements](evidence/benchmark_
 document timing boundaries, hardware, and sampling limitations. Current equivalence evidence
 is separate from that historical experiment.
 
-## Planned machine-learning extension
+## ML v1 development case study
 
-Estimate the probability of **at least one new recorded wildfire ignition within a defined
-geographic unit during a specified future period**. Resolution and forecast horizon will be
-chosen after evaluating event frequency, source accuracy, and data availability. Development
-will require multi-year, time-aligned predictors available at forecast issue time, observed
-outcomes, appropriate no-recorded-ignition samples, calibration, and comparisons with simple
-baselines. Evaluation will withhold future periods and geographic areas. The current weighted
-score is not a training label. This capability is planned and is not implemented in this release.
+The [published ML study](https://aval0311.github.io/utah-wui-exposure-analysis/ml/)
+estimates the annual probability of at least one **recorded wildfire discovery** within
+a county-clipped grid cell, using UTC calendar years. The study covers 997 nominal 4 km
+cells, including non-WUI land. It uses 14 terrain/area variables and six antecedent climate
+variables; the descriptive weighted hazard score is not the training label.
+
+The frozen recommendation is conservative intercept-calibrated XGBoost for probability
+estimation, with raw XGBoost as the ranking reference and sigmoid-calibrated Random Forest
+as the benchmark. The 2013–2021 annual development backtest combines 45 geographic fits
+and 8,588 eligible held-out cell-years, with 656 recorded positives.
+
+| Model | Mean annual Brier score | Mean annual top-10% recall |
+|---|---:|---:|
+| Conservative XGBoost | 0.070814 | 17.42% |
+| Raw XGBoost | 0.071353 | 18.09% |
+| Sigmoid Random Forest | 0.071341 | 16.13% |
+
+The probability improvement over past-rate references is approximately 1% relative and
+is modest. These development years informed model and calibration choices; this is not
+an untouched independent final evaluation. Full cells account for approximately 75% of
+eligible cell-years and 98% of top-decile selections. Cell area materially affects interpretation.
+Reporting changes around 2020 and remaining underprediction are unresolved. Climate inputs
+are retrospective reconstructions with an assumed 60-day availability lag; historical
+as-issued availability is unverified. A no-record label does not prove that no fire occurred.
+
+Read the [frozen specification](docs/ml/data/frozen_specification.json),
+[area audit](docs/ml/AREA_AUDIT.md), [sources](docs/ml/SOURCES.md), and
+[reproduction limits](docs/ml/REPRODUCIBILITY.md). The package reproduces the presentation
+and saved evidence, without the full training inputs or fitted models. Publication generated
+no new predictions and performed no analysis of 2024–2025. These maps do not estimate
+property loss, burn severity, daily fire danger, or hazard per square kilometer.
+
+The [ML package README](docs/ml/README.md) explains offline viewing and integrity checks.
+The original descriptive notebook, dashboard, and analytical outputs remain unchanged.
 
 ## Package layout
 
@@ -183,7 +216,8 @@ score is not a training label. This capability is planned and is not implemented
 - scripts/: regression checks and publication export.
 - data/: matching snapshot inventory, checksum, and acquisition guide.
 - images/ and outputs/tables/: accepted-run figures and tables.
-- docs/index.html: interactive dashboard for GitHub Pages.
+- docs/index.html: interactive descriptive dashboard for GitHub Pages.
+- docs/ml/: immutable ML v1 publication package, served at /ml/.
 - evidence/: current validation and explicitly retained historical evidence.
 
 The [file checksum manifest](release_file_checksums.json) records SHA-256 hashes and byte

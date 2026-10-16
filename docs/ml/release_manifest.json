@@ -1,0 +1,259 @@
+{
+  "schema_version": 1,
+  "version": "1.0.0",
+  "hash_algorithm": "SHA-256",
+  "note": "Manifest excludes itself. ZIP checksum is distributed separately.",
+  "notebook_input_sha256": "b49c482c0f5525a2b231a4e6997af8e5900cef4e28102f237e9abd10d36c6e68",
+  "files": [
+    {
+      "path": "AREA_AUDIT.md",
+      "bytes": 2595,
+      "sha256": "0886601130c659ade61a6227bcb6e044983b209ccd264126924105cd787f0824"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 808,
+      "sha256": "cce3790f8341999a2a8a7d3117a88e7b0f8c124a9308c1c7227e2be77de06808"
+    },
+    {
+      "path": "CITATION.cff",
+      "bytes": 455,
+      "sha256": "d9c8ab4a7dd4631d4e776d4b0ad5769c13a6a9a016304b41639111c8429bea09"
+    },
+    {
+      "path": "data/analysis_environment.json",
+      "bytes": 344,
+      "sha256": "d89db01f1b62033b5dafff29c2a445c49932048e11ce9a0b4ac9056b4e3e80fb"
+    },
+    {
+      "path": "data/annual_area_summary.csv",
+      "bytes": 14142,
+      "sha256": "1b50ac01ed578de0f9b03245689ff3ba90d7b6ff726e345a6e137b086f66925f"
+    },
+    {
+      "path": "data/annual_comparison.csv",
+      "bytes": 21142,
+      "sha256": "5cd3a95a2c1dafd83b2e131c73d887e5cefd6f79533b88e627f74af36209de87"
+    },
+    {
+      "path": "data/annual_map_context.csv",
+      "bytes": 586,
+      "sha256": "74c29c6e3b0eb3c7e01f239b7608b1b42428207834b254a8305e6bcbb03f95b2"
+    },
+    {
+      "path": "data/area_audit_summary.json",
+      "bytes": 3095,
+      "sha256": "a5a4f46139bf2eca8c3580d496b6d48acf2059e47f4e136a3f3e82ab20a1ab05"
+    },
+    {
+      "path": "data/area_probability_summary.csv",
+      "bytes": 396,
+      "sha256": "8b3f9af1ddea5f7d3e11df8805312921a46672f0a10ae189c247c97201197f48"
+    },
+    {
+      "path": "data/area_sensitivity_summary.csv",
+      "bytes": 1887,
+      "sha256": "50d6fffba40ce16eb4f07f12e991a2e85b3fd00dbf5973178e3e2dae82862cff"
+    },
+    {
+      "path": "data/candidate_comparisons.csv",
+      "bytes": 1280,
+      "sha256": "322776052fa4c431e8d34beb20fd7472a8393d85406b3c022b23e39d2ade2278"
+    },
+    {
+      "path": "data/claims.json",
+      "bytes": 1145,
+      "sha256": "40228bb60d6bd44833c9d4212223602a5e5fdf560093b183cefe2c781dc17735"
+    },
+    {
+      "path": "data/county_map_summary.csv",
+      "bytes": 1119,
+      "sha256": "7b42b128a70107737433b3d9d3a52b57f89a5d24622afc353a843e962a8f876e"
+    },
+    {
+      "path": "data/feature_importance.csv",
+      "bytes": 2785,
+      "sha256": "6017536e2bd704751fea953e25dbd9606e6aa4e0db6d58b654f8ae5d4b7674b0"
+    },
+    {
+      "path": "data/frozen_specification.json",
+      "bytes": 8107,
+      "sha256": "ad0aa5e19c2038475a22ec944996664fd3db03028d1c04fd75588cf16302a722"
+    },
+    {
+      "path": "data/interpretation_summary.json",
+      "bytes": 3979,
+      "sha256": "83110e0415f631c951eb1565f0256aa4b112501f371354e48052acf05774a5b8"
+    },
+    {
+      "path": "data/map_attributes.csv",
+      "bytes": 1786587,
+      "sha256": "6514d7225cb0d28f89c0cbb4e4f8362d2e00b7f4d3a4322ea6a5ea5b9cc59e04"
+    },
+    {
+      "path": "data/map_data_dictionary.json",
+      "bytes": 1305,
+      "sha256": "7a864f9fc018e1c0eb82684017742c0558cb99c560ba033f1ed5788adb663422"
+    },
+    {
+      "path": "data/map_descriptions.json",
+      "bytes": 15156,
+      "sha256": "902a113adc2c9a163bb4f1de4045b34f1642c6cf59262a0ca9d44290192eb8af"
+    },
+    {
+      "path": "data/map_year_summary.csv",
+      "bytes": 782,
+      "sha256": "146faa09067cd5b316ca95ab604e548fb42c37e342e26979f0d7618a7292f063"
+    },
+    {
+      "path": "data/model_comparison.csv",
+      "bytes": 2448,
+      "sha256": "041526a68c46e9aacf1aa246e4c8bc7e82851bf305e71b23f8acd49848eff719"
+    },
+    {
+      "path": "data/ranking_tradeoff.csv",
+      "bytes": 2306,
+      "sha256": "d17f27b7f0d82ccb3426cb5bd76b3d4c9bc2370671892aebc6c952e2cc737825"
+    },
+    {
+      "path": "data/source_provenance.json",
+      "bytes": 11831,
+      "sha256": "cfd5b5c1dd96af7d3de67047ff205b353b643e0dd26a675bfd06bd6fb5d35c7a"
+    },
+    {
+      "path": "data/terrain_policy.json",
+      "bytes": 2826,
+      "sha256": "204c8e3357143376e9e107bff29f2f336677f8a5dae65b506e7684ee4d3a70ad"
+    },
+    {
+      "path": "data/viewer_environment.json",
+      "bytes": 331,
+      "sha256": "a30a1ef67bbe5d7b6d92ae3264f295c315cf5561213e7c5fa7e109b4e7fc85ab"
+    },
+    {
+      "path": "DATA_LICENSE.md",
+      "bytes": 2115,
+      "sha256": "e63980ca36dc5f96a555061442290d2309f5b6f9f9460744c0d4abb07aa22b94"
+    },
+    {
+      "path": "decision.md",
+      "bytes": 9955,
+      "sha256": "000bd395619fb286d50c56632eb651d9ad6f3fc3a678f9809312939bc25bd2e4"
+    },
+    {
+      "path": "figures/map_2013.png",
+      "bytes": 317884,
+      "sha256": "7af88cd1e91f0802f780094398e94f3130cdbfe80c5dc1e48952df8b3a136cf3"
+    },
+    {
+      "path": "figures/map_2014.png",
+      "bytes": 317283,
+      "sha256": "fd284e5169184fa5d382302d5bc11896e772336db24b1d0162a4334afef0a97d"
+    },
+    {
+      "path": "figures/map_2015.png",
+      "bytes": 315931,
+      "sha256": "944acba807a0d3409b91628f9ccc0ed899444269efe294007f94f8f28484835e"
+    },
+    {
+      "path": "figures/map_2016.png",
+      "bytes": 316594,
+      "sha256": "f3faa70e70e0a2f67e072d714c5838f38ce4f38af370a23dd39019c889e32c30"
+    },
+    {
+      "path": "figures/map_2017.png",
+      "bytes": 352622,
+      "sha256": "2e86635dd35c581c0ecc0ecb99be8805b8753a4c6ca2e476ae3a130784cc0eae"
+    },
+    {
+      "path": "figures/map_2018.png",
+      "bytes": 350097,
+      "sha256": "d1123fa9cb7c764fd88eae02b4a2ece4d0668f30bc6fb80453fe3d8dd36c2a97"
+    },
+    {
+      "path": "figures/map_2019.png",
+      "bytes": 361110,
+      "sha256": "e5da713262853d0994f2f17821ee439e46c5b306c875dc104b30bd1522f11827"
+    },
+    {
+      "path": "figures/map_2020.png",
+      "bytes": 368314,
+      "sha256": "c9fbc0d8a90c1addff06906b45ed24388f23d518fe873b88702e8e05061d58e8"
+    },
+    {
+      "path": "figures/map_2021.png",
+      "bytes": 361535,
+      "sha256": "307ea1d46e1d9ec033c52af57a6ec6ed2a987bb4623e294e50f35b6d23b03046"
+    },
+    {
+      "path": "index.html",
+      "bytes": 46722,
+      "sha256": "b83e83bd85a6612ef64d517f1b15c52219140ac751359af9c9c538b92c245b4d"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1071,
+      "sha256": "68b98fc9acdf52e91d3d577a86976a826404579bdb932873af89247bfafca849"
+    },
+    {
+      "path": "map_captions.md",
+      "bytes": 11047,
+      "sha256": "caa41faa1fade2fd53f7afdf3a9f36eb797994b41490cbf483b8ebe776836857"
+    },
+    {
+      "path": "narrative.md",
+      "bytes": 7580,
+      "sha256": "fe592dc9d263863505b7e2c10f2ee230d07b9be0a6165a8ecb919f64a18ab193"
+    },
+    {
+      "path": "PUBLISHING.md",
+      "bytes": 1427,
+      "sha256": "04958ac982a1a52150454b053848ca4bf57bfc88690be94280ea18250f86904b"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2438,
+      "sha256": "49948a515f6cd823f97550e889cc54cfa5f8c92b68d3cd8476a0fc8111a76d2f"
+    },
+    {
+      "path": "release.json",
+      "bytes": 448,
+      "sha256": "e708dcf994634616b26f81f4df394df905de538f8b11aca53b3dd358aaf612a3"
+    },
+    {
+      "path": "RELEASE_VALIDATION.md",
+      "bytes": 3937,
+      "sha256": "64b5b59f241ef0ac079b124990aed4dbd76bd3507905e2f7b87c210157ac9287"
+    },
+    {
+      "path": "REPRODUCIBILITY.md",
+      "bytes": 4246,
+      "sha256": "3d4f6dd5accd1043ef11e66cdc03f91b0522cbb3ef4e40f7720c87b0e27be567"
+    },
+    {
+      "path": "SOURCES.md",
+      "bytes": 3948,
+      "sha256": "8b757c14d76abdeaacbd047add50b01d068720bfc392d4d6a20d6818b59c1df6"
+    },
+    {
+      "path": "tools/build_atlas.py",
+      "bytes": 8440,
+      "sha256": "5c4167ed7e283c5a055c7af45c4f8899a68d8033bea2424bd2bb6ff9bf4a0442"
+    },
+    {
+      "path": "viewer.py",
+      "bytes": 10977,
+      "sha256": "a4e2006a6c97a243a686471c7ef062ca21edbed809d7613630108b4ab7421543"
+    },
+    {
+      "path": "wui_ml_v1_atlas.pdf",
+      "bytes": 3605025,
+      "sha256": "01deb20bc30bbf4580c9d73dbcf8a47ca421419e37fd9e91844514f76f1d70b0"
+    },
+    {
+      "path": "wui_ml_v1_snapshot.ipynb",
+      "bytes": 4114755,
+      "sha256": "60f8dee4e052ae394e09943734e8c45dc804b808bc17525abc51c03f3999848e"
+    }
+  ]
+}

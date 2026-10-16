@@ -1,0 +1,21 @@
+feature,feature_label,feature_group,mean_absolute_contribution,minimum_annual_contribution,maximum_annual_contribution,total_imputed_rows,total_rows
+study_area_km2,Clipped cell area,Clipped cell area,0.37752632034225164,0.35337659222033685,0.41557667064214543,0,8588
+slope_std_deg,Slope variability,Slope and flatness,0.27032682525317253,0.24494645226963516,0.2826481164969585,430,8588
+clim_pr_sum_antecedent_12mo_mm,Prior 12-month precipitation,Antecedent precipitation,0.14745583631325512,0.1028594487689883,0.23780937550891937,0,8588
+clim_vpd_mean_antecedent_12mo_kpa,Prior 12-month VPD,Antecedent VPD,0.12791844916998804,0.10109929612590897,0.15345633077484705,0,8588
+elevation_std_m,Elevation variability,Elevation and relief,0.12638841746077667,0.11575793828423474,0.13467326057086765,54,8588
+eastness_mean,East-facing orientation,Terrain orientation,0.12000238638839167,0.10575147078394373,0.13699897717916606,430,8588
+northness_mean,North-facing orientation,Terrain orientation,0.11582830654128642,0.1006252177531471,0.1244188072602428,430,8588
+slope_p50_deg,Median slope,Slope and flatness,0.11481901518474896,0.10043951063840469,0.12594786207671552,430,8588
+clim_pr_sum_antecedent_jul_sep_mm,Prior Jul-Sep precipitation,Antecedent precipitation,0.11066493171070586,0.09574296632690138,0.15333514332913137,0,8588
+clim_tmean_antecedent_jul_sep_c,Prior Jul-Sep temperature,Antecedent temperature,0.10185925231348306,0.09575837620559925,0.11515319388639632,11,8588
+slope_mean_deg,Mean slope,Slope and flatness,0.08965710228118745,0.08336584351139427,0.09504280852523694,430,8588
+flat_fraction_lt1deg,Flat terrain fraction,Slope and flatness,0.08945096804390819,0.07652499375206914,0.10020996317049767,430,8588
+clim_vpd_mean_antecedent_jul_sep_kpa,Prior Jul-Sep VPD,Antecedent VPD,0.08304685559126193,0.06254589373365127,0.1027204425008421,0,8588
+elevation_p10_m,Elevation 10th percentile,Elevation and relief,0.07187236935690075,0.06519659012161565,0.08067217473363492,54,8588
+clim_tmean_antecedent_12mo_c,Prior 12-month temperature,Antecedent temperature,0.07147986909651766,0.059715544048622185,0.0958735551946066,93,8588
+slope_p90_deg,Slope 90th percentile,Slope and flatness,0.06946872339683141,0.06289962542402698,0.07478717689877065,430,8588
+elevation_relief_p90_p10_m,Elevation relief,Elevation and relief,0.06463970842650467,0.05544179714516734,0.07244340639096244,54,8588
+elevation_p90_m,Elevation 90th percentile,Elevation and relief,0.061957890899307554,0.050060148925760786,0.07385201308873474,54,8588
+elevation_mean_m,Mean elevation,Elevation and relief,0.03656016235064938,0.029109367366107097,0.04585865213764412,54,8588
+elevation_p50_m,Median elevation,Elevation and relief,0.031775181476344984,0.02658509843605136,0.0373688376343056,54,8588

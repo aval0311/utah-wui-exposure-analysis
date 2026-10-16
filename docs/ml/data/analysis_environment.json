@@ -1,0 +1,14 @@
+{
+  "scope": "Recorded estimator versions, not a full training environment lock",
+  "versions": {
+    "numpy": "2.4.6",
+    "pandas": "3.0.6",
+    "scikit-learn": "1.9.1",
+    "xgboost": "3.4.1",
+    "scipy": "1.18.0",
+    "joblib": "1.6.0",
+    "threadpoolctl": "3.7.0"
+  },
+  "original_kernel": "wui-professional-314",
+  "python": "3.14.7"
+}

@@ -1,0 +1,239 @@
+{
+  "artifact_lineage": [
+    {
+      "source": "ml_outputs/portfolio_presentation_e1d06329084e/figures/heldout_maps_2013_area_context.png",
+      "source_sha256": "7af88cd1e91f0802f780094398e94f3130cdbfe80c5dc1e48952df8b3a136cf3",
+      "publication_file": "figures/map_2013.png",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "source": "ml_outputs/portfolio_presentation_e1d06329084e/figures/heldout_maps_2014_area_context.png",
+      "source_sha256": "fd284e5169184fa5d382302d5bc11896e772336db24b1d0162a4334afef0a97d",
+      "publication_file": "figures/map_2014.png",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "source": "ml_outputs/portfolio_presentation_e1d06329084e/figures/heldout_maps_2015_area_context.png",
+      "source_sha256": "944acba807a0d3409b91628f9ccc0ed899444269efe294007f94f8f28484835e",
+      "publication_file": "figures/map_2015.png",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "source": "ml_outputs/portfolio_presentation_e1d06329084e/figures/heldout_maps_2016_area_context.png",
+      "source_sha256": "f3faa70e70e0a2f67e072d714c5838f38ce4f38af370a23dd39019c889e32c30",
+      "publication_file": "figures/map_2016.png",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "source": "ml_outputs/portfolio_presentation_e1d06329084e/figures/heldout_maps_2017_area_context.png",
+      "source_sha256": "2e86635dd35c581c0ecc0ecb99be8805b8753a4c6ca2e476ae3a130784cc0eae",
+      "publication_file": "figures/map_2017.png",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "source": "ml_outputs/portfolio_presentation_e1d06329084e/figures/heldout_maps_2018_area_context.png",
+      "source_sha256": "d1123fa9cb7c764fd88eae02b4a2ece4d0668f30bc6fb80453fe3d8dd36c2a97",
+      "publication_file": "figures/map_2018.png",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "source": "ml_outputs/portfolio_presentation_e1d06329084e/figures/heldout_maps_2019_area_context.png",
+      "source_sha256": "e5da713262853d0994f2f17821ee439e46c5b306c875dc104b30bd1522f11827",
+      "publication_file": "figures/map_2019.png",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "source": "ml_outputs/portfolio_presentation_e1d06329084e/figures/heldout_maps_2020_area_context.png",
+      "source_sha256": "c9fbc0d8a90c1addff06906b45ed24388f23d518fe873b88702e8e05061d58e8",
+      "publication_file": "figures/map_2020.png",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "source": "ml_outputs/portfolio_presentation_e1d06329084e/figures/heldout_maps_2021_area_context.png",
+      "source_sha256": "307ea1d46e1d9ec033c52af57a6ec6ed2a987bb4623e294e50f35b6d23b03046",
+      "publication_file": "figures/map_2021.png",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "source": "ml_outputs/portfolio_presentation_e1d06329084e/annual_map_context.csv",
+      "source_sha256": "74c29c6e3b0eb3c7e01f239b7608b1b42428207834b254a8305e6bcbb03f95b2",
+      "publication_file": "data/annual_map_context.csv",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "source": "ml_outputs/portfolio_presentation_e1d06329084e/area_probability_summary.csv",
+      "source_sha256": "8b3f9af1ddea5f7d3e11df8805312921a46672f0a10ae189c247c97201197f48",
+      "publication_file": "data/area_probability_summary.csv",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "source": "ml_outputs/portfolio_presentation_e1d06329084e/model_comparison.csv",
+      "source_sha256": "041526a68c46e9aacf1aa246e4c8bc7e82851bf305e71b23f8acd49848eff719",
+      "publication_file": "data/model_comparison.csv",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "source": "ml_outputs/ml_v1_decision_c325661fdc6f/annual_comparison.csv",
+      "source_sha256": "5cd3a95a2c1dafd83b2e131c73d887e5cefd6f79533b88e627f74af36209de87",
+      "publication_file": "data/annual_comparison.csv",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "source": "ml_outputs/ml_v1_decision_c325661fdc6f/candidate_comparisons.csv",
+      "source_sha256": "322776052fa4c431e8d34beb20fd7472a8393d85406b3c022b23e39d2ade2278",
+      "publication_file": "data/candidate_comparisons.csv",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "source": "ml_outputs/ml_v1_decision_c325661fdc6f/ranking_tradeoff.csv",
+      "source_sha256": "d17f27b7f0d82ccb3426cb5bd76b3d4c9bc2370671892aebc6c952e2cc737825",
+      "publication_file": "data/ranking_tradeoff.csv",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "source": "ml_outputs/model_interpretation_f218938ebc8c/map_attributes.csv",
+      "source_sha256": "6514d7225cb0d28f89c0cbb4e4f8362d2e00b7f4d3a4322ea6a5ea5b9cc59e04",
+      "publication_file": "data/map_attributes.csv",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "source": "ml_outputs/model_interpretation_f218938ebc8c/map_data_dictionary.json",
+      "source_sha256": "7a864f9fc018e1c0eb82684017742c0558cb99c560ba033f1ed5788adb663422",
+      "publication_file": "data/map_data_dictionary.json",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "source": "ml_outputs/model_interpretation_f218938ebc8c/feature_importance.csv",
+      "source_sha256": "6017536e2bd704751fea953e25dbd9606e6aa4e0db6d58b654f8ae5d4b7674b0",
+      "publication_file": "data/feature_importance.csv",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "source": "ml_outputs/model_interpretation_f218938ebc8c/map_year_summary.csv",
+      "source_sha256": "146faa09067cd5b316ca95ab604e548fb42c37e342e26979f0d7618a7292f063",
+      "publication_file": "data/map_year_summary.csv",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "source": "ml_outputs/area_audit_b798bc8300ed/annual_area_summary.csv",
+      "source_sha256": "1b50ac01ed578de0f9b03245689ff3ba90d7b6ff726e345a6e137b086f66925f",
+      "publication_file": "data/annual_area_summary.csv",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "source": "ml_outputs/area_audit_b798bc8300ed/sensitivity_area_summary.csv",
+      "source_sha256": "50d6fffba40ce16eb4f07f12e991a2e85b3fd00dbf5973178e3e2dae82862cff",
+      "publication_file": "data/area_sensitivity_summary.csv",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "source": "ml_outputs/portfolio_presentation_e1d06329084e/claims.json",
+      "source_sha256": "40228bb60d6bd44833c9d4212223602a5e5fdf560093b183cefe2c781dc17735",
+      "publication_file": "data/claims.json",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "source": "wui_ml/terrain_policy.json",
+      "source_sha256": "204c8e3357143376e9e107bff29f2f336677f8a5dae65b506e7684ee4d3a70ad",
+      "publication_file": "data/terrain_policy.json",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "source": "baseline-repository/LICENSE",
+      "source_sha256": "68b98fc9acdf52e91d3d577a86976a826404579bdb932873af89247bfafca849",
+      "publication_file": "LICENSE",
+      "transformation": "byte-identical copy"
+    },
+    {
+      "source": "ml_outputs/area_audit_b798bc8300ed/report.json",
+      "source_sha256": "d2b3260f99d562ddc005828e10808727670345f3681334fc5cbc5e8610cc2ee7",
+      "publication_file": "data/area_audit_summary.json",
+      "transformation": "Preserved analytical values; removed nested preservation inventories and localized machine paths to relative source identifiers."
+    },
+    {
+      "source": "ml_outputs/model_interpretation_f218938ebc8c/report.json",
+      "source_sha256": "4cdf7071c6fd102e166c5dc5a88bf9ced8c267d6cec4a6ffdf8191de9f52ee93",
+      "publication_file": "data/interpretation_summary.json",
+      "transformation": "Preserved analytical values; removed nested preservation inventories and localized machine paths to relative source identifiers."
+    },
+    {
+      "source": "ml_outputs/ml_v1_decision_c325661fdc6f/decision.json",
+      "source_sha256": "73e34cad562b0656434d92781005a1f509fa398b3fd3c36fc2cd54abec8303ab",
+      "publication_file": "data/frozen_specification.json",
+      "transformation": "Preserved analytical values; removed nested preservation inventories and localized machine paths to relative source identifiers."
+    },
+    {
+      "source": "ml_outputs/portfolio_presentation_e1d06329084e/wui_ml_portfolio_narrative.md",
+      "source_sha256": "e30f8d5c49ba3d87e6e8197babfaa1b267d3715855c6e420f674d9b1dbc3026f",
+      "publication_file": "narrative.md",
+      "transformation": "Portable links; explicit adaptive development and terrain assumptions; relative Brier wording; source links. All numerical claims retained."
+    },
+    {
+      "source": "ml_outputs/ml_v1_decision_c325661fdc6f/decision.md",
+      "source_sha256": "695c0bc87f061d3add5eee294100434f3e3de6f10aaa61daeb01b548460c6d65",
+      "publication_file": "decision.md",
+      "transformation": "Replaced local notebook links with included evidence; labeled historical next milestone completed. Decision and metrics unchanged."
+    },
+    {
+      "source": "ml_outputs/portfolio_presentation_e1d06329084e/map_captions.json",
+      "source_sha256": "daf80c5205632cd9a49b98d34c0c9bf1cd79518d04222ad164d70cee6d4db425",
+      "publication_file": "data/map_descriptions.json",
+      "transformation": "Original annual captions plus development qualification and county descriptive aggregates from unchanged map_attributes.csv. No fitting or new prediction."
+    }
+  ],
+  "source_bundle_manifests": {
+    "portfolio_presentation_e1d06329084e": "c683a994f72d1627e4c44dc083739aacbda70120f7fbf2ba657daf2b600e8cb5",
+    "model_interpretation_f218938ebc8c": "3513a3c37bc62f0ff1943f8bdc258d6a40d6b86ca91558abeca5aa2d2db4c9bd",
+    "area_audit_b798bc8300ed": "627f9c535113a731cb9afa5aecc636f6dd35e33571896597f0cf55e8a41e136f",
+    "ml_v1_decision_c325661fdc6f": "88d5feaf9a72b4f95867e858e5fd7957b3f3e0fefa663980608fb84327b0c868",
+    "annual_calibration_9b93835d6db9": "1472403aefa61764e9316ecb8abe4de02b93ee4fb34daf2ecf202eb7b808fcb1"
+  },
+  "source_vintages": {
+    "counties_acquired_utc": "2026-10-15T17:19:57.020486+00:00",
+    "terrain_catalog_acquired_utc": "2026-10-15T18:31:06.621214+00:00",
+    "terrain_catalog_publication_dates": [
+      "2013-01-01",
+      "2026-07-01"
+    ],
+    "climate_archive_completed_utc": "2026-10-16T02:15:15.063572+00:00",
+    "climate_source_days": [
+      "1999-10-01",
+      "2020-09-30"
+    ]
+  },
+  "notes": "Only development summaries and saved map attributes parsed. Raw sources not redistributed. Copied source hashes are preservation evidence, not digital signatures.",
+  "generated_artifacts": [
+    {
+      "files": [
+        "index.html",
+        "viewer.py"
+      ],
+      "method": "New standard-library renderer using only included text, saved images and descriptions. No remote assets or model inference."
+    },
+    {
+      "files": [
+        "wui_ml_v1_snapshot.ipynb"
+      ],
+      "method": "New display-only notebook; verifies included files and embeds all nine unchanged PNGs. Source notebooks remain unchanged."
+    },
+    {
+      "files": [
+        "wui_ml_v1_atlas.pdf",
+        "tools/build_atlas.py"
+      ],
+      "method": "New 11-page ReportLab atlas with native text descriptions and language metadata. Original PNG pixels embedded unchanged; only the old page-number margin is covered and renumbered. Content-based image identifiers support identical PDF rebuilding after relocation."
+    },
+    {
+      "files": [
+        "data/county_map_summary.csv"
+      ],
+      "method": "27 county-year descriptive aggregates calculated from the saved eligible 2013-2021 map attributes; no new predictions."
+    },
+    {
+      "files": [
+        "RELEASE_VALIDATION.md"
+      ],
+      "method": "Summary of package, notebook, PDF, browser, relocation and preservation checks."
+    }
+  ]
+}

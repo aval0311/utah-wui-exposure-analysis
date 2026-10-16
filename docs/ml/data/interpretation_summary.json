@@ -1,0 +1,100 @@
+{
+  "complete": true,
+  "checkpoint_records_loaded": 45,
+  "heldout_explanations": 8588,
+  "feature_contributions": 171760,
+  "mapped_cell_years": 8973,
+  "eligible_cell_years": 8588,
+  "unknown_exclusions": 230,
+  "flagged_exclusions": 155,
+  "new_model_fits": 0,
+  "new_calibrator_fits": 0,
+  "new_imputer_fits": 0,
+  "later_period_rows_loaded": 0,
+  "maximum_parsed_year": 2021,
+  "atlas_pages": [
+    "model_contributions",
+    "contribution_relationships",
+    "heldout_maps_2013",
+    "heldout_maps_2014",
+    "heldout_maps_2015",
+    "heldout_maps_2016",
+    "heldout_maps_2017",
+    "heldout_maps_2018",
+    "heldout_maps_2019",
+    "heldout_maps_2020",
+    "heldout_maps_2021"
+  ],
+  "top_features": [
+    {
+      "feature": "study_area_km2",
+      "feature_label": "Clipped cell area",
+      "feature_group": "Clipped cell area",
+      "mean_absolute_contribution": 0.37752632034225164,
+      "minimum_annual_contribution": 0.35337659222033685,
+      "maximum_annual_contribution": 0.41557667064214543,
+      "total_imputed_rows": 0,
+      "total_rows": 8588
+    },
+    {
+      "feature": "slope_std_deg",
+      "feature_label": "Slope variability",
+      "feature_group": "Slope and flatness",
+      "mean_absolute_contribution": 0.27032682525317253,
+      "minimum_annual_contribution": 0.24494645226963516,
+      "maximum_annual_contribution": 0.2826481164969585,
+      "total_imputed_rows": 430,
+      "total_rows": 8588
+    },
+    {
+      "feature": "clim_pr_sum_antecedent_12mo_mm",
+      "feature_label": "Prior 12-month precipitation",
+      "feature_group": "Antecedent precipitation",
+      "mean_absolute_contribution": 0.14745583631325512,
+      "minimum_annual_contribution": 0.1028594487689883,
+      "maximum_annual_contribution": 0.23780937550891937,
+      "total_imputed_rows": 0,
+      "total_rows": 8588
+    },
+    {
+      "feature": "clim_vpd_mean_antecedent_12mo_kpa",
+      "feature_label": "Prior 12-month VPD",
+      "feature_group": "Antecedent VPD",
+      "mean_absolute_contribution": 0.12791844916998804,
+      "minimum_annual_contribution": 0.10109929612590897,
+      "maximum_annual_contribution": 0.15345633077484705,
+      "total_imputed_rows": 0,
+      "total_rows": 8588
+    },
+    {
+      "feature": "elevation_std_m",
+      "feature_label": "Elevation variability",
+      "feature_group": "Elevation and relief",
+      "mean_absolute_contribution": 0.12638841746077667,
+      "minimum_annual_contribution": 0.11575793828423474,
+      "maximum_annual_contribution": 0.13467326057086765,
+      "total_imputed_rows": 54,
+      "total_rows": 8588
+    },
+    {
+      "feature": "eastness_mean",
+      "feature_label": "East-facing orientation",
+      "feature_group": "Terrain orientation",
+      "mean_absolute_contribution": 0.12000238638839167,
+      "minimum_annual_contribution": 0.10575147078394373,
+      "maximum_annual_contribution": 0.13699897717916606,
+      "total_imputed_rows": 430,
+      "total_rows": 8588
+    }
+  ],
+  "max_margin_additivity_error": 8.214497938752174e-06,
+  "max_calibrated_probability_error": 3.732013910129339e-07,
+  "limitations": [
+    "Historical development holdouts, not current forecasts or operational fire-danger maps; no held-out maps exist for 2001-2012 in this protocol.",
+    "The target is recorded wildfire discovery per county-clipped 4 km cell-year, not burn probability, property loss or a WUI-only population.",
+    "The 45 fitted models share a frozen specification, but are not one statewide fitted model; differences across folds may create map seams.",
+    "Reporting completeness and historical as-issued climate availability remain unverified. Excluded cells are not evidence of low risk.",
+    "Correlated predictors share attribution; imputed values and cell area can influence contributions. SHAP is not a causal or independent predictive-value test.",
+    "No fitting, threshold changes, feature selection, label changes, agency outreach or 2022-2025 data evaluation."
+  ]
+}

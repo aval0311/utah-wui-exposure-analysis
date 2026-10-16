@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "milestone": "terrain_feature_matrix_v1",
+  "preparation_bundle": "milestone1_56ca5d009827",
+  "review_bundle": "label_review_79ce3359e998",
+  "target_column": "y_reviewed",
+  "expected_unknown_cell_years": 494,
+  "expected_eligible_cell_years": 24431,
+  "minimum_valid_area_fraction": 0.95,
+  "flat_slope_threshold_degrees": 1.0,
+  "aggregation": "Exact polygon-pixel intersection area in EPSG:26912. Include fractional boundary pixels within the county-clipped grid cell; no burnable-land mask.",
+  "quantiles": "Area-weighted empirical inverse CDF: smallest observed value with cumulative valid-area weight at least the requested probability. Population weighted standard deviation.",
+  "aspect": "Downhill compass azimuth: north=0, east=90. Northness=cos(aspect), eastness=sin(aspect). Pixels with slope<1 degree contribute zero directional components; average over valid directional-or-flat area. Flat fraction uses valid slope area.",
+  "missingness": "If a source group covers less than 95% of the clipped cell, leave that group's predictors missing. Keep all known-label rows. Fit imputation separately within each training fold; apply it unchanged to early stopping, validation, calibration and test. Coverage and QA fields are audit metadata, not predictors.",
+  "static_terrain_assumption": "Use the retained contemporary terrain as a time-invariant geomorphic proxy for 2001-2025 susceptibility. This does not establish historical release availability or account for past excavation, construction or terrain change. It is not a strict operational forecasting hindcast.",
+  "area_policy": "Include study_area_km2 as an observation-area covariate because county-clipped cells have unequal areas. Preserve small positive-area cells; do not infer source accuracy from their size.",
+  "evaluation_policy": "Use the reviewed-label cohort identically for both algorithms. Preserve all frozen year roles and geographic blocks/buffers. Do not impute, scale, select features or estimate class weights using all years together.",
+  "feature_columns": [
+    "elevation_mean_m", "elevation_std_m", "elevation_p10_m", "elevation_p50_m", "elevation_p90_m", "elevation_relief_p90_p10_m",
+    "slope_mean_deg", "slope_std_deg", "slope_p50_deg", "slope_p90_deg",
+    "northness_mean", "eastness_mean", "flat_fraction_lt1deg", "study_area_km2"
+  ],
+  "inputs": {
+    "elevation": "data/raw/fire_hazard/fuels/fuel_hazard_component/terrain_hazard/usgs_3dep_dem_aligned_30m.tif",
+    "slope": "data/raw/fire_hazard/fuels/fuel_hazard_component/terrain_hazard/slope_degrees.tif",
+    "aspect": "data/raw/fire_hazard/fuels/fuel_hazard_component/terrain_hazard/aspect_degrees.tif"
+  },
+  "references": [
+    "https://pubs.usgs.gov/tm/11b9/tm11B9.pdf",
+    "https://gdal.org/en/stable/programs/gdaldem.html"
+  ]
+}

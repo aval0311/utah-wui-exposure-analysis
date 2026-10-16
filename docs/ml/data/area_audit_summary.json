@@ -1,0 +1,72 @@
+{
+  "complete": true,
+  "heldout_rows": 8588,
+  "grid_cells": 997,
+  "full_grid_cells": 754,
+  "clipped_grid_cells": 243,
+  "clipped_heldout_rows": 2146,
+  "full_heldout_rows": 6442,
+  "model_checkpoints_loaded": 45,
+  "new_model_or_imputer_or_calibrator_fits": 0,
+  "maximum_parsed_year": 2021,
+  "figures": [
+    "area_observed_and_allocation",
+    "area_model_response",
+    "area_ranking_sensitivity"
+  ],
+  "pooled_sensitivity": [
+    {
+      "method": "conservative",
+      "rows": 8588,
+      "unique_cells": 997,
+      "years": 9,
+      "original_mean_probability": 0.08338526065876659,
+      "area16_mean_probability": 0.09436325039107275,
+      "mean_delta_pp": 1.0977989732306133,
+      "median_delta_pp": 0.0,
+      "min_delta_pp": -0.2888763083580024,
+      "max_delta_pp": 33.30311923891139,
+      "increased": 2121,
+      "decreased": 16,
+      "unchanged": 6451,
+      "original_selected": 863,
+      "area16_selected": 863,
+      "median_rank_improvement": -34.0,
+      "retained": 767,
+      "entered": 96,
+      "left": 96,
+      "neither": 7629
+    },
+    {
+      "method": "raw",
+      "rows": 8588,
+      "unique_cells": 997,
+      "years": 9,
+      "original_mean_probability": 0.09467902211264179,
+      "area16_mean_probability": 0.10710620758560511,
+      "mean_delta_pp": 1.2427185472963325,
+      "median_delta_pp": 0.0,
+      "min_delta_pp": -0.3156770020723343,
+      "max_delta_pp": 35.56782528758049,
+      "increased": 2121,
+      "decreased": 16,
+      "unchanged": 6451,
+      "original_selected": 863,
+      "area16_selected": 863,
+      "median_rank_improvement": -34.0,
+      "retained": 777,
+      "entered": 86,
+      "left": 86,
+      "neither": 7639
+    }
+  ],
+  "limits": [
+    "Area-input sensitivity is a model diagnostic, not a forecast for physically expanded cells, not a causal effect, and not an area-normalized probability.",
+    "Holding other predictors fixed can create implausible combinations because terrain, climate, location and clipped geometry are associated. Marginal area support does not establish joint support.",
+    "Do not score altered-area probabilities against original-area outcomes or interpret membership changes as accuracy gains. Do not divide probabilities or binary positive-cell counts by area to infer fire intensity.",
+    "Area SHAP values describe the stored model and share attribution with correlated predictors; subtracting an area SHAP value is not a fitted model without area.",
+    "The target is at least one recorded WF discovery per county-clipped cell and year, not property loss, fire severity or intrinsic per-area hazard. Reporting completeness and historical as-issued climate availability remain unverified.",
+    "Area strata and within-year geographic summaries are descriptive; they do not remove all geographic confounding or spatial dependence. No significance tests or independent-cell uncertainty claims.",
+    "No changes to the frozen ML v1 model, baseline, existing labels, prior outputs, or final-test protocol. No 2022-2025 targets, features or predictions parsed or evaluated."
+  ]
+}

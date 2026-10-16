@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "Please cite this project and its underlying sources."
+title: "Utah wildfire occurrence modeling: ML v1 development portfolio"
+type: software
+authors:
+  - family-names: Valentino
+    given-names: Adam
+version: 1.0.0
+date-released: 2026-10-16
+license: MIT
+abstract: "Retrospective development case study using 2001-2021, with held-out maps for 2013-2021. Not an independent final evaluation or operational forecast."

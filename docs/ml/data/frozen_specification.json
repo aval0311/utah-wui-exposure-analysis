@@ -1,0 +1,162 @@
+{
+  "decision": {
+    "decision_id": "ml_v1_development_recommendation",
+    "status": "documented recommendation and configuration freeze for portfolio development; no new fitted model or deployment",
+    "source_annual_bundle": "annual_calibration_9b93835d6db9",
+    "source_ranking_bundle": "ranking_audit_eb627f7034d3",
+    "development_years": [
+      2001,
+      2021
+    ],
+    "validation_years": [
+      2013,
+      2021
+    ],
+    "primary_recommendation": {
+      "family": "xgboost",
+      "feature_set": "terrain_climate",
+      "probability_kind": "intercept_shrunk"
+    },
+    "ranking_reference": {
+      "family": "xgboost",
+      "feature_set": "terrain_climate",
+      "probability_kind": "raw"
+    },
+    "benchmark": {
+      "family": "random_forest",
+      "feature_set": "terrain_climate",
+      "probability_kind": "sigmoid"
+    },
+    "decision_basis": "Prioritize average probability accuracy for the portfolio occurrence model, while explicitly retaining the raw XGBoost ranking reference. This is a retrospective judgment using previously studied development results, not a newly preregistered selection criterion or an independent test.",
+    "reference_forecasts": "Saved training-period and preceding two-year calibration-period observed rates, estimated only in each fold's permitted training geography. No validation prevalence input. Constant within a fold, not necessarily across the stitched year; no meaningful top-budget location ranking is assigned.",
+    "prohibited_actions": [
+      "training or calibration fits",
+      "model-object loading",
+      "hyperparameter or threshold search",
+      "editing prior artifacts or original selection",
+      "parsing or evaluating 2022-2025 targets, features or predictions",
+      "agency outreach"
+    ],
+    "next_milestone": "Interpret the frozen development model and present clearly labeled held-out probability and ranking maps with the reporting, geographic and historical-availability limitations. Any later single-model fitting and calibration design requires a separate development-only protocol; this decision does not authorize revisiting 2024-2025."
+  },
+  "created_utc": "2026-10-16T16:30:01.937995+00:00",
+  "target": "At least one recorded WF discovery in county-clipped grid cell during UTC calendar year",
+  "target_period": "[January 1 00:00 UTC, next January 1 00:00 UTC)",
+  "geographic_eligibility": "Geographic county footprint only. Do not reuse 2025 burnable or imagery-coverage masks for historical labels.",
+  "counties": [
+    "SALT LAKE",
+    "UTAH",
+    "WASHINGTON"
+  ],
+  "grid_size_m": 4000,
+  "grid_crs": "EPSG:26912",
+  "original_grid_cells": 997,
+  "recommendation_scope": "Portfolio development recorded-occurrence probabilities; not operational fire-danger, burn-probability, or property-loss estimates.",
+  "primary_model": {
+    "family": "xgboost",
+    "candidate_id": "xgb_depth5_child20",
+    "parameters": {
+      "n_estimators": 346,
+      "learning_rate": 0.03,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "reg_alpha": 0.0,
+      "scale_pos_weight": 1.0,
+      "tree_method": "hist",
+      "device": "cpu",
+      "objective": "binary:logistic",
+      "eval_metric": "logloss",
+      "max_depth": 5,
+      "min_child_weight": 20,
+      "reg_lambda": 20.0,
+      "random_state": 2026,
+      "n_jobs": 4,
+      "early_stopping_rounds": null
+    },
+    "features": [
+      "elevation_mean_m",
+      "elevation_std_m",
+      "elevation_p10_m",
+      "elevation_p50_m",
+      "elevation_p90_m",
+      "elevation_relief_p90_p10_m",
+      "slope_mean_deg",
+      "slope_std_deg",
+      "slope_p50_deg",
+      "slope_p90_deg",
+      "northness_mean",
+      "eastness_mean",
+      "flat_fraction_lt1deg",
+      "study_area_km2",
+      "clim_pr_sum_antecedent_12mo_mm",
+      "clim_pr_sum_antecedent_jul_sep_mm",
+      "clim_tmean_antecedent_12mo_c",
+      "clim_tmean_antecedent_jul_sep_c",
+      "clim_vpd_mean_antecedent_12mo_kpa",
+      "clim_vpd_mean_antecedent_jul_sep_kpa"
+    ],
+    "imputation": "Median fitted on base-training rows only; no scaling or indicators.",
+    "calibration": {
+      "shrinkage": 0.5,
+      "probability_clip": 1e-06,
+      "definition": "Let z=logit(clip(p,eps,1-eps)). Fit a single offset a by minimizing unweighted Bernoulli negative log likelihood on calibration observations, with slope fixed at 1. Apply expit(z+0.5*a) to validation predictions. The factor 0.5 is a prespecified pragmatic shrinkage rule, not a fitted or optimal value. No threshold or shrinkage search.",
+      "numerical_root_bracket": [
+        -40.0,
+        40.0
+      ]
+    },
+    "calibration_window": "For target year T, base train 2001 through T-3; calibrate T-2 and T-1.",
+    "spatial_protocol": "Reuse all five saved 20 km block folds and 4 km polygon buffers. Training and calibration use only the spatial training geography; validation uses only held-out geography. Exclude buffers from every stage.",
+    "label_protocol": "Retain original known reviewed labels for training and calibration, including flagged zeros. Preserve the previous 231 unknown development exclusions. Exclude the frozen 155 flagged zeros from validation in every method. No label changes or additional exclusion arms.",
+    "climate_availability": "Retrospective gridMET reconstruction with pre-January-1 measurement windows and a 60-day assumed release lag; historical as-issued vintages unverified."
+  },
+  "decision_status": "Recommended configuration documented and frozen separately; existing fitted models, original selection and baseline are unchanged.",
+  "evidence": {
+    "development_years": [
+      2001,
+      2021
+    ],
+    "validation_years": [
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021
+    ],
+    "eligible_validation_cell_years": 8588,
+    "recorded_positive_cell_years": 656,
+    "annual_windows": 9,
+    "spatial_folds": 5,
+    "joint_folds": 45,
+    "aggregation": "Equal-weight mean of nine annual metrics after stitching spatial holdouts; summed captures are separately labeled.",
+    "ranking_budget": "ceil(0.10 * annual eligible rows), probability descending then observation_id ascending",
+    "saved_annual_bundle": "ml_outputs/annual_calibration_9b93835d6db9",
+    "saved_ranking_bundle": "ml_outputs/ranking_audit_eb627f7034d3"
+  },
+  "next_step": "Interpret the frozen development model and present clearly labeled held-out probability and ranking maps with the reporting, geographic and historical-availability limitations. Any later single-model fitting and calibration design requires a separate development-only protocol; this decision does not authorize revisiting 2024-2025.",
+  "limits": [
+    "Studied development data and chosen model configurations; no independent or fully nested confirmation.",
+    "Approximately one percent mean Brier improvement over simple past-rate references; uneven annual gains and no significance claim.",
+    "Calibration worsens 2020 underprediction; reporting/source changes and real occurrence variation are not separately identified.",
+    "Recorded occurrence depends on reporting. No-record labels do not prove absence; 155 flagged zeros and prior unknowns restrict evaluation.",
+    "County footprint includes cells beyond mapped WUI; it is not a WUI-only or burnable-only sample.",
+    "Rank changes across stitched geographic fits do not imply one monotone calibrator changes a single final model ranking.",
+    "Spatial buffers do not prove independence; shared history, nearby cells and one coarse climate pixel remain dependencies.",
+    "Retrospective climate/label reconstruction does not establish point-in-time data availability.",
+    "Top-decile results measure an observation budget, not land area, incident totals or suppression benefit."
+  ],
+  "work_performed": {
+    "new_model_fits": 0,
+    "new_calibration_fits": 0,
+    "new_imputer_fits": 0,
+    "model_objects_loaded": 0,
+    "later_period_rows_loaded": 0,
+    "later_period_evaluations": 0,
+    "original_labels_changed": 0,
+    "agency_contact": false
+  }
+}

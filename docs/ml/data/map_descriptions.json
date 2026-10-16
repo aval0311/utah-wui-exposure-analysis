@@ -1,0 +1,245 @@
+[
+  {
+    "year": 2013,
+    "image": "figures/map_2013.png",
+    "alt": "2013 six-panel map: conservative probability above raw ranking for Salt Lake, Utah and Washington counties. Text description and county table follow.",
+    "caption": "2013: 997 of 997 original cells have held-out predictions; 0 unknown-label and 0 flagged-zero cells are excluded. Outlines select 100 cells across the three-county cohort. In this year, full cells represent 75.6% of eligible cells and 99.0% of raw top-decile selections. Upper panels show conservative probabilities; lower panels show raw ranking percentiles. Original-area values are retained, and boundary-cell probabilities are not per-km² hazard measures. Development years informed model selection; terrain is a contemporary static proxy.",
+    "spatial_description": "Geographic comparison among eligible cells: Salt Lake has mean conservative probability 7.19% and 8 raw top-decile cells; Utah has mean conservative probability 7.59% and 34 raw top-decile cells; Washington has mean conservative probability 10.59% and 58 raw top-decile cells. County averages do not imply uniform conditions within a county; the mapped pattern is clustered, and panel scales differ.",
+    "counties": [
+      {
+        "county": "Salt Lake",
+        "eligible": 152,
+        "mean_probability_pct": 7.194779445507843,
+        "raw_top10": 8
+      },
+      {
+        "county": "Utah",
+        "eligible": 412,
+        "mean_probability_pct": 7.586698917551849,
+        "raw_top10": 34
+      },
+      {
+        "county": "Washington",
+        "eligible": 433,
+        "mean_probability_pct": 10.5917681540222,
+        "raw_top10": 58
+      }
+    ]
+  },
+  {
+    "year": 2014,
+    "image": "figures/map_2014.png",
+    "alt": "2014 six-panel map: conservative probability above raw ranking for Salt Lake, Utah and Washington counties. Text description and county table follow.",
+    "caption": "2014: 997 of 997 original cells have held-out predictions; 0 unknown-label and 0 flagged-zero cells are excluded. Outlines select 100 cells across the three-county cohort. In this year, full cells represent 75.6% of eligible cells and 99.0% of raw top-decile selections. Upper panels show conservative probabilities; lower panels show raw ranking percentiles. Original-area values are retained, and boundary-cell probabilities are not per-km² hazard measures. Development years informed model selection; terrain is a contemporary static proxy.",
+    "spatial_description": "Geographic comparison among eligible cells: Salt Lake has mean conservative probability 5.99% and 9 raw top-decile cells; Utah has mean conservative probability 6.93% and 17 raw top-decile cells; Washington has mean conservative probability 12.01% and 74 raw top-decile cells. County averages do not imply uniform conditions within a county; the mapped pattern is clustered, and panel scales differ.",
+    "counties": [
+      {
+        "county": "Salt Lake",
+        "eligible": 152,
+        "mean_probability_pct": 5.986128877937572,
+        "raw_top10": 9
+      },
+      {
+        "county": "Utah",
+        "eligible": 412,
+        "mean_probability_pct": 6.930738854943572,
+        "raw_top10": 17
+      },
+      {
+        "county": "Washington",
+        "eligible": 433,
+        "mean_probability_pct": 12.012313170792533,
+        "raw_top10": 74
+      }
+    ]
+  },
+  {
+    "year": 2015,
+    "image": "figures/map_2015.png",
+    "alt": "2015 six-panel map: conservative probability above raw ranking for Salt Lake, Utah and Washington counties. Text description and county table follow.",
+    "caption": "2015: 997 of 997 original cells have held-out predictions; 0 unknown-label and 0 flagged-zero cells are excluded. Outlines select 100 cells across the three-county cohort. In this year, full cells represent 75.6% of eligible cells and 98.0% of raw top-decile selections. Upper panels show conservative probabilities; lower panels show raw ranking percentiles. Original-area values are retained, and boundary-cell probabilities are not per-km² hazard measures. Development years informed model selection; terrain is a contemporary static proxy.",
+    "spatial_description": "Geographic comparison among eligible cells: Salt Lake has mean conservative probability 6.03% and 10 raw top-decile cells; Utah has mean conservative probability 7.26% and 36 raw top-decile cells; Washington has mean conservative probability 9.58% and 54 raw top-decile cells. County averages do not imply uniform conditions within a county; the mapped pattern is clustered, and panel scales differ.",
+    "counties": [
+      {
+        "county": "Salt Lake",
+        "eligible": 152,
+        "mean_probability_pct": 6.027298116082891,
+        "raw_top10": 10
+      },
+      {
+        "county": "Utah",
+        "eligible": 412,
+        "mean_probability_pct": 7.25505938048074,
+        "raw_top10": 36
+      },
+      {
+        "county": "Washington",
+        "eligible": 433,
+        "mean_probability_pct": 9.57933829657112,
+        "raw_top10": 54
+      }
+    ]
+  },
+  {
+    "year": 2016,
+    "image": "figures/map_2016.png",
+    "alt": "2016 six-panel map: conservative probability above raw ranking for Salt Lake, Utah and Washington counties. Text description and county table follow.",
+    "caption": "2016: 997 of 997 original cells have held-out predictions; 0 unknown-label and 0 flagged-zero cells are excluded. Outlines select 100 cells across the three-county cohort. In this year, full cells represent 75.6% of eligible cells and 96.0% of raw top-decile selections. Upper panels show conservative probabilities; lower panels show raw ranking percentiles. Original-area values are retained, and boundary-cell probabilities are not per-km² hazard measures. Development years informed model selection; terrain is a contemporary static proxy.",
+    "spatial_description": "Geographic comparison among eligible cells: Salt Lake has mean conservative probability 5.61% and 7 raw top-decile cells; Utah has mean conservative probability 6.32% and 27 raw top-decile cells; Washington has mean conservative probability 9.95% and 66 raw top-decile cells. County averages do not imply uniform conditions within a county; the mapped pattern is clustered, and panel scales differ.",
+    "counties": [
+      {
+        "county": "Salt Lake",
+        "eligible": 152,
+        "mean_probability_pct": 5.610324702393505,
+        "raw_top10": 7
+      },
+      {
+        "county": "Utah",
+        "eligible": 412,
+        "mean_probability_pct": 6.316653386386446,
+        "raw_top10": 27
+      },
+      {
+        "county": "Washington",
+        "eligible": 433,
+        "mean_probability_pct": 9.953377590222498,
+        "raw_top10": 66
+      }
+    ]
+  },
+  {
+    "year": 2017,
+    "image": "figures/map_2017.png",
+    "alt": "2017 six-panel map: conservative probability above raw ranking for Salt Lake, Utah and Washington counties. Text description and county table follow.",
+    "caption": "2017: 948 of 997 original cells have held-out predictions; 2 unknown-label and 47 flagged-zero cells are excluded. Outlines select 95 cells across the three-county cohort. In this year, full cells represent 74.8% of eligible cells and 97.9% of raw top-decile selections. Upper panels show conservative probabilities; lower panels show raw ranking percentiles. Original-area values are retained, and boundary-cell probabilities are not per-km² hazard measures. Development years informed model selection; terrain is a contemporary static proxy.",
+    "spatial_description": "Geographic comparison among eligible cells: Salt Lake has mean conservative probability 6.07% and 9 raw top-decile cells; Utah has mean conservative probability 6.63% and 24 raw top-decile cells; Washington has mean conservative probability 10.66% and 62 raw top-decile cells. County averages do not imply uniform conditions within a county; the mapped pattern is clustered, and panel scales differ.",
+    "counties": [
+      {
+        "county": "Salt Lake",
+        "eligible": 148,
+        "mean_probability_pct": 6.073516683387535,
+        "raw_top10": 9
+      },
+      {
+        "county": "Utah",
+        "eligible": 381,
+        "mean_probability_pct": 6.631874723367229,
+        "raw_top10": 24
+      },
+      {
+        "county": "Washington",
+        "eligible": 419,
+        "mean_probability_pct": 10.658153948890586,
+        "raw_top10": 62
+      }
+    ]
+  },
+  {
+    "year": 2018,
+    "image": "figures/map_2018.png",
+    "alt": "2018 six-panel map: conservative probability above raw ranking for Salt Lake, Utah and Washington counties. Text description and county table follow.",
+    "caption": "2018: 954 of 997 original cells have held-out predictions; 2 unknown-label and 41 flagged-zero cells are excluded. Outlines select 96 cells across the three-county cohort. In this year, full cells represent 75.3% of eligible cells and 97.9% of raw top-decile selections. Upper panels show conservative probabilities; lower panels show raw ranking percentiles. Original-area values are retained, and boundary-cell probabilities are not per-km² hazard measures. Development years informed model selection; terrain is a contemporary static proxy.",
+    "spatial_description": "Geographic comparison among eligible cells: Salt Lake has mean conservative probability 7.14% and 19 raw top-decile cells; Utah has mean conservative probability 8.08% and 46 raw top-decile cells; Washington has mean conservative probability 9.02% and 31 raw top-decile cells. County averages do not imply uniform conditions within a county; the mapped pattern is clustered, and panel scales differ.",
+    "counties": [
+      {
+        "county": "Salt Lake",
+        "eligible": 149,
+        "mean_probability_pct": 7.140311889523246,
+        "raw_top10": 19
+      },
+      {
+        "county": "Utah",
+        "eligible": 390,
+        "mean_probability_pct": 8.078533757825282,
+        "raw_top10": 46
+      },
+      {
+        "county": "Washington",
+        "eligible": 415,
+        "mean_probability_pct": 9.020579955508756,
+        "raw_top10": 31
+      }
+    ]
+  },
+  {
+    "year": 2019,
+    "image": "figures/map_2019.png",
+    "alt": "2019 six-panel map: conservative probability above raw ranking for Salt Lake, Utah and Washington counties. Text description and county table follow.",
+    "caption": "2019: 931 of 997 original cells have held-out predictions; 0 unknown-label and 66 flagged-zero cells are excluded. Outlines select 94 cells across the three-county cohort. In this year, full cells represent 74.1% of eligible cells and 97.9% of raw top-decile selections. Upper panels show conservative probabilities; lower panels show raw ranking percentiles. Original-area values are retained, and boundary-cell probabilities are not per-km² hazard measures. Development years informed model selection; terrain is a contemporary static proxy.",
+    "spatial_description": "Geographic comparison among eligible cells: Salt Lake has mean conservative probability 5.80% and 11 raw top-decile cells; Utah has mean conservative probability 6.49% and 26 raw top-decile cells; Washington has mean conservative probability 8.71% and 57 raw top-decile cells. County averages do not imply uniform conditions within a county; the mapped pattern is clustered, and panel scales differ.",
+    "counties": [
+      {
+        "county": "Salt Lake",
+        "eligible": 134,
+        "mean_probability_pct": 5.804507297778702,
+        "raw_top10": 11
+      },
+      {
+        "county": "Utah",
+        "eligible": 381,
+        "mean_probability_pct": 6.493739776162161,
+        "raw_top10": 26
+      },
+      {
+        "county": "Washington",
+        "eligible": 416,
+        "mean_probability_pct": 8.705204134056968,
+        "raw_top10": 57
+      }
+    ]
+  },
+  {
+    "year": 2020,
+    "image": "figures/map_2020.png",
+    "alt": "2020 six-panel map: conservative probability above raw ranking for Salt Lake, Utah and Washington counties. Text description and county table follow.",
+    "caption": "2020: 874 of 997 original cells have held-out predictions; 122 unknown-label and 1 flagged-zero cells are excluded. Outlines select 88 cells across the three-county cohort. In this year, full cells represent 73.5% of eligible cells and 98.9% of raw top-decile selections. Upper panels show conservative probabilities; lower panels show raw ranking percentiles. Original-area values are retained, and boundary-cell probabilities are not per-km² hazard measures. Development years informed model selection; terrain is a contemporary static proxy.",
+    "spatial_description": "Geographic comparison among eligible cells: Salt Lake has mean conservative probability 6.17% and 10 raw top-decile cells; Utah has mean conservative probability 6.69% and 23 raw top-decile cells; Washington has mean conservative probability 11.12% and 55 raw top-decile cells. County averages do not imply uniform conditions within a county; the mapped pattern is clustered, and panel scales differ.",
+    "counties": [
+      {
+        "county": "Salt Lake",
+        "eligible": 138,
+        "mean_probability_pct": 6.171100294505366,
+        "raw_top10": 10
+      },
+      {
+        "county": "Utah",
+        "eligible": 360,
+        "mean_probability_pct": 6.692882313841751,
+        "raw_top10": 23
+      },
+      {
+        "county": "Washington",
+        "eligible": 376,
+        "mean_probability_pct": 11.1151956395804,
+        "raw_top10": 55
+      }
+    ]
+  },
+  {
+    "year": 2021,
+    "image": "figures/map_2021.png",
+    "alt": "2021 six-panel map: conservative probability above raw ranking for Salt Lake, Utah and Washington counties. Text description and county table follow.",
+    "caption": "2021: 893 of 997 original cells have held-out predictions; 104 unknown-label and 0 flagged-zero cells are excluded. Outlines select 90 cells across the three-county cohort. In this year, full cells represent 74.7% of eligible cells and 97.8% of raw top-decile selections. Upper panels show conservative probabilities; lower panels show raw ranking percentiles. Original-area values are retained, and boundary-cell probabilities are not per-km² hazard measures. Development years informed model selection; terrain is a contemporary static proxy.",
+    "spatial_description": "Geographic comparison among eligible cells: Salt Lake has mean conservative probability 5.93% and 3 raw top-decile cells; Utah has mean conservative probability 7.15% and 24 raw top-decile cells; Washington has mean conservative probability 11.70% and 63 raw top-decile cells. County averages do not imply uniform conditions within a county; the mapped pattern is clustered, and panel scales differ.",
+    "counties": [
+      {
+        "county": "Salt Lake",
+        "eligible": 144,
+        "mean_probability_pct": 5.927173886224118,
+        "raw_top10": 3
+      },
+      {
+        "county": "Utah",
+        "eligible": 386,
+        "mean_probability_pct": 7.1467648299053685,
+        "raw_top10": 24
+      },
+      {
+        "county": "Washington",
+        "eligible": 363,
+        "mean_probability_pct": 11.695879594826089,
+        "raw_top10": 63
+      }
+    ]
+  }
+]
