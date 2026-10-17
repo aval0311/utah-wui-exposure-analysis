@@ -10,7 +10,7 @@ an audit of unequal cell areas. The descriptive dashboard and ML study answer di
 
 ## Explore
 
-- **[Historical occurrence timeline](https://aval0311.github.io/utah-wui-exposure-analysis/history/):** explore reviewed 2001–2021 positive cell-years with county filters, a year slider, cell histories, and reporting-coverage annotations.
+- **[Historical timeline + ML comparison](https://aval0311.github.io/utah-wui-exposure-analysis/history/):** explore reviewed 2001–2021 occurrence alongside saved 2013–2021 predictions, matched-cohort charts, probability maps, and findings. Includes county filters, a year slider, cell histories, and reporting limitations.
 - **[ML v1 development case study](https://aval0311.github.io/utah-wui-exposure-analysis/ml/):** annual recorded wildfire occurrence, development 2001–2021, with nine annual map pairs and disclosed reporting and area limitations.
 - **[ML release download](https://github.com/aval0311/utah-wui-exposure-analysis/releases/tag/ml-v1.0.0):** complete offline viewer, map atlas, executed snapshot notebook, saved evidence, and checksums.
 - **[Live dashboard](https://aval0311.github.io/utah-wui-exposure-analysis/):** explore wildfire exposure, relative hazard, and facility proximity across Salt Lake, Utah, and Washington counties.

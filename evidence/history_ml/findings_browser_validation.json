@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-17",
+  "desktopOverflow": false,
+  "mobile": {
+    "columns": "307.409px",
+    "overflow": false,
+    "tableRegion": 307,
+    "tableWidth": 750,
+    "viewport": 390
+  },
+  "consoleWarningsAndErrors": []
+}

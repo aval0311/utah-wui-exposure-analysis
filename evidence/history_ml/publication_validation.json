@@ -1,0 +1,16 @@
+{
+  "version": "0.2.0",
+  "date": "2026-10-17",
+  "historical_data_files_unchanged": 4,
+  "frozen_ml_files_unchanged": 51,
+  "saved_rows": 8973,
+  "eligible_cell_years": 8588,
+  "positives": 656,
+  "unknown_exclusions": 230,
+  "flagged_zero_exclusions": 155,
+  "models_fitted": 0,
+  "new_predictions": 0,
+  "later_period_observations_accessed": 0,
+  "archive_sha256": "108ada51954cd2ba36fc5910444d05033d1b25efc322fe4088bf22e20d0018bc",
+  "archive_verified": true
+}

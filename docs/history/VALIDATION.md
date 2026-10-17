@@ -1,6 +1,9 @@
-# Local review validation
+# Retained historical snapshot validation
 
 Version 0.1.0 · October 16, 2026 · Passed.
+
+This retained record covers the historical base. New saved-prediction checks for
+the local 0.2.0 comparison are documented in `COMPARISON_VALIDATION.md`.
 
 ## Data and preservation
 
@@ -23,4 +26,4 @@ Version 0.1.0 · October 16, 2026 · Passed.
 
 This is a practical local review, not a formal accessibility certification or a new
 model evaluation. Browser checks used a local HTTP preview; the full folder is also
-designed for offline file viewing. This record describes local checks before hosting; deployment is checked separately.
+designed for offline file viewing. The build has not been uploaded or deployed.

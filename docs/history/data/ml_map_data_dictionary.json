@@ -1,0 +1,13 @@
+{
+  "observation_id": "Stable cell_id:year key; one record per original cell per held-out year.",
+  "eligibility": "eligible, unknown_label or flagged_zero_excluded. Prediction, outcome and ranking fields are null for excluded cells.",
+  "conservative_probability": "Saved held-out recorded-occurrence probability after the frozen half-intercept adjustment, 0-1.",
+  "raw_probability": "Saved held-out base XGBoost probability; retained as a sensitivity reference.",
+  "raw_rank_percentile": "100*(eligible_count-ordinal_rank)/(eligible_count-1); 100 is highest. Exact top-10% membership is a separate boolean using ceil(0.1*n). Ties are ordered by observation_id.",
+  "raw_top10": "1/0 for the frozen annual three-county budget; null for excluded cells.",
+  "conservative_top10": "1/0 using the same annual budget on calibrated probabilities; null for excluded cells.",
+  "priority_change": "retained/entered/left/neither relative to raw; null for excluded cells.",
+  "y_reviewed": "Recorded positive cell-year 1 or 0, only in the common evaluation cohort.",
+  "geometry": "Original county-clipped nominal 4 km grid cell in EPSG:26912; not WUI-only.",
+  "use": "Filter year before rendering. Do not combine overlapping yearly polygons in one map or interpret missing predictions as zero."
+}

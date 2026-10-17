@@ -10,7 +10,7 @@ def add_phase_navigation(html):
             anchor = '  </nav>\n  <div class="wui-body">'
             if html.count(anchor) != 1:
                 raise ValueError('Review project-phase navigation before export.')
-            html = html.replace(anchor, '    <a class="wui-timeline-link" href="https://aval0311.github.io/utah-wui-exposure-analysis/history/">Historical timeline <span aria-hidden="true">&rarr;</span></a>\n' + anchor)
+            html = html.replace(anchor, '    <a class="wui-timeline-link" href="https://aval0311.github.io/utah-wui-exposure-analysis/history/">Timeline + ML comparison <span aria-hidden="true">&rarr;</span></a>\n' + anchor)
         if '#wui-app .wui-phase-nav .wui-timeline-link' not in html:
             html = html.replace(css_anchor, '  #wui-app .wui-phase-nav .wui-timeline-link { background:var(--wui-teal); color:white;\n    padding:0 12px; border-radius:4px; text-decoration:none; }\n  #wui-app .wui-phase-nav .wui-timeline-link:hover { background:#12575C; }\n' + css_anchor)
         return html

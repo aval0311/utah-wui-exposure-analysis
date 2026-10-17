@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "saved_rows": 8973,
+  "eligible_rows": 8588,
+  "positive_rows": 656,
+  "unknown_rows": 230,
+  "flagged_zero_rows": 155,
+  "annual_county_summaries": 36,
+  "saved_annual_model_rows_reconciled": 18,
+  "saved_county_summaries_reconciled": 27,
+  "raw_top_decile_slots": 863,
+  "maximum_prediction_year": 2021,
+  "source_files_unchanged": true,
+  "model_fits": 0,
+  "model_objects_loaded": 0,
+  "new_predictions": 0,
+  "later_period_rows_loaded": 0
+}

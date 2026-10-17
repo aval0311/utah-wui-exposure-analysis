@@ -7,7 +7,9 @@
   }
   const $ = id => document.getElementById(id);
   const ns = 'http://www.w3.org/2000/svg';
-  const state = {year:2021, county:'All counties', measure:'rate', cell:null};
+  const ml = window.WUI_ML;
+  const state = {year:2021, county:'All counties', measure:'rate', cell:null, mapMode:'observed'};
+  const notify = () => document.dispatchEvent(new CustomEvent('wui:change',{detail:{...state}}));
   const summaries = new Map(data.summaries.map(row => [`${row.county}:${row.year}`, row]));
   const cells = new Map(data.cells.map(cell => [cell.id, cell]));
   const statusNames = data.status_codes;
@@ -115,14 +117,30 @@
     document.querySelectorAll('.map-panel').forEach((figure,index)=>{
       const county=figure.dataset.county;figure.hidden=state.county!=='All counties'&&county!==state.county;
       const row=summaries.get(`${county}:${state.year}`);
-      figure.querySelector('.map-status').textContent=`${row.positive} positive · ${row.unknown} unknown · ${row.flagged_zero} flagged zeros`;
+      const available=ml.years.includes(state.year);
+      const matched=available?ml.summaries.find(r=>r.county===county&&r.year===state.year):null;
+      figure.querySelector('.map-status').textContent=state.mapMode==='observed'
+        ? `${row.positive} positive · ${row.unknown} unknown · ${row.flagged_zero} flagged zeros`
+        : !available?'No saved predictions for this year.'
+        : `${matched.eligible} eligible · ${matched.unknown+matched.flagged_zero} excluded${state.mapMode==='ranking'?` · ${matched.raw_top10} saved top-decile cells`:''}`;
       figure.querySelectorAll('.cell-shape').forEach(path=>{
         const cell=cells.get(path.dataset.cell), status=cell.status[state.year-2001];
         path.setAttribute('class',`cell-shape status-${status}${cell.id===state.cell?' is-selected':''}`);
         if (status==='U') path.setAttribute('fill',`url(#unknown-hatch-${index})`); else path.removeAttribute('fill');
-        // Inline style overrides the shared legend's generic pattern for this panel.
+        let detail=statusNames[status];
         path.style.fill=status==='U'?`url(#unknown-hatch-${index})`:'';
-        const label=`${cell.id}, ${state.year}: ${statusNames[status]}; area ${areaText(cell.area_km2)} square kilometers`;
+        if(state.mapMode!=='observed') {
+          const value=available?ml.cells[cell.id][state.year-2013]:null;
+          path.classList.toggle('saved-top-decile',Boolean(state.mapMode==='ranking'&&value&&value[3]));
+          if(!available){path.style.fill='#e9edef';detail='No saved prediction; outside 2013–2021';}
+          else if(value){
+            const fraction=state.mapMode==='probability'?value[0]/.4:value[2]/100;
+            const t=Math.max(0,Math.min(1,fraction));
+            path.style.fill=`rgb(${Math.round(238-222*t)},${Math.round(246-157*t)},${Math.round(240-146*t)})`;
+            detail=state.mapMode==='probability'?`Saved conservative probability ${(100*value[0]).toFixed(2)}%`:`Saved raw rank percentile ${value[2].toFixed(1)}${value[3]?'; original annual top decile':''}`;
+          } else detail=`No prediction: ${status==='U'?'unknown label':'flagged zero excluded'}`;
+        }
+        const label=`${cell.id}, ${state.year}: ${detail}; area ${areaText(cell.area_km2)} square kilometers`;
         path.setAttribute('aria-label',label);path.setAttribute('aria-pressed',String(cell.id===state.cell));path.querySelector('title').textContent=label;
       });
     });
@@ -137,6 +155,7 @@
   function selectCell(id) {
     if (id && !cells.has(id)) return;
     state.cell=id||null;$('cell-select').value=id||'';renderMaps();renderCell();
+    notify();
     if (id) text('announcement',`Selected ${id}. ${statusNames[cells.get(id).status[state.year-2001]]} in ${state.year}.`);
   }
 
@@ -155,6 +174,7 @@
       button.append(document.createTextNode({P:'●',N:'–',U:'?',F:'!'}[code]));const small=document.createElement('small');small.textContent=String(year).slice(2);button.append(small);
       button.addEventListener('click',()=>{selectYear(year);detail.querySelector(`[data-cell-year="${year}"]`).focus();});years.append(button);
     });wrap.append(years);detail.append(heading,area,status,wrap);
+    const mlDetail=document.createElement('div');mlDetail.id='cell-ml-detail';detail.append(mlDetail);
   }
 
   function renderTable() {
@@ -178,12 +198,15 @@
       : 'Unknown labels are omitted from the rate; known reviewed zeros remain included. A no-record label does not establish that no fire occurred. Year-to-year differences can reflect both reporting and actual occurrence.';
     renderChart();renderMaps();renderCell();renderTable();
     text('announcement',`${state.county}, ${state.year}: ${row.positive} recorded-positive cells, ${percent(row.rate_pct)} of ${row.known} known reviewed cells, ${row.unknown} unknown labels and ${row.flagged_zero} flagged zeros.`);
+    notify();
   }
 
   $('county').addEventListener('change',event=>{state.county=event.target.value;state.cell=null;updateCellOptions();render();});
-  document.querySelectorAll('input[name="measure"]').forEach(input=>input.addEventListener('change',()=>{state.measure=input.value;renderChart();}));
+  document.querySelectorAll('input[name="measure"]').forEach(input=>input.addEventListener('change',()=>{state.measure=input.value;renderChart();notify();}));
   $('year').addEventListener('input',event=>selectYear(Number(event.target.value)));
   $('previous').addEventListener('click',()=>selectYear(state.year-1));$('next').addEventListener('click',()=>selectYear(state.year+1));
   $('cell-select').addEventListener('change',event=>selectCell(event.target.value));
+  $('map-mode').addEventListener('change',event=>{state.mapMode=event.target.value;renderMaps();notify();});
+  document.addEventListener('wui:requestyear',event=>selectYear(Number(event.detail)));
   initMaps();updateCellOptions();render();
 })();

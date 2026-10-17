@@ -1,0 +1,91 @@
+{
+  "version": "0.2.0",
+  "historical_base": [
+    {
+      "path": "app.js",
+      "sha256": "65a69c2bb42ea0f523d3a946d49d08bd7b34f6f4bc6f1ffd65525853a35a6e38"
+    },
+    {
+      "path": "data/annual_summary.csv",
+      "sha256": "895c5df78fe7e1b209aed1bbe0c6631ac9fc3ca50ad0a386698f7b1d8bebe1c6"
+    },
+    {
+      "path": "data/provenance.json",
+      "sha256": "af5340be8805d1899724743c7302ede115b85864ba250bc476e0408a242d9d06"
+    },
+    {
+      "path": "data/timeline.js",
+      "sha256": "9c12a000aed60b12e90c7bb389c8f4acd6ab649706858a9c0d92da23563d7fa9"
+    },
+    {
+      "path": "data/timeline.json",
+      "sha256": "0aaacf6784ce53b9f19cbf13e66214644c6b388bfdb4009546b368375d0d7bb1"
+    },
+    {
+      "path": "index.html",
+      "sha256": "f49d6e04653a1654f9dcccc47fabac2ceca6faaf4f9b26185466b85201badf81"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "68b98fc9acdf52e91d3d577a86976a826404579bdb932873af89247bfafca849"
+    },
+    {
+      "path": "README.md",
+      "sha256": "8ad4a351b8658623e821d04a32e2ced9acbd5d90c4274e183b71edaabfb4d3ae"
+    },
+    {
+      "path": "styles.css",
+      "sha256": "5e483443bcd2a1963ac549c5d30c97e1865200db6c7c80fea76466fae894cdca"
+    },
+    {
+      "path": "VALIDATION.md",
+      "sha256": "e4a10819de2ed9ca893c30fb69f8867486ae7436f2cb39034b273991f620c017"
+    },
+    {
+      "path": "verify.py",
+      "sha256": "5e478f74046de0a86f742f04a1425310218bf8e4d76db8bae48f9561f32aed32"
+    }
+  ],
+  "ml_sources": [
+    {
+      "path": "data/map_attributes.csv",
+      "sha256": "6514d7225cb0d28f89c0cbb4e4f8362d2e00b7f4d3a4322ea6a5ea5b9cc59e04"
+    },
+    {
+      "path": "data/annual_comparison.csv",
+      "sha256": "5cd3a95a2c1dafd83b2e131c73d887e5cefd6f79533b88e627f74af36209de87"
+    },
+    {
+      "path": "data/county_map_summary.csv",
+      "sha256": "7b42b128a70107737433b3d9d3a52b57f89a5d24622afc353a843e962a8f876e"
+    },
+    {
+      "path": "data/map_data_dictionary.json",
+      "sha256": "7a864f9fc018e1c0eb82684017742c0558cb99c560ba033f1ed5788adb663422"
+    },
+    {
+      "path": "data/frozen_specification.json",
+      "sha256": "ad0aa5e19c2038475a22ec944996664fd3db03028d1c04fd75588cf16302a722"
+    }
+  ],
+  "join": "Exact original cell_id and UTC year; all 997 original cells in each year 2013–2021.",
+  "cohort": "Only saved eligibility=eligible rows enter observed/predicted comparisons. Exclude unknown labels and the frozen flagged zeros from both sides. Null predictions remain missing.",
+  "historical_rate": "The original 2001–2021 historical panel retains its reviewed-label denominator, including flagged zeros. It is separate from the matched ML comparison.",
+  "expected_cells": "Sum of saved probabilities: expected recorded-positive cells, not incident counts. No independence assumption is needed for the expectation; no confidence interval is inferred.",
+  "ranking": "Raw percentile and top-decile membership are copied from the original annual three-county cohort. County filters do not rerank or recalculate the budget.",
+  "aggregation": "County/year descriptive summaries of saved geographic fits. Pooled sums are not the equal-weight annual model-selection metrics.",
+  "limits": [
+    "Development years informed model and calibration choices; not an independent final test.",
+    "Maps combine five geographic fits per year, not a newly fitted deployment model.",
+    "Reporting changes, unknown labels, unequal cell areas and retrospective climate availability remain unresolved."
+  ],
+  "work_performed": {
+    "model_fits": 0,
+    "calibration_fits": 0,
+    "model_objects_loaded": 0,
+    "new_predictions": 0,
+    "original_labels_changed": 0,
+    "source_refreshes": 0,
+    "later_period_rows_loaded": 0
+  }
+}

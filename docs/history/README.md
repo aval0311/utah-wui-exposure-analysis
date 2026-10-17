@@ -1,6 +1,11 @@
-# Utah historical occurrence explorer
+# Utah history and saved ML comparison
 
-Historical occurrence release 0.1.0 · Reviewed development evidence, 2001–2021.
+Published snapshot 0.2.0 · Reviewed history 2001–2021; saved ML holdouts 2013–2021.
+
+**Start with [the saved ML comparison guide](ML_COMPARISON.md)** for the new charts,
+map modes, exact evaluation cohort, and per-cell probability table. The historical
+snapshot and its original denominator are retained. The historical notes below
+describe that panel; the comparison guide explains the different ML denominator.
 
 Open `index.html` in a browser with the whole folder intact. Viewing needs no Python,
 Jupyter, account, network connection, or external JavaScript libraries. The links to
@@ -32,8 +37,8 @@ Unknown labels remain missing and are omitted from this denominator. Flagged zer
 retain their reviewed label 0 and remain included. Their flags are displayed separately.
 This differs from the ML case study's evaluation cohort, which excludes the frozen
 155 flagged zeros. The 2013–2021 intersection has been reconciled against every row
-in the published ML map evidence. This explorer introduces no new model predictions,
-performance estimates, relabeling, or training/calibration policy changes.
+in the published ML map evidence. The new panel adds descriptive summaries of saved
+predictions, without new fitting, inference, relabeling, or training/calibration changes.
 
 ## Geography and interpretation
 
@@ -62,10 +67,11 @@ With Python 3.10 or later, optionally run `python -I -S verify.py` to check file
 integrity. Python is not required for viewing. See `VALIDATION.md` for completed
 data and interface checks and their limits.
 
-The source project retains `tools/build_data.py` and its validation tools. Data
-rebuilding requires the retained source bundles and the existing geospatial Python
-environment; those original analytical inputs are not distributed here. Viewing the
-snapshot requires none of them. No analytical notebook is executed for this build.
+The original historical project retains its geospatial export code. The source
+project for this comparison retains `tools/export_predictions.py`, using only the
+Python standard library and the already assembled historical and ML snapshots.
+Those retained source snapshots are separate from the portable viewer. No analytical
+notebook is executed for this build.
 Temporal reads load only 2001–2021. No 2022–2025 observation rows are loaded or evaluated.
 
 Original explorer code and documentation are MIT licensed. Underlying source terms
@@ -75,5 +81,4 @@ limitations are documented in the [ML source guide](https://aval0311.github.io/u
 and [source license notes](https://aval0311.github.io/utah-wui-exposure-analysis/ml/DATA_LICENSE.md).
 No raw incident records, precise incident locations, or provider logos are bundled.
 
-Published at [the historical timeline](https://aval0311.github.io/utah-wui-exposure-analysis/history/).
-The versioned GitHub release supplies the offline ZIP and checksum.
+This published snapshot has not been uploaded to GitHub or deployed.
