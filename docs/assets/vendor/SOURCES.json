@@ -1,0 +1,62 @@
+{
+  "leaflet.js": {
+    "url": "https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js",
+    "sha256": "5819285cec137b229c94e1ee5ad73e8b6b84345a4367d60f75fe477fe0fb7b03",
+    "bytes": 146715
+  },
+  "leaflet.css": {
+    "url": "https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css",
+    "sha256": "90b693d86392a4779c861b28cf307e7e59c3fb35328c4d8b95f58f814d38c722",
+    "bytes": 14657
+  },
+  "leaflet.markercluster.js": {
+    "url": "https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js",
+    "sha256": "7e1a592d5bf4b1698700edecc0ac091166d41d3c31373611627b4e7b9faef067",
+    "bytes": 33555
+  },
+  "MarkerCluster.css": {
+    "url": "https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css",
+    "sha256": "f9b756b96397305917d2ff42bebdce58294f89879f0d0cfd18664fffbc59c5d7",
+    "bytes": 886
+  },
+  "MarkerCluster.Default.css": {
+    "url": "https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css",
+    "sha256": "2d687359a406651b1616bac9c60fba667f134fce24d3fb6bb621c173aa9c1a96",
+    "bytes": 1346
+  },
+  "LEAFLET_LICENSE.txt": {
+    "url": "https://raw.githubusercontent.com/Leaflet/Leaflet/v1.9.3/LICENSE",
+    "sha256": "97c194191510b19c72d25094922821a888d5d9bafb909ea7a38c9bf5b6c40a08",
+    "bytes": 1394
+  },
+  "MARKERCLUSTER_LICENSE.txt": {
+    "url": "https://raw.githubusercontent.com/Leaflet/Leaflet.markercluster/v1.1.0/MIT-LICENCE.txt",
+    "sha256": "3133dacd38250bd1f524d8166cc60a016a382522e062fce143691c65bf5e4b3d",
+    "bytes": 1052
+  },
+  "images/layers.png": {
+    "url": "https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/images/layers.png",
+    "sha256": "1dbbe9d028e292f36fcba8f8b3a28d5e8932754fc2215b9ac69e4cdecf5107c6",
+    "bytes": 696
+  },
+  "images/layers-2x.png": {
+    "url": "https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/images/layers-2x.png",
+    "sha256": "066daca850d8ffbef007af00b06eac0015728dee279c51f3cb6c716df7c42edf",
+    "bytes": 1259
+  },
+  "images/marker-icon.png": {
+    "url": "https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/images/marker-icon.png",
+    "sha256": "574c3a5cca85f4114085b6841596d62f00d7c892c7b03f28cbfa301deb1dc437",
+    "bytes": 1466
+  },
+  "images/marker-icon-2x.png": {
+    "url": "https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/images/marker-icon-2x.png",
+    "sha256": "00179c4c1ee830d3a108412ae0d294f55776cfeb085c60129a39aa6fc4ae2528",
+    "bytes": 2464
+  },
+  "images/marker-shadow.png": {
+    "url": "https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/images/marker-shadow.png",
+    "sha256": "264f5c640339f042dd729062cfc04c17f8ea0f29882b538e3848ed8f10edb4da",
+    "bytes": 618
+  }
+}

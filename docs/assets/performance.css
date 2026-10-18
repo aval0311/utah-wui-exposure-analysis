@@ -1,0 +1,15 @@
+/* Small reset replaces the unused Bootstrap dependency. */
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.5}
+button,input{font:inherit}
+button{cursor:pointer}
+[hidden]{display:none!important}
+.wui-load-status{font-size:12px;color:#435967;padding:0 14px 8px 40px;line-height:1.4}
+.wui-load-status button,#wui-basemap-status button{border:1px solid #176b70;border-radius:4px;background:white;color:#155e63;padding:8px 12px;margin:4px}
+#wui-basemap-status{position:absolute;z-index:1100;bottom:26px;left:64px;right:12px;background:#fff8de;color:#34434d;border:1px solid #b99b3a;padding:8px;font-size:13px;max-width:440px}
+@media(max-width:850px){
+ #wui-app .leaflet-control-zoom a,#wui-app .dashboard-fullscreen-button,#wui-app .dashboard-reset-view-button{width:44px!important;height:44px!important;line-height:44px!important}
+ #wui-app .wui-menu,#wui-app .wui-close,#wui-app .wui-info{min-width:44px;min-height:44px}
+ .wui-load-status button{min-height:44px}
+ nav.portfolio-phase-nav a,nav.portfolio-phase-nav span{min-height:44px;display:inline-flex!important;align-items:center}
+}

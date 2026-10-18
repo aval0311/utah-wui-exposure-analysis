@@ -8,3 +8,7 @@ docs/forecasting/** -text
 
 # Preserve forecasting code-package integrity hashes.
 forecasting_code/** -text
+
+# Preserve reviewed dashboard asset bytes and validation hashes.
+docs/index.html -text
+docs/assets/** -text
