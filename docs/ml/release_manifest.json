@@ -187,8 +187,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 48312,
-      "sha256": "cafff9e746619898a5fe03d52b3d795cd418e6ef4fe9e83f446f73aec1b382cb"
+      "bytes": 49813,
+      "sha256": "2a04ed85508c1ff794faff8345a204db9b77bf3de39938391f7a688c40308712"
     },
     {
       "path": "LICENSE",
@@ -273,6 +273,10 @@
       "bytes": 46975,
       "sha256": "a73463e3fc81a286d9736d8f75f681886a1cafbd571672e05ea0e5d903f4d34f"
     },
+    "original_releases_preserved": true
+  },
+  "recruiter_presentation_overlay": {
+    "reason": "Reviewed introductory summary, descriptive header, and frozen release reference in reproducibility section; no analytical changes.",
     "original_releases_preserved": true
   }
 }

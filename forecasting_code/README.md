@@ -19,7 +19,7 @@ This validates the installation and synthetic/summary workflow on the tested con
 
 ## What the code demonstrates
 
-- Four historical baselines and two fixed L2 logistic models, each retained raw and calibrated.
+- Four historical baselines, plus two fixed L2 logistic models with raw and calibrated variants.
 - Whole-year temporal separation; training-only imputation and scaling; a separate calibration interval.
 - Predictions persisted and hashed before evaluation joins outcomes.
 - Audited input allowlists, source hashes, fit membership ledgers and non-overwrite guards.

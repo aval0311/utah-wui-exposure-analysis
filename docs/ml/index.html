@@ -20,9 +20,17 @@ nav.portfolio-phase-nav a:hover{background:#d1e4e2!important;text-decoration:und
 nav.portfolio-phase-nav a:focus-visible{outline:3px solid #a24d00;outline-offset:2px}
 @media(max-width:480px){nav.portfolio-phase-nav{gap:4px!important;padding:8px!important}nav.portfolio-phase-nav a,nav.portfolio-phase-nav span{padding:7px 9px!important;font-size:12px}}
 @media print{nav.portfolio-phase-nav{display:none!important}}
-</style></head><body><a class="skip" href="#main">Skip to content</a><nav class="portfolio-phase-nav" aria-label="Project phases"><a href="../">Dashboard</a><span aria-current="page">ML case study</span><a href="../history/">Timeline + ML comparison</a><a href="../forecasting/">Forecasting</a></nav><header>
-<div class="eyebrow">Adam Valentino · ML v1 · 1.0.0 · 16 October 2026</div><h1>Utah wildfire occurrence modeling</h1>
+</style><style id="project-summary-style">.project-summary{margin:24px 0;padding:18px 22px;background:#fff;border:1px solid var(--line);border-radius:8px}.project-summary h2{font-size:21px;margin:0 0 12px}.project-summary ul{padding-left:20px;margin:0}.project-summary li{margin:8px 0;font-size:16px;line-height:1.55}@media(max-width:640px){.project-summary{padding:16px}.project-summary li{font-size:15px}}</style></head><body><a class="skip" href="#main">Skip to content</a><nav class="portfolio-phase-nav" aria-label="Project phases"><a href="../">Dashboard</a><span aria-current="page">ML case study</span><a href="../history/">Timeline + ML comparison</a><a href="../forecasting/">Forecasting</a></nav><header>
+<div class="eyebrow">Adam Valentino · Machine Learning Case Study · 16 October 2026</div><h1>Utah wildfire occurrence modeling</h1>
 <p>A development case study of probability calibration, geographic validation and the effect of observation area on wildfire rankings.</p>
+<aside class="project-summary" aria-labelledby="project-summary-title">
+<h2 id="project-summary-title">Project at a glance</h2>
+<ul>
+<li><strong>Contribution:</strong> Built a Python geospatial modeling workflow comparing Random Forest and XGBoost for annual recorded wildfire occurrence across 997 Utah study cells.</li>
+<li><strong>Evaluation:</strong> Combined chronological training and calibration with geographic holdouts, then audited reporting gaps, probability quality and unequal cell areas.</li>
+<li><strong>Result:</strong> Selected conservative XGBoost for development probability estimates, with about 1% lower mean annual Brier error than past-rate forecasts. Retained raw XGBoost for ranking and showed that cell area strongly affects which locations enter the top decile.</li>
+</ul>
+</aside>
 <div class="scope"><p><strong>Development 2001–2021 · Annual maps 2013–2021</strong></p><p>Recorded occurrence within county-clipped cells across Salt Lake, Utah and Washington counties. These years informed model selection; the results are not an independent final evaluation or an operational forecast.</p></div>
 <p class="scope"><strong>Next phase:</strong> <a href="../forecasting/">Retrospective forecasting case study</a> &mdash; why cell history outperformed the fixed forecasting models. This separate experiment preserves the frozen ML v1 recommendation.</p>
 <nav aria-label="On this page"><a href="#study">Study</a><a href="#maps">Annual maps</a><a href="#area">Area audit</a><a href="#sources">Sources</a><a href="#reproduce">Reproduce the presentation</a><a href="#downloads">Downloads</a></nav></header><main id="main">
@@ -174,6 +182,7 @@ src="figures/map_2021.png" alt="2021 six-panel map: conservative probability abo
 </ul>
 <p>Raw source archives are not included. The release contains original analysis summaries, cell-year prediction attributes, maps and selected provenance. <a href="DATA_LICENSE.md">License and attribution notes</a> distinguish the project&#x27;s material from source-provider conditions.</p></section>
 <section id="reproduce"><h2>Reproducing the presentation</h2>
+<p><strong>Release reference:</strong> <a href="https://github.com/aval0311/utah-wui-exposure-analysis/releases/tag/ml-v1.0.0"><code>ml-v1.0.0</code></a> identifies the frozen ML presentation release underlying this case study. The original release remains unchanged.</p>
 <h3>Offline viewing and integrity</h3>
 <p>Open <code>index.html</code> after extracting the complete folder. It has no scripts, remote fonts, tracking, fetched data or CDN dependencies. Maps, text descriptions and county summaries are included locally. The PDF and notebook provide alternative views. External citation links are optional.</p>
 <p>Python 3.10 or later is sufficient for the viewer. <code>python -I -S viewer.py --verify</code> checks every manifest-listed file against SHA-256 and size. <code>python -I -S viewer.py --build</code> deterministically rebuilds the HTML from included text, metadata and map descriptions. Both commands locate inputs relative to the script, so they work from another current directory. No packages need installing and no data are downloaded.</p>

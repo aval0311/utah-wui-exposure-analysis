@@ -10,7 +10,7 @@
   "evidence/original_verification.json": "e48b64da3c72070e58c59b6824c14a91ae7c6640c81a0c4e4f1fe0dc8c540383",
   "evidence/RESULTS.md": "199cc0f6686a045156da89f5b19f8191ca9231f3a052a434db76b1d5a5d33f6b",
   "LICENSE": "68b98fc9acdf52e91d3d577a86976a826404579bdb932873af89247bfafca849",
-  "README.md": "40ba3ff0df354db84fd86b353768808b9565d55fdecaa11ea89c62e120486939",
+  "README.md": "dd6229cb4f25109717e9a7f39d3fad08bd3abcc86d3d3f234326b02f08ecbce0",
   "reference/experiment.py": "4404775c35d07dd1965962bbf2b6c791d7108b6a475e2e2d3a4b40ef07987951",
   "reference/test_contract.py": "6538ebfc46b34d8eed32c294369d64790fb4b9ec0fb14e6c7dc6924fc1c1ad7f",
   "REPRODUCIBILITY.md": "60382ad89052f5e55f0f6ff41f0ab0ec8a4435566baf45b96673a372e09d2431",
