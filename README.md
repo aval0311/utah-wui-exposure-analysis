@@ -17,12 +17,25 @@ an audit of unequal cell areas. The descriptive dashboard and ML study answer di
 - **[ML release download](https://github.com/aval0311/utah-wui-exposure-analysis/releases/tag/ml-v1.0.0):** complete offline viewer, map atlas, executed snapshot notebook, saved evidence, and checksums.
 - **[Live dashboard](https://aval0311.github.io/utah-wui-exposure-analysis/):** explore wildfire exposure, relative hazard, and facility proximity across Salt Lake, Utah, and Washington counties.
 - **[Analysis notebook](notebooks/utah_wui_exposure_analysis.ipynb):** saved results, methods, code, and checks.
-- **[Dashboard HTML](docs/index.html):** download and open locally in a browser; internet is required for browser libraries and basemap tiles.
+- **[Dashboard source bundle](docs/):** the HTML and `assets/` folder work together; use the local HTTP preview instructions below. Basemap tiles require internet.
 - **[County results](outputs/tables/county_exposure.csv)** and **[coverage diagnostics](outputs/tables/hazard_coverage.csv)**.
 - **[Reproduction guide](data/README.md)** and **[publication handoff](RELEASE_HANDOFF.md)**.
 
-GitHub's notebook preview displays saved figures and tables. Interactive exploration
-uses the standalone dashboard. Browser libraries and basemap tiles require internet.
+GitHub's notebook preview displays saved figures and tables. The dashboard starts with
+the hazard overview and county outlines; WUI, exposure, and facility layers load when
+selected. Map libraries are included locally; Esri basemap tiles require internet.
+
+For a local preview, download or clone the repository, then run from its root:
+
+```text
+python -m http.server 8000 --bind 127.0.0.1 --directory docs
+```
+
+Open <http://127.0.0.1:8000/>. Keep `docs/index.html` and `docs/assets/` together;
+opening the HTML directly with `file://` does not support on-demand layer requests.
+The preserved publication handoff describes the original single-file snapshot; these
+instructions apply to the current dashboard. Analytical values and original release
+archives are unchanged.
 
 ## Questions and contribution
 
@@ -210,7 +223,9 @@ no new predictions and performed no analysis of 2024–2025. These maps do not e
 property loss, burn severity, daily fire danger, or hazard per square kilometer.
 
 The [ML package README](docs/ml/README.md) explains offline viewing and integrity checks.
-The original descriptive notebook, dashboard, and analytical outputs remain unchanged.
+The original descriptive notebook and analytical outputs remain unchanged. The hosted
+dashboard has since received presentation and loading improvements; its analytical
+values and the original release archives are preserved.
 
 ## Package layout
 
@@ -219,7 +234,7 @@ The original descriptive notebook, dashboard, and analytical outputs remain unch
 - scripts/: regression checks and publication export.
 - data/: matching snapshot inventory, checksum, and acquisition guide.
 - images/ and outputs/tables/: accepted-run figures and tables.
-- docs/index.html: interactive descriptive dashboard for GitHub Pages.
+- docs/index.html and docs/assets/: interactive descriptive dashboard with on-demand layers for GitHub Pages.
 - docs/ml/: immutable ML v1 publication package, served at /ml/.
 - evidence/: current validation and explicitly retained historical evidence.
 
