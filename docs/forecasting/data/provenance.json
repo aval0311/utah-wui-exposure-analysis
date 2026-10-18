@@ -1,0 +1,41 @@
+{
+  "built_utc": "2026-10-18T01:20:36.044358+00:00",
+  "status": "portfolio publication build",
+  "source_experiment": "retrospective_occurrence_v1/run_002",
+  "source_manifest_sha256": "2f65f2888a7fc9f75f4e7febb2ecee21d16d07b797500fb9d663e63128531341",
+  "source_sha256": {
+    "method_comparison.csv": "84f9d9069a982d2b36a475fcda924e33a7b3ef0c21bd667b1c1de2f5cf519024",
+    "annual_metrics.csv": "9c1e5b9eb816c4fe722b1e973946dfe6c124d32d11f4a9f05a9f61580b86032f",
+    "county_mean_annual_metrics.csv": "d51a67b329150e5462bb9515cc848e3de058ab1eb51b48c5ded0cbd928afc9ba",
+    "verification.json": "e48b64da3c72070e58c59b6824c14a91ae7c6640c81a0c4e4f1fe0dc8c540383",
+    "figures/annual_results.png": "aa6a5459e5a7f3cd9150f868b87d635d672742fcbc860f9c57b026225ed7636e"
+  },
+  "observation_reads": 0,
+  "new_fits": 0,
+  "protected_years": [
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "evaluation_years": [
+    2013,
+    2021
+  ],
+  "reviewed_history": [
+    2001,
+    2021
+  ],
+  "cells": 997,
+  "eligible_evaluation_cell_years": 8588,
+  "positive_evaluation_cell_years": 656,
+  "primary_model": "M1_calibrated",
+  "reference": "cell_history",
+  "primary_relative_brier_error_increase_pct": 4.9146994790090215,
+  "limitations": "Retrospective development evidence; historical availability unverified; reporting changes and reviewed exclusions; unequal cells and non-WUI land.",
+  "publication_prepared_utc": "2026-10-18T05:49:01.665381+00:00",
+  "reviewed_local_manifest_sha256": "4adb9f885bb77f762b0dab6e45ff26c2c9a49abf80487891bbd280acdc460b8c",
+  "publication_destination": "https://aval0311.github.io/utah-wui-exposure-analysis/forecasting/",
+  "publication_changes": "Review badges removed; dashboard and ML case study links added; no analytical changes",
+  "local_review_published_files_modified": 0
+}

@@ -187,8 +187,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 46722,
-      "sha256": "b83e83bd85a6612ef64d517f1b15c52219140ac751359af9c9c538b92c245b4d"
+      "bytes": 46975,
+      "sha256": "a73463e3fc81a286d9736d8f75f681886a1cafbd571672e05ea0e5d903f4d34f"
     },
     {
       "path": "LICENSE",
@@ -255,5 +255,15 @@
       "bytes": 4114755,
       "sha256": "60f8dee4e052ae394e09943734e8c45dc804b808bc17525abc51c03f3999848e"
     }
-  ]
+  ],
+  "hosting_overlay": {
+    "reason": "Authorized forecasting case-study link added to hosted index only; no analytical changes.",
+    "original_release_index": {
+      "path": "index.html",
+      "bytes": 46722,
+      "sha256": "b83e83bd85a6612ef64d517f1b15c52219140ac751359af9c9c538b92c245b4d"
+    },
+    "frozen_release_preserved": "Original publication_releases/wui_ml_v1_1.0.0 and existing Git release tags are unchanged.",
+    "forecasting_url": "https://aval0311.github.io/utah-wui-exposure-analysis/forecasting/"
+  }
 }

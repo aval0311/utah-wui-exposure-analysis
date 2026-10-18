@@ -1,0 +1,33 @@
+{
+  "files": {
+    "assets/annual_results.png": {
+      "bytes": 209254,
+      "sha256": "aa6a5459e5a7f3cd9150f868b87d635d672742fcbc860f9c57b026225ed7636e"
+    },
+    "data/annual_metrics.csv": {
+      "bytes": 20270,
+      "sha256": "9c1e5b9eb816c4fe722b1e973946dfe6c124d32d11f4a9f05a9f61580b86032f"
+    },
+    "data/county_mean_annual_metrics.csv": {
+      "bytes": 2511,
+      "sha256": "d51a67b329150e5462bb9515cc848e3de058ab1eb51b48c5ded0cbd928afc9ba"
+    },
+    "data/method_comparison.csv": {
+      "bytes": 1173,
+      "sha256": "84f9d9069a982d2b36a475fcda924e33a7b3ef0c21bd667b1c1de2f5cf519024"
+    },
+    "data/provenance.json": {
+      "bytes": 1848,
+      "sha256": "06a6f38609801df6f3ec12c8e96d9405605f0fc98fdd34c2a9983bac990fc6c5"
+    },
+    "index.html": {
+      "bytes": 10647,
+      "sha256": "74bc8cdb968cf4dfebffb169471a40129fcb480c06e8313c11e82fe3ccce4b32"
+    },
+    "styles.css": {
+      "bytes": 7678,
+      "sha256": "fefc15660047d6863f2a15bd23261aed99c2138966b786ed8a00fa255833bf1e"
+    }
+  },
+  "scope": "Published presentation and reviewed development summaries; no new analysis"
+}

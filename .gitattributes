@@ -3,3 +3,5 @@ docs/ml/** -text
 docs/ml/*.pdf binary
 # Preserve the historical snapshot and its byte-level manifest.
 docs/history/** -text
+# Preserve the forecasting presentation and its byte-level manifest.
+docs/forecasting/** -text
