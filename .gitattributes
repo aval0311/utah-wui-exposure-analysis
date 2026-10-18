@@ -5,3 +5,6 @@ docs/ml/*.pdf binary
 docs/history/** -text
 # Preserve the forecasting presentation and its byte-level manifest.
 docs/forecasting/** -text
+
+# Preserve forecasting code-package integrity hashes.
+forecasting_code/** -text

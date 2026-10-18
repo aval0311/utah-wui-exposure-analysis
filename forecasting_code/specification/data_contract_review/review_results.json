@@ -1,0 +1,110 @@
+{
+  "status": "Data structure passes; reconstruction acceptance and training authorization pending",
+  "target_years": [
+    2001,
+    2021
+  ],
+  "cells": 997,
+  "rows": 20937,
+  "eligible_rows": 20551,
+  "positives": 2006,
+  "unknown": 231,
+  "flagged_zero": 155,
+  "predictors_audited": 20,
+  "proposed_model_predictors": 11,
+  "folds": 9,
+  "all_fold_roles_have_both_classes": true,
+  "all_training_predictors_have_support": true,
+  "rows_with_any_model_missing": 1128,
+  "eligible_rows_with_any_model_missing": 1125,
+  "area_min_km2": 0.001013678069244731,
+  "area_max_km2": 16.0,
+  "passed_checks": 1469,
+  "historical_as_issued_verified": false,
+  "input_reads": {
+    "historical_timeline_v1/dist/manifest.json": {
+      "sha256_before": "3fa971b1dbc7ec23081b60c4e11ad40eefbb5867668beaa6603b4d305ba678d6",
+      "bytes": 1743,
+      "sha256_after": "3fa971b1dbc7ec23081b60c4e11ad40eefbb5867668beaa6603b4d305ba678d6"
+    },
+    "historical_timeline_v1/dist/data/provenance.json": {
+      "sha256_before": "af5340be8805d1899724743c7302ede115b85864ba250bc476e0408a242d9d06",
+      "bytes": 3009,
+      "sha256_after": "af5340be8805d1899724743c7302ede115b85864ba250bc476e0408a242d9d06"
+    },
+    "ml_outputs/climate_features_ba80797440f5/manifest.json": {
+      "sha256_before": "65fb52339c619cb13d9a252ae4456de8790c0eb2f22b5d40ddd853e5c92a2a5a",
+      "bytes": 32454,
+      "sha256_after": "65fb52339c619cb13d9a252ae4456de8790c0eb2f22b5d40ddd853e5c92a2a5a"
+    },
+    "ml_outputs/climate_features_ba80797440f5/feature_report.json": {
+      "sha256_before": "7b69e077f812106e3d5f51cc3dc56b28f377039efaa3b4183aeba280b454c533",
+      "bytes": 5146,
+      "sha256_after": "7b69e077f812106e3d5f51cc3dc56b28f377039efaa3b4183aeba280b454c533"
+    },
+    "historical_timeline_v1/dist/data/timeline.json": {
+      "sha256_before": "0aaacf6784ce53b9f19cbf13e66214644c6b388bfdb4009546b368375d0d7bb1",
+      "bytes": 217849,
+      "sha256_after": "0aaacf6784ce53b9f19cbf13e66214644c6b388bfdb4009546b368375d0d7bb1"
+    },
+    "publication_releases/wui_ml_v1_1.0.0/data/frozen_specification.json": {
+      "sha256_before": "ad0aa5e19c2038475a22ec944996664fd3db03028d1c04fd75588cf16302a722",
+      "bytes": 8107,
+      "sha256_after": "ad0aa5e19c2038475a22ec944996664fd3db03028d1c04fd75588cf16302a722"
+    },
+    "ml_outputs/terrain_064dcafd4cc0/manifest.json": {
+      "sha256_before": "66fc19654583b598d5a26782bfee42a31b4de131ed312504e11c2ee51431ba88",
+      "bytes": 15787,
+      "sha256_after": "66fc19654583b598d5a26782bfee42a31b4de131ed312504e11c2ee51431ba88"
+    },
+    "ml_outputs/terrain_064dcafd4cc0/terrain_features_by_cell.parquet": {
+      "sha256_before": "152fe7b793792a81c8e86639f86a5e756cfd2a83ddac75ce28ff0319f017fff1",
+      "bytes": 119596,
+      "sha256_after": "152fe7b793792a81c8e86639f86a5e756cfd2a83ddac75ce28ff0319f017fff1"
+    },
+    "ml_outputs/climate_features_ba80797440f5/climate_features_by_cell_year.parquet": {
+      "sha256_before": "56f6d31b7de52db56e81a733b152db1e3738efb481770ab3dfdcc9277e39a0ef",
+      "bytes": 1273488,
+      "sha256_after": "56f6d31b7de52db56e81a733b152db1e3738efb481770ab3dfdcc9277e39a0ef"
+    },
+    "ml_outputs/climate_features_ba80797440f5/model_matrix.parquet": {
+      "sha256_before": "3e6e1797bbf91286c694e409c7f233b468d9b388a9524be2c46788552cb66745",
+      "bytes": 1633138,
+      "sha256_after": "3e6e1797bbf91286c694e409c7f233b468d9b388a9524be2c46788552cb66745"
+    },
+    "ml_outputs/milestone1_56ca5d009827/analysis_grid.parquet": {
+      "sha256_before": "4291591af2915d5443637839745f4a8bfc5e4c76d504b4acb75e1ab3db1ba451",
+      "bytes": 322076,
+      "sha256_after": "4291591af2915d5443637839745f4a8bfc5e4c76d504b4acb75e1ab3db1ba451"
+    },
+    "ml_outputs/climate_features_ba80797440f5/feature_year_availability.csv": {
+      "sha256_before": "639caaa1648e2e5fd22bc47a7998f283fed967799d4241496d49949d311b9f68",
+      "bytes": 30753,
+      "sha256_after": "639caaa1648e2e5fd22bc47a7998f283fed967799d4241496d49949d311b9f68"
+    },
+    "fire_occurrence_forecasting_v1/experiment_schedule.csv": {
+      "sha256_before": "e42034e747185060c17893c89b7f7606e93d4c6a2c4c730de1d9d9cda298c9e9",
+      "bytes": 1557,
+      "sha256_after": "e42034e747185060c17893c89b7f7606e93d4c6a2c4c730de1d9d9cda298c9e9"
+    },
+    "fire_occurrence_forecasting_v1/forecast_specification.md": {
+      "sha256_before": "ca6ae4ebfc2dda6964bd6d99fa60c57e9513ea7bd3360eb89d9da6eb8257efc2",
+      "bytes": 8743,
+      "sha256_after": "ca6ae4ebfc2dda6964bd6d99fa60c57e9513ea7bd3360eb89d9da6eb8257efc2"
+    }
+  },
+  "scope_basis": "Timeline documented bounded export; climate documented development-only bundle; non-temporal terrain/grid. No mixed-year tables opened.",
+  "preservation": "All allowlisted consumed sources unchanged; no writes outside this review directory. No claim of full repository integrity scan.",
+  "work_performed": {
+    "model_fits": 0,
+    "imputer_fits": 0,
+    "scaler_fits": 0,
+    "calibration_fits": 0,
+    "baseline_predictions": 0,
+    "model_objects_loaded": 0,
+    "raw_source_reads": 0,
+    "later_period_rows_loaded": 0,
+    "published_files_modified": 0
+  },
+  "created_utc": "2026-10-17T21:57:58.429508+00:00"
+}

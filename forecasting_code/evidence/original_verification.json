@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "models_replayed": 18,
+  "baseline_years_replayed": 36,
+  "annual_brier_scores_recomputed": 72,
+  "training_only_preprocessing_verified": true,
+  "fit_membership_verified": true,
+  "source_hashes_unchanged": true,
+  "later_period_rows_loaded": 0,
+  "new_fits_during_verification": 0,
+  "completed_utc": "2026-10-17T22:12:17.075043+00:00"
+}

@@ -10,6 +10,7 @@ an audit of unequal cell areas. The descriptive dashboard and ML study answer di
 
 ## Explore
 
+- **[Forecasting code and reproducibility package](forecasting_code/):** original experiment code, fixed specification, environment requirements, 12 synthetic tests, and summary-only verification. Exact retraining requires separately preserved audited inputs.
 - **[Retrospective forecasting case study](https://aval0311.github.io/utah-wui-exposure-analysis/forecasting/):** fixed chronological experiments within reviewed 2001–2021 history; a smoothed cell-history baseline outperformed the terrain-plus-climate model. Includes evaluation design, saved results, and limitations.
 - **[Historical timeline + ML comparison](https://aval0311.github.io/utah-wui-exposure-analysis/history/):** explore reviewed 2001–2021 occurrence alongside saved 2013–2021 predictions, matched-cohort charts, probability maps, and findings. Includes county filters, a year slider, cell histories, and reporting limitations.
 - **[ML v1 development case study](https://aval0311.github.io/utah-wui-exposure-analysis/ml/):** annual recorded wildfire occurrence, development 2001–2021, with nine annual map pairs and disclosed reporting and area limitations.

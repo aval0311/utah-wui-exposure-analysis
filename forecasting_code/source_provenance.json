@@ -1,0 +1,50 @@
+{
+  "reference/experiment.py": {
+    "source": "experiment_v1/experiment.py",
+    "sha256": "4404775c35d07dd1965962bbf2b6c791d7108b6a475e2e2d3a4b40ef07987951"
+  },
+  "reference/test_contract.py": {
+    "source": "experiment_v1/test_contract.py",
+    "sha256": "6538ebfc46b34d8eed32c294369d64790fb4b9ec0fb14e6c7dc6924fc1c1ad7f"
+  },
+  "specification/forecast_specification.md": {
+    "source": "forecast_specification.md",
+    "sha256": "ca6ae4ebfc2dda6964bd6d99fa60c57e9513ea7bd3360eb89d9da6eb8257efc2"
+  },
+  "specification/experiment_schedule.csv": {
+    "source": "experiment_schedule.csv",
+    "sha256": "e42034e747185060c17893c89b7f7606e93d4c6a2c4c730de1d9d9cda298c9e9"
+  },
+  "specification/predictor_availability_audit.md": {
+    "source": "predictor_availability_audit.md",
+    "sha256": "c504fedd5553ffe8b50db844c66df702b0aca9a904f5a754186fff94a3e8b9d6"
+  },
+  "specification/data_contract_review/review_results.json": {
+    "source": "data_contract_review/review_results.json",
+    "sha256": "87f03bdcf422fe937e2fb815b0e616d3008c09f882e621a8382bb56a389c88c8"
+  },
+  "evidence/frozen_config.json": {
+    "source": "experiment_v1/run_002/frozen_config.json",
+    "sha256": "1f1841d3e55155954c338158c11ecadae9efcf62d53497659cde80696975ad55"
+  },
+  "evidence/method_comparison.csv": {
+    "source": "experiment_v1/run_002/method_comparison.csv",
+    "sha256": "84f9d9069a982d2b36a475fcda924e33a7b3ef0c21bd667b1c1de2f5cf519024"
+  },
+  "evidence/annual_metrics.csv": {
+    "source": "experiment_v1/run_002/annual_metrics.csv",
+    "sha256": "9c1e5b9eb816c4fe722b1e973946dfe6c124d32d11f4a9f05a9f61580b86032f"
+  },
+  "evidence/county_mean_annual_metrics.csv": {
+    "source": "experiment_v1/run_002/county_mean_annual_metrics.csv",
+    "sha256": "d51a67b329150e5462bb9515cc848e3de058ab1eb51b48c5ded0cbd928afc9ba"
+  },
+  "evidence/original_verification.json": {
+    "source": "experiment_v1/run_002/verification.json",
+    "sha256": "e48b64da3c72070e58c59b6824c14a91ae7c6640c81a0c4e4f1fe0dc8c540383"
+  },
+  "evidence/RESULTS.md": {
+    "source": "experiment_v1/run_002/RESULTS.md",
+    "sha256": "83ae9a260a2c12b5b590b01ade7cf9b27dcb9150162a3a2d913acede47347a5f"
+  }
+}

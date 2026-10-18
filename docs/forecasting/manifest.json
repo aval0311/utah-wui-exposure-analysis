@@ -21,12 +21,16 @@
       "sha256": "06a6f38609801df6f3ec12c8e96d9405605f0fc98fdd34c2a9983bac990fc6c5"
     },
     "index.html": {
-      "bytes": 12726,
-      "sha256": "178682510196b2056cb1bd973eacc269abd761d8ca145bd9ba664a97385aed94"
+      "bytes": 12996,
+      "sha256": "79a0412b96506cdef8aa90925b6e8706ab1636a34bdcc83def172669acf027af"
     },
     "styles.css": {
       "bytes": 7678,
       "sha256": "fefc15660047d6863f2a15bd23261aed99c2138966b786ed8a00fa255833bf1e"
+    },
+    "downloads/forecasting_code_v1.zip": {
+      "bytes": 48077,
+      "sha256": "c1ed8a03e1986084fe40c41b4f2a3d947bd346de0a8dc1f037b26b2f0c9b8a5b"
     }
   },
   "scope": "Published presentation and reviewed development summaries; no new analysis",

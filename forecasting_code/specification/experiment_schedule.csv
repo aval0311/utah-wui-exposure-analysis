@@ -1,0 +1,10 @@
+target_year,training_first,training_last,calibration_first,calibration_last,latest_baseline_label_year,data_cutoff_utc,issue_utc,climate_assumed_available_utc,evaluation_status,training_authorized
+2013,2001,2009,2010,2011,2011,2012-12-01T00:00:00+00:00,2012-12-15T17:00:00+00:00,2012-11-30T07:00:00+00:00,Previously studied development year,False
+2014,2001,2010,2011,2012,2012,2013-12-01T00:00:00+00:00,2013-12-15T17:00:00+00:00,2013-11-30T07:00:00+00:00,Previously studied development year,False
+2015,2001,2011,2012,2013,2013,2014-12-01T00:00:00+00:00,2014-12-15T17:00:00+00:00,2014-11-30T07:00:00+00:00,Previously studied development year,False
+2016,2001,2012,2013,2014,2014,2015-12-01T00:00:00+00:00,2015-12-15T17:00:00+00:00,2015-11-30T07:00:00+00:00,Previously studied development year,False
+2017,2001,2013,2014,2015,2015,2016-12-01T00:00:00+00:00,2016-12-15T17:00:00+00:00,2016-11-30T07:00:00+00:00,Previously studied development year,False
+2018,2001,2014,2015,2016,2016,2017-12-01T00:00:00+00:00,2017-12-15T17:00:00+00:00,2017-11-30T07:00:00+00:00,Previously studied development year,False
+2019,2001,2015,2016,2017,2017,2018-12-01T00:00:00+00:00,2018-12-15T17:00:00+00:00,2018-11-30T07:00:00+00:00,Previously studied development year,False
+2020,2001,2016,2017,2018,2018,2019-12-01T00:00:00+00:00,2019-12-15T17:00:00+00:00,2019-11-30T07:00:00+00:00,Previously studied development year,False
+2021,2001,2017,2018,2019,2019,2020-12-01T00:00:00+00:00,2020-12-15T17:00:00+00:00,2020-11-30T07:00:00+00:00,Previously studied development year,False
