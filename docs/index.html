@@ -434,7 +434,15 @@
     #wui-app .wui-footer { padding:5px 12px; }
   }
 </style>
-</head>
+<style id="portfolio-navigation-style">
+nav.portfolio-phase-nav{display:flex!important;flex-wrap:wrap!important;align-items:center;gap:8px!important;margin:0!important;padding:12px 16px!important;background:#e5f0ef!important;border-bottom:1px solid #b9cecd;font:600 13px/1.5 system-ui,sans-serif!important;letter-spacing:normal;text-transform:none}
+nav.portfolio-phase-nav a,nav.portfolio-phase-nav span{display:inline-block!important;padding:8px 12px!important;border-radius:4px;color:#155e63!important;text-decoration:none!important;white-space:normal}
+nav.portfolio-phase-nav [aria-current="page"]{background:#176b70!important;color:white!important;font-weight:700}
+nav.portfolio-phase-nav a:hover{background:#d1e4e2!important;text-decoration:underline!important}
+nav.portfolio-phase-nav a:focus-visible{outline:3px solid #a24d00;outline-offset:2px}
+@media(max-width:480px){nav.portfolio-phase-nav{gap:4px!important;padding:8px!important}nav.portfolio-phase-nav a,nav.portfolio-phase-nav span{padding:7px 9px!important;font-size:12px}}
+@media print{nav.portfolio-phase-nav{display:none!important}}
+</style></head>
 <body>
     
     
@@ -457,12 +465,7 @@
     </div>
     <span class="wui-header-tag">THREE-COUNTY STUDY</span>
   </header>
-  <nav class="wui-phase-nav" aria-label="Project phases">
-    <span aria-current="page">WUI dashboard</span>
-    <a href="https://aval0311.github.io/utah-wui-exposure-analysis/ml/">ML case study <span aria-hidden="true">&rarr;</span></a>
-    <a class="wui-timeline-link" href="https://aval0311.github.io/utah-wui-exposure-analysis/history/">Timeline + ML comparison <span aria-hidden="true">&rarr;</span></a>
-    <a href="https://aval0311.github.io/utah-wui-exposure-analysis/forecasting/">Forecasting case study <span aria-hidden="true">&rarr;</span></a>
-  </nav>
+  <nav class="portfolio-phase-nav wui-phase-nav" aria-label="Project phases"><span aria-current="page">Dashboard</span><a href="./ml/">ML case study</a><a href="./history/">Timeline + ML comparison</a><a href="./forecasting/">Forecasting</a></nav>
   <div class="wui-body">
     <button id="wui-sidebar-backdrop" class="wui-backdrop" type="button" aria-label="Close map sidebar" tabindex="-1"></button>
     <aside id="wui-sidebar" class="wui-sidebar" aria-label="Map layers and legend" aria-hidden="true">

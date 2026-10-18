@@ -80,8 +80,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 18707,
-      "sha256": "1448e61a4260cadc3e0c1f2f6e1814eeb67f63675635229b9d173eee76ebd885"
+      "bytes": 19762,
+      "sha256": "adf77e6a9cc1034cfb4135ae1e1de886036dd6651e5ee371e3679faebeb0096c"
     },
     {
       "path": "LICENSE",
@@ -118,5 +118,14 @@
       "bytes": 736,
       "sha256": "5e478f74046de0a86f742f04a1425310218bf8e4d76db8bae48f9561f32aed32"
     }
-  ]
+  ],
+  "navigation_overlay": {
+    "reason": "Reviewed four-page portfolio navigation; no analytical changes.",
+    "previous_hosted_index": {
+      "path": "index.html",
+      "bytes": 18707,
+      "sha256": "1448e61a4260cadc3e0c1f2f6e1814eeb67f63675635229b9d173eee76ebd885"
+    },
+    "original_releases_preserved": true
+  }
 }

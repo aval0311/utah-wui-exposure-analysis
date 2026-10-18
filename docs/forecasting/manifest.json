@@ -21,13 +21,21 @@
       "sha256": "06a6f38609801df6f3ec12c8e96d9405605f0fc98fdd34c2a9983bac990fc6c5"
     },
     "index.html": {
-      "bytes": 11726,
-      "sha256": "9b95c369e262785c45e0fe78a9889fbe8e53026db0079ae9e08ed0feca9fa34c"
+      "bytes": 12726,
+      "sha256": "178682510196b2056cb1bd973eacc269abd761d8ca145bd9ba664a97385aed94"
     },
     "styles.css": {
       "bytes": 7678,
       "sha256": "fefc15660047d6863f2a15bd23261aed99c2138966b786ed8a00fa255833bf1e"
     }
   },
-  "scope": "Published presentation and reviewed development summaries; no new analysis"
+  "scope": "Published presentation and reviewed development summaries; no new analysis",
+  "navigation_overlay": {
+    "reason": "Reviewed four-page portfolio navigation; no analytical changes.",
+    "previous_hosted_index": {
+      "bytes": 11726,
+      "sha256": "9b95c369e262785c45e0fe78a9889fbe8e53026db0079ae9e08ed0feca9fa34c"
+    },
+    "original_releases_preserved": true
+  }
 }

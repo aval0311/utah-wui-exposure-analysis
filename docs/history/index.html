@@ -12,16 +12,20 @@
   <script src="data/ml_comparison.js" defer></script>
   <script src="app.js" defer></script>
   <script src="comparison.js" defer></script>
-</head>
+<style id="portfolio-navigation-style">
+nav.portfolio-phase-nav{display:flex!important;flex-wrap:wrap!important;align-items:center;gap:8px!important;margin:0!important;padding:12px 16px!important;background:#e5f0ef!important;border-bottom:1px solid #b9cecd;font:600 13px/1.5 system-ui,sans-serif!important;letter-spacing:normal;text-transform:none}
+nav.portfolio-phase-nav a,nav.portfolio-phase-nav span{display:inline-block!important;padding:8px 12px!important;border-radius:4px;color:#155e63!important;text-decoration:none!important;white-space:normal}
+nav.portfolio-phase-nav [aria-current="page"]{background:#176b70!important;color:white!important;font-weight:700}
+nav.portfolio-phase-nav a:hover{background:#d1e4e2!important;text-decoration:underline!important}
+nav.portfolio-phase-nav a:focus-visible{outline:3px solid #a24d00;outline-offset:2px}
+@media(max-width:480px){nav.portfolio-phase-nav{gap:4px!important;padding:8px!important}nav.portfolio-phase-nav a,nav.portfolio-phase-nav span{padding:7px 9px!important;font-size:12px}}
+@media print{nav.portfolio-phase-nav{display:none!important}}
+</style></head>
 <body>
 <a class="skip" href="#main">Skip to explorer</a>
 <header class="site-header">
   <a class="brand" href="https://aval0311.github.io/utah-wui-exposure-analysis/">UTAH WUI <span>Adam Valentino</span></a>
-  <nav aria-label="Project phases">
-    <a href="https://aval0311.github.io/utah-wui-exposure-analysis/">WUI dashboard</a>
-    <a href="https://aval0311.github.io/utah-wui-exposure-analysis/ml/">ML case study</a>
-    <span aria-current="page">History + ML comparison</span>
-  </nav>
+  <nav class="portfolio-phase-nav" aria-label="Project phases"><a href="../">Dashboard</a><a href="../ml/">ML case study</a><span aria-current="page">Timeline + ML comparison</span><a href="../forecasting/">Forecasting</a></nav>
 </header>
 <main id="main">
   <section class="intro" aria-labelledby="title">
