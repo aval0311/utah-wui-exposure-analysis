@@ -11,6 +11,12 @@ The smoothed cell-history baseline beat the primary calibrated logistic model in
 3. With the numerical environment installed, run `python -I run.py test`. Twelve synthetic tests exercise chronology, exclusions, baseline fallback, calibration, metrics, deterministic ties and overwrite protection. They do not read original observations or fit models.
 4. Inspect [the original experiment code](reference/experiment.py): `role_labels`, `baselines`, `train`, `evaluate` and `verify` show the full implementation.
 
+## Clean-environment validation
+
+On October 18, 2026, the published package installed successfully from PyPI into a fresh Windows virtual environment using Python 3.14.7. All 12 synthetic tests, summary checks, and dependency checks passed. Numerical imports came from the new environment, with system site-packages excluded and user site disabled.
+
+This validates the installation and synthetic/summary workflow on the tested configuration. The virtual environment shares the existing interpreter and standard library; other platforms and full real-data reproduction remain untested. See [validation evidence](VALIDATION.md) and [environment limits](ENVIRONMENT.md).
+
 ## What the code demonstrates
 
 - Four historical baselines and two fixed L2 logistic models, each retained raw and calibrated.

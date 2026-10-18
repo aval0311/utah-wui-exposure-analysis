@@ -34,6 +34,10 @@ The original code is unchanged. The wrapper redirects its source workspace, cont
 
 The archived review's pending-authorization wording predates the authorized completed experiment. It is included for lineage and exact source hashes, not as the current execution status. The source review may include hashes for other audited metadata; the experiment accessor uses only its six named inputs.
 
+## Clean-environment result
+
+The installation and review commands above passed in a fresh Windows/Python 3.14.7 virtual environment on October 18, 2026: 12 synthetic tests, summary verification and `pip check`. All numerical imports resolved inside the virtual environment. This narrows the installation uncertainty for that configuration; it does not establish end-to-end analytical reproduction. See [the validation record](VALIDATION.md).
+
 ## Limits
 
 The adapter's full real-data rerun has not been exercised during packaging. Original evidence records the successful experiment and replay; synthetic tests validate selected contracts, not every branch or a clean-room end-to-end reconstruction. Historical source vintages and reporting completeness remain unverified. Later-period observations, raw archives, prediction rows and model artifacts are intentionally absent.

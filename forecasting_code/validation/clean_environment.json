@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-18",
+  "status": "passed",
+  "tested_source_commit": "ba14f1b312fd47365e9e3240ce469a75d80b3f6e",
+  "tested_zip_sha256": "03b013f1c7d7de4f894a8016a428a25e5aec7a08536c3af3d453bfdf2511176b",
+  "platform": "Windows x64",
+  "python": "3.14.7 (conda-forge build)",
+  "isolation": "Fresh venv; system site-packages excluded; user site disabled; inherited CONDA/PYTHON variables removed; PATH restricted to venv and Windows directories.",
+  "shared_base_interpreter_and_standard_library": true,
+  "numerical_imports_verified_inside_venv": [
+    "numpy",
+    "pandas",
+    "scipy",
+    "sklearn",
+    "pyarrow"
+  ],
+  "dependencies_installed_from": "PyPI, with pip cache disabled",
+  "synthetic_tests_passed": 12,
+  "summary_check_passed": true,
+  "tested_package_manifest_files": 26,
+  "pip_check_passed": true,
+  "real_data_stages_run": false,
+  "model_fits": 0,
+  "protected_observation_reads": 0,
+  "limitations": [
+    "Same Windows machine and base interpreter; not a fresh OS.",
+    "Other Python versions, distributions and operating systems untested.",
+    "Transitive dependencies are not pinned by requirements.txt.",
+    "No full adapter-based real-data rerun or model replay."
+  ],
+  "setup_issue": "Initial sandbox temporary-directory permission failure during pip bootstrap; resolved outside that restriction without package changes."
+}

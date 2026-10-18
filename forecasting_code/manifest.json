@@ -1,5 +1,5 @@
 {
-  "ENVIRONMENT.md": "23ef64bc36f16650158cf5d4fbc88b2b6aa16ac476c28948410055a1075a24fe",
+  "ENVIRONMENT.md": "4a7d24e533518eda1ca21c1111a572f321d002e2c9247c5bef76fa76cc2e3233",
   "evidence/annual_metrics.csv": "9c1e5b9eb816c4fe722b1e973946dfe6c124d32d11f4a9f05a9f61580b86032f",
   "evidence/county_mean_annual_metrics.csv": "d51a67b329150e5462bb9515cc848e3de058ab1eb51b48c5ded0cbd928afc9ba",
   "evidence/figures/annual_results.png": "aa6a5459e5a7f3cd9150f868b87d635d672742fcbc860f9c57b026225ed7636e",
@@ -10,10 +10,10 @@
   "evidence/original_verification.json": "e48b64da3c72070e58c59b6824c14a91ae7c6640c81a0c4e4f1fe0dc8c540383",
   "evidence/RESULTS.md": "199cc0f6686a045156da89f5b19f8191ca9231f3a052a434db76b1d5a5d33f6b",
   "LICENSE": "68b98fc9acdf52e91d3d577a86976a826404579bdb932873af89247bfafca849",
-  "README.md": "19260661ef0c11e31537f15fdb7e7360e05210765f4396f1869ba74a28a576b0",
+  "README.md": "40ba3ff0df354db84fd86b353768808b9565d55fdecaa11ea89c62e120486939",
   "reference/experiment.py": "4404775c35d07dd1965962bbf2b6c791d7108b6a475e2e2d3a4b40ef07987951",
   "reference/test_contract.py": "6538ebfc46b34d8eed32c294369d64790fb4b9ec0fb14e6c7dc6924fc1c1ad7f",
-  "REPRODUCIBILITY.md": "10d7bda1b4a821de8be47e6fe62d91230cf28363fb9f614ebcbe1402d856f73a",
+  "REPRODUCIBILITY.md": "60382ad89052f5e55f0f6ff41f0ab0ec8a4435566baf45b96673a372e09d2431",
   "requirements.txt": "f8898f8b90e8608847d20d36f72fa58264c1bd5fb9142d5aad70ace0730e4f5d",
   "review.py": "a84fe7b28baeb1e05f13f64b5a7dd29c1d0103fc8c71a27b230b8c84a2a657d6",
   "run.py": "8f7b72ad7cc756e47baab9ad8bbad6204c875add7da9e0c0736d66a6014e2f17",
@@ -24,5 +24,10 @@
   "specification/predictor_availability_audit.md": "c504fedd5553ffe8b50db844c66df702b0aca9a904f5a754186fff94a3e8b9d6",
   "SPECIFICATION.md": "d45fac6379e60fa232cc80284139180da8128c4c7ebcbd5aabe85e2a73211610",
   "tests/test_review.py": "01d6c52969810175c2de69d9f9ef58c083b84a9f6385a399ffd7b46825554e2b",
-  "VALIDATION.md": "00669d1ac9b47600e64f9c6e5707ea0ec084e85f4b8ee8039a8d360438bea56d"
+  "validation/clean_environment.json": "2c380fe97b1a949dce1c8af07ecb24a3ce63d264133e4e34cd462a91ee9f0c30",
+  "validation/pip_check.log": "f224655f1ff1d95e2b2a3014fe5560b31fa92ad15dac4fd90897e156ebeac2fd",
+  "validation/resolved_dependencies.txt": "27f46aa285579356c3d9aeae319301b00f29eb1021a865efad38ad64c0891748",
+  "validation/summary.log": "816cee998a6c12a51140ac5da5285c68c48f72a5c328699fa154d3c6c619ed23",
+  "validation/synthetic_tests.log": "04d6ba8beee28ad5bfe6295a8501b12ef4ff560853cedc444906e0599aac4c0d",
+  "VALIDATION.md": "e036dea12f5c8d1b3232634bee8e79e6390e76df0bb9ce61b6a35f31496e0e7f"
 }
