@@ -1,5 +1,11 @@
 # Retrospective wildfire occurrence forecasting results
 
+> **Archived original-run report — publication note added October 18, 2026.** The report below preserves the findings and execution-time wording of the completed retrospective experiment. References to “nothing was published,” local-only writes, and a future review describe that original stage, before the portfolio and code package were published.
+>
+> **Included in this package:** this report and its three saved figures, annual/method/county summary scores, the frozen configuration, and the original verification record (packaged as `original_verification.json`), alongside the code and specification. **Retained separately:** model artifacts, cell-level predictions and labels, fit ledgers, input/prediction/evaluation manifests, and the incomplete `run_001` attempt. Paths to those items below describe the original workspace, not files in this download. See [the package README](../README.md) and [reproducibility guide](../REPRODUCIBILITY.md) for the available verification steps and exact-rerun requirements.
+>
+> The figures were copied unchanged from the sealed run; this presentation update performs no new fitting or evaluation. Existing releases and 2022–2025 observations remain untouched.
+
 **The fixed terrain-plus-climate model did not improve on the cell-history baseline. Retain cell history as the reference method for this retrospective experiment.** Its lower Brier score and log loss do not establish operational readiness or independent future performance.
 
 The primary candidate's mean annual Brier score was **0.07101**, compared with **0.06768** for cell history: an increase in error of 0.00333, or **4.91% relative to the baseline**. Cell history had lower Brier score in all nine forecast years. The primary candidate therefore fails the prespecified numerical recommendation gate. No post-result tuning or additional model search was performed.

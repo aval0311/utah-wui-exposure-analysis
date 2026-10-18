@@ -45,6 +45,20 @@
   },
   "evidence/RESULTS.md": {
     "source": "experiment_v1/run_002/RESULTS.md",
-    "sha256": "83ae9a260a2c12b5b590b01ade7cf9b27dcb9150162a3a2d913acede47347a5f"
+    "sha256": "83ae9a260a2c12b5b590b01ade7cf9b27dcb9150162a3a2d913acede47347a5f",
+    "packaged_sha256": "199cc0f6686a045156da89f5b19f8191ca9231f3a052a434db76b1d5a5d33f6b",
+    "transformation": "Added an archival publication note; original report body retained unchanged. sha256 records the original source; packaged_sha256 records this annotated copy."
+  },
+  "evidence/figures/method_comparison.png": {
+    "source": "experiment_v1/run_002/figures/method_comparison.png",
+    "sha256": "d949ccfe0e07065aef5c40ac75a8c6eea57e5a3ddee98b7b2b2af7564c31d564"
+  },
+  "evidence/figures/annual_results.png": {
+    "source": "experiment_v1/run_002/figures/annual_results.png",
+    "sha256": "aa6a5459e5a7f3cd9150f868b87d635d672742fcbc860f9c57b026225ed7636e"
+  },
+  "evidence/figures/calibration.png": {
+    "source": "experiment_v1/run_002/figures/calibration.png",
+    "sha256": "32d53b9e2a2c1c437b7088ca1adfe67310934cd09c4303e99192ac05f32132c5"
   }
 }
