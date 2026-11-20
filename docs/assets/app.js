@@ -838,21 +838,26 @@
     
   };
   var basemaps = ['topographic', 'imagery'];
+  function deferredFacility(group) {
+    return {idleMessage: '', apply: function (data) { addFacilities(data, group); }};
+  }
+
 var deferredLayers = {
 'salt-lake': {apply: function(data) { geo_json_e219ca67f284451dfe2bb9b0f70b6ed6_add(data); }},
 'utah': {apply: function(data) { geo_json_e6cbce1cc23c42f8856060f9c9f015e8_add(data); }},
 'washington': {apply: function(data) { geo_json_352e79a818e7f6adb399345209edd260_add(data); }},
 'wui': {apply: function(data) { geo_json_c4ce6f29e558d75ea8c8ad5e2241d1ce_add(data); }},
 'exposure': {apply: function(data) { geo_json_3171758a9cc9684c2da02e0a1928d3e0_add(data); }},
-'hospitals': {apply: function(data) { addFacilities(data, feature_group_6e5997ea896523cfbcdea3ba156cbb40); }},
-'fire': {apply: function(data) { addFacilities(data, feature_group_1888bcf1ed8ac1a8b073ea29d258b507); }},
-'police': {apply: function(data) { addFacilities(data, feature_group_e1939e12a90595de638272f196a18b9f); }},
-'schools': {apply: function(data) { addFacilities(data, feature_group_98011f5b58e92644ffbb1fed95305760); }},
-'shelters': {apply: function(data) { addFacilities(data, feature_group_da6cd3e985b966b45a91e38fea5303b7); }}
+'hospitals': deferredFacility(feature_group_6e5997ea896523cfbcdea3ba156cbb40),
+'fire': deferredFacility(feature_group_1888bcf1ed8ac1a8b073ea29d258b507),
+'police': deferredFacility(feature_group_e1939e12a90595de638272f196a18b9f),
+'schools': deferredFacility(feature_group_98011f5b58e92644ffbb1fed95305760),
+'shelters': deferredFacility(feature_group_da6cd3e985b966b45a91e38fea5303b7)
 };
   // Deferred layers keep user intent separate from request and Leaflet state.
   Object.keys(deferredLayers).forEach(function(id) {
     var item = deferredLayers[id];
+    item.idleMessage ??= 'Loads when selected';
     item.desired = document.getElementById('wui-input-' + id).defaultChecked;
     item.loaded = false;
     item.pending = null;
@@ -871,7 +876,7 @@ var deferredLayers = {
       row.setAttribute('aria-busy', String(Boolean(item.pending) && !failed));
     };
     retry.addEventListener('click', function(){selectDeferred(id,true);});
-    item.status(item.desired ? 'Loading…' : 'Loads when selected',false);
+    item.status(item.desired ? 'Loading…' : item.idleMessage,false);
   });
 
   var facilityRecords = new WeakMap();
@@ -943,7 +948,7 @@ var deferredLayers = {
     item.desired = desired;
     if (!desired) {
       map.removeLayer(layers[id]);
-      item.status(item.loaded ? '' : (item.pending ? 'Loading; hidden when ready' : 'Loads when selected'),false);
+      item.status(item.loaded ? '' : (item.pending ? 'Loading; hidden when ready' : item.idleMessage),false);
       synchronizeSidebar();
       return item.pending || Promise.resolve();
     }
