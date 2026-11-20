@@ -13,6 +13,17 @@
 
                 }
             );
+    // Keep High-Risk WUI on the default overlay canvas (400), below the hazard raster.
+    var dashboardMap = map_d1b7ce120271f28f3680a3a773fb74bb;
+    var hazardPane = dashboardMap.createPane('compositeHazard');
+    hazardPane.style.zIndex = '410';
+    hazardPane.style.pointerEvents = 'none';
+    dashboardMap.createPane('blockGroupExposure').style.zIndex = '420';
+    dashboardMap.createPane('facilitySymbols').style.zIndex = '430';
+    // SVG paths allow clicks in empty areas to reach features in lower panes.
+    var exposureRenderer = L.svg({pane: 'blockGroupExposure'});
+    var facilityRenderer = L.svg({pane: 'facilitySymbols'});
+
     // Bounds of the shipped county outlines, available before optional layers load.
     var dashboardViewBounds = {
         "salt-lake": L.latLngBounds([40.414174, -112.260170], [40.921867, -111.553199]),
@@ -413,6 +424,8 @@
             });
         };
         var geo_json_3171758a9cc9684c2da02e0a1928d3e0 = L.geoJson(null, {
+                pane: 'blockGroupExposure',
+                renderer: exposureRenderer,
                 onEachFeature: geo_json_3171758a9cc9684c2da02e0a1928d3e0_onEachFeature,
             
                 style: geo_json_3171758a9cc9684c2da02e0a1928d3e0_styler,
@@ -518,9 +531,6 @@
             var feature_group_da6cd3e985b966b45a91e38fea5303b7 = L.featureGroup();
         
     
-
-    // Reference the Leaflet map created by Folium.
-    var dashboardMap = map_d1b7ce120271f28f3680a3a773fb74bb;
 
     // Retrieve the HTML element containing the map.
     var dashboardMapContainer = (
@@ -784,7 +794,7 @@
   "opacity": 0.58,
   "interactive": false,
   "crossOrigin": false,
-  "zindex": 1,
+  "pane": "compositeHazard",
 }
             );
         
@@ -918,7 +928,7 @@ var deferredLayers = {
     var cluster = L.markerClusterGroup({disableClusteringAtZoom:13});
     // Construct off-map. Partial layers cannot appear after a failed build.
     data.forEach(function(row) {
-      var marker = L.circleMarker(row.position,row.options);
+      var marker = L.circleMarker(row.position, {...row.options, pane: 'facilitySymbols', renderer: facilityRenderer});
       facilityRecords.set(marker, row);
       marker.on('click', prepareFacilityPopup);
       marker.bindPopup(facilityDetails, {maxWidth:350});
