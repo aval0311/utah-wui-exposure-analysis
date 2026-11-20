@@ -188,40 +188,6 @@
 });
                      
     
-    geo_json_e219ca67f284451dfe2bb9b0f70b6ed6.bindPopup(
-    function(layer){
-    let div = L.DomUtil.create('div');
-    
-    let handleObject = feature => {
-        if (feature === null) {
-            return '';
-        } else if (typeof(feature)=='object') {
-            return JSON.stringify(feature);
-        } else {
-            return feature;
-        }
-    }
-    let fields = ["COUNTY_DISPLAY_NAME"];
-    let aliases = ["County:"];
-    let table = '<table>' +
-        String(
-        fields.map(
-        (v,i)=>
-        `<tr>
-            <th>${aliases[i].toLocaleString()}</th>
-            
-            <td>${handleObject(layer.feature.properties[v]).toLocaleString()}</td>
-        </tr>`).join(''))
-    +'</table>';
-    div.innerHTML=table;
-    
-    return div
-    }
-    ,{
-  "className": "foliumpopup",
-});
-                     
-    
             geo_json_e219ca67f284451dfe2bb9b0f70b6ed6.addTo(feature_group_08a88c73f1e663f12f9156a14e65f217);
         
     
@@ -314,40 +280,6 @@
 });
                      
     
-    geo_json_e6cbce1cc23c42f8856060f9c9f015e8.bindPopup(
-    function(layer){
-    let div = L.DomUtil.create('div');
-    
-    let handleObject = feature => {
-        if (feature === null) {
-            return '';
-        } else if (typeof(feature)=='object') {
-            return JSON.stringify(feature);
-        } else {
-            return feature;
-        }
-    }
-    let fields = ["COUNTY_DISPLAY_NAME"];
-    let aliases = ["County:"];
-    let table = '<table>' +
-        String(
-        fields.map(
-        (v,i)=>
-        `<tr>
-            <th>${aliases[i].toLocaleString()}</th>
-            
-            <td>${handleObject(layer.feature.properties[v]).toLocaleString()}</td>
-        </tr>`).join(''))
-    +'</table>';
-    div.innerHTML=table;
-    
-    return div
-    }
-    ,{
-  "className": "foliumpopup",
-});
-                     
-    
             geo_json_e6cbce1cc23c42f8856060f9c9f015e8.addTo(feature_group_5dc82d5dc5d86b36554fc9189fd11c3f);
         
     
@@ -437,40 +369,6 @@
     ,{
   "sticky": false,
   "className": "foliumtooltip",
-});
-                     
-    
-    geo_json_352e79a818e7f6adb399345209edd260.bindPopup(
-    function(layer){
-    let div = L.DomUtil.create('div');
-    
-    let handleObject = feature => {
-        if (feature === null) {
-            return '';
-        } else if (typeof(feature)=='object') {
-            return JSON.stringify(feature);
-        } else {
-            return feature;
-        }
-    }
-    let fields = ["COUNTY_DISPLAY_NAME"];
-    let aliases = ["County:"];
-    let table = '<table>' +
-        String(
-        fields.map(
-        (v,i)=>
-        `<tr>
-            <th>${aliases[i].toLocaleString()}</th>
-            
-            <td>${handleObject(layer.feature.properties[v]).toLocaleString()}</td>
-        </tr>`).join(''))
-    +'</table>';
-    div.innerHTML=table;
-    
-    return div
-    }
-    ,{
-  "className": "foliumpopup",
 });
                      
     
@@ -1042,6 +940,26 @@
   var toggle = document.getElementById('wui-sidebar-toggle');
   var close = document.getElementById('wui-sidebar-close');
   var mobile = window.matchMedia('(max-width:850px)');
+  // On phones, Leaflet already opens the compact county tooltip on a tap.
+  var compactCountyLabels = window.matchMedia('(max-width:850px), (hover:none) and (pointer:coarse)');
+  var countyBoundaries = [
+    geo_json_e219ca67f284451dfe2bb9b0f70b6ed6,
+    geo_json_e6cbce1cc23c42f8856060f9c9f015e8,
+    geo_json_352e79a818e7f6adb399345209edd260
+  ];
+  function updateCountyPopups() {
+    countyBoundaries.forEach(function (county) {
+      if (compactCountyLabels.matches) {
+        county.closePopup();
+        county.unbindPopup();
+      } else {
+        county.bindPopup(county.getTooltip().getContent(), {className:'foliumpopup'});
+      }
+    });
+  }
+  updateCountyPopups();
+  if (compactCountyLabels.addEventListener) { compactCountyLabels.addEventListener('change', updateCountyPopups); }
+  else { compactCountyLabels.addListener(updateCountyPopups); }
   var layers = {
     'hazard': image_overlay_863723ce4817400a3676643818e14004,
     'wui': feature_group_1d34b2bd2307238c7a702a70b8c84f3c,
