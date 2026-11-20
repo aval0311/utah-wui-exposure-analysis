@@ -213,7 +213,8 @@
 
     /* Apply the standard Leaflet appearance to custom navigation controls. */
     .dashboard-fullscreen-control,
-    .dashboard-reset-view-control {
+    .dashboard-reset-view-control,
+    .wui-map-view {
         background-color: white;
         border: 2px solid rgba(0, 0, 0, 0.20);
         border-radius: 4px;
@@ -226,9 +227,10 @@
         box-shadow: 0 1px 5px rgba(0, 0, 0, 0.40);
     }
 
-    /* Apply one button layout to fullscreen and reset-view actions. */
+    /* Give all three navigation buttons the same square face. */
     .dashboard-fullscreen-button,
-    .dashboard-reset-view-button {
+    .dashboard-reset-view-button,
+    .wui-map-view-face {
         width: 30px;
         height: 30px;
         display: flex;
@@ -397,9 +399,6 @@
   #wui-app .wui-map-stage { flex:1; position:relative; min-width:0; min-height:0; background:#E4EBE8; }
   #wui-app .wui-map-stage > .folium-map { position:absolute !important; inset:0 !important;
     width:100% !important; height:100% !important; margin:0 !important; }
-  #wui-app .wui-map-view {
-    width:72px; height:44px; border-radius:4px; background:white; color:var(--wui-ink);
-  }
   /* On short screens, keep the picker alongside Zoom so it stays on the map. */
   @media(max-height:500px) {
     #wui-app .leaflet-top.leaflet-left .wui-map-view { position:absolute; top:0; left:100%; }
@@ -407,11 +406,7 @@
   #wui-app .wui-map-view label {
     position:absolute; width:1px; height:1px; overflow:hidden; clip-path:inset(50%); white-space:nowrap;
   }
-  #wui-app .wui-map-view-short {
-    display:grid; place-items:center; height:100%; border:2px solid rgba(0, 0, 0, 0.20);
-    border-radius:inherit; font-size:14px; font-weight:700;
-  }
-  #wui-app .wui-map-view:hover { background:#f4f4f4; }
+  #wui-app .wui-map-view:hover .wui-map-view-face { background:#f4f4f4; }
   /* The native select covers the entire button for mouse, touch, and keyboard input. */
   #wui-app .wui-map-view select {
     position:absolute; inset:0; width:100%; height:100%; opacity:0; font-size:16px; cursor:pointer;
@@ -460,7 +455,7 @@ nav.portfolio-phase-nav a:hover{background:#d1e4e2!important;text-decoration:und
 nav.portfolio-phase-nav a:focus-visible{outline:3px solid #a24d00;outline-offset:2px}
 @media(max-width:480px){nav.portfolio-phase-nav{gap:4px!important;padding:8px!important}nav.portfolio-phase-nav a,nav.portfolio-phase-nav span{padding:7px 9px!important;font-size:12px}}
 @media print{nav.portfolio-phase-nav{display:none!important}}
-</style><link rel="stylesheet" href="assets/performance.css"/>
+</style><link rel="stylesheet" href="assets/performance.css?v=map-view-icon"/>
 </head>
 <body>
     
@@ -713,8 +708,13 @@ nav.portfolio-phase-nav a:focus-visible{outline:3px solid #a24d00;outline-offset
     <main id="wui-map-stage" class="wui-map-stage" aria-label="Interactive Utah WUI map">
       <div class="wui-map-view">
         <label for="wui-map-view">Map view</label>
-        <span class="wui-map-view-short" aria-hidden="true">View ▾</span>
-        <select id="wui-map-view">
+        <span class="wui-map-view-face" aria-hidden="true">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="1.8" stroke-linejoin="round" focusable="false">
+            <path d="m3 5 6-2 6 3 6-2v15l-6 2-6-3-6 2z M9 3v15 M15 6v15"/>
+          </svg>
+        </span>
+        <select id="wui-map-view" title="Map view">
           <option value="north" selected>Salt Lake &amp; Utah</option>
           <option value="salt-lake">Salt Lake County</option>
           <option value="utah">Utah County</option>
