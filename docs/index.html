@@ -416,6 +416,13 @@
   #wui-app .dashboard-mouse-position { color:var(--wui-ink); border-color:var(--wui-line); font-size:10px; }
   #wui-app .leaflet-control-scale { margin-bottom:8px; }
   #wui-app.wui-detail-open .leaflet-tooltip { visibility:hidden; }
+  #wui-app .wui-facility-chooser { display:grid; gap:6px; }
+  #wui-app .wui-facility-chooser h3 { margin:0 0 4px; font-size:15px; }
+  #wui-app .wui-facility-chooser button {
+    min-height:44px; text-align:left; padding:8px 10px; color:var(--wui-ink);
+    background:white; border:1px solid var(--wui-line); border-radius:4px; font-size:13px;
+  }
+  #wui-app .wui-facility-chooser button:hover { background:var(--wui-selected); }
   /* Keep every feature popup inside the visible map, including long tables. */
   #wui-app .leaflet-popup-content { overflow-wrap:anywhere; overscroll-behavior:contain; }
   #wui-app .leaflet-popup-content > div { width:auto !important; max-width:100% !important; }
@@ -729,5 +736,5 @@ nav.portfolio-phase-nav a:focus-visible{outline:3px solid #a24d00;outline-offset
   </div>
 </div>
 </body>
-<script defer src="assets/app.js?v=feature-details"></script>
+<script defer src="assets/app.js?v=facility-chooser"></script>
 </html>

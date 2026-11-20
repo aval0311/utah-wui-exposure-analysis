@@ -867,16 +867,64 @@ var deferredLayers = {
     item.status(item.desired ? 'Loading…' : 'Loads when selected',false);
   });
 
+  var facilityRecords = new WeakMap();
+
+  function facilityDetails(marker) {
+    var wrapper = document.createElement('div');
+    wrapper.innerHTML = facilityRecords.get(marker).popup;
+    return wrapper.firstElementChild;
+  }
+
+  function facilityChooser(matches) {
+    var list = document.createElement('div');
+    list.className = 'wui-facility-chooser';
+    var heading = document.createElement('h3');
+    heading.textContent = 'Choose a facility';
+    list.appendChild(heading);
+
+    matches.forEach(function (candidate) {
+      var button = document.createElement('button');
+      button.type = 'button';
+      // The existing facility label contains its display name and facility type.
+      var label = document.createElement('div');
+      label.innerHTML = facilityRecords.get(candidate).tooltip;
+      button.textContent = label.textContent.trim();
+      button.addEventListener('click', function (event) {
+        event.stopPropagation();
+        if (!map.hasLayer(candidate)) return;
+        candidate.setPopupContent(facilityDetails);
+        candidate.openPopup();
+      });
+      list.appendChild(button);
+    });
+    return list;
+  }
+
+  function prepareFacilityPopup(event) {
+    var marker = event.target;
+    var point = event.originalEvent && typeof event.originalEvent.clientX === 'number'
+      ? map.mouseEventToLayerPoint(event.originalEvent)
+      : map.latLngToLayerPoint(marker.getLatLng());
+    var matches = [marker];
+    // Only individual facility symbols currently drawn on the map are selectable.
+    map.eachLayer(function (candidate) {
+      if (candidate === marker || !facilityRecords.has(candidate)) return;
+      var radius = candidate.getRadius() + candidate.options.weight / 2;
+      if (point.distanceTo(map.latLngToLayerPoint(candidate.getLatLng())) <= radius) {
+        matches.push(candidate);
+      }
+    });
+    marker.setPopupContent(matches.length > 1 ? facilityChooser(matches) : facilityDetails);
+  }
+
   function addFacilities(data, group) {
     var cluster = L.markerClusterGroup({disableClusteringAtZoom:13});
     // Construct off-map. Partial layers cannot appear after a failed build.
     data.forEach(function(row) {
       var marker = L.circleMarker(row.position,row.options);
-      marker.bindPopup(function(){
-        var wrapper = document.createElement('div');
-        wrapper.innerHTML = row.popup;
-        return wrapper.firstElementChild;
-      },{maxWidth:350});
+      facilityRecords.set(marker, row);
+      marker.on('click', prepareFacilityPopup);
+      marker.bindPopup(facilityDetails, {maxWidth:350});
       marker.bindTooltip(row.tooltip,{sticky:false, className:'wui-detail-tooltip'});
       cluster.addLayer(marker);
     });
@@ -1063,6 +1111,14 @@ var deferredLayers = {
       activePopup = null;
       app.classList.remove('wui-detail-open');
       window.clearTimeout(popupLayoutTimer);
+    }
+  });
+  // A change in zoom or visible facilities can change which symbols overlap.
+  map.on('zoomstart layeradd layerremove', function (event) {
+    if (!activePopup || (event.type !== 'zoomstart' && !facilityRecords.has(event.layer))) return;
+    var content = activePopup.getContent();
+    if (content && content.classList && content.classList.contains('wui-facility-chooser')) {
+      map.closePopup(activePopup);
     }
   });
   map.on('resize', schedulePopupLayout);
