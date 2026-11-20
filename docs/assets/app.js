@@ -359,40 +359,6 @@
 });
                      
     
-    geo_json_c4ce6f29e558d75ea8c8ad5e2241d1ce.bindPopup(
-    function(layer){
-    let div = L.DomUtil.create('div');
-    
-    let handleObject = feature => {
-        if (feature === null) {
-            return '';
-        } else if (typeof(feature)=='object') {
-            return JSON.stringify(feature);
-        } else {
-            return feature;
-        }
-    }
-    let fields = ["WUI_POLYGON_ID", "COUNTY_NAME", "WUI_AREA_KM2"];
-    let aliases = ["WUI Polygon ID:", "Intersecting County:", "Polygon Area (km\u00b2):"];
-    let table = '<table>' +
-        String(
-        fields.map(
-        (v,i)=>
-        `<tr>
-            <th>${aliases[i].toLocaleString()}</th>
-            
-            <td>${handleObject(layer.feature.properties[v]).toLocaleString()}</td>
-        </tr>`).join(''))
-    +'</table>';
-    div.innerHTML=table;
-    
-    return div
-    }
-    ,{
-  "className": "foliumpopup",
-});
-                     
-    
             geo_json_c4ce6f29e558d75ea8c8ad5e2241d1ce.addTo(feature_group_1d34b2bd2307238c7a702a70b8c84f3c);
         
     
@@ -493,7 +459,7 @@
     }
     ,{
   "sticky": false,
-  "className": "foliumtooltip",
+  "className": "foliumtooltip wui-detail-tooltip",
 });
                      
     
@@ -911,7 +877,7 @@ var deferredLayers = {
         wrapper.innerHTML = row.popup;
         return wrapper.firstElementChild;
       },{maxWidth:350});
-      marker.bindTooltip(row.tooltip,{sticky:false});
+      marker.bindTooltip(row.tooltip,{sticky:false, className:'wui-detail-tooltip'});
       cluster.addLayer(marker);
     });
     group.addLayer(cluster);
@@ -1089,11 +1055,15 @@ var deferredLayers = {
   }
   map.on('popupopen', function (event) {
     activePopup = event.popup;
+    app.classList.add('wui-detail-open');
     schedulePopupLayout();
   });
   map.on('popupclose', function (event) {
-    if (activePopup === event.popup) { activePopup = null; }
-    window.clearTimeout(popupLayoutTimer);
+    if (activePopup === event.popup) {
+      activePopup = null;
+      app.classList.remove('wui-detail-open');
+      window.clearTimeout(popupLayoutTimer);
+    }
   });
   map.on('resize', schedulePopupLayout);
   window.addEventListener('resize', schedulePopupLayout);
