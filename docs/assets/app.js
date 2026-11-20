@@ -789,9 +789,6 @@
             );
         
     
-            image_overlay_863723ce4817400a3676643818e14004.addTo(map_d1b7ce120271f28f3680a3a773fb74bb);
-        
-    
 (function () {
   'use strict';
   var map = map_d1b7ce120271f28f3680a3a773fb74bb;
@@ -846,7 +843,7 @@ var deferredLayers = {
   // Deferred layers keep user intent separate from request and Leaflet state.
   Object.keys(deferredLayers).forEach(function(id) {
     var item = deferredLayers[id];
-    item.desired = ['salt-lake','utah','washington'].includes(id);
+    item.desired = document.getElementById('wui-input-' + id).defaultChecked;
     item.loaded = false;
     item.pending = null;
     var row = document.getElementById('wui-row-' + id);
@@ -1138,7 +1135,9 @@ var deferredLayers = {
   }
   synchronizeSidebar();
   app.querySelectorAll('[data-layer-id]').forEach(function(input){input.disabled=false;});
-  Promise.all(['salt-lake','utah','washington'].map(function(id){return selectDeferred(id,true);})).then(function(){window.dispatchEvent(new Event('wui-ready'));});
+  var initialLayers = Object.keys(deferredLayers).filter(function (id) { return deferredLayers[id].desired; });
+  Promise.all(initialLayers.map(function (id) { return selectDeferred(id, true); }))
+    .then(function () { window.dispatchEvent(new Event('wui-ready')); });
   setSidebar(!mobile.matches, false);
   window.requestAnimationFrame(function () {
     map.invalidateSize({pan:false});

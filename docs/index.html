@@ -514,7 +514,7 @@ nav.portfolio-phase-nav a:focus-visible{outline:3px solid #a24d00;outline-offset
               
               <div class="wui-opacity"><label for="wui-opacity-hazard">Opacity</label>
                 <input id="wui-opacity-hazard" type="range" min="0" max="100" step="1" value="58"
-                  aria-label="Composite Fire Hazard opacity" data-opacity-id="hazard">
+                  aria-label="Composite Fire Hazard opacity" data-opacity-id="hazard" disabled>
                 <output id="wui-opacity-value-hazard" for="wui-opacity-hazard">58%</output></div>
               
             </div>
@@ -534,7 +534,7 @@ nav.portfolio-phase-nav a:focus-visible{outline:3px solid #a24d00;outline-offset
             
             <div class="wui-layer" id="wui-row-exposure">
               <div class="wui-layer-main"><label class="wui-layer-label" for="wui-input-exposure">
-                <input id="wui-input-exposure" data-layer-id="exposure" type="checkbox"
+                <input id="wui-input-exposure" data-layer-id="exposure" type="checkbox" checked
                    disabled>
                 <span>Block Group WUI Exposure</span></label>
                 <button class="wui-info" type="button" aria-label="About Block Group WUI Exposure" aria-expanded="false"
@@ -590,7 +590,7 @@ nav.portfolio-phase-nav a:focus-visible{outline:3px solid #a24d00;outline-offset
             <div class="wui-group-label">County boundaries</div>
             <div class="wui-layer" id="wui-row-salt-lake">
               <div class="wui-layer-main"><label class="wui-layer-label" for="wui-input-salt-lake">
-                <input id="wui-input-salt-lake" data-layer-id="salt-lake" type="checkbox"
+                <input id="wui-input-salt-lake" data-layer-id="salt-lake" type="checkbox" checked
                    disabled>
                 <span>Salt Lake County</span></label>
                 <button class="wui-info" type="button" aria-label="About Salt Lake County" aria-expanded="false"
@@ -602,7 +602,7 @@ nav.portfolio-phase-nav a:focus-visible{outline:3px solid #a24d00;outline-offset
             
             <div class="wui-layer" id="wui-row-utah">
               <div class="wui-layer-main"><label class="wui-layer-label" for="wui-input-utah">
-                <input id="wui-input-utah" data-layer-id="utah" type="checkbox"
+                <input id="wui-input-utah" data-layer-id="utah" type="checkbox" checked
                    disabled>
                 <span>Utah County</span></label>
                 <button class="wui-info" type="button" aria-label="About Utah County" aria-expanded="false"
@@ -614,7 +614,7 @@ nav.portfolio-phase-nav a:focus-visible{outline:3px solid #a24d00;outline-offset
             
             <div class="wui-layer" id="wui-row-washington">
               <div class="wui-layer-main"><label class="wui-layer-label" for="wui-input-washington">
-                <input id="wui-input-washington" data-layer-id="washington" type="checkbox"
+                <input id="wui-input-washington" data-layer-id="washington" type="checkbox" checked
                    disabled>
                 <span>Washington County</span></label>
                 <button class="wui-info" type="button" aria-label="About Washington County" aria-expanded="false"
@@ -692,10 +692,10 @@ nav.portfolio-phase-nav a:focus-visible{outline:3px solid #a24d00;outline-offset
           </button></h2>
           <div id="wui-legend" class="wui-legend">
             <p id="wui-empty-legend" class="wui-muted" hidden>Turn on an analysis or reference layer to see its symbols.</p>
-            <div class="wui-legend-block" data-legend-layer="hazard"><h3>Composite Fire Hazard</h3>
+            <div class="wui-legend-block" data-legend-layer="hazard" hidden><h3>Composite Fire Hazard</h3>
               <div class="wui-key-row"><span class="wui-swatch" style="background:#2c7bb6"></span>Very Low</div><div class="wui-key-row"><span class="wui-swatch" style="background:#abd9e9"></span>Low</div><div class="wui-key-row"><span class="wui-swatch" style="background:#ffffbf"></span>Moderate</div><div class="wui-key-row"><span class="wui-swatch" style="background:#fdae61"></span>High</div><div class="wui-key-row"><span class="wui-swatch" style="background:#d7191c"></span>Very High</div>
             </div>
-            <div class="wui-legend-block" data-legend-layer="wui"><h3>High-Risk WUI</h3>
+            <div class="wui-legend-block" data-legend-layer="wui" hidden><h3>High-Risk WUI</h3>
               <div class="wui-key-row"><span class="wui-swatch wui-wui-swatch"></span>Mapped WUI extent</div></div>
             <div class="wui-legend-block" data-legend-layer="exposure"><h3>Block Group WUI Exposure</h3>
               <p class="wui-muted" style="margin-bottom:6px">Block group area intersecting WUI</p>
@@ -736,5 +736,5 @@ nav.portfolio-phase-nav a:focus-visible{outline:3px solid #a24d00;outline-offset
   </div>
 </div>
 </body>
-<script defer src="assets/app.js?v=facility-chooser"></script>
+<script defer src="assets/app.js?v=exposure-default"></script>
 </html>

@@ -22,8 +22,9 @@ an audit of unequal cell areas. The descriptive dashboard and ML study answer di
 - **[Reproduction guide](data/README.md)** and **[publication handoff](RELEASE_HANDOFF.md)**.
 
 GitHub's notebook preview displays saved figures and tables. The dashboard starts with
-the hazard overview and county outlines; WUI, exposure, and facility layers load when
-selected. Map libraries are included locally; Esri basemap tiles require internet.
+Block Group WUI Exposure and county outlines. Composite Fire Hazard, High-Risk WUI,
+and facility layers load when selected. Map libraries are included locally, and Esri
+basemap tiles require internet.
 
 For a local preview, download or clone the repository, then run from its root:
 
