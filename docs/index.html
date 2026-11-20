@@ -403,7 +403,22 @@
     background:white; border:1px solid transparent; cursor:pointer;
   }
   #wui-app .wui-map-view select:focus-visible { outline:2px solid var(--wui-teal); }
-  @media(max-width:850px) { #wui-app .wui-map-view select { min-height:44px; } }
+  #wui-app .wui-map-view-short { display:none; }
+  @media(max-width:850px) {
+    #wui-app .wui-map-view {
+      width:72px; height:44px; padding:0; justify-content:center; border:0;
+      box-shadow:inset 0 0 0 1px var(--wui-line), 0 1px 5px #24374630;
+    }
+    #wui-app .wui-map-view label {
+      position:absolute; width:1px; height:1px; overflow:hidden; clip-path:inset(50%);
+    }
+    #wui-app .wui-map-view-short { display:inline; font-size:14px; font-weight:700; }
+    /* The native select covers the entire button for touch and keyboard input. */
+    #wui-app .wui-map-view select {
+      position:absolute; inset:0; width:100%; height:100%; opacity:0; font-size:16px;
+    }
+    #wui-app .wui-map-view:focus-within { outline:2px solid var(--wui-teal); outline-offset:2px; }
+  }
   #wui-app .wui-backdrop { display:none; }
   #wui-app .dashboard-mouse-position { color:var(--wui-ink); border-color:var(--wui-line); font-size:10px; }
   #wui-app .leaflet-control-scale { margin-bottom:8px; }
@@ -700,6 +715,7 @@ nav.portfolio-phase-nav a:focus-visible{outline:3px solid #a24d00;outline-offset
     <main id="wui-map-stage" class="wui-map-stage" aria-label="Interactive Utah WUI map">
       <div class="wui-map-view">
         <label for="wui-map-view">Map view</label>
+        <span class="wui-map-view-short" aria-hidden="true">View ▾</span>
         <select id="wui-map-view">
           <option value="north" selected>Salt Lake &amp; Utah</option>
           <option value="salt-lake">Salt Lake County</option>
