@@ -838,8 +838,8 @@
     
   };
   var basemaps = ['topographic', 'imagery'];
-  function deferredFacility(group) {
-    return {idleMessage: '', apply: function (data) { addFacilities(data, group); }};
+  function deferredFacility(group, facilityType) {
+    return {idleMessage: '', apply: function (data) { addFacilities(data, group, facilityType); }};
   }
 
 var deferredLayers = {
@@ -848,11 +848,11 @@ var deferredLayers = {
 'washington': {apply: function(data) { geo_json_352e79a818e7f6adb399345209edd260_add(data); }},
 'wui': {idleMessage: '', apply: function(data) { geo_json_c4ce6f29e558d75ea8c8ad5e2241d1ce_add(data); }},
 'exposure': {apply: function(data) { geo_json_3171758a9cc9684c2da02e0a1928d3e0_add(data); }},
-'hospitals': deferredFacility(feature_group_6e5997ea896523cfbcdea3ba156cbb40),
-'fire': deferredFacility(feature_group_1888bcf1ed8ac1a8b073ea29d258b507),
-'police': deferredFacility(feature_group_e1939e12a90595de638272f196a18b9f),
-'schools': deferredFacility(feature_group_98011f5b58e92644ffbb1fed95305760),
-'shelters': deferredFacility(feature_group_da6cd3e985b966b45a91e38fea5303b7)
+'hospitals': deferredFacility(feature_group_6e5997ea896523cfbcdea3ba156cbb40, 'hospitals / medical facilities'),
+'fire': deferredFacility(feature_group_1888bcf1ed8ac1a8b073ea29d258b507, 'fire stations'),
+'police': deferredFacility(feature_group_e1939e12a90595de638272f196a18b9f, 'police / sheriff stations'),
+'schools': deferredFacility(feature_group_98011f5b58e92644ffbb1fed95305760, 'public schools'),
+'shelters': deferredFacility(feature_group_da6cd3e985b966b45a91e38fea5303b7, 'emergency shelters')
 };
   // Deferred layers keep user intent separate from request and Leaflet state.
   Object.keys(deferredLayers).forEach(function(id) {
@@ -929,8 +929,29 @@ var deferredLayers = {
     marker.setPopupContent(matches.length > 1 ? facilityChooser(matches) : facilityDetails);
   }
 
-  function addFacilities(data, group) {
-    var cluster = L.markerClusterGroup({disableClusteringAtZoom:13});
+  var FacilityClusterIcon = L.DivIcon.extend({
+    createIcon: function (oldIcon) {
+      var element = L.DivIcon.prototype.createIcon.call(this, oldIcon);
+      element.setAttribute('aria-label', this.options.facilityLabel);
+      element.style.setProperty('--facility-color', this.options.facilityColor);
+      return element;
+    }
+  });
+
+  function addFacilities(data, group, facilityType) {
+    var cluster = L.markerClusterGroup({
+      disableClusteringAtZoom: 13,
+      iconCreateFunction: function (markers) {
+        var count = markers.getChildCount();
+        return new FacilityClusterIcon({
+          className: 'wui-facility-cluster',
+          html: String(count),
+          iconSize: [36, 36],
+          facilityLabel: count + ' ' + facilityType,
+          facilityColor: data[0].options.fillColor
+        });
+      }
+    });
     // Construct off-map. Partial layers cannot appear after a failed build.
     data.forEach(function(row) {
       var marker = L.circleMarker(row.position, {...row.options, pane: 'facilitySymbols', renderer: facilityRenderer});

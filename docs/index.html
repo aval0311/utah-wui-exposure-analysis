@@ -391,6 +391,28 @@
   #wui-app .wui-key-row { display:flex; align-items:center; gap:9px; min-height:23px; font-size:12px; }
   #wui-app .wui-swatch { display:inline-block; width:18px; height:12px; border:1px solid #24374633; flex:none; }
   #wui-app .wui-wui-swatch { border:2px solid #6d28d9; background:rgba(139,92,246,.14); }
+  #wui-app .wui-facility-cluster {
+    box-sizing:border-box; display:grid; place-items:center; border-radius:50%;
+    border:3px solid var(--facility-color); background:#fff;
+    background:color-mix(in srgb, var(--facility-color) 9%, white);
+    color:#172432; font-size:13px; font-weight:700; line-height:1;
+    box-shadow:0 0 0 1px white, 0 1px 4px #0005;
+  }
+  #wui-app .wui-facility-cluster::after {
+    content:attr(aria-label); display:none; position:absolute;
+    bottom:calc(100% + 6px); left:50%; transform:translateX(-50%);
+    width:max-content; padding:5px 8px; border-radius:4px;
+    background:#fff; box-shadow:0 1px 5px #0005; color:#172432;
+    font-size:12px; font-weight:600; pointer-events:none;
+  }
+  #wui-app .wui-facility-cluster:focus-visible {
+    outline:2px solid #172432; outline-offset:2px; z-index:100000 !important;
+  }
+  #wui-app .wui-facility-cluster:focus-visible::after { display:block; }
+  @media (hover:hover) {
+    #wui-app .wui-facility-cluster:hover { z-index:100000 !important; }
+    #wui-app .wui-facility-cluster:hover::after { display:block; }
+  }
   #wui-app .wui-facility-dot { width:9px; height:9px; border-radius:50%; margin:0 5px 0 4px; flex:none; }
   #wui-app .wui-muted { color:var(--wui-muted); font-size:12px; margin:0; }
   #wui-app .wui-footer { flex:none; padding:10px 16px; border-top:1px solid var(--wui-line);
@@ -705,6 +727,7 @@ nav.portfolio-phase-nav a:focus-visible{outline:3px solid #a24d00;outline-offset
               <div class="wui-key-row" data-legend-layer="salt-lake"><span class="wui-swatch" style="border:2px solid #374151;background:transparent"></span>Salt Lake County</div><div class="wui-key-row" data-legend-layer="utah"><span class="wui-swatch" style="border:2px solid #374151;background:transparent"></span>Utah County</div><div class="wui-key-row" data-legend-layer="washington"><span class="wui-swatch" style="border:2px solid #374151;background:transparent"></span>Washington County</div>
             </div>
             <div class="wui-legend-block" id="wui-facility-key"><h3>Critical facilities</h3>
+              <p class="wui-muted">Numbered circles show the count of nearby facilities of the same type.</p>
               <div class="wui-key-row" data-legend-layer="hospitals"><span class="wui-facility-dot" style="background:red"></span>Hospitals / Medical Facilities</div><div class="wui-key-row" data-legend-layer="fire"><span class="wui-facility-dot" style="background:orange"></span>Fire Stations</div><div class="wui-key-row" data-legend-layer="police"><span class="wui-facility-dot" style="background:blue"></span>Police / Sheriff Stations</div><div class="wui-key-row" data-legend-layer="schools"><span class="wui-facility-dot" style="background:green"></span>Public Schools</div><div class="wui-key-row" data-legend-layer="shelters"><span class="wui-facility-dot" style="background:purple"></span>Emergency Shelters</div>
             </div>
           </div>
@@ -736,5 +759,5 @@ nav.portfolio-phase-nav a:focus-visible{outline:3px solid #a24d00;outline-offset
   </div>
 </div>
 </body>
-<script defer src="assets/app.js?v=wui-status"></script>
+<script defer src="assets/app.js?v=facility-clusters"></script>
 </html>
