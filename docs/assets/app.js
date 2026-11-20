@@ -846,7 +846,7 @@ var deferredLayers = {
 'salt-lake': {apply: function(data) { geo_json_e219ca67f284451dfe2bb9b0f70b6ed6_add(data); }},
 'utah': {apply: function(data) { geo_json_e6cbce1cc23c42f8856060f9c9f015e8_add(data); }},
 'washington': {apply: function(data) { geo_json_352e79a818e7f6adb399345209edd260_add(data); }},
-'wui': {apply: function(data) { geo_json_c4ce6f29e558d75ea8c8ad5e2241d1ce_add(data); }},
+'wui': {idleMessage: '', apply: function(data) { geo_json_c4ce6f29e558d75ea8c8ad5e2241d1ce_add(data); }},
 'exposure': {apply: function(data) { geo_json_3171758a9cc9684c2da02e0a1928d3e0_add(data); }},
 'hospitals': deferredFacility(feature_group_6e5997ea896523cfbcdea3ba156cbb40),
 'fire': deferredFacility(feature_group_1888bcf1ed8ac1a8b073ea29d258b507),
