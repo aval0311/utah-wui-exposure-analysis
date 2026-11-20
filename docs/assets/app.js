@@ -835,8 +835,6 @@
   var toggle = document.getElementById('wui-sidebar-toggle');
   var close = document.getElementById('wui-sidebar-close');
   var mobile = window.matchMedia('(max-width:850px)');
-  // On phones, Leaflet already opens the compact county tooltip on a tap.
-  var compactCountyLabels = window.matchMedia('(max-width:850px), (hover:none) and (pointer:coarse)');
   var countyBoundaries = [
     geo_json_e219ca67f284451dfe2bb9b0f70b6ed6,
     geo_json_e6cbce1cc23c42f8856060f9c9f015e8,
@@ -850,19 +848,6 @@
   countyBoundaries.forEach(function (county) {
     county.bindTooltip(countyLabel, {sticky:false, className:'foliumtooltip'});
   });
-  function updateCountyPopups() {
-    countyBoundaries.forEach(function (county) {
-      if (compactCountyLabels.matches) {
-        county.closePopup();
-        county.unbindPopup();
-      } else {
-        county.bindPopup(countyLabel, {className:'foliumpopup'});
-      }
-    });
-  }
-  updateCountyPopups();
-  if (compactCountyLabels.addEventListener) { compactCountyLabels.addEventListener('change', updateCountyPopups); }
-  else { compactCountyLabels.addListener(updateCountyPopups); }
   var layers = {
     'hazard': image_overlay_863723ce4817400a3676643818e14004,
     'wui': feature_group_1d34b2bd2307238c7a702a70b8c84f3c,
