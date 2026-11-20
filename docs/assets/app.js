@@ -4,16 +4,58 @@
             var map_d1b7ce120271f28f3680a3a773fb74bb = L.map(
                 "map_d1b7ce120271f28f3680a3a773fb74bb",
                 {
-                    center: [38.96091422349325, -112.4552774477515],
                     crs: L.CRS.EPSG3857,
                     ...{
-  "zoom": 7,
+  "zoomSnap": 0.25,
   "zoomControl": true,
   "preferCanvas": true,
 }
 
                 }
             );
+    // Bounds of the shipped county outlines, available before optional layers load.
+    var dashboardViewBounds = {
+        "salt-lake": L.latLngBounds([40.414174, -112.260170], [40.921867, -111.553199]),
+        "utah": L.latLngBounds([39.776252, -112.214190], [40.577920, -110.857657]),
+        "washington": L.latLngBounds([36.999962, -114.052897], [37.618295, -112.899084])
+    };
+    dashboardViewBounds.north = L.latLngBounds([
+        dashboardViewBounds["salt-lake"], dashboardViewBounds.utah
+    ]);
+    dashboardViewBounds.all = L.latLngBounds([
+        dashboardViewBounds.north, dashboardViewBounds.washington
+    ]);
+
+    var dashboardViewSelect = document.getElementById("wui-map-view");
+    var dashboardZooming = false;
+    var queuedDashboardView = null;
+    function fitDashboardView(view) {
+        if (dashboardZooming) {
+            queuedDashboardView = view;
+            return;
+        }
+        map_d1b7ce120271f28f3680a3a773fb74bb.fitBounds(dashboardViewBounds[view], {
+            paddingTopLeft: [18, 66], paddingBottomRight: [18, 18], animate: false
+        });
+        dashboardViewSelect.value = view;
+    }
+
+    map_d1b7ce120271f28f3680a3a773fb74bb.on("zoomstart", function () {
+        dashboardZooming = true;
+    }).on("zoomend", function () {
+        dashboardZooming = false;
+        if (queuedDashboardView) {
+            var view = queuedDashboardView;
+            queuedDashboardView = null;
+            fitDashboardView(view);
+        }
+    }).on("movestart", function () {
+        dashboardViewSelect.value = "custom";
+    });
+    dashboardViewSelect.addEventListener("change", function () {
+        fitDashboardView(dashboardViewSelect.value);
+    });
+    fitDashboardView("north");
             L.control.scale().addTo(map_d1b7ce120271f28f3680a3a773fb74bb);
 
             
@@ -57,10 +99,7 @@
             );
         
     
-            map_d1b7ce120271f28f3680a3a773fb74bb.fitBounds(
-                [[36.999962312497104, -114.052896913423], [40.92186613448939, -110.85765798208]],
-                {"paddingBottomRight": [20, 20], "paddingTopLeft": [20, 20]}
-            );
+
         
     
             var feature_group_08a88c73f1e663f12f9156a14e65f217 = L.featureGroup(
@@ -836,11 +875,6 @@
     // CREATE RESET-VIEW CONTROL
     // ------------------------------------------------
 
-    // Preserve the original fitted extent used when the dashboard first opens.
-    var dashboardResetViewBounds = L.latLngBounds(
-        [[36.999962312497104, -114.052896913423], [40.92186613448939, -110.85765798208]]
-    );
-
     // Create a Leaflet control positioned with the other navigation controls.
     var DashboardResetViewControl = L.Control.extend({
 
@@ -889,13 +923,7 @@
                     L.DomEvent.preventDefault(event);
                     L.DomEvent.stopPropagation(event);
 
-                    dashboardMap.fitBounds(
-                        dashboardResetViewBounds,
-                        {
-                            paddingTopLeft: [20, 20],
-                            paddingBottomRight: [20, 20]
-                        }
-                    );
+                    fitDashboardView("all");
                 }
             );
 
@@ -1271,6 +1299,6 @@ var deferredLayers = {
   setSidebar(!mobile.matches, false);
   window.requestAnimationFrame(function () {
     map.invalidateSize({pan:false});
-    map.fitBounds([[36.999962312497104, -114.052896913423], [40.92186613448939, -110.85765798208]], {padding:[24,24]});
+    fitDashboardView("north");
   });
 })();
