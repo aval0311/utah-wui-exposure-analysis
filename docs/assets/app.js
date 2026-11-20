@@ -936,6 +936,17 @@
         new DashboardResetViewControl()
     );
 
+    // Let Leaflet position the existing picker after Home in the navigation stack.
+    var mapViewControl = L.control({position: "topleft"});
+    mapViewControl.onAdd = function () {
+        var picker = dashboardViewSelect.closest(".wui-map-view");
+        L.DomEvent.disableClickPropagation(picker);
+        L.DomEvent.disableScrollPropagation(picker);
+        L.DomEvent.on(picker, "keydown", L.DomEvent.stopPropagation);
+        return picker;
+    };
+    mapViewControl.addTo(dashboardMap);
+
     // ------------------------------------------------
     // UPDATE MAP AFTER FULLSCREEN CHANGES
     // ------------------------------------------------
