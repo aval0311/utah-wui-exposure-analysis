@@ -153,41 +153,6 @@
 
         
     
-    geo_json_e219ca67f284451dfe2bb9b0f70b6ed6.bindTooltip(
-    function(layer){
-    let div = L.DomUtil.create('div');
-    
-    let handleObject = feature => {
-        if (feature === null) {
-            return '';
-        } else if (typeof(feature)=='object') {
-            return JSON.stringify(feature);
-        } else {
-            return feature;
-        }
-    }
-    let fields = ["COUNTY_DISPLAY_NAME"];
-    let aliases = ["County:"];
-    let table = '<table>' +
-        String(
-        fields.map(
-        (v,i)=>
-        `<tr>
-            <th>${aliases[i].toLocaleString()}</th>
-            
-            <td>${handleObject(layer.feature.properties[v]).toLocaleString()}</td>
-        </tr>`).join(''))
-    +'</table>';
-    div.innerHTML=table;
-    
-    return div
-    }
-    ,{
-  "sticky": false,
-  "className": "foliumtooltip",
-});
-                     
-    
             geo_json_e219ca67f284451dfe2bb9b0f70b6ed6.addTo(feature_group_08a88c73f1e663f12f9156a14e65f217);
         
     
@@ -245,41 +210,6 @@
 
         
     
-    geo_json_e6cbce1cc23c42f8856060f9c9f015e8.bindTooltip(
-    function(layer){
-    let div = L.DomUtil.create('div');
-    
-    let handleObject = feature => {
-        if (feature === null) {
-            return '';
-        } else if (typeof(feature)=='object') {
-            return JSON.stringify(feature);
-        } else {
-            return feature;
-        }
-    }
-    let fields = ["COUNTY_DISPLAY_NAME"];
-    let aliases = ["County:"];
-    let table = '<table>' +
-        String(
-        fields.map(
-        (v,i)=>
-        `<tr>
-            <th>${aliases[i].toLocaleString()}</th>
-            
-            <td>${handleObject(layer.feature.properties[v]).toLocaleString()}</td>
-        </tr>`).join(''))
-    +'</table>';
-    div.innerHTML=table;
-    
-    return div
-    }
-    ,{
-  "sticky": false,
-  "className": "foliumtooltip",
-});
-                     
-    
             geo_json_e6cbce1cc23c42f8856060f9c9f015e8.addTo(feature_group_5dc82d5dc5d86b36554fc9189fd11c3f);
         
     
@@ -336,41 +266,6 @@
             /* Exact geometry and attributes loaded on demand. */
 
         
-    
-    geo_json_352e79a818e7f6adb399345209edd260.bindTooltip(
-    function(layer){
-    let div = L.DomUtil.create('div');
-    
-    let handleObject = feature => {
-        if (feature === null) {
-            return '';
-        } else if (typeof(feature)=='object') {
-            return JSON.stringify(feature);
-        } else {
-            return feature;
-        }
-    }
-    let fields = ["COUNTY_DISPLAY_NAME"];
-    let aliases = ["County:"];
-    let table = '<table>' +
-        String(
-        fields.map(
-        (v,i)=>
-        `<tr>
-            <th>${aliases[i].toLocaleString()}</th>
-            
-            <td>${handleObject(layer.feature.properties[v]).toLocaleString()}</td>
-        </tr>`).join(''))
-    +'</table>';
-    div.innerHTML=table;
-    
-    return div
-    }
-    ,{
-  "sticky": false,
-  "className": "foliumtooltip",
-});
-                     
     
             geo_json_352e79a818e7f6adb399345209edd260.addTo(feature_group_a5b3848c21960057590945d931e8abac);
         
@@ -947,13 +842,21 @@
     geo_json_e6cbce1cc23c42f8856060f9c9f015e8,
     geo_json_352e79a818e7f6adb399345209edd260
   ];
+  function countyLabel(layer) {
+    var label = document.createElement('span');
+    label.textContent = layer.feature.properties.COUNTY_DISPLAY_NAME;
+    return label;
+  }
+  countyBoundaries.forEach(function (county) {
+    county.bindTooltip(countyLabel, {sticky:false, className:'foliumtooltip'});
+  });
   function updateCountyPopups() {
     countyBoundaries.forEach(function (county) {
       if (compactCountyLabels.matches) {
         county.closePopup();
         county.unbindPopup();
       } else {
-        county.bindPopup(county.getTooltip().getContent(), {className:'foliumpopup'});
+        county.bindPopup(countyLabel, {className:'foliumpopup'});
       }
     });
   }
