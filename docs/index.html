@@ -503,6 +503,18 @@ nav.portfolio-phase-nav a:focus-visible{outline:3px solid #a24d00;outline-offset
           <div id="wui-section-analysis">
             
             
+            <div class="wui-layer" id="wui-row-exposure">
+              <div class="wui-layer-main"><label class="wui-layer-label" for="wui-input-exposure">
+                <input id="wui-input-exposure" data-layer-id="exposure" type="checkbox" checked
+                   disabled>
+                <span>Block Group WUI Exposure</span></label>
+                <button class="wui-info" type="button" aria-label="About Block Group WUI Exposure" aria-expanded="false"
+                  aria-controls="wui-info-exposure"><span aria-hidden="true">i</span></button></div>
+              <p class="wui-description" id="wui-info-exposure" hidden>The percentage of each Census Block Group’s land area intersecting mapped WUI. Population and housing exposure in popups are area-weighted estimates, not the locations of individual people or buildings.</p>
+              
+            </div>
+            
+            
             <div class="wui-layer" id="wui-row-hazard">
               <div class="wui-layer-main"><label class="wui-layer-label" for="wui-input-hazard">
                 <input id="wui-input-hazard" data-layer-id="hazard" type="checkbox"
@@ -528,18 +540,6 @@ nav.portfolio-phase-nav a:focus-visible{outline:3px solid #a24d00;outline-offset
                 <button class="wui-info" type="button" aria-label="About High-Risk WUI" aria-expanded="false"
                   aria-controls="wui-info-wui"><span aria-hidden="true">i</span></button></div>
               <p class="wui-description" id="wui-info-wui" hidden>Mapped high-risk wildland–urban interface polygons within the study area. Select a polygon for its county and mapped area.</p>
-              
-            </div>
-            
-            
-            <div class="wui-layer" id="wui-row-exposure">
-              <div class="wui-layer-main"><label class="wui-layer-label" for="wui-input-exposure">
-                <input id="wui-input-exposure" data-layer-id="exposure" type="checkbox" checked
-                   disabled>
-                <span>Block Group WUI Exposure</span></label>
-                <button class="wui-info" type="button" aria-label="About Block Group WUI Exposure" aria-expanded="false"
-                  aria-controls="wui-info-exposure"><span aria-hidden="true">i</span></button></div>
-              <p class="wui-description" id="wui-info-exposure" hidden>The percentage of each Census Block Group’s land area intersecting mapped WUI. Population and housing exposure in popups are area-weighted estimates, not the locations of individual people or buildings.</p>
               
             </div>
             
